@@ -18,7 +18,8 @@ Tài liệu này mô tả **cấu trúc thư mục**, **nội dung chính** và 
 ├── docs/                     # Tài liệu ngữ cảnh dự án (ưu tiên đọc sau rules)
 │   ├── setup/                # Chạy local, cấu hình, triển khai
 │   ├── api/                  # Contract HTTP (01-…12-)
-│   └── architecture/         # Kiến trúc BE (01-…09-)
+│   ├── architecture/         # Kiến trúc BE (01-…09-)
+│   └── decisions/          # ADR (README + TEMPLATE + NNN-*.md)
 ├── skills/                   # Playbook theo từng việc (SKILL + checklist)
 └── notes/                    # Ghi chú cá nhân (không thay rules/docs)
 ```
@@ -56,7 +57,7 @@ Tài liệu này mô tả **cấu trúc thư mục**, **nội dung chính** và 
 | **`setup/`** | Chạy local, cấu hình, tổng quan triển khai; **hướng dẫn triển khai cấu trúc** `setup/` cho dự án — xem `setup/README.md`. Không chứa secret. |
 | **`project-overview.md`** | Tổng quan dự án, stack, scope. |
 | **`architecture/`** | Kiến trúc BE (file `01-`…`09-`): overview, stack, package, DB, layer, integration, transaction, security code. |
-| **`decisions/`** | ADR — quyết định kỹ thuật (tại sao chọn A không chọn B). |
+| **`decisions/`** | ADR: `README.md` (index + lifecycle), `TEMPLATE.md`, file `NNN-topic.md`. |
 | **`api/`** | Chuẩn API cá nhân (file đánh số `01-`…`12-`): overview, format, auth, versioning, pagination, endpoint list, contract template, changelog, deprecation, OpenAPI link. |
 | **`specs/`** | Đặc tả tính năng (feature-auth, feature-order, …). |
 | **`knowledge-base/`** | Tri thức: prompt, naming, patterns, error codes, security, troubleshooting. |

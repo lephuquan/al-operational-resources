@@ -11,7 +11,7 @@ Thiết kế feature trước khi code: ranh giới module, API, data, failure m
 3. Định nghĩa contract: request/response, error codes, idempotency.
 4. Data: entity mới hay mở rộng bảng; migration; index.
 5. Non-functional: performance, security, observability.
-6. Ghi ADR ngắn nếu quyết định đáng kể (`docs/decisions/`).
+6. Ghi ADR ngắn nếu quyết định đáng kể: `docs/decisions/TEMPLATE.md` → `NNN-topic.md`, cập nhật `docs/decisions/README.md`.
 
 ## Output
 

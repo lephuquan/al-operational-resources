@@ -19,7 +19,7 @@ Một **chủ đề** (Redis, Kafka, OpenAPI, CI, OAuth2, …) thường cần *
 
 | Mục đích | Nơi đặt | Nội dung gợi ý |
 |----------|---------|----------------|
-| Quyết định kỹ thuật (tại sao chọn A không chọn B) | `docs/decisions/NNN-topic.md` | ADR ngắn |
+| Quyết định kỹ thuật (tại sao chọn A không chọn B) | `docs/decisions/TEMPLATE.md` → `NNN-topic.md` | ADR ngắn; cập nhật `decisions/README.md` |
 | Playbook từng bước cho AI / lặp lại sau này | `skills/<nhóm>/<topic-slug>/SKILL.md` | Goal → Preconditions → Steps → References |
 | Checklist / ví dụ dài | `checklist.md`, `examples.md` cùng thư mục skill | Tùy độ dài |
 | Mã lỗi, contract API | `docs/knowledge-base/error-codes.md`, `docs/api/*` | Khi chủ đề đổi API hoặc lỗi |
@@ -28,7 +28,7 @@ Một **chủ đề** (Redis, Kafka, OpenAPI, CI, OAuth2, …) thường cần *
 ## 3. Quy trình đề xuất (thứ tự)
 
 1. **Xác định phạm vi** — chủ đề giải quyết vấn đề gì; có ảnh hưởng security/contract không.
-2. **ADR (nếu đáng kể)** — `docs/decisions/` để sau không tranh cãi lại.
+2. **ADR (nếu đáng kể)** — copy `docs/decisions/TEMPLATE.md`, đặt số `NNN-`, cập nhật index trong `docs/decisions/README.md`.
 3. **Triển khai code + config** trong `src/` và `pom.xml` (và CI nếu cần).
 4. **Thêm hoặc cập nhật skill** — `skills/<category>/<name>/SKILL.md` (xem mục 4).
 5. **Đồng bộ docs** — `docs/api/`, `error-codes.md`, `docs/architecture/03-tech-stack.md` nếu đổi hành vi công khai.

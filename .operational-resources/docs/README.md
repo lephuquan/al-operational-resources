@@ -17,7 +17,7 @@
 3. `setup/` — chạy local, biến môi trường (tên), triển khai tóm tắt; đọc sớm khi task cần chạy app hoặc đổi cấu hình (`setup/README.md` là mục lục)
 4. `current-task/` — task đang làm (`README.md` + `TEMPLATE.md`; nội dung template English, có `TL;DR (VI)`)
 5. `api/` (bắt đầu từ `api/01-README.md`) + `specs/` — contract API và đặc tả tính năng
-6. `decisions/` — lý do kiến trúc và trade-off
+6. `decisions/README.md` — ADR index + `TEMPLATE.md` — lý do kiến trúc và trade-off
 7. `knowledge-base/` — pattern và kinh nghiệm tích lũy
 
 ## Hướng dẫn sử dụng khi prompt Cursor

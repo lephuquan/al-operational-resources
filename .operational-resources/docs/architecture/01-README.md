@@ -29,7 +29,7 @@
 |----------|--------|
 | `docs/api/` | HTTP contract, envelopes, versioning |
 | `docs/specs/` | Feature behavior and acceptance |
-| `docs/decisions/` | ADRs (why a big choice was made) |
+| `docs/decisions/` | ADRs: `README.md` (index), `TEMPLATE.md`, `NNN-topic.md` |
 | `docs/setup/` | How to run locally |
 | `skills/backend/*` | How to implement tasks step-by-step |
 

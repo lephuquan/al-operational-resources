@@ -49,7 +49,7 @@ Complete **before** large implementation; if not ready — note in §11 or set s
 - **Ticket / description:** (link or short summary)
 - **Spec:** `docs/specs/...` (if any)
 - **API / contract:** `docs/api/...` (if touched)
-- **Related ADR:** `docs/decisions/...` (if any)
+- **Related ADR:** `docs/decisions/README.md` (index) or `docs/decisions/NNN-topic.md` (if any)
 
 ### 2.2 In scope / out of scope
 
