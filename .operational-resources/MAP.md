@@ -21,7 +21,7 @@ Tài liệu này mô tả **cấu trúc thư mục**, **nội dung chính** và 
 │   ├── architecture/         # Kiến trúc BE (01-…09-)
 │   ├── decisions/          # ADR (README + TEMPLATE + NNN-*.md)
 │   └── specs/              # Đặc tả feature (README + TEMPLATE + feature-*.md)
-├── skills/                   # Playbook theo từng việc (SKILL + checklist)
+├── skills/                   # Playbook (README + SKILL-TEMPLATE + SKILL + checklist)
 └── notes/                    # Ghi chú cá nhân (không thay rules/docs)
 ```
 
@@ -71,7 +71,8 @@ Tài liệu này mô tả **cấu trúc thư mục**, **nội dung chính** và 
 | Thư mục | Mục đích |
 |---------|----------|
 | **`README.md`** | Mục lục toàn bộ skill theo nhóm (backend, testing, security, …). |
-| **`HOW-TO-ADD-TOPIC.md`** | Cách thêm skill/topic mới; code ở `src/`, tài liệu ở đây. |
+| **`SKILL-TEMPLATE.md`** | Bản copy chuẩn cho `SKILL.md` mới (Goal → Output → References). |
+| **`HOW-TO-ADD-TOPIC.md`** | Cách thêm skill/topic mới; code ở `src/`, tài liệu ở đây; trỏ `SKILL-TEMPLATE.md`. |
 | **`backend/`** | REST API, service layer, JPA, upload, pagination, … |
 | **`debugging/`** | Stacktrace, lỗi local, sự cố production. |
 | **`architecture/`** | Thiết kế feature, review kiến trúc. |

@@ -49,5 +49,6 @@ Owner: Phu Quan Le (personal only)
 - ADRs (index + template): `.operational-resources/docs/decisions/README.md`
 - Feature specs (index): `.operational-resources/docs/specs/README.md`
 - Local run & setup (no secrets): `.operational-resources/docs/setup/01-README.md`
-- Skills: `.operational-resources/skills/`
+- Skills index: `.operational-resources/skills/README.md`
+- Adding a skill / topic: `.operational-resources/skills/HOW-TO-ADD-TOPIC.md` (copy `.operational-resources/skills/SKILL-TEMPLATE.md` → `skills/<group>/<topic>/SKILL.md`)
 - Notes: `.operational-resources/notes/`
