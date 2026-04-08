@@ -46,10 +46,12 @@
 
 ### Architecture
 
+**Hub:** [architecture/README.md](architecture/README.md) — when to use design vs review; links to `docs/architecture/`.
+
 | Skill | Short description |
 |-------|-------------------|
-| [architecture/design-feature-architecture](architecture/design-feature-architecture/) | Design a module/feature |
-| [architecture/review-project-architecture](architecture/review-project-architecture/) | Review repository structure |
+| [architecture/design-feature-architecture](architecture/design-feature-architecture/) | Design a module/feature (layers, API, data, ADR) |
+| [architecture/review-project-architecture](architecture/review-project-architecture/) | Review repository structure (P0/P1/P2 actions) |
 
 ### Code quality
 

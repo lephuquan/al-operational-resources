@@ -32,6 +32,7 @@
 | `docs/decisions/` | ADRs: `README.md` (index), `TEMPLATE.md`, `NNN-topic.md` |
 | `docs/setup/01-README.md` | How to run locally (numbered `01`…`05`) |
 | `skills/backend/*` | How to implement tasks step-by-step |
+| `skills/architecture/README.md` | When to design a feature vs review repo architecture (playbooks) |
 
 ## How to reuse in a new project
 

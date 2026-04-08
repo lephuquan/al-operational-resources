@@ -75,7 +75,7 @@ Tài liệu này mô tả **cấu trúc thư mục**, **nội dung chính** và 
 | **`HOW-TO-ADD-TOPIC.md`** | Cách thêm skill/topic mới; code ở `src/`, tài liệu ở đây; trỏ `SKILL-TEMPLATE.md`. |
 | **`backend/`** | REST API, service layer, JPA, upload, pagination, … |
 | **`debugging/`** | Stacktrace, lỗi local, sự cố production. |
-| **`architecture/`** | Thiết kế feature, review kiến trúc. |
+| **`architecture/`** | Thiết kế feature, review kiến trúc; **`README.md`** trong nhóm làm hub. |
 | **`code-quality/`** | Review code, smell, refactor. |
 | **`testing/`** | Unit, integration, test data. |
 | **`database/`** | Schema, migration, tối ưu query. |
