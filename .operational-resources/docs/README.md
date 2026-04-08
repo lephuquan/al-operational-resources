@@ -14,7 +14,7 @@
 
 1. `project-overview.md` — tổng quan dự án
 2. `architecture/01-README.md` → `architecture/02-system-overview.md` — kiến trúc BE (đánh số `01`…`09`)
-3. `setup/` — chạy local, biến môi trường (tên), triển khai tóm tắt; đọc sớm khi task cần chạy app hoặc đổi cấu hình (`setup/README.md` là mục lục)
+3. `setup/01-README.md` → `02`…`05` — chạy local, biến môi trường (tên), triển khai tóm tắt (`01`…`05`)
 4. `current-task/` — task đang làm (`README.md` + `TEMPLATE.md`; nội dung template English, có `TL;DR (VI)`)
 5. `api/` (bắt đầu từ `api/01-README.md`) + `specs/` — contract API và đặc tả tính năng
 6. `decisions/README.md` — ADR index + `TEMPLATE.md` — lý do kiến trúc và trade-off

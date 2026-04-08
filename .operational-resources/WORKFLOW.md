@@ -25,7 +25,7 @@ Tài liệu này mô tả **quy trình một task** khi bạn dùng `.operationa
 1. `rules/00-personal-priority.md` → `AGENTS.md`
 2. `rules/01-project-overview.md`, `02-coding-standards.md`, các rule liên quan (API, backend, security, testing)
 3. `docs/project-overview.md` → `docs/architecture/01-README.md` → `docs/architecture/02-system-overview.md`
-4. `docs/setup/` — khi cần chạy local, profile, biến môi trường hoặc ngữ cảnh triển khai (xem `docs/setup/README.md`)
+4. `docs/setup/` — khi cần chạy local, profile, biến môi trường hoặc ngữ cảnh triển khai (xem `docs/setup/01-README.md`)
 5. `docs/specs/` (feature liên quan) + `docs/api/` nếu đụng API
 6. `docs/current-task/` — tạo hoặc cập nhật file task (xem 1.2)
 7. `skills/README.md` — chọn skill phù hợp (REST, service, JPA, error, test…)
