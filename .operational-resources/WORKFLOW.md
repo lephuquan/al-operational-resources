@@ -24,7 +24,7 @@ Tài liệu này mô tả **quy trình một task** khi bạn dùng `.operationa
 
 1. `rules/00-personal-priority.md` → `AGENTS.md`
 2. `rules/01-project-overview.md`, `02-coding-standards.md`, các rule liên quan (API, backend, security, testing)
-3. `docs/project-overview.md` → `docs/architecture/system-overview.md`
+3. `docs/project-overview.md` → `docs/architecture/01-README.md` → `docs/architecture/02-system-overview.md`
 4. `docs/setup/` — khi cần chạy local, profile, biến môi trường hoặc ngữ cảnh triển khai (xem `docs/setup/README.md`)
 5. `docs/specs/` (feature liên quan) + `docs/api/` nếu đụng API
 6. `docs/current-task/` — tạo hoặc cập nhật file task (xem 1.2)
@@ -33,8 +33,8 @@ Tài liệu này mô tả **quy trình một task** khi bạn dùng `.operationa
 
 ### 1.2 Tạo / cập nhật **một file duy nhất** `docs/current-task/YYYYMMDD-ten-task.md`
 
-- Copy từ **`docs/current-task/TEMPLATE.md`** (chuẩn thống nhất); không tạo bản song song trong `rules/`.
-- Điền tối thiểu: metadata, tóm tắt, nguồn/ticket, AC (hoặc lý do không có), **AC → Test**, **một khối loại task** (feature / bugfix / refactor / …), hướng dẫn cho AI, câu hỏi mở.
+- Copy từ **`docs/current-task/TEMPLATE.md`** (tiêu đề/hướng dẫn **English** + `TL;DR (VI)`); không tạo bản song song trong `rules/`.
+- Điền tối thiểu: metadata, tóm tắt, nguồn/ticket, AC (hoặc lý do không có), **AC → Test**, **một khối loại task** (feature / bugfix / refactor / …), hướng dẫn cho AI, câu hỏi mở (nội dung điền có thể VI hoặc EN).
 - Cập nhật bảng Dashboard trong `docs/current-task/README.md`.
 
 **Output của bước 1:** một file task “đủ context” để `@` trong Cursor — xem `docs/current-task/README.md` (single source of truth).

@@ -14,4 +14,4 @@
 
 ## References
 
-- `docs/api/error-handling.md`
+- `docs/api/05-error-handling.md`

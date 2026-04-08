@@ -1,6 +1,6 @@
 # Error Codes (Reference)
 
-Danh sách mã lỗi ổn định cho client. **Đồng bộ** với `api/error-handling.md`.
+Danh sách mã lỗi ổn định cho client. **Đồng bộ** với `docs/api/05-error-handling.md`.
 
 | Code | HTTP | Ý nghĩa |
 |------|------|---------|

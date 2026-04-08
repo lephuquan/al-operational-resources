@@ -14,4 +14,4 @@ Bảo vệ endpoint: authentication, authorization, CSRF (nếu session), method
 
 ## References
 
-- `docs/api/authentication.md`
+- `docs/api/04-authentication.md`

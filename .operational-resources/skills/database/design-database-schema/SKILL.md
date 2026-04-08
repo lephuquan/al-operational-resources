@@ -10,7 +10,7 @@ Thiết kế schema: normalization, khóa ngoại, index, constraints, và chi�
 2. Chọn khóa: surrogate key (long/UUID) theo convention.
 3. Index: WHERE/JOIN/ORDER BY thường dùng; unique business key.
 4. Soft delete: ảnh hưởng unique index (partial index nếu có).
-5. Ghi vào `docs/architecture/database-design.md` + script migration.
+5. Ghi vào `docs/architecture/05-database-design.md` + script migration.
 
 ## References
 

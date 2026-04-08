@@ -19,4 +19,4 @@ Tạo entity JPA an toàn: mapping đúng cột/bảng, quan hệ lazy/eager có
 
 ## References
 
-- `docs/architecture/database-design.md`
+- `docs/architecture/05-database-design.md`

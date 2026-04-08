@@ -1,192 +1,198 @@
-# Task — [Tên ngắn gọn]
+# Task — [Short title]
 
-> **Quy ước:** Mỗi task = **một file** `YYYYMMDD-ten-task.md` trong **chỉ** `docs/current-task/`. Không tạo bản song song trong `rules/`.  
-> Copy file này → đổi tên → xóa mục không dùng (theo loại task).
+## TL;DR (VI)
 
----
+- Copy file này → đổi tên `YYYYMMDD-slug.md` → xóa khối §6 không dùng.
+- Phần **hướng dẫn và tiêu đề** giữ **English**; nội dung điền có thể VI hoặc EN tùy ticket.
+- Mỗi task **một file**, chỉ trong `docs/current-task/`.
 
-## Metadata (bắt buộc)
-
-| Trường | Giá trị |
-|--------|---------|
-| **Loại task** | `feature` \| `bugfix` \| `refactor` \| `spike` \| `chore` \| `ops` |
-| **ID file** | `YYYYMMDD-slug.md` |
-| **Ticket / Issue** | Link hoặc mã (PROJ-123) |
-| **Trạng thái** | Draft \| In Progress \| Review \| Blocked \| Done |
-| **Ưu tiên** | High \| Medium \| Low |
-| **Owner** | (bạn / team) |
+> **Convention:** One task = **one file** `YYYYMMDD-task-name.md` under **only** `docs/current-task/`. Do not duplicate tasks under `rules/`.  
+> Copy this file → rename → remove sections you do not need (by task type).
 
 ---
 
-## 0. Definition of Ready — trước khi nhờ AL code (bắt buộc đánh dấu)
+## Metadata (required)
 
-Điền **trước** khi bắt đầu implementation lớn; nếu chưa đủ — ghi vào §11 hoặc tạm **Blocked**.
-
-- [ ] Ticket/spec có **mục tiêu** và **AC** (hoặc đã ghi rõ “không có AC — chỉ mục tiêu kỹ thuật: …”).
-- [ ] **Phạm vi** §2 đã điền; biết điều gì **không làm** (out of scope).
-- [ ] **Câu hỏi mở** §11: không còn blocker — hoặc đã ghi **giả định tạm** để AL tiếp tục (sẽ xác nhận lại sau).
-- [ ] Đã liệt kê **skills + docs** AL phải đọc ở §8 (ít nhất rules + 1 skill liên quan).
-- [ ] Nếu thay đổi lớn so với ticket gốc: đã ghi ở **§7 Revision** và (khi cần) đã **sync với BA/Lead**.
-
----
-
-## 1. Tóm tắt một dòng (bắt buộc)
-
-[Một câu: làm gì, cho ai, kết quả kinh doanh/kỹ thuật là gì.]
+| Field | Value |
+|-------|--------|
+| **Task type** | `feature` \| `bugfix` \| `refactor` \| `spike` \| `chore` \| `ops` |
+| **File ID** | `YYYYMMDD-slug.md` |
+| **Ticket / issue** | Link or id (e.g. PROJ-123) |
+| **Status** | Draft \| In Progress \| Review \| Blocked \| Done |
+| **Priority** | High \| Medium \| Low |
+| **Owner** | (you / team) |
 
 ---
 
-## 2. Nguồn, phạm vi & giả định (bắt buộc)
+## 0. Definition of Ready — before asking AI to implement (checkboxes)
 
-### 2.1 Liên kết chính thức
+Complete **before** large implementation; if not ready — note in §11 or set status **Blocked**.
 
-- **Ticket / mô tả:** (link hoặc tóm tắt)
-- **Spec:** `docs/specs/...` (nếu có)
-- **API / contract:** `docs/api/...` (nếu đụng)
-- **ADR liên quan:** `docs/decisions/...` (nếu có)
+- [ ] Ticket/spec has a clear **goal** and **AC** (or explicitly: “No separate AC — technical goal only: …”).
+- [ ] **Scope** in §2 is filled; **out of scope** is explicit.
+- [ ] **Open questions** §11: no unresolved blockers — or **temporary assumptions** are written so AI can proceed (to confirm later).
+- [ ] **Skills + docs** listed in §8 (at least `rules/` + one relevant skill).
+- [ ] If scope diverges materially from the ticket: recorded in **§7 Revision** and (when needed) **synced with BA/lead**.
 
-### 2.2 In scope / Out of scope
+---
 
-| In scope (làm trong task này) | Out of scope (không làm / ticket khác) |
-|-------------------------------|------------------------------------------|
+## 1. One-line summary (required)
+
+[One sentence: what, for whom, business or technical outcome.]
+
+---
+
+## 2. Sources, scope, and assumptions (required)
+
+### 2.1 Official links
+
+- **Ticket / description:** (link or short summary)
+- **Spec:** `docs/specs/...` (if any)
+- **API / contract:** `docs/api/...` (if touched)
+- **Related ADR:** `docs/decisions/...` (if any)
+
+### 2.2 In scope / out of scope
+
+| In scope (this task) | Out of scope (another task / later) |
+|----------------------|----------------------------------------|
 | … | … |
 
-### 2.3 Giả định & phụ thuộc
+### 2.3 Assumptions and dependencies
 
-- **Giả định** (nếu chưa xác nhận với BA): …
-- **Phụ thuộc** (team khác, service khác, flag, DB migration): …
+- **Assumptions** (if not confirmed with BA): …
+- **Dependencies** (other team, service, feature flag, DB migration): …
 
 ---
 
-## 3. Acceptance criteria (bắt buộc khi có từ BA/Lead)
+## 3. Acceptance criteria (required when provided by BA/lead)
 
-Nếu không có AC từ ticket — ghi: *“Không có AC riêng — mục tiêu kỹ thuật: …”* và vẫn có checklist có thể kiểm chứng.
+If there is no separate AC — write: *“No separate AC — technical goal: …”* and still provide verifiable checklists.
 
 - [ ] AC1: …
 - [ ] AC2: …
 
-### 3.1 Hành vi chi tiết (khuyến nghị cho feature — tránh AL chỉ làm happy path)
+### 3.1 Detailed behavior (recommended for features — avoids happy-path-only AI work)
 
-| Kịch bản | Kết quả mong đợi | Ghi chú |
-|----------|------------------|---------|
+| Scenario | Expected result | Notes |
+|----------|-----------------|-------|
 | Happy path | … | |
-| Lỗi nghiệp vụ / validation | … | mã lỗi / HTTP |
+| Business / validation error | … | error code / HTTP |
 | Edge case (null, empty, concurrent, …) | … | |
-| Thay đổi sau này (extensibility) | … | optional: interface ổn định, feature flag |
+| Future change (extensibility) | … | optional: stable interface, feature flag |
 
 ---
 
-## 4. Ánh xạ AC → Test (bắt buộc trước khi coi xong — trừ spike/chore thuần tài liệu)
+## 4. AC → test mapping (required before “done” — except pure doc spike/chore)
 
-| AC / Mục tiêu | Mô tả | Test (class#method hoặc mô tả) | Loại |
-|---------------|-------|-----------------------------------|------|
-| … | … | … | unit / IT / E2E / N/A + lý do |
+| AC / goal | Description | Test (class#method or description) | Type |
+|-----------|-------------|-------------------------------------|------|
+| … | … | … | unit / IT / E2E / N/A + reason |
 
-Cập nhật lại bảng này khi **§7** có thay đổi AC.
-
----
-
-## 5. Non-functional & ràng buộc kỹ thuật (điền khi liên quan)
-
-- **Performance / SLI:** (ví dụ p95, batch size)
-- **Bảo mật:** (authz, PII, audit)
-- **Tương thích / versioning API:** breaking hay không
-- **Idempotency / retry:** (nếu có tích hợp ngoài)
+Update this table when **§7** changes AC.
 
 ---
 
-## 6. Khối theo loại task — giữ **một** khối, xóa các khối khác
+## 5. Non-functional and technical constraints (fill when relevant)
+
+- **Performance / SLI:** (e.g. p95, batch size)
+- **Security:** (authz, PII, audit)
+- **API compatibility / versioning:** breaking or not
+- **Idempotency / retry:** (if external integration)
+
+---
+
+## 6. Task-type block — keep **one** block, delete the others
 
 ### A — FEATURE
 
 - **User impact:** …
-- **Luồng triển khai gợi ý:** DTO + validation → service → repo/DB → controller → test → `docs/api/` nếu đổi contract.
-- **Mở rộng sau:** (optional) điểm nối để thêm field/rule mà không phá contract — ghi ở đây hoặc §3.1.
+- **Suggested implementation flow:** DTO + validation → service → repo/DB → controller → tests → if contract changes: `docs/api/08-endpoint-list.md`, `docs/api/10-current-api-changes.md`, and `docs/api/12-openapi-source-of-truth.md` when applicable.
+- **Future extension:** (optional) extension points without breaking contract — here or §3.1.
 
 ### B — BUGFIX
 
-- **Hiện tượng / nghiệp vụ ảnh hưởng:** …
-- **Chứng cứ:** log, input, môi trường
-- **Tái hiện:** …
-- **Hướng fix & regression test:** …
+- **Symptom / business impact:** …
+- **Evidence:** logs, input, environment
+- **Reproduction:** …
+- **Fix direction and regression tests:** …
 
 ### C — REFACTOR
 
 - **Smell / risk:** …
-- **Hành vi giữ nguyên:** (trừ khi ticket cho phép đổi)
-- **Chiến lược & hồi quy:** …
+- **Behavior unchanged:** (unless ticket allows change)
+- **Strategy and regression:** …
 
 ### D — SPIKE / CHORE / OPS
 
 - **Output:** doc / PoC / runbook
-- **AC → Test:** có thể N/A + lý do
+- **AC → Test:** may be N/A + reason
 
 ---
 
-## 7. Revision — cập nhật yêu cầu trong quá trình làm (bắt buộc ghi khi có thay đổi)
+## 7. Revision — requirement changes while in progress (required when anything changes)
 
-Khi AC hoặc phạm vi **đổi** so với lần mở task (dù nhỏ), ghi dòng mới — để AL và bạn không mất ngữ cảnh.
+When AC or scope **changes** vs. task start (even small), add a row — keeps context for you and AI.
 
-| Ngày | Thay đổi | Loại | Hành động (đã sync BA/Lead? cập nhật AC/test?) |
-|------|----------|------|--------------------------------------------------|
-| YYYY-MM-DD | Mô tả ngắn | Nhỏ (wording) / Trung bình (thêm AC) / **Lớn** (đổi hướng nghiệp vụ) | Ví dụ: đã cập nhật §3–4; cần ticket PROJ-456 |
+| Date | Change | Type | Action (synced BA/lead? AC/tests updated?) |
+|------|--------|------|--------------------------------------------|
+| YYYY-MM-DD | Short description | Small (wording) / Medium (new AC) / **Large** (business pivot) | e.g. updated §3–4; needs ticket PROJ-456 |
 
-**Quy ước:**
+**Rules:**
 
-- **Thay đổi nhỏ:** cập nhật §3–4 và checklist; ghi một dòng ở đây.
-- **Thay đổi lớn:** dừng implementation nếu chưa đồng ý với BA/Lead; hoặc tách task / ticket mới — ghi rõ trong cột Hành động.
+- **Small change:** update §3–4 and checklists; one line here.
+- **Large change:** pause implementation until agreed with BA/lead; or split task / new ticket — note in Action column.
 
 ---
 
-## 8. Gói ngữ cảnh cho AL — rules, docs, skills (bắt buộc: ít nhất rules + 1 skill)
+## 8. Context pack for AI — rules, docs, skills (required: at least rules + one skill)
 
-AL nên đọc (điền path thật; xóa dòng không dùng):
+Paths AI should read (fill real paths; delete unused rows):
 
-| Loại | Đường dẫn (ví dụ) |
-|------|-------------------|
+| Kind | Paths (examples) |
+|------|------------------|
 | Rules | `rules/00-personal-priority.md`, `rules/02-coding-standards.md`, … |
-| Docs | `docs/architecture/system-overview.md`, `docs/api/...`, `docs/specs/...` |
+| Docs | `docs/architecture/02-system-overview.md`, `docs/api/01-README.md`, `docs/specs/...` |
 | Skills | `skills/backend/create-rest-api/SKILL.md`, … |
 
-**Prompt gợi ý (copy):**  
-“Đọc file task này trước. Tuân thủ rules và skills trong bảng trên. Không thêm dependency / không đổi kiến trúc lớn mà không hỏi.”
+**Suggested prompt (copy):**  
+“Read this task file first. Follow the rules and skills in the table above. Do not add dependencies or change architecture broadly without asking.”
 
 ---
 
-## 9. Checklist thực hiện (tùy chỉnh)
+## 9. Execution checklist (customize)
 
 - [ ] …
 - [ ] …
 
 ---
 
-## 10. Hướng dẫn chi tiết cho AI (bắt buộc — ít nhất 3 ý)
+## 10. Detailed guidance for AI (required — at least three items)
 
-- **MUST:** … (ví dụ: Bean Validation trên DTO, không log PII)
-- **SHOULD:** … (ví dụ: thêm integration test cho endpoint mới)
-- **ASK FIRST:** … (ví dụ: thêm starter mới, đổi schema chung)
-
----
-
-## 11. Câu hỏi mở, rủi ro & blocker
-
-- … (trống = không blocker; hoặc ghi “đang chờ X”)
+- **MUST:** … (e.g. Bean Validation on DTOs, do not log PII)
+- **SHOULD:** … (e.g. add integration test for new endpoint)
+- **ASK FIRST:** … (e.g. new starter dependency, shared schema change)
 
 ---
 
-## 12. Nhật ký tiến độ (Progress log)
+## 11. Open questions, risks, and blockers
 
-- **[YYYY-MM-DD]** Làm gì / phát hiện gì / quyết định gì (kèm link §7 nếu đổi scope)
+- … (empty = none; or “waiting on X”)
 
 ---
 
-## 13. Definition of Done (tick trước MR)
+## 12. Progress log
 
-- [ ] §0 Definition of Ready đã được thỏa (hoặc điều chỉnh có chủ đích)
-- [ ] Code + test khớp §3–4 (và §7 nếu đã revision)
-- [ ] `./mvnw test` pass (hoặc lệnh team)
+- **[YYYY-MM-DD]** What you did / found / decided (link §7 if scope changed)
+
+---
+
+## 13. Definition of Done (check before MR)
+
+- [ ] §0 Definition of Ready satisfied (or intentionally adjusted)
+- [ ] Code + tests match §3–4 (and §7 if revised)
+- [ ] `./mvnw test` passes (or team command)
 - [ ] Self-review `rules/08-review-checklist.md`
-- [ ] MR: mô tả + link ticket + **How to test** + ảnh hưởng breaking (nếu có)
+- [ ] MR: description + ticket link + **How to test** + breaking impact (if any)
 
 ---
 

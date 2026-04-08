@@ -1,15 +1,44 @@
-# Current API Changes - 2026-04-08
+# Current API changes (changelog)
 
-**Task dang lam**: Implement Order API v2 [cap nhat khi doi task]
+## TL;DR (VI)
 
-## Thay doi moi
+- Ghi **mọi thay đổi contract hoặc hành vi** đang làm hoặc sắp release.
+- Sau khi merge/release, có thể tóm tắt vào `docs/decisions/` hoặc release notes team — file này có thể **xóa trắng** mỗi cycle.
 
-- Them endpoint `POST /api/v2/orders`
-- Them field `voucherCode` va `shippingAddress`
-- Response schema cap nhat theo spec moi
+**Last updated:** 2026-04-08
 
-## Can cap nhat
+## Active work / draft
 
-- `03-response-format.md`
-- `05-error-handling.md` (them error codes moi)
-- `08-endpoint-list.md`
+**Task / ticket reference:** _(link or id)_
+
+**Scope (one line):**
+
+- …
+
+## Changes (add newest first)
+
+### YYYY-MM-DD — short title
+
+- **Type:** breaking | non-breaking | docs-only
+- **Endpoints affected:** `METHOD /path`
+- **What changed:** …
+- **Client impact:** …
+- **Follow-ups:** update `08-endpoint-list.md`, OpenAPI, `05-error-handling.md` codes, …
+
+### YYYY-MM-DD — example entry
+
+- **Type:** non-breaking
+- **Endpoints affected:** `GET /api/v2/example`
+- **What changed:** Added optional query `include=summary`.
+- **Client impact:** None if clients ignore unknown fields.
+
+## Checklist before closing a PR
+
+- [ ] `08-endpoint-list.md` updated
+- [ ] `05-error-handling.md` / `error-codes` if new codes
+- [ ] `03-response-format.md` if envelope rules changed
+- [ ] OpenAPI / spec link updated (`12-openapi-source-of-truth.md`)
+
+## Archive policy
+
+When a release ships, you may move completed sections to a dated archive file under `docs/api/archive/` (optional) or rely on team release notes.

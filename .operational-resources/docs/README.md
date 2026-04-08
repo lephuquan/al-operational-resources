@@ -13,17 +13,17 @@
 ## Thứ tự đọc khuyến nghị cho AI (Cursor)
 
 1. `project-overview.md` — tổng quan dự án
-2. `architecture/system-overview.md` — kiến trúc tổng thể
+2. `architecture/01-README.md` → `architecture/02-system-overview.md` — kiến trúc BE (đánh số `01`…`09`)
 3. `setup/` — chạy local, biến môi trường (tên), triển khai tóm tắt; đọc sớm khi task cần chạy app hoặc đổi cấu hình (`setup/README.md` là mục lục)
-4. `current-task/` — task đang làm hiện tại
-5. `api/` + `specs/` — chi tiết API và tính năng
+4. `current-task/` — task đang làm (`README.md` + `TEMPLATE.md`; nội dung template English, có `TL;DR (VI)`)
+5. `api/` (bắt đầu từ `api/01-README.md`) + `specs/` — contract API và đặc tả tính năng
 6. `decisions/` — lý do kiến trúc và trade-off
 7. `knowledge-base/` — pattern và kinh nghiệm tích lũy
 
 ## Hướng dẫn sử dụng khi prompt Cursor
 
 - "Use full context from `.operational-resources/docs/`"
-- "Read `project-overview.md` and `architecture/system-overview.md` first"
+- "Read `project-overview.md` and `architecture/02-system-overview.md` first"
 - "Refer to `current-task/YYYYMMDD-xxx.md` for the active task"
 
 ## Lưu ý quan trọng

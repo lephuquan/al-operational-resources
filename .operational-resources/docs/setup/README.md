@@ -1,64 +1,70 @@
-# `docs/setup/` — Chạy local & cấu hình (personal docs)
+# `docs/setup/` - Local run and configuration (personal docs)
 
-Thư mục này là **điểm vào** cho: cách **cài đặt**, **chạy**, **cấu hình** và **môi trường triển khai** — phục vụ bạn và AI khi cần ngữ cảnh vận hành, **không** thay cho `README` chính thức của team ở root repo (nếu có).
+## TL;DR (VI)
 
-**Nguyên tắc:** ghi **tên** biến, profile, URL public; **không** lưu mật khẩu, token, connection string đầy đủ, khóa private.
+- Day la noi tap trung cach cai dat/chay local/cau hinh/deploy overview.
+- Noi dung chinh viet English de AI doc on dinh.
+- Tuyet doi khong ghi secret that, chi ghi ten bien va placeholder.
+
+This folder is the entry point for installation, local run steps, configuration, and deployment context. It supports you and AI with operational context, and does not replace the team-level root `README` (if present).
+
+**Security rule:** document variable names, profiles, and public URLs only. Never store passwords, tokens, full connection strings, or private keys.
 
 ---
 
-## Nội dung trong thư mục
+## Folder contents
 
-| File | Mục đích |
+| File | Purpose |
 |------|----------|
-| **`README.md`** | File này — mục đích, cách triển khai bộ tài liệu `setup/` cho dự án. |
-| **`local-development.md`** | Điều kiện tiên quyết, clone, cài dependency, lệnh chạy, URL/port, profile local. |
-| **`configuration.md`** | Biến môi trường (chỉ tên), file cấu hình, profile Spring/`NODE_ENV`, nơi lưu secret an toàn. |
-| **`deployment-overview.md`** | Môi trường (dev/stage/prod), pipeline/artifact ở mức tóm tắt, liên kết tài liệu team. |
-| **`troubleshooting-local.md`** | Lỗi thường gặp khi chạy máy — cập nhật dần theo thực tế. |
+| **`README.md`** | This file - purpose and rollout approach for `setup/` docs. |
+| **`local-development.md`** | Prerequisites, clone, dependency install, run commands, local URL/port, local profile. |
+| **`configuration.md`** | Environment variable names, config files, Spring profile/`NODE_ENV`, secret storage guidance. |
+| **`deployment-overview.md`** | Environments (dev/stage/prod), pipeline/artifact summary, links to team docs. |
+| **`troubleshooting-local.md`** | Common local machine issues and fixes, updated over time. |
 
-Có thể **thêm** file theo dự án (ví dụ `docker.md`, `database-local.md`) khi cần; nên liệt kê trong bảng trên hoặc mục “Tài liệu bổ sung” dưới đây.
+You can add project-specific files (for example `docker.md`, `database-local.md`) when needed; keep them listed in the table above.
 
 ---
 
-## Cách triển khai `setup/` cho hầu hết dự án
+## How to roll out `setup/` in most projects
 
-Áp dụng khi bắt đầu dự án mới hoặc khi đồng bộ lại tài liệu cá nhân.
+Use this when starting a new project or syncing personal docs.
 
-### Bước 1 — Tạo khung (một lần)
+### Step 1 - Create baseline files (one-time)
 
-1. Sao chép nội dung mẫu từ các file `*.md` hiện có (placeholder `<!-- ... -->` hoặc mục “Điền theo dự án”).
-2. Đảm bảo có đủ tối thiểu: **`local-development.md`**, **`configuration.md`**, **`troubleshooting-local.md`** (có thể để ngắn ban đầu).
+1. Copy the templates from current `*.md` files (placeholders `<!-- ... -->` are fine initially).
+2. Keep at least: **`local-development.md`**, **`configuration.md`**, and **`troubleshooting-local.md`**.
 
-### Bước 2 — Điền theo stack (chọn phần liên quan)
+### Step 2 - Fill by stack (select relevant rows)
 
-| Loại dự án | Ưu tiên điền trong |
+| Project type | Fill first |
 |------------|---------------------|
-| Backend (Spring, Node, …) | `local-development.md` (lệnh build/run/test), `configuration.md` (profile, env). |
-| Frontend (React, Vue, …) | URL dev server, biến `VITE_*` / `NEXT_PUBLIC_*` (chỉ tên và ý nghĩa). |
-| Monorepo | Một mục “Thứ tự chạy” hoặc file `workspaces.md` nếu phức tạp. |
-| Docker / Compose | Mục trong `local-development.md` hoặc file `docker.md` riêng. |
-| DB / migration | Lệnh migrate local, tên DB/schema; **không** paste chuỗi kết nối có mật khẩu. |
+| Backend (Spring, Node, ...) | `local-development.md` (build/run/test commands), `configuration.md` (profiles/env). |
+| Frontend (React, Vue, ...) | Dev server URL, `VITE_*` / `NEXT_PUBLIC_*` vars (names and meaning only). |
+| Monorepo | Add run order section or a dedicated `workspaces.md` if complex. |
+| Docker / Compose | Section in `local-development.md` or separate `docker.md`. |
+| DB / migration | Local migration commands, DB/schema names; **never** paste secret connection strings. |
 
-### Bước 3 — Liên kết
+### Step 3 - Link from higher-level docs
 
-- Trong **`docs/project-overview.md`** hoặc `docs/README.md`: một dòng trỏ tới `docs/setup/` cho người/AI “lần đầu chạy”.
-- Trong **`MAP.md`**: đã có mục `setup/` — giữ đồng bộ khi đổi tên file.
+- Add one line in **`docs/project-overview.md`** or `docs/README.md` pointing to `docs/setup/` for first-time run context.
+- Keep **`MAP.md`** in sync when file names change.
 
-### Bước 4 — Bảo trì
+### Step 4 - Maintain continuously
 
-- Khi đổi port, profile, hoặc lệnh chạy chuẩn — cập nhật `setup/` trong cùng MR hoặc ngay sau.
-- Ghi vấn đề lặp lại vào `troubleshooting-local.md` thay vì chỉ chat nội bộ.
+- When port/profile/standard run commands change, update `setup/` in the same MR (or immediately after).
+- Capture recurring local issues in `troubleshooting-local.md` instead of chat-only notes.
 
 ---
 
-## Quan hệ với các thư mục khác
+## Relation to other folders
 
-| Thư mục | Khác biệt so với `setup/` |
+| Folder | Difference from `setup/` |
 |---------|---------------------------|
-| **`docs/architecture/`** | Kiến trúc, luồng dữ liệu — không nhắm “lệnh chạy máy dev”. |
-| **`docs/knowledge-base/troubleshooting-manual.md`** | Tri thức lỗi nghiệp vụ / production — `setup/troubleshooting-local.md` tập trung **máy dev**. |
-| **`notes/quick-reference/`** | Ghi chú cá nhân ngắn; có thể **link** tới `docs/setup/` thay vì nhân đôi nội dung dài. |
-| **Root `README` của team** | Nguồn chính thức cho cả team; `setup/` là bản **cá nhân + đủ chi tiết cho AI**. |
+| **`docs/architecture/`** | Backend architecture (`01-README.md` …); not focused on machine run commands. |
+| **`docs/knowledge-base/troubleshooting-manual.md`** | Broader business/production issues; `setup/troubleshooting-local.md` focuses on **developer machines**. |
+| **`notes/quick-reference/`** | Short personal notes; prefer linking to `docs/setup/` over duplicating long content. |
+| **Team root `README`** | Official source for the whole team; `setup/` is a **personal + AI-friendly** layer. |
 
 ---
 

@@ -6,7 +6,7 @@
 
 ## Steps
 
-1. Đọc `docs/architecture/system-overview.md` và `folder-structure.md`.
+1. Đọc `docs/architecture/02-system-overview.md` và `docs/architecture/04-folder-structure.md`.
 2. Quét package: controller có business logic không; service có gọi DB trực tiếp lộn xộn không.
 3. Kiểm tra cross-cutting: security, exception handling, logging.
 4. Đánh giá test pyramid: unit vs integration coverage.

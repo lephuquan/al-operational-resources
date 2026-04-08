@@ -1,6 +1,6 @@
 # AGENTS.md - Personal AI Workspace
 
-Last updated: 2026-04-06
+Last updated: 2026-04-08
 Owner: Phu Quan Le (personal only)
 
 ## 1) Workspace intent
@@ -45,6 +45,7 @@ Owner: Phu Quan Le (personal only)
 - Task → implement → test → review → MR: `.operational-resources/WORKFLOW.md`
 - Rules: `.operational-resources/rules/`
 - Personal docs: `.operational-resources/docs/`
+- Backend architecture (numbered): `.operational-resources/docs/architecture/01-README.md`
 - Local run & setup (no secrets): `.operational-resources/docs/setup/README.md`
 - Skills: `.operational-resources/skills/`
 - Notes: `.operational-resources/notes/`

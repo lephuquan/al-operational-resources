@@ -31,7 +31,7 @@ Một **chủ đề** (Redis, Kafka, OpenAPI, CI, OAuth2, …) thường cần *
 2. **ADR (nếu đáng kể)** — `docs/decisions/` để sau không tranh cãi lại.
 3. **Triển khai code + config** trong `src/` và `pom.xml` (và CI nếu cần).
 4. **Thêm hoặc cập nhật skill** — `skills/<category>/<name>/SKILL.md` (xem mục 4).
-5. **Đồng bộ docs** — `docs/api/`, `error-codes.md`, `architecture/tech-stack.md` nếu đổi hành vi công khai.
+5. **Đồng bộ docs** — `docs/api/`, `error-codes.md`, `docs/architecture/03-tech-stack.md` nếu đổi hành vi công khai.
 6. **Cập nhật** `skills/README.md` (mục lục) nếu thêm skill mới.
 
 ## 4. Cách tạo một skill mới (cấu trúc thư mục)

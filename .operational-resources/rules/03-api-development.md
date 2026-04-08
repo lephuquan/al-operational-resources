@@ -2,7 +2,7 @@
 
 ## Endpoint design
 
-- **Versioning**: `/api/v2/...` (hoặc version team đang dùng — đồng bộ với `docs/api/`)
+- **Versioning**: `/api/v2/...` (hoặc version team đang dùng — đồng bộ với `docs/api/01-README.md` và `docs/api/06-versioning.md`)
 - **Resource naming**: kebab-case cho path segment (`/user-profiles`, `/order-items`)
 - **HTTP methods**: tuân thủ RESTful (GET an toàn/idempotent khi đúng ngữ nghĩa; POST tạo; PUT/PATCH cập nhật; DELETE xóa)
 
@@ -45,4 +45,4 @@ Khi lỗi:
 
 ## Current API tasks
 
-- [ ] Cập nhật endpoint / thay đổi contract đang làm tại đây (ví dụ: Order API v2)
+- [ ] Cập nhật endpoint / thay đổi contract đang làm tại `docs/api/10-current-api-changes.md` và `docs/api/08-endpoint-list.md`.

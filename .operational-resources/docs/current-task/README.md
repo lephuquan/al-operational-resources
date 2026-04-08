@@ -1,55 +1,65 @@
-# Current Tasks — nguồn duy nhất (single source of truth)
+# Current tasks (single source of truth)
 
-## Vị trí
+## TL;DR (VI)
 
-- **Chỉ dùng thư mục này:** `.operational-resources/docs/current-task/`
-- **Không** tạo file task song song trong `rules/` — mọi task nằm ở đây để tránh nhân đôi và lệch bản.
+- Thư mục **duy nhất** chứa file task cá nhân; không tạo bản song song trong `rules/`.
+- **Nội dung kỹ thuật / template** dùng **English** để AI đọc ổn định; phần này là **lối vào** + dashboard.
+- Sao chép `TEMPLATE.md` → đặt tên `YYYYMMDD-slug.md` → điền và cập nhật bảng bên dưới.
 
-## Quy ước đặt tên
+This folder is the **only** place for active personal task files. Use **`TEMPLATE.md`** for every new task. Main instructions are in **English**; this README is the entry point and dashboard.
 
-- `YYYYMMDD-mo-ta-ngan.md` — ví dụ: `20260408-order-create-api.md`
-- Một task = một file; ID trong metadata trùng với prefix ngày + slug.
+## Location
 
-## Chuẩn bắt buộc cho mọi task
+- **Path:** `.operational-resources/docs/current-task/`
+- **Do not** duplicate tasks under `rules/` — one source of truth avoids drift.
 
-Khi tạo task mới, copy **`TEMPLATE.md`** và điền đủ tối thiểu:
+## File naming
 
-| Mục (trong `TEMPLATE.md`) | Bắt buộc | Ghi chú |
-|---------------------------|----------|---------|
-| §0 Definition of Ready | Tick trước khi code lớn | Đảm bảo đã làm rõ yêu cầu hoặc ghi blocker |
-| Metadata + §1 tóm tắt | Có | |
-| §2 nguồn, in/out scope, giả định | Có | Giảm hiểu nhầm khi scope đổi |
-| §3 AC + §3.1 hành vi (feature) | Khuyến nghị mạnh | Happy path + lỗi + edge |
-| §4 AC → Test | Có* | *Spike/chore có thể N/A |
-| §5 non-functional (khi cần) | Tùy | |
-| §6 một khối A/B/C/D | Có | Xóa khối không dùng |
-| §7 Revision | Ghi khi AC thay đổi | Theo dõi cập nhật / thay đổi lớn |
-| §8 gói ngữ cảnh rules + docs + skills | Có | AL biết đọc đâu trước khi code |
-| §10 hướng dẫn AI (MUST/SHOULD/ASK) | Có | |
-| §13 Definition of Done | Tick trước MR | |
+- Pattern: `YYYYMMDD-short-description.md` — example: `20260408-order-create-api.md`
+- One task = one file; metadata **ID** should match the date prefix + slug.
 
-## Loại task khác nhau
+## Minimum content per task
 
-**Feature / Bugfix / Refactor / Spike / Chore / Ops** — dùng chung **`TEMPLATE.md`**: ở **§6** có khối A/B/C/D; **chỉ giữ một khối** tương ứng, xóa các khối còn lại.
+Copy **`TEMPLATE.md`**, then fill at least:
 
-## Dashboard (task đang chạy)
+| Section in `TEMPLATE.md` | Required | Notes |
+|--------------------------|----------|--------|
+| §0 Definition of Ready | Before large implementation | Clear requirements or explicit blockers |
+| Metadata + §1 summary | Yes | |
+| §2 sources, in/out scope, assumptions | Yes | Reduces scope misunderstandings |
+| §3 AC + §3.1 behavior (features) | Strongly recommended | Happy path, errors, edge cases |
+| §4 AC → Test | Yes* | *Spike/chore may be N/A with reason |
+| §5 non-functional | When relevant | |
+| §6 one block A/B/C/D | Yes | Delete unused blocks |
+| §7 Revision | When AC changes | Track updates / major pivots |
+| §8 context pack (rules + docs + skills) | Yes | AI knows what to read before coding |
+| §10 AI guidance (MUST / SHOULD / ASK) | Yes | |
+| §13 Definition of Done | Before MR | |
 
-| ID | Task Name | Priority | Status | File |
+## Task types
+
+**Feature / Bugfix / Refactor / Spike / Chore / Ops** — all use **`TEMPLATE.md`**. In **§6**, keep **one** block (A/B/C/D) and remove the others.
+
+## Dashboard (active tasks)
+
+| ID | Task name | Priority | Status | File |
 |:---|:---|:---:|:---:|:---|
-| 20260406 | Thiết lập workspace AL / operational docs | High | Done | `20260406-setup-personal-workspace.md` |
-| 20250405 | Triển khai Order API (mẫu) | High | In Progress | `20250405-order-api.md` |
+| 20260406 | Personal AL / operational workspace setup | High | Done | `20260406-setup-personal-workspace.md` |
+| 20250405 | Order API (sample) | High | In Progress | `20250405-order-api.md` |
 
-*(Cập nhật bảng khi đổi task.)*
+*(Update this table when tasks change.)*
 
-## Quy trình
+## Workflow
 
-1. Copy `TEMPLATE.md` → `YYYYMMDD-ten-task.md`.
-2. Điền metadata + các mục bắt buộc; xóa khối loại task không dùng.
-3. Cập nhật bảng Dashboard ở trên.
-4. Prompt AI: `@docs/current-task/YYYYMMDD-ten-task.md` + skill liên quan.
-5. Đóng task: Status = Done; có thể chuyển file sang thư mục `archive/` sau này nếu bạn muốn (tùy chọn).
+1. Copy `TEMPLATE.md` → `YYYYMMDD-task-name.md`.
+2. Fill metadata and required sections; delete unused §6 blocks.
+3. Update the Dashboard table above.
+4. Prompt AI: `@docs/current-task/YYYYMMDD-task-name.md` + relevant skill.
+5. Close task: set Status to **Done**; optionally move the file to `archive/` later.
 
-## Tham chiếu
+## References
 
-- Flow tổng: `../../WORKFLOW.md`
-- Rules (không chứa bản copy task): `../../rules/`
+- End-to-end flow: `../../WORKFLOW.md`
+- Rules (no task copies): `../../rules/`
+
+**Last updated:** 2026-04-08

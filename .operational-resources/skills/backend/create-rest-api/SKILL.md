@@ -21,9 +21,9 @@ Thêm endpoint REST mới: controller rõ ràng, DTO có validation, mã HTTP đ
 ## Output
 
 - Controller + DTO + test tối thiểu.
-- Cập nhật `docs/api/endpoint-list.md` và `current-api-changes.md` nếu đổi contract.
+- Cập nhật `docs/api/08-endpoint-list.md` và `docs/api/10-current-api-changes.md` nếu đổi contract.
 
 ## References
 
-- `docs/api/response-format.md`
+- `docs/api/03-response-format.md`
 - `rules/03-api-development.md`

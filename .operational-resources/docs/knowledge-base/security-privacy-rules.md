@@ -16,4 +16,4 @@ Quy tắc bắt buộc khi coding.
 ## 3. Error handling
 
 - Production: không trả full stack trace cho client.
-- Dùng mã lỗi chuẩn trong `error-codes.md` + `api/error-handling.md`.
+- Dùng mã lỗi chuẩn trong `error-codes.md` + `docs/api/05-error-handling.md`.

@@ -5,5 +5,5 @@
 - [ ] Validation + security + authz
 - [ ] Transaction boundary đúng
 - [ ] Tests pass (`./mvnw test`)
-- [ ] `endpoint-list.md` + `current-api-changes.md` cập nhật
+- [ ] `docs/api/08-endpoint-list.md` + `docs/api/10-current-api-changes.md` cập nhật
 - [ ] Không secret / không log nhạy cảm

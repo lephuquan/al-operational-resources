@@ -1,25 +1,48 @@
-# API Documentation (Personal Context)
+# API documentation (personal workspace standard)
 
-Bo tai lieu API ca nhan de chuan hoa contract khi lam viec voi Cursor/AI. File trong thu muc duoc danh so theo thu tu doc de tranh lech ngu canh.
+## TL;DR (VI)
 
-## Thu tu doc khuyen nghi
+- Đây là **bộ khung tiêu chuẩn** cho contract HTTP/JSON, dùng lại giữa các dự án.
+- Nội dung kỹ thuật viết **English**; mục TL;DR giúp bạn đọc nhanh.
+- Số thứ tự file cố định thứ tự đọc cho AI — **đổi nội dung theo dự án**, giữ cấu trúc.
 
-1. `01-README.md`
-2. `02-api-overview.md`
-3. `03-response-format.md`
-4. `04-authentication.md`
-5. `05-error-handling.md`
-6. `06-versioning.md`
-7. `07-pagination-filtering.md`
-8. `08-endpoint-list.md`
-9. `09-contract-template.md`
-10. `10-current-api-changes.md`
-11. `11-deprecation-policy.md`
+## What this folder is
 
-## Muc dich
+- A **reusable baseline** for REST/JSON APIs: envelopes, errors, auth patterns, versioning, pagination, and endpoint inventory.
+- **Project-specific values** (base path, auth provider, real routes) live in the same files but should be clearly marked or replaced when you copy this tree to another repo.
+- **Separation of concerns:** contract lives here; implementation steps live under `skills/backend/create-rest-api` and related skills.
 
-- Giup AI hieu chuan contract API truoc khi sinh code.
-- Tach ro phan contract (`docs/api/`) va phan cach trien khai (`skills/backend/create-rest-api`).
-- Lam base de cap nhat endpoint khi co thay doi.
+## Conventions
 
-**Last updated**: 2026-04-08
+| Convention | Rule |
+|------------|------|
+| Language | Body text in **English**; optional `TL;DR (VI)` at top of key files. |
+| Version in URL | Prefer `/api/v{major}/...` (see `02-api-overview.md`). |
+| File names | Numbered prefix `NN-` = reading order, not semantic version. |
+| Secrets | Never document real tokens/passwords; use placeholders only. |
+| Source of truth | If the team publishes OpenAPI/Swagger, link it from `12-openapi-source-of-truth.md` and keep markdown in sync. |
+
+## Recommended reading order
+
+1. `01-README.md` (this file)
+2. `02-api-overview.md` — global rules, headers, media types
+3. `03-response-format.md` — success/error envelopes and `meta`
+4. `04-authentication.md` — authn/authz patterns
+5. `05-error-handling.md` — codes, HTTP mapping, validation errors
+6. `06-versioning.md` — breaking vs non-breaking, URL strategy
+7. `07-pagination-filtering.md` — list endpoints
+8. `08-endpoint-list.md` — inventory table (fill per project)
+9. `09-contract-template.md` — copy per new endpoint
+10. `10-current-api-changes.md` — running changelog while work is in flight
+11. `11-deprecation-policy.md` — how to retire endpoints/versions
+12. `12-openapi-source-of-truth.md` — link to machine-readable spec
+
+## How to reuse in a new project
+
+1. Copy the entire `docs/api/` folder.
+2. In `02-api-overview.md`, set your **base path**, **default version**, and **content-type** rules.
+3. Replace sample rows in `08-endpoint-list.md` with real modules, or start from an empty template table.
+4. Keep `10-current-api-changes.md` as a **living log**; archive or trim when releasing.
+5. Point `12-openapi-source-of-truth.md` to your OpenAPI URL or repo path if available.
+
+**Last updated:** 2026-04-08

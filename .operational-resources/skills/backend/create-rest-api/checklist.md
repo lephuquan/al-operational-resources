@@ -6,4 +6,4 @@
 - [ ] Không logic nghiệp vụ nặng trong controller
 - [ ] Status code: 201 cho create, 204 nếu no body, 404 khi không tìm thấy resource
 - [ ] Test: ít nhất một test happy path + một validation/error case
-- [ ] Ghi endpoint vào `docs/api/endpoint-list.md`
+- [ ] Ghi endpoint vào `docs/api/08-endpoint-list.md`
