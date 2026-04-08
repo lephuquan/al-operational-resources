@@ -28,7 +28,7 @@
 | Location | Focus |
 |----------|--------|
 | `docs/api/` | HTTP contract, envelopes, versioning |
-| `docs/specs/` | Feature behavior and acceptance |
+| `docs/specs/README.md` | Feature behavior and acceptance (`feature-*.md`, copy from `TEMPLATE.md`) |
 | `docs/decisions/` | ADRs: `README.md` (index), `TEMPLATE.md`, `NNN-topic.md` |
 | `docs/setup/01-README.md` | How to run locally (numbered `01`…`05`) |
 | `skills/backend/*` | How to implement tasks step-by-step |

@@ -20,6 +20,7 @@ Một **chủ đề** (Redis, Kafka, OpenAPI, CI, OAuth2, …) thường cần *
 | Mục đích | Nơi đặt | Nội dung gợi ý |
 |----------|---------|----------------|
 | Quyết định kỹ thuật (tại sao chọn A không chọn B) | `docs/decisions/TEMPLATE.md` → `NNN-topic.md` | ADR ngắn; cập nhật `decisions/README.md` |
+| Đặc tả tính năng (business / AC) | `docs/specs/TEMPLATE.md` → `feature-<slug>.md` | Cập nhật bảng index trong `docs/specs/README.md` |
 | Playbook từng bước cho AI / lặp lại sau này | `skills/<nhóm>/<topic-slug>/SKILL.md` | Goal → Preconditions → Steps → References |
 | Checklist / ví dụ dài | `checklist.md`, `examples.md` cùng thư mục skill | Tùy độ dài |
 | Mã lỗi, contract API | `docs/knowledge-base/error-codes.md`, `docs/api/*` | Khi chủ đề đổi API hoặc lỗi |

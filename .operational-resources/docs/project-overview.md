@@ -1,48 +1,61 @@
-# Project Overview
+# Project overview
 
-## Thông tin chung
+## TL;DR (VI)
 
-- **Tên dự án**: al-operational-resources
-- **Mã dự án** (nếu có): [PROJ-XXX]
-- **Loại dự án**: Dự án lớn, phát triển dài hạn, làm việc nhóm
-- **Phương thức phát triển**: Agile / Scrum
+- Repo **`al-operational-resources`**: workspace **cá nhân** (rules + docs + skills) để làm việc với AI/Cursor, song song với code dự án thật trong `src/`.
+- Stack chính: **Spring Boot 3.x, Java 17, Maven** (khớp `AGENTS.md`).
+- Đọc tiếp: `docs/README.md` (thứ tự đọc), `architecture/01-README.md`.
 
-## Mục tiêu kinh doanh
+**Last updated:** 2026-04-08
 
-- [Mô tả mục tiêu chính của dự án — ví dụ: nền tảng vận hành, API nội bộ, tích hợp dịch vụ…]
-- **Giá trị cốt lõi**: [Tốc độ / Độ tin cậy / Trải nghiệm người dùng / Bảo mật — điền cụ thể]
+---
 
-## Phạm vi hiện tại (Scope)
+## Identity
 
-- Các module đang phát triển: Auth, User Management, [Order, Payment, Notification, Dashboard…]
-- Module đã hoàn thành: [liệt kê nếu có]
-- Module sắp tới: […]
+| Field | Value |
+|-------|--------|
+| **Repository** | `al-operational-resources` |
+| **Workspace type** | Personal operational resources: `.operational-resources/` (rules, docs, skills, notes) + application code under `src/` when present |
+| **Owner** | Phu Quan Le (personal; see `AGENTS.md`) |
+| **Team / org** | Optional: align with your team’s official process; this tree does not replace BA or shared wiki |
 
-## Tech stack chính (repo hiện tại)
+## Goals
 
-- **Frontend**: [chưa có trong repo — cập nhật nếu thêm SPA/monorepo]
-- **Backend**: Spring Boot 3.x, Java 17, Maven
-- **Database**: [PostgreSQL / H2 / … — cập nhật khi gắn persistence]
-- **Cache**: [Redis — nếu có]
-- **Authentication**: [JWT / session / OAuth — theo team]
-- **Deployment**: [Docker / K8s / VM — theo team]
-- **Testing**: JUnit 5, Spring Boot Test, Mockito
+- **Fast, safe delivery** with AI assistance (clear context, fewer wrong assumptions).
+- **Maintainable** Java/Spring code when the repo hosts application modules.
+- **No silent drift** from team conventions: confirm before changing shared standards.
 
-## Kiến trúc tổng quát
+## Scope (this repo)
 
-- **Layered / Clean boundaries** trên Spring (controller → service → repository)
-- **DDD / CQRS / Event-driven**: [mức độ áp dụng — ghi rõ khi có]
+- **In scope:** personal rules and documentation for AI; Spring Boot service code and tests as the project evolves; references to feature areas (Auth, Orders, …) documented under `docs/specs/`.
+- **Out of scope:** secrets in docs; replacing official team documentation or ticket systems.
 
-## Rủi ro & thách thức lớn nhất
+## Tech stack (current)
 
-1. [Ví dụ: performance khi scale]
-2. [Data consistency giữa các module/service]
-3. [Tích hợp bên thứ ba]
+| Layer | Choice |
+|-------|--------|
+| **Backend** | Spring Boot 3.x, Java 17, Maven |
+| **Persistence** | Spring Data JPA when used; DB via team/project choice (e.g. PostgreSQL, H2 for local) |
+| **Auth** | JWT + refresh (see `docs/decisions/` and `docs/api/`) — adjust to match team |
+| **Testing** | JUnit 5, Mockito, Spring Boot Test |
+| **Frontend** | Not in this repo by default; optional separate app or monorepo (see `docs/decisions/005-optional-frontend-nextjs.md`) |
+| **Deployment** | Docker / K8s / VM per team — only summarized in `docs/setup/04-deployment-overview.md` |
 
-## Stakeholders
+## Architecture (target)
 
-- Product Owner: […]
-- Tech Lead: […]
-- Team size: [số người]
+- **Layered** boundaries: controller → application/service → domain (as applicable) → persistence/infrastructure.
+- **Optional:** DDD-style domain modeling or event-driven modules when complexity warrants (record in `docs/decisions/`).
 
-**Last updated**: 06/04/2026
+## Main risks (to watch)
+
+1. **Context drift:** personal `docs/` out of sync with `src/` or team API — update docs in the same MR when behavior changes.
+2. **Scope creep:** personal rules overriding team norms without explicit agreement — default to team, then opt-in overrides locally.
+3. **Dependency / security:** new libraries or secrets — follow `rules/` and never commit secrets.
+
+## Related documents
+
+- Reading order and folder map: `docs/README.md`
+- Backend architecture: `docs/architecture/01-README.md`
+- API contract: `docs/api/01-README.md`
+- Local run: `docs/setup/01-README.md`
+- Task format: `docs/current-task/README.md`

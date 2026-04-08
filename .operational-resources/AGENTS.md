@@ -47,6 +47,7 @@ Owner: Phu Quan Le (personal only)
 - Personal docs: `.operational-resources/docs/`
 - Backend architecture (numbered): `.operational-resources/docs/architecture/01-README.md`
 - ADRs (index + template): `.operational-resources/docs/decisions/README.md`
+- Feature specs (index): `.operational-resources/docs/specs/README.md`
 - Local run & setup (no secrets): `.operational-resources/docs/setup/01-README.md`
 - Skills: `.operational-resources/skills/`
 - Notes: `.operational-resources/notes/`

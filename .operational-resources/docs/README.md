@@ -1,35 +1,39 @@
-# Personal Docs - AI Context Repository
+# Personal docs — AI context (`docs/`)
 
-Đây là bộ tài liệu **cá nhân** của Phú Quân Lê, được ưu tiên cao khi Cursor (hoặc các AI agent khác) làm việc với dự án này.
+## TL;DR (VI)
 
-**Vị trí thực tế**: `.operational-resources/docs/` (tương đương vai trò `.personal-ai/docs/` trong tài liệu gốc).
+- Đây là **điểm vào** cho toàn bộ tài liệu trong `.operational-resources/docs/` (ngữ cảnh cá nhân + AI).
+- **`docs/` ở root repo** (nếu team có) là chuẩn chung; **không nhầm** với thư mục này.
+- Nội dung chính **English**; mục này để bạn đọc nhanh.
 
-## Mục đích của thư mục `docs/`
+**Entry point:** this file lists **recommended reading order** for Cursor and humans. Path on disk: `.operational-resources/docs/`.
 
-- Cung cấp **ngữ cảnh, kiến trúc, business logic, và kiến thức dự án** cho AI.
-- Giúp AI hiểu rõ lý do đằng sau các quyết định kỹ thuật.
-- Làm tài liệu tham khảo nhanh cho cả AI và con người.
+## Purpose of `docs/`
 
-## Thứ tự đọc khuyến nghị cho AI (Cursor)
+- Provide **context** for implementation: architecture, API contract, specs, setup, decisions, knowledge base.
+- Help AI apply **your** priorities while respecting team norms when they exist.
+- Stay **separate** from playbooks in `skills/` (how-to) and ephemeral work in `current-task/`.
 
-1. `project-overview.md` — tổng quan dự án
-2. `architecture/01-README.md` → `architecture/02-system-overview.md` — kiến trúc BE (đánh số `01`…`09`)
-3. `setup/01-README.md` → `02`…`05` — chạy local, biến môi trường (tên), triển khai tóm tắt (`01`…`05`)
-4. `current-task/` — task đang làm (`README.md` + `TEMPLATE.md`; nội dung template English, có `TL;DR (VI)`)
-5. `api/` (bắt đầu từ `api/01-README.md`) + `specs/` — contract API và đặc tả tính năng
-6. `decisions/README.md` — ADR index + `TEMPLATE.md` — lý do kiến trúc và trade-off
-7. `knowledge-base/` — pattern và kinh nghiệm tích lũy
+## Recommended reading order (AI)
 
-## Hướng dẫn sử dụng khi prompt Cursor
+1. `project-overview.md` — project intent and stack (start here)
+2. `architecture/01-README.md` → `architecture/02-system-overview.md` — backend shape (`01`…`09`)
+3. `setup/01-README.md` → `02`…`05` — local run, env names, deploy summary
+4. `current-task/` — active task (`README.md` + `TEMPLATE.md`; English template + `TL;DR (VI)`)
+5. `api/` from `api/01-README.md` + `specs/README.md` — HTTP contract and feature behavior (`specs/TEMPLATE.md` for new features)
+6. `decisions/README.md` — ADR index + `TEMPLATE.md`
+7. `knowledge-base/` — patterns, naming, errors, troubleshooting
+
+## Example prompts
 
 - "Use full context from `.operational-resources/docs/`"
 - "Read `project-overview.md` and `architecture/02-system-overview.md` first"
-- "Refer to `current-task/YYYYMMDD-xxx.md` for the active task"
+- "Active task: `docs/current-task/YYYYMMDD-task-name.md`"
 
-## Lưu ý quan trọng
+## Important notes
 
-- Nội dung trong thư mục này được ưu tiên **cao hơn** `docs/` chính thức của team **cho luồng làm việc cá nhân**; khi merge/PR cần **đối chiếu** với chuẩn team.
-- Cập nhật thường xuyên để AI luôn có thông tin mới nhất.
-- Khi task hoàn thành, nội dung quan trọng có thể **sync** sang docs chung của dự án (có chủ đích).
+- **This folder** (under `.operational-resources/`) is **personal** and optimized for your AI workflow. **Official product or team documentation** usually lives elsewhere (e.g. `docs/` at the **repository root** for the shared codebase, Confluence, wiki). Before merging to shared branches, **reconcile** with team standards.
+- Update these files when behavior or contracts change.
+- When a task completes, **promote** durable facts into `specs/`, `api/`, `decisions/`, or team docs **on purpose**.
 
-**Last updated**: 08/04/2026
+**Last updated:** 2026-04-08
