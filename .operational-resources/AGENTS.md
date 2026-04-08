@@ -41,6 +41,7 @@ Owner: Phu Quan Le (personal only)
 5. Team docs/rules for cross-check and alignment
 
 ## 7) References
+- Task → implement → test → review → MR: `.operational-resources/WORKFLOW.md`
 - Rules: `.operational-resources/rules/`
 - Personal docs: `.operational-resources/docs/`
 - Skills: `.operational-resources/skills/`

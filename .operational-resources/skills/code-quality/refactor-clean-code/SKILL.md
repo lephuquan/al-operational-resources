@@ -14,4 +14,4 @@ Refactor an toàn: cùng hành vi observable, test hồi quy, bước nhỏ.
 
 ## References
 
-- `docs/current-task/template-refactor.md`
+- `docs/current-task/TEMPLATE.md` (khối refactor)

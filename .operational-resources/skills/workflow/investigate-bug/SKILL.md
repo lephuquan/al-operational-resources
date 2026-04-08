@@ -14,4 +14,4 @@
 
 ## References
 
-- `docs/current-task/template-bugfix.md`
+- `docs/current-task/TEMPLATE.md` (khối bugfix)

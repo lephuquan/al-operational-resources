@@ -1,29 +1,52 @@
-# Current Tasks Dashboard
+# Current Tasks — nguồn duy nhất (single source of truth)
 
-Đây là nơi quản lý công việc đang thực hiện. AI nên đọc file này trước để biết task nào **ưu tiên cao nhất**.
+## Vị trí
 
-## 1. Task đang thực hiện (Active)
+- **Chỉ dùng thư mục này:** `.operational-resources/docs/current-task/`
+- **Không** tạo file task song song trong `rules/` — mọi task nằm ở đây để tránh nhân đôi và lệch bản.
 
-| ID | Task Name | Priority | Status | Assigned File |
+## Quy ước đặt tên
+
+- `YYYYMMDD-mo-ta-ngan.md` — ví dụ: `20260408-order-create-api.md`
+- Một task = một file; ID trong metadata trùng với prefix ngày + slug.
+
+## Chuẩn bắt buộc cho mọi task
+
+Khi tạo task mới, copy **`TEMPLATE.md`** và điền đủ tối thiểu:
+
+| Mục | Bắt buộc | Ghi chú |
+|-----|----------|---------|
+| Metadata (loại, ticket, trạng thái) | Có | |
+| Tóm tắt một dòng | Có | |
+| Nguồn & phạm vi | Có | |
+| AC hoặc lý do không có AC | Có | |
+| AC → Test (hoặc N/A có lý do) | Có* | *Spike/chore tài liệu có thể ghi N/A |
+| Một khối loại task (A/B/C/D) | Có | Xóa khối không dùng |
+| Hướng dẫn cho AI | Ít nhất 1 dòng | Tránh AL đoán sai |
+| Definition of Done | Tick trước MR | |
+
+## Loại task khác nhau
+
+**Feature / Bugfix / Refactor / Spike / Chore / Ops** — dùng chung **`TEMPLATE.md`**: ở **§5** có khối A/B/C/D; **chỉ giữ một khối** tương ứng, xóa các khối còn lại.
+
+## Dashboard (task đang chạy)
+
+| ID | Task Name | Priority | Status | File |
 |:---|:---|:---:|:---:|:---|
 | 20260406 | Thiết lập workspace AL / operational docs | High | Done | `20260406-setup-personal-workspace.md` |
 | 20250405 | Triển khai Order API (mẫu) | High | In Progress | `20250405-order-api.md` |
 
-*(Cập nhật bảng khi đổi task; có thể thêm cột Owner nếu cần.)*
+*(Cập nhật bảng khi đổi task.)*
 
-## 2. Quy trình làm việc (Workflow)
+## Quy trình
 
-1. **Chọn template**: Feature / Bugfix / Refactor — dùng `template-*.md` trong thư mục này.
-2. **Tạo file task**: `YYYYMMDD-ten-task.md`.
-3. **Cập nhật README**: thêm dòng vào bảng Active.
-4. **Thực thi với AI**: "Dựa trên file `docs/current-task/<file>.md`, làm bước tiếp theo trong checklist."
-5. **Đóng task**: đánh dấu Done / chuyển sang archive (tùy bạn).
+1. Copy `TEMPLATE.md` → `YYYYMMDD-ten-task.md`.
+2. Điền metadata + các mục bắt buộc; xóa khối loại task không dùng.
+3. Cập nhật bảng Dashboard ở trên.
+4. Prompt AI: `@docs/current-task/YYYYMMDD-ten-task.md` + skill liên quan.
+5. Đóng task: Status = Done; có thể chuyển file sang thư mục `archive/` sau này nếu bạn muốn (tùy chọn).
 
-## 3. Lưu ý cho AI
+## Tham chiếu
 
-- Tuân thủ `docs/knowledge-base/` khi thực hiện task.
-- Task kéo dài > ~3 phiên chat: tóm tắt tiến độ vào file task để tránh mất context.
-
-## 4. Đường dẫn tham chiếu
-
-Dùng prefix: `.operational-resources/docs/...` (không dùng `.personal-ai/`).
+- Flow tổng: `../../WORKFLOW.md`
+- Rules (không chứa bản copy task): `../../rules/`

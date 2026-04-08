@@ -12,7 +12,7 @@ Cursor phải đọc file này **đầu tiên** và ưu tiên cao nhất so vớ
 - Ưu tiên đọc toàn bộ nội dung trong `.operational-resources/` trước khi đọc `.cursor/`, `docs/` chính thức của team, hoặc `AGENTS.md` của team (nếu có).
 - Khi có conflict giữa team rules và personal rules → áp dụng personal rules cho luồng làm việc local, sau đó **báo cho tôi** để đồng bộ / điều chỉnh trước khi merge nếu cần.
 - Cho phép **fast iteration** khi dev, nhưng trước khi commit/PR phải **clean code** và tuân thủ standards đã thống nhất.
-- **Luôn cập nhật** file `current-task-*.md` trong `rules/` (hoặc tạo file mới theo task) **trước khi** bắt đầu task mới hoặc khi đổi hướng task đáng kể.
+- **Luôn cập nhật** file task trong **`docs/current-task/YYYYMMDD-ten-task.md`** (một nguồn duy nhất — không tạo bản song song trong `rules/`) **trước khi** bắt đầu task mới hoặc khi đổi hướng task đáng kể.
 
 ## Personal working style
 
