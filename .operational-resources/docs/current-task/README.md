@@ -14,20 +14,23 @@
 
 Khi tạo task mới, copy **`TEMPLATE.md`** và điền đủ tối thiểu:
 
-| Mục | Bắt buộc | Ghi chú |
-|-----|----------|---------|
-| Metadata (loại, ticket, trạng thái) | Có | |
-| Tóm tắt một dòng | Có | |
-| Nguồn & phạm vi | Có | |
-| AC hoặc lý do không có AC | Có | |
-| AC → Test (hoặc N/A có lý do) | Có* | *Spike/chore tài liệu có thể ghi N/A |
-| Một khối loại task (A/B/C/D) | Có | Xóa khối không dùng |
-| Hướng dẫn cho AI | Ít nhất 1 dòng | Tránh AL đoán sai |
-| Definition of Done | Tick trước MR | |
+| Mục (trong `TEMPLATE.md`) | Bắt buộc | Ghi chú |
+|---------------------------|----------|---------|
+| §0 Definition of Ready | Tick trước khi code lớn | Đảm bảo đã làm rõ yêu cầu hoặc ghi blocker |
+| Metadata + §1 tóm tắt | Có | |
+| §2 nguồn, in/out scope, giả định | Có | Giảm hiểu nhầm khi scope đổi |
+| §3 AC + §3.1 hành vi (feature) | Khuyến nghị mạnh | Happy path + lỗi + edge |
+| §4 AC → Test | Có* | *Spike/chore có thể N/A |
+| §5 non-functional (khi cần) | Tùy | |
+| §6 một khối A/B/C/D | Có | Xóa khối không dùng |
+| §7 Revision | Ghi khi AC thay đổi | Theo dõi cập nhật / thay đổi lớn |
+| §8 gói ngữ cảnh rules + docs + skills | Có | AL biết đọc đâu trước khi code |
+| §10 hướng dẫn AI (MUST/SHOULD/ASK) | Có | |
+| §13 Definition of Done | Tick trước MR | |
 
 ## Loại task khác nhau
 
-**Feature / Bugfix / Refactor / Spike / Chore / Ops** — dùng chung **`TEMPLATE.md`**: ở **§5** có khối A/B/C/D; **chỉ giữ một khối** tương ứng, xóa các khối còn lại.
+**Feature / Bugfix / Refactor / Spike / Chore / Ops** — dùng chung **`TEMPLATE.md`**: ở **§6** có khối A/B/C/D; **chỉ giữ một khối** tương ứng, xóa các khối còn lại.
 
 ## Dashboard (task đang chạy)
 

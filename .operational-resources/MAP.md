@@ -1,0 +1,119 @@
+# Bản đồ `.operational-resources/` (Directory map)
+
+Tài liệu này mô tả **cấu trúc thư mục**, **nội dung chính** và **mục đích** từng phần — để bạn và AI định vị nhanh. Chi tiết từng skill nằm trong `skills/README.md`.
+
+**Đường gốc (trong repo):** `.operational-resources/`
+
+---
+
+## Sơ đồ tổng quan
+
+```text
+.operational-resources/
+├── AGENTS.md                 # Ngữ cảnh & cách làm việc với AI (ưu tiên đọc)
+├── MAP.md                    # (file này) Bản đồ thư mục
+├── WORKFLOW.md               # Task → code → test → review → MR
+├── README-GIT-LOCAL.md       # Ẩn/hiện thư mục này khỏi Git local
+├── rules/                    # Quy tắc cá nhân (Cursor / AI)
+├── docs/                     # Tài liệu ngữ cảnh dự án (ưu tiên đọc sau rules)
+│   └── setup/                # Chạy local, cấu hình, triển khai (xem bảng dưới)
+├── skills/                   # Playbook theo từng việc (SKILL + checklist)
+└── notes/                    # Ghi chú cá nhân (không thay rules/docs)
+```
+
+---
+
+## File ở gốc
+
+| File | Mục đích |
+|------|----------|
+| **`AGENTS.md`** | “Khung” làm việc với AI: nguyên tắc, thứ tự ưu tiên đọc `rules/` → `docs/`, hành vi cấm. |
+| **`MAP.md`** | Bản đồ thư mục (file này). |
+| **`WORKFLOW.md`** | Quy trình end-to-end từ task ticket đến MR; liên kết `docs/current-task/TEMPLATE.md`. |
+| **`README-GIT-LOCAL.md`** | Hướng dẫn dùng `.git/info/exclude` để không track hoặc track thư mục này trên máy bạn. |
+
+---
+
+## `rules/` — Quy tắc cá nhân
+
+| Nội dung | Mục đích |
+|----------|----------|
+| **`00-personal-priority.md`** | Ưu tiên cao nhất; đọc trước; trỏ task tập trung tại `docs/current-task/`. |
+| **`01`–`08-*.md`** | Tổng quan dự án, coding standards, API, frontend/backend, security, testing, review checklist. |
+| **`README.md`** | Giải thích: **không** đặt file task trong `rules/`; task chỉ ở `docs/current-task/`. |
+
+**Lưu ý:** Không chứa file task `current-task-*.md` — đã loại bỏ để tránh trùng với `docs/current-task/`.
+
+---
+
+## `docs/` — Tài liệu ngữ cảnh dự án
+
+| Thư mục / file | Mục đích |
+|----------------|----------|
+| **`README.md`** | Thứ tự đọc khuyến nghị cho AI. |
+| **`setup/`** | Chạy local, cấu hình, tổng quan triển khai; **hướng dẫn triển khai cấu trúc** `setup/` cho dự án — xem `setup/README.md`. Không chứa secret. |
+| **`project-overview.md`** | Tổng quan dự án, stack, scope. |
+| **`architecture/`** | Kiến trúc: system overview, tech-stack, DB, cấu trúc thư mục code. |
+| **`decisions/`** | ADR — quyết định kỹ thuật (tại sao chọn A không chọn B). |
+| **`api/`** | Chuẩn API cá nhân: overview, format, auth, versioning, endpoint, lỗi, thay đổi đang làm. |
+| **`specs/`** | Đặc tả tính năng (feature-auth, feature-order, …). |
+| **`knowledge-base/`** | Tri thức: prompt, naming, patterns, error codes, security, troubleshooting. |
+| **`current-task/`** | **Nguồn duy nhất** cho task đang làm: `TEMPLATE.md`, `README.md` (dashboard), file `YYYYMMDD-*.md`. |
+
+---
+
+## `skills/` — Playbook (cách làm từng việc)
+
+| Thư mục | Mục đích |
+|---------|----------|
+| **`README.md`** | Mục lục toàn bộ skill theo nhóm (backend, testing, security, …). |
+| **`HOW-TO-ADD-TOPIC.md`** | Cách thêm skill/topic mới; code ở `src/`, tài liệu ở đây. |
+| **`backend/`** | REST API, service layer, JPA, upload, pagination, … |
+| **`debugging/`** | Stacktrace, lỗi local, sự cố production. |
+| **`architecture/`** | Thiết kế feature, review kiến trúc. |
+| **`code-quality/`** | Review code, smell, refactor. |
+| **`testing/`** | Unit, integration, test data. |
+| **`database/`** | Schema, migration, tối ưu query. |
+| **`security/`** | Endpoint, validation, security review. |
+| **`integration/`** | HTTP client, email, payment, webhook, queue. |
+| **`performance/`** | Response, cache, query, memory. |
+| **`observability/`** | Log, metrics, tracing, đọc log. |
+| **`error-handling/`** | global exception, format lỗi, map HTTP. |
+| **`devops/`** | Docker, env, logging, health. |
+| **`workflow/`** | Implement feature, PR, investigate bug. |
+
+Mỗi skill thường có **`SKILL.md`**; một số có **`checklist.md`** hoặc **`examples.md`**.
+
+---
+
+## `notes/` — Ghi chú cá nhân
+
+| Nội dung | Mục đích |
+|----------|----------|
+| **`README.md`** | Phân biệt: rules = luật, skills = quy trình, docs = tài liệu, **notes = trí nhớ** (insight, bug, research). |
+| **`daily/`** | Nhật ký ngày. |
+| **`debugging/`** | Lịch sử bug. |
+| **`backend/`**, **`architecture/`**, **`research/`**, **`quick-reference/`** | Ghi chú theo chủ đề. |
+
+**Không** dùng `notes/` thay cho `docs/api` hoặc `rules` cho chuẩn chung.
+
+---
+
+## Thứ tự đọc gợi ý cho AI (tóm tắt)
+
+1. `AGENTS.md` → `rules/00-personal-priority.md`  
+2. Các `rules/*.md` liên quan task  
+3. `docs/project-overview.md` → `docs/architecture/system-overview.md`  
+4. `docs/setup/` khi cần chạy local, cấu hình, hoặc ngữ cảnh triển khai  
+5. `docs/current-task/<file>.md` (task đang làm)  
+6. `skills/...` theo bảng trong task file  
+7. `docs/specs/`, `docs/api/`, `knowledge-base/` khi cần  
+
+---
+
+## Quan hệ với code thật (`src/`)
+
+- **`.operational-resources/`** chứa **ngữ cảnh & quy trình** — không thay cho mã trong `src/`, `pom.xml`, CI.  
+- Triển khai chạy được vẫn nằm ở **repo chính**; đồng bộ mô tả khi đổi contract hoặc kiến trúc.
+
+**Last updated:** 2026-04-08

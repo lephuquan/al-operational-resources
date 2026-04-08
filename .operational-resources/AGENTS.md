@@ -41,8 +41,10 @@ Owner: Phu Quan Le (personal only)
 5. Team docs/rules for cross-check and alignment
 
 ## 7) References
+- Directory map (cấu trúc thư mục): `.operational-resources/MAP.md`
 - Task → implement → test → review → MR: `.operational-resources/WORKFLOW.md`
 - Rules: `.operational-resources/rules/`
 - Personal docs: `.operational-resources/docs/`
+- Local run & setup (no secrets): `.operational-resources/docs/setup/README.md`
 - Skills: `.operational-resources/skills/`
 - Notes: `.operational-resources/notes/`

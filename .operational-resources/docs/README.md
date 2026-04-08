@@ -14,10 +14,11 @@
 
 1. `project-overview.md` — tổng quan dự án
 2. `architecture/system-overview.md` — kiến trúc tổng thể
-3. `current-task/` — task đang làm hiện tại
-4. `api/` + `specs/` — chi tiết API và tính năng
-5. `decisions/` — lý do kiến trúc và trade-off
-6. `knowledge-base/` — pattern và kinh nghiệm tích lũy
+3. `setup/` — chạy local, biến môi trường (tên), triển khai tóm tắt; đọc sớm khi task cần chạy app hoặc đổi cấu hình (`setup/README.md` là mục lục)
+4. `current-task/` — task đang làm hiện tại
+5. `api/` + `specs/` — chi tiết API và tính năng
+6. `decisions/` — lý do kiến trúc và trade-off
+7. `knowledge-base/` — pattern và kinh nghiệm tích lũy
 
 ## Hướng dẫn sử dụng khi prompt Cursor
 
@@ -31,4 +32,4 @@
 - Cập nhật thường xuyên để AI luôn có thông tin mới nhất.
 - Khi task hoàn thành, nội dung quan trọng có thể **sync** sang docs chung của dự án (có chủ đích).
 
-**Last updated**: 06/04/2026
+**Last updated**: 08/04/2026
