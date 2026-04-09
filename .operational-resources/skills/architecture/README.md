@@ -23,6 +23,7 @@
 | Path | Role |
 |------|------|
 | `*/SKILL.md` | Playbook (required) |
+| `design-feature-architecture/README.md` | Entry guide: what the folder includes and usage order |
 | `design-feature-architecture/examples.md` | Sample design note (no secrets) |
 | `*/checklist.md` | Quick verification lists |
 

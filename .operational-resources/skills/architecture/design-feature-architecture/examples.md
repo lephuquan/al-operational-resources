@@ -24,4 +24,61 @@ Non-secret sketches. Replace names and IDs with project-specific values.
 - DB: no new tables; optional materialized view later if NFR requires
 ```
 
+## Example C — Webhook ingestion (idempotent)
+
+```markdown
+## Feature: Payment webhook ingestion
+
+- API: `POST /api/v1/webhooks/payment` with signature header
+- Flow: verify signature → deduplicate by eventId → persist event log → update payment state
+- Failure:
+  - invalid signature → `401`
+  - duplicate eventId → `200` (idempotent no-op)
+  - transient DB error → retry by provider + internal alert
+- DB:
+  - `payment_webhook_events(event_id unique, payload_hash, received_at)`
+  - index on `(provider, received_at)` for troubleshooting
+- Transaction:
+  - event log insert + state transition in one boundary when possible
+```
+
+## Reusable output template (paste into task file)
+
+```markdown
+## Design note
+
+### Scope
+- In scope:
+- Out of scope:
+
+### Boundaries
+- Controller:
+- Service/Application:
+- Domain/Repository:
+
+### API sketch
+- Endpoint(s):
+- Request validation:
+- Response shape:
+- Error semantics:
+
+### Data impact
+- Schema/migration:
+- Index/constraint:
+
+### Cross-cutting
+- Security:
+- Observability:
+- Performance:
+- Integrations:
+
+### Risks and mitigations
+1. Risk:
+   Mitigation:
+2. Risk:
+   Mitigation:
+3. Risk:
+   Mitigation:
+```
+
 **Last updated:** 2026-04-08
