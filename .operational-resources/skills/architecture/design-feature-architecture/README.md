@@ -2,51 +2,51 @@
 
 ## TL;DR (VI)
 
-- Thư mục này giúp bạn **thiết kế feature trước khi code** theo thứ tự rõ ràng.
-- Bắt đầu từ `SKILL.md`, kiểm bằng `checklist.md`, tham chiếu/copy từ `examples.md`.
-- Đầu ra cuối cùng là design note (và ADR nếu cần) để chuyển sang implement an toàn.
+- Thư mục này dùng để **thiết kế feature trước khi code** theo trình tự rõ ràng.
+- Đi theo thứ tự: `SKILL.md` -> `examples.md` -> `checklist.md`.
+- Đầu ra cuối: một **design note** đủ để implement, và **ADR** khi quyết định có tính dài hạn.
 
-## This folder contains what
+## Thư mục này chứa gì
 
-| File | Purpose |
-|------|---------|
-| `SKILL.md` | Main playbook: what to do, in which order, and what output is required |
-| `checklist.md` | Quality gate before coding starts |
-| `examples.md` | Reusable examples and a paste-ready design note template |
-| `README.md` | This index: how to use the folder end-to-end |
+| File | Mục đích |
+|------|----------|
+| `SKILL.md` | Playbook chính: làm gì, theo thứ tự nào, đầu ra tối thiểu là gì |
+| `examples.md` | Ví dụ tham chiếu + mẫu dán nhanh (paste-ready template) |
+| `checklist.md` | Quality gate để tự soát trước khi chuyển sang code |
+| `README.md` | Index/hướng dẫn sử dụng end-to-end |
 
-## When to use this skill
+## Khi nào dùng skill này
 
-Use this folder when:
+Nên dùng khi:
 
-- You are starting a **new feature** or major extension
-- The change affects **API + data + transactions + integrations**
-- You need explicit trade-offs and risk handling before implementation
+- Bắt đầu **new feature** hoặc mở rộng lớn (major extension)
+- Thay đổi chạm nhiều lớp: **API + data + transactions + integrations**
+- Cần ghi rõ trade-off trước khi code để tránh rework
 
-Avoid overusing for tiny CRUD-only changes with no architectural impact.
+Không cần dùng quá nặng cho CRUD nhỏ, ít impact kiến trúc.
 
-## Recommended order
+## Thứ tự khuyến nghị
 
-1. Read `SKILL.md` and draft design decisions.
-2. Fill design note in active task file (`docs/current-task/*.md`) using structure from `examples.md`.
-3. Run through `checklist.md` and mark unresolved items.
-4. If decisions are significant/long-lived, create ADR via `docs/decisions/TEMPLATE.md`.
-5. Hand off to implementation with a clear "Ready" or "Blocked" status.
+1. Đọc `SKILL.md` để chốt scope, boundaries, assumptions.
+2. Dùng khung trong `examples.md` để soạn design note cho task hiện tại (`docs/current-task/*.md`).
+3. Chạy `checklist.md` để phát hiện lỗ hổng trước khi implement.
+4. Nếu quyết định quan trọng/khó đảo ngược, tạo ADR từ `docs/decisions/TEMPLATE.md`.
+5. Handoff sang implementation với trạng thái rõ ràng: **Ready** hoặc **Blocked**.
 
-## Expected output package
+## Gói output kỳ vọng
 
-At minimum:
+Bắt buộc có:
 
-- Scope and non-goals
-- Layer boundaries and API behavior
-- Data impact (migration/index/constraints)
+- Scope và non-goals
+- Layer boundaries + API behavior
+- Data impact (migration/index/constraint)
 - Top risks + mitigations
 
-Optional (when needed):
+Tùy trường hợp:
 
-- ADR file + updated index in `docs/decisions/README.md`
+- ADR file + cập nhật index tại `docs/decisions/README.md`
 
-## Upstream references (read-first docs)
+## Tài liệu cần đọc trước (read-first)
 
 - `docs/architecture/01-README.md`
 - `docs/architecture/02-system-overview.md`
@@ -55,8 +55,8 @@ Optional (when needed):
 - `docs/architecture/08-transactions-and-consistency.md`
 - `docs/architecture/09-security-architecture-backend.md`
 
-## Handoff note
+## Handoff sang triển khai
 
-If this folder produces a clear design note and no critical checklist blockers, proceed to implementation skill:
+Khi design note đã rõ và checklist không còn blocker nghiêm trọng, chuyển sang:
 
 - `skills/workflow/implement-feature/SKILL.md`

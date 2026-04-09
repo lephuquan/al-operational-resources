@@ -1,8 +1,8 @@
 # Examples: Feature design notes
 
-Non-secret sketches. Replace names and IDs with project-specific values.
+Các mẫu phác thảo không chứa secret. Hãy thay tên/ID theo dự án thực tế.
 
-## Example A — Order checkout (markdown snippet)
+## Example A — Order checkout (mẫu markdown)
 
 ```markdown
 ## Feature: Order checkout
@@ -42,7 +42,7 @@ Non-secret sketches. Replace names and IDs with project-specific values.
   - event log insert + state transition in one boundary when possible
 ```
 
-## Reusable output template (paste into task file)
+## Mẫu output tái sử dụng (dán vào task file)
 
 ```markdown
 ## Design note
@@ -80,5 +80,10 @@ Non-secret sketches. Replace names and IDs with project-specific values.
 3. Risk:
    Mitigation:
 ```
+
+Gợi ý dùng nhanh:
+- Với feature đơn giản: dùng Example A/B rồi rút gọn.
+- Với flow tích hợp ngoài hệ thống: dùng Example C để tránh quên idempotency/retry.
+- Luôn giữ output ngắn gọn nhưng đủ quyết định để chuyển qua implement.
 
 **Last updated:** 2026-04-08

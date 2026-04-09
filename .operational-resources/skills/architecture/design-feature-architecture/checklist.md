@@ -1,53 +1,53 @@
 # Checklist: Design Feature Architecture
 
-Use before implementation starts. Skip rows that do not apply.
+Dùng trước khi bắt đầu implement. Mục nào không áp dụng thì có thể bỏ qua.
 
 ## Exit criteria
 
-- [ ] The design is understandable by another engineer without live explanation
-- [ ] Open questions are explicitly listed (not hidden in assumptions)
-- [ ] Ready-for-implementation status is stated: **Ready** / **Blocked**
+- [ ] Thiết kế đủ rõ để một engineer khác đọc và hiểu mà không cần giải thích trực tiếp
+- [ ] Open questions được liệt kê tường minh (không ẩn trong assumptions)
+- [ ] Có trạng thái rõ: **Ready** / **Blocked**
 
 ## Inputs
 
-- [ ] Spec or task file read; scope and non-goals are clear
-- [ ] `docs/architecture/01-README.md` reading order understood
-- [ ] Stakeholder/owner for unresolved trade-offs identified
+- [ ] Đã đọc spec hoặc task file; scope và non-goals rõ ràng
+- [ ] Đã nắm thứ tự đọc `docs/architecture/01-README.md`
+- [ ] Xác định được stakeholder/owner cho trade-offs còn mở
 
 ## Structure
 
-- [ ] Feature mapped to layers per `06-backend-layers-and-dependencies.md`
-- [ ] Packages/paths align with `04-folder-structure.md`
-- [ ] Async or external calls align with `07-integrations.md` (if any)
+- [ ] Feature đã map đúng layers theo `06-backend-layers-and-dependencies.md`
+- [ ] Packages/paths bám `04-folder-structure.md`
+- [ ] Async flow hoặc external calls bám `07-integrations.md` (nếu có)
 
 ## Contract & behavior
 
-- [ ] Main request/response and validation noted (link or sketch in task)
-- [ ] Error semantics consistent with `docs/api/` and project error catalog (if any)
-- [ ] Idempotency / transactions considered per `08-transactions-and-consistency.md` when needed
-- [ ] Backward compatibility and versioning impact checked (if API is public/shared)
+- [ ] Main request/response và validation đã ghi rõ (link hoặc sketch trong task)
+- [ ] Error semantics nhất quán với `docs/api/` và error catalog của dự án (nếu có)
+- [ ] Đã xem xét idempotency / transactions theo `08-transactions-and-consistency.md` khi cần
+- [ ] Đã kiểm tra backward compatibility và versioning impact (nếu API public/shared)
 
 ## Data
 
-- [ ] Schema/migration impact listed (`05-database-design.md`)
-- [ ] Indexes/constraints for hot paths considered
-- [ ] Read/write amplification risk noted for expected traffic profile
+- [ ] Đã liệt kê schema/migration impact (`05-database-design.md`)
+- [ ] Đã cân nhắc indexes/constraints cho hot paths
+- [ ] Đã ghi rủi ro read/write amplification theo traffic profile dự kiến
 
 ## Cross-cutting
 
-- [ ] Security touchpoints per `09-security-architecture-backend.md`
-- [ ] Observability (logs/metrics/traces) for new flows
-- [ ] Failure and retry strategy documented for external integrations (if any)
+- [ ] Security touchpoints bám `09-security-architecture-backend.md`
+- [ ] Có observability (logs/metrics/traces) cho flow mới
+- [ ] Có mô tả failure/retry strategy cho external integrations (nếu có)
 
 ## Decisions
 
-- [ ] ADR filed and index updated if the decision is significant (`docs/decisions/`)
-- [ ] Top 3 risks + mitigations included in design note
+- [ ] Đã tạo ADR và cập nhật index nếu decision đủ quan trọng (`docs/decisions/`)
+- [ ] Đã có top 3 risks + mitigations trong design note
 
 ## Handoff to implementation
 
-- [ ] Coding sequence proposed (suggested first PR slice)
-- [ ] Test strategy outlined (unit/integration boundaries)
-- [ ] Out-of-scope items explicitly parked for later
+- [ ] Đề xuất coding sequence (gợi ý first PR slice)
+- [ ] Phác test strategy (ranh giới unit/integration)
+- [ ] Các mục out-of-scope được park rõ ràng cho giai đoạn sau
 
 **Last updated:** 2026-04-08

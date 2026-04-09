@@ -25,6 +25,8 @@
 | `*/SKILL.md` | Playbook (required) |
 | `design-feature-architecture/README.md` | Entry guide: what the folder includes and usage order |
 | `design-feature-architecture/examples.md` | Sample design note (no secrets) |
+| `review-project-architecture/README.md` | Entry guide: review scope, order, expected output |
+| `review-project-architecture/examples.md` | Sample review reports + reusable skeleton |
 | `*/checklist.md` | Quick verification lists |
 
 **Last updated:** 2026-04-08
