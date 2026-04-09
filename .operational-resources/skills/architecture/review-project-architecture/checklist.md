@@ -1,11 +1,11 @@
 # Checklist: Review Project Architecture
 
-Quick pass before writing the narrative (strengths / risks / P0–P2 actions).
+Checklist nhanh trước khi chốt narrative (strengths / risks / P0-P2 actions).
 
 ## Review setup
 
-- [ ] Review scope defined (whole repo / module / changed area)
-- [ ] Timebox defined (quick scan vs deep review)
+- [ ] Review scope đã chốt (whole repo / module / changed area)
+- [ ] Timebox đã chốt (quick scan vs deep review)
 
 ## Baseline read
 
@@ -15,35 +15,35 @@ Quick pass before writing the narrative (strengths / risks / P0–P2 actions).
 
 ## Layering & coupling
 
-- [ ] Controllers: HTTP mapping and validation only; no business rules
-- [ ] Services: orchestration and domain rules; clear boundaries
-- [ ] Persistence: repositories/entities behind documented rules; no layer violations spotted
+- [ ] Controllers: chỉ mapping HTTP + validation; không chứa business rules
+- [ ] Services: giữ orchestration + domain rules; boundaries rõ ràng
+- [ ] Persistence: repositories/entities bám documented rules; không vi phạm layer
 
 ## Cross-cutting
 
-- [ ] Security model consistent with `09-security-architecture-backend.md`
-- [ ] Global error handling and API error shape reviewed (`docs/api/` as needed)
-- [ ] Logging/observability adequate for debugging production issues
-- [ ] Integration failure behavior checked (timeout/retry/circuit breaker patterns where relevant)
+- [ ] Security model nhất quán với `09-security-architecture-backend.md`
+- [ ] Global error handling và API error shape đã được rà (`docs/api/` khi cần)
+- [ ] Logging/observability đủ để debug production issues
+- [ ] Integration failure behavior đã kiểm tra (timeout/retry/circuit breaker khi phù hợp)
 
 ## Tests
 
-- [ ] Critical paths have automated coverage (unit and/or integration)
-- [ ] Slow/flaky tests identified if any
-- [ ] Negative/error-path test coverage assessed for key use cases
+- [ ] Critical paths có automated coverage (unit và/hoặc integration)
+- [ ] Đã nhận diện slow/flaky tests (nếu có)
+- [ ] Đã đánh giá coverage cho negative/error-path ở use case chính
 
 ## Risk framing
 
-- [ ] Each risk includes impact + likelihood
-- [ ] Each action has owner suggestion and smallest first step
-- [ ] No proposed action violates existing architecture rules without explicit ADR/approval
+- [ ] Mỗi risk có impact + likelihood
+- [ ] Mỗi action có owner suggestion và smallest first step
+- [ ] Không action nào vi phạm architecture rules nếu chưa có ADR/approval
 
 ## Output shape
 
-- [ ] Review scope stated at top of report
-- [ ] Three strengths listed
-- [ ] Three risks listed
-- [ ] Three actions with **P0 / P1 / P2** labels
-- [ ] Recommended first implementation slice included
+- [ ] Review scope nằm ở đầu báo cáo
+- [ ] Có Three strengths
+- [ ] Có Three risks
+- [ ] Có Three actions với nhãn **P0 / P1 / P2**
+- [ ] Có recommended first implementation slice
 
 **Last updated:** 2026-04-08

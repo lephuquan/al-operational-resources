@@ -5,50 +5,50 @@
 - Thư mục này dùng để **review kiến trúc hiện trạng** và ra hành động ưu tiên.
 - Đọc `SKILL.md` để biết flow, dùng `checklist.md` để không sót mục, và `examples.md` để xuất báo cáo nhanh.
 
-## Folder contents
+## Thư mục này chứa gì
 
-| File | Purpose |
+| File | Mục đích |
 |------|---------|
-| `SKILL.md` | Main playbook for architecture review |
-| `checklist.md` | Quality checklist before finalizing findings |
-| `examples.md` | Sample reports and reusable output skeleton |
-| `README.md` | This index and usage order |
+| `SKILL.md` | Playbook chính để review kiến trúc |
+| `checklist.md` | Checklist chất lượng trước khi chốt findings |
+| `examples.md` | Báo cáo mẫu + khung output tái sử dụng |
+| `README.md` | File index và thứ tự sử dụng |
 
-## When to use
+## Khi nào dùng
 
-Use when:
+Nên dùng khi:
 
-- You need a quick architecture health check before planning a feature
-- You suspect layering/coupling/testability issues
-- You want prioritized actions without starting a large refactor
+- Bạn cần health check kiến trúc nhanh trước khi lên kế hoạch feature
+- Bạn nghi có vấn đề về layering/coupling/testability
+- Bạn muốn hành động ưu tiên rõ ràng mà chưa cần mở refactor lớn
 
-## Recommended order
+## Thứ tự khuyến nghị
 
-1. Start with `SKILL.md` and set scope/timebox.
-2. Walk through `checklist.md` while reviewing code.
-3. Write output using `examples.md` skeleton.
-4. Share report with 3 strengths + 3 risks + P0/P1/P2 actions.
+1. Bắt đầu từ `SKILL.md` để chốt scope/timebox.
+2. Đi qua `checklist.md` trong lúc review code.
+3. Viết output theo khung trong `examples.md`.
+4. Chia sẻ báo cáo gồm 3 strengths + 3 risks + hành động P0/P1/P2.
 
-## Expected output
+## Output kỳ vọng
 
-- Review scope (what was reviewed and for how long)
+- Review scope (review gì, trong bao lâu)
 - Three strengths
-- Three risks (with impact)
+- Three risks (kèm impact)
 - Three prioritized actions (P0/P1/P2)
-- Suggested first implementation slice
+- Gợi ý first implementation slice
 
-## Key references
+## Tài liệu tham chiếu chính
 
 - `docs/architecture/01-README.md`
 - `docs/architecture/02-system-overview.md`
 - `docs/architecture/04-folder-structure.md`
 - `docs/architecture/06-backend-layers-and-dependencies.md`
 - `docs/architecture/09-security-architecture-backend.md`
-- `docs/api/05-error-handling.md` (if API error mapping is in scope)
+- `docs/api/05-error-handling.md` (nếu review có phạm vi API error mapping)
 
-## Next step after review
+## Bước tiếp theo sau review
 
-If the report is accepted and actioned:
+Nếu báo cáo được chấp nhận và đưa vào thực thi:
 
-- Design major changes via `skills/architecture/design-feature-architecture/SKILL.md`
-- Execute implementation via `skills/workflow/implement-feature/SKILL.md`
+- Thiết kế thay đổi lớn bằng `skills/architecture/design-feature-architecture/SKILL.md`
+- Triển khai bằng `skills/workflow/implement-feature/SKILL.md`

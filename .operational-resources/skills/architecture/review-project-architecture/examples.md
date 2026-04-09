@@ -1,8 +1,8 @@
 # Examples: Architecture review outputs
 
-Use these templates to produce concise, actionable review reports.
+Dùng các mẫu này để tạo báo cáo review ngắn gọn, actionable, và dễ follow-up.
 
-## Example A — Feature module review
+## Example A — Review theo feature module
 
 ```markdown
 ## Architecture review: Order module
@@ -26,7 +26,7 @@ Use these templates to produce concise, actionable review reports.
 - **P2:** Add integration tests for reserve-stock failure and payment-timeout mapping.
 ```
 
-## Example B — Repository-wide quick health report
+## Example B — Quick health report toàn repo
 
 ```markdown
 ## Architecture review: Repo quick scan
@@ -51,7 +51,7 @@ Use these templates to produce concise, actionable review reports.
 - **P2:** Add targeted unit tests for service decision logic.
 ```
 
-## Reusable report skeleton
+## Khung báo cáo tái sử dụng (reusable skeleton)
 
 ```markdown
 ## Architecture review: <area>
