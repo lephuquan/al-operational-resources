@@ -42,6 +42,7 @@ Owner: Phu Quan Le (personal only)
 
 ## 7) References
 - Directory map (cấu trúc thư mục): `.operational-resources/MAP.md`
+- End-to-end execution playbook (single entry): `.operational-resources/PLAYBOOK.md`
 - Task → implement → test → review → MR: `.operational-resources/WORKFLOW.md`
 - Rules: `.operational-resources/rules/`
 - Personal docs: `.operational-resources/docs/`

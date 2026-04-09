@@ -11,6 +11,7 @@ Tài liệu này mô tả **cấu trúc thư mục**, **nội dung chính** và 
 ```text
 .operational-resources/
 ├── AGENTS.md                 # Ngữ cảnh & cách làm việc với AI (ưu tiên đọc)
+├── PLAYBOOK.md               # Entry guide: current-task -> implement -> test -> MR
 ├── MAP.md                    # (file này) Bản đồ thư mục
 ├── WORKFLOW.md               # Task → code → test → review → MR
 ├── README-GIT-LOCAL.md       # Ẩn/hiện thư mục này khỏi Git local
@@ -32,6 +33,7 @@ Tài liệu này mô tả **cấu trúc thư mục**, **nội dung chính** và 
 | File | Mục đích |
 |------|----------|
 | **`AGENTS.md`** | “Khung” làm việc với AI: nguyên tắc, thứ tự ưu tiên đọc `rules/` → `docs/`, hành vi cấm. |
+| **`PLAYBOOK.md`** | Hướng dẫn vận hành end-to-end từ một `current-task` đến MR/Done (DoR/DoD + prompt contract). |
 | **`MAP.md`** | Bản đồ thư mục (file này). |
 | **`WORKFLOW.md`** | Quy trình end-to-end từ task ticket đến MR; liên kết `docs/current-task/TEMPLATE.md`. |
 | **`README-GIT-LOCAL.md`** | Hướng dẫn dùng `.git/info/exclude` để không track hoặc track thư mục này trên máy bạn. |

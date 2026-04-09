@@ -2,6 +2,8 @@
 
 Tài liệu này mô tả **quy trình một task** khi bạn dùng `.operational-resources/` cùng **ticket/BA/leader** và **AL (AI trong Cursor)**. Đây là khung tham chiếu; có thể rút gọn cho task nhỏ.
 
+> Muốn theo một điểm vào duy nhất (single entry) có DoR/DoD + prompt contract: xem `.operational-resources/PLAYBOOK.md`.
+
 **Nguyên tắc:** Ticket team là **nguồn yêu cầu chính thức**; `.operational-resources/` là **ngữ cảnh + quy tắc cá nhân + playbook** — không thay thế quyết định BA/Lead khi có conflict (ưu tiên sync với team trước khi merge).
 
 ---
@@ -120,8 +122,9 @@ Cập nhật file khi team đổi quy trình (CI, template MR, …).
 
 ## Liên kết nhanh
 
+- Playbook vận hành (single entry): `PLAYBOOK.md`
 - Task (chuẩn): `docs/current-task/TEMPLATE.md`
 - Thêm skill / chủ đề mới: `skills/HOW-TO-ADD-TOPIC.md`
 - Git local (ẩn/hiện thư mục): `README-GIT-LOCAL.md`
 
-**Last updated:** 2026-04-08
+**Last updated:** 2026-04-09
