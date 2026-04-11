@@ -80,7 +80,7 @@ Tài liệu này mô tả **cấu trúc thư mục**, **nội dung chính** và 
 | **`architecture/`** | Thiết kế feature, review kiến trúc; **`README.md`** trong nhóm làm hub. |
 | **`code-quality/`** | Code review (`review-code` hub); detect smells (`detect-code-smells` hub); safe refactor (`refactor-clean-code` hub). |
 | **`testing/`** | Unit, integration, test data. |
-| **`database/`** | Schema design (`design-database-schema` hub), migration (`create-migration` hub), tối ưu query. |
+| **`database/`** | Schema design (`design-database-schema` hub), migration (`create-migration` hub), tối ưu query (`optimize-query` hub). |
 | **`security/`** | Endpoint, validation, security review. |
 | **`integration/`** | HTTP client, email, payment, webhook, queue. |
 | **`performance/`** | Response, cache, query, memory. |

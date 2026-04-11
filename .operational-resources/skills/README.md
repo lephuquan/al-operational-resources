@@ -82,12 +82,13 @@
 ### Database
 
 **Hub schema design:** [database/design-database-schema/README.md](database/design-database-schema/)  
-**Hub migration (Flyway / Liquibase):** [database/create-migration/README.md](database/create-migration/)
+**Hub migration (Flyway / Liquibase):** [database/create-migration/README.md](database/create-migration/)  
+**Hub query performance:** [database/optimize-query/README.md](database/optimize-query/)
 
 | Skill | Short description |
 |-------|-------------------|
 | [database/design-database-schema](database/design-database-schema/) | Tables, keys, FK, indexes, soft delete; see folder `README.md` |
-| [database/optimize-query](database/optimize-query/) | N+1, indexes |
+| [database/optimize-query](database/optimize-query/) | N+1, EXPLAIN, fetch, indexes; see folder `README.md` |
 | [database/create-migration](database/create-migration/) | Versioned DDL, test, JPA sync; see folder `README.md` |
 
 ### Security
