@@ -62,9 +62,10 @@ Nếu chưa đạt DoR: ưu tiên làm rõ task trước, không đẩy AL vào 
 
 ## Phase 2 - Implement with skills
 
-1. Chọn skill phù hợp từ `skills/README.md`.
-2. Prompt AL theo cấu trúc: Context -> Task -> Constraints -> Expected output.
-3. Làm theo cụm nhỏ (vertical slice), review diff sau mỗi cụm.
+1. Bám playbook chi tiết: `skills/workflow/implement-feature/README.md` (và `SKILL.md`).
+2. Chọn skill phù hợp từ `skills/README.md`.
+3. Prompt AL theo cấu trúc: Context -> Task -> Constraints -> Expected output.
+4. Làm theo cụm nhỏ (vertical slice), review diff sau mỗi cụm.
 
 ## Phase 3 - Test & verify
 
@@ -151,6 +152,7 @@ Task được xem là done khi:
 - Global flow tham chiếu: `WORKFLOW.md`
 - Current-task template: `docs/current-task/TEMPLATE.md`
 - Skills catalog: `skills/README.md`
+- Implement feature (từ task): `skills/workflow/implement-feature/README.md`
 - Cách thêm skill mới: `skills/HOW-TO-ADD-TOPIC.md`
 - Directory map: `MAP.md`
 

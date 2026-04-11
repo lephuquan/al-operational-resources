@@ -132,9 +132,11 @@
 
 ### Workflow
 
+**Hub triển khai từ task:** [workflow/implement-feature/README.md](workflow/implement-feature/README.md) — slice, prompt AL, checklist, liên kết `PLAYBOOK.md`.
+
 | Skill | Short description |
 |-------|-------------------|
-| [workflow/implement-feature](workflow/implement-feature/) | End-to-end feature delivery |
+| [workflow/implement-feature](workflow/implement-feature/) | Triển khai feature có kiểm soát: task → slice → code → test → docs → MR |
 | [workflow/prepare-pull-request](workflow/prepare-pull-request/) | Prepare a pull request |
 | [workflow/investigate-bug](workflow/investigate-bug/) | Systematic bug investigation |
 
@@ -144,4 +146,4 @@
 - When **docs** paths change (`docs/api/NN-*.md`), update **References** inside affected skills.
 - Existing skills may still be **short** or **Vietnamese**; migrate gradually toward the template.
 
-**Last updated:** 2026-04-08
+**Last updated:** 2026-04-09

@@ -87,7 +87,7 @@ Tài liệu này mô tả **cấu trúc thư mục**, **nội dung chính** và 
 | **`observability/`** | Log, metrics, tracing, đọc log. |
 | **`error-handling/`** | global exception, format lỗi, map HTTP. |
 | **`devops/`** | Docker, env, logging, health. |
-| **`workflow/`** | Implement feature, PR, investigate bug. |
+| **`workflow/`** | Implement feature (có `implement-feature/README.md` làm hub), PR, investigate bug. |
 
 Mỗi skill thường có **`SKILL.md`**; một số có **`checklist.md`** hoặc **`examples.md`**.
 
