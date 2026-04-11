@@ -28,11 +28,13 @@
 
 ### Backend
 
+**Hub JPA (entity + repo + migration):** [backend/create-jpa-entity/README.md](backend/create-jpa-entity/)
+
 | Skill | Short description |
 |-------|-------------------|
 | [backend/create-rest-api](backend/create-rest-api/) | REST controller, DTOs, validation |
 | [backend/create-service-layer](backend/create-service-layer/) | Service layer, transactions, ports |
-| [backend/create-jpa-entity](backend/create-jpa-entity/) | Entity, mapping, repository |
+| [backend/create-jpa-entity](backend/create-jpa-entity/) | JPA entity, mapping, repository, migration slice; see folder `README.md` |
 | [backend/implement-file-upload](backend/implement-file-upload/) | Multipart, storage, validation |
 | [backend/implement-pagination-search](backend/implement-pagination-search/) | Pageable, spec/filter |
 

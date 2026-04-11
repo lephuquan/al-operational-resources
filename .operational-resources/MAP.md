@@ -75,7 +75,7 @@ Tài liệu này mô tả **cấu trúc thư mục**, **nội dung chính** và 
 | **`README.md`** | Mục lục toàn bộ skill theo nhóm (backend, testing, security, …). |
 | **`SKILL-TEMPLATE.md`** | Bản copy chuẩn cho `SKILL.md` mới (Goal → Output → References). |
 | **`HOW-TO-ADD-TOPIC.md`** | Cách thêm skill/topic mới; code ở `src/`, tài liệu ở đây; trỏ `SKILL-TEMPLATE.md`. |
-| **`backend/`** | REST API, service layer, JPA, upload, pagination, … |
+| **`backend/`** | REST API, service layer, JPA (skill `create-jpa-entity` có `README.md` hub), upload, pagination, … |
 | **`debugging/`** | Stacktrace, lỗi local, sự cố production. |
 | **`architecture/`** | Thiết kế feature, review kiến trúc; **`README.md`** trong nhóm làm hub. |
 | **`code-quality/`** | Review code, smell, refactor. |
