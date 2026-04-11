@@ -44,9 +44,11 @@
 
 ### Debugging
 
+**Hub stacktrace:** [debugging/analyze-stacktrace/README.md](debugging/analyze-stacktrace/)
+
 | Skill | Short description |
 |-------|-------------------|
-| [debugging/analyze-stacktrace](debugging/analyze-stacktrace/) | Read Java/Spring stack traces |
+| [debugging/analyze-stacktrace](debugging/analyze-stacktrace/) | Read stack traces, Caused by, app frames; see folder `README.md` |
 | [debugging/debug-backend-error](debugging/debug-backend-error/) | Debug local backend errors |
 | [debugging/debug-production-issue](debugging/debug-production-issue/) | Production incidents, logs, rollback |
 
