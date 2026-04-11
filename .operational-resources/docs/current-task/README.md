@@ -3,6 +3,7 @@
 ## TL;DR (VI)
 
 - Thư mục **duy nhất** chứa file task cá nhân; không tạo bản song song trong `rules/`.
+- **Luồng làm việc với AL (task → code → test → MR):** đọc **`../../PLAYBOOK.md`**, rồi khi implement bám **`../../skills/workflow/implement-feature/README.md`**.
 - **Nội dung kỹ thuật / template** dùng **English** để AI đọc ổn định; phần này là **lối vào** + dashboard.
 - Sao chép `TEMPLATE.md` → đặt tên `YYYYMMDD-slug.md` → điền và cập nhật bảng bên dưới.
 
@@ -51,15 +52,19 @@ Copy **`TEMPLATE.md`**, then fill at least:
 
 ## Workflow
 
-1. Copy `TEMPLATE.md` → `YYYYMMDD-task-name.md`.
-2. Fill metadata and required sections; delete unused §6 blocks.
-3. Update the Dashboard table above.
-4. Prompt AI: `@docs/current-task/YYYYMMDD-task-name.md` + relevant skill.
-5. Close task: set Status to **Done**; optionally move the file to `archive/` later.
+1. **(Khuyến nghị)** Đọc playbook tổng: **`../../PLAYBOOK.md`** (DoR/DoD, prompt contract, evidence checklist).
+2. Copy `TEMPLATE.md` → `YYYYMMDD-task-name.md`.
+3. Fill metadata and required sections; delete unused §6 blocks.
+4. Update the Dashboard table above.
+5. Khi triển khai code: bám **`../../skills/workflow/implement-feature/README.md`** (slice, checklist, ví dụ prompt) + skill chi tiết trong §8 context pack.
+6. Prompt AI: `@docs/current-task/YYYYMMDD-task-name.md` + relevant skill.
+7. Close task: set Status to **Done**; optionally move the file to `archive/` later.
 
 ## References
 
-- End-to-end flow: `../../WORKFLOW.md`
+- **Playbook vận hành với AL (single entry):** `../../PLAYBOOK.md`
+- **Implement feature từ task (hub skill):** `../../skills/workflow/implement-feature/README.md`
+- End-to-end flow (chi tiết): `../../WORKFLOW.md`
 - Rules (no task copies): `../../rules/`
 
-**Last updated:** 2026-04-08
+**Last updated:** 2026-04-09
