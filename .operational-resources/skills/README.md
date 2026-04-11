@@ -141,10 +141,12 @@
 
 ### DevOps
 
+**Hub environment (profiles / env / secrets):** [devops/configure-environment/README.md](devops/configure-environment/)
+
 | Skill | Short description |
 |-------|-------------------|
 | [devops/dockerize-service](devops/dockerize-service/) | Dockerfile |
-| [devops/configure-environment](devops/configure-environment/) | Profiles / env |
+| [devops/configure-environment](devops/configure-environment/) | Spring profiles, env, ConfigurationProperties; see folder `README.md` |
 | [devops/configure-logging](devops/configure-logging/) | Logback |
 | [devops/health-check-endpoint](devops/health-check-endpoint/) | Actuator health |
 
