@@ -31,7 +31,8 @@
 **Hub JPA (entity + repo + migration):** [backend/create-jpa-entity/README.md](backend/create-jpa-entity/)  
 **Hub REST (controller + DTO + test + docs API):** [backend/create-rest-api/README.md](backend/create-rest-api/)  
 **Hub Service (use case + transaction + ports):** [backend/create-service-layer/README.md](backend/create-service-layer/)  
-**Hub file upload:** [backend/implement-file-upload/README.md](backend/implement-file-upload/)
+**Hub file upload:** [backend/implement-file-upload/README.md](backend/implement-file-upload/)  
+**Hub pagination & search:** [backend/implement-pagination-search/README.md](backend/implement-pagination-search/)
 
 | Skill | Short description |
 |-------|-------------------|
@@ -39,7 +40,7 @@
 | [backend/create-service-layer](backend/create-service-layer/) | Service/use-case, transactions, ports/clients; see folder `README.md` |
 | [backend/create-jpa-entity](backend/create-jpa-entity/) | JPA entity, mapping, repository, migration slice; see folder `README.md` |
 | [backend/implement-file-upload](backend/implement-file-upload/) | Multipart, storage, validation, security; see folder `README.md` |
-| [backend/implement-pagination-search](backend/implement-pagination-search/) | Pageable, spec/filter |
+| [backend/implement-pagination-search](backend/implement-pagination-search/) | Pageable, Specification, meta; see folder `README.md` |
 
 ### Debugging
 
