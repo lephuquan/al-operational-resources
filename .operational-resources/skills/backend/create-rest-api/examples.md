@@ -1,8 +1,8 @@
 # Examples: Create REST API
 
-Use these snippets as a baseline. Replace package names and envelope fields with your project conventions.
+Snippet dùng làm baseline. Thay package, envelope, path theo convention dự án. Không dán secret/token thật.
 
-## 1) Controller (create endpoint)
+## 1) Controller — tạo resource (POST)
 
 ```java
 @RestController
@@ -22,7 +22,7 @@ public class OrderController {
 }
 ```
 
-## 2) Request DTO with validation
+## 2) Request DTO — validation
 
 ```java
 public record CreateOrderRequest(
@@ -31,7 +31,18 @@ public record CreateOrderRequest(
 ) {}
 ```
 
-## 3) Example success payload (201)
+## 3) GET theo id (gợi ý)
+
+```java
+@GetMapping("/{id}")
+public ResponseEntity<ApiResponse<OrderResponse>> getById(@PathVariable Long id) {
+    return orderService.findById(id)
+            .map(o -> ResponseEntity.ok(ApiResponse.ok(o)))
+            .orElseGet(() -> ResponseEntity.notFound().build());
+}
+```
+
+## 4) JSON success (201)
 
 ```json
 {
@@ -44,7 +55,7 @@ public record CreateOrderRequest(
 }
 ```
 
-## 4) Example validation error payload (400)
+## 5) JSON validation error (400)
 
 ```json
 {
@@ -62,7 +73,7 @@ public record CreateOrderRequest(
 }
 ```
 
-## 5) WebMvcTest skeleton
+## 6) WebMvcTest — skeleton
 
 ```java
 @WebMvcTest(OrderController.class)
@@ -83,7 +94,7 @@ class OrderControllerTest {
 }
 ```
 
-## 6) cURL quick check
+## 7) cURL — smoke test local
 
 ```bash
 curl -X POST "http://localhost:8080/api/v2/orders" \
@@ -94,7 +105,9 @@ curl -X POST "http://localhost:8080/api/v2/orders" \
   }'
 ```
 
-Notes:
-- Keep controller thin (mapping + validation + service call only).
-- Centralize domain-to-HTTP error mapping in `@ControllerAdvice`.
-- Adapt `ApiResponse` and error codes to your real project contract.
+## Lưu ý
+
+- Controller mỏng: mapping + `@Valid` + gọi service + build response.
+- Map lỗi domain → HTTP tập trung trong `@ControllerAdvice`; chỉnh `ApiResponse` / mã lỗi theo contract thật của dự án.
+
+**Last updated:** 2026-04-09
