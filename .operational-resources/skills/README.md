@@ -45,13 +45,14 @@
 ### Debugging
 
 **Hub stacktrace:** [debugging/analyze-stacktrace/README.md](debugging/analyze-stacktrace/)  
-**Hub debug local:** [debugging/debug-backend-error/README.md](debugging/debug-backend-error/)
+**Hub debug local:** [debugging/debug-backend-error/README.md](debugging/debug-backend-error/)  
+**Hub production incident:** [debugging/debug-production-issue/README.md](debugging/debug-production-issue/)
 
 | Skill | Short description |
 |-------|-------------------|
 | [debugging/analyze-stacktrace](debugging/analyze-stacktrace/) | Read stack traces, Caused by, app frames; see folder `README.md` |
 | [debugging/debug-backend-error](debugging/debug-backend-error/) | Reproduce, isolate, fix, regression test (local); see folder `README.md` |
-| [debugging/debug-production-issue](debugging/debug-production-issue/) | Production incidents, logs, rollback |
+| [debugging/debug-production-issue](debugging/debug-production-issue/) | Prod triage, observability, mitigation, post-incident; see folder `README.md` |
 
 ### Architecture
 

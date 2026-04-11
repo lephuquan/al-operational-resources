@@ -23,7 +23,7 @@
 ## Liên kết nhanh
 
 - `skills/debugging/analyze-stacktrace/README.md`
-- `skills/debugging/debug-production-issue/SKILL.md`
+- `skills/debugging/debug-production-issue/README.md`
 - `docs/setup/01-README.md`
 - `notes/debugging/bug-history.md`
 - `skills/testing/write-integration-test/SKILL.md`
