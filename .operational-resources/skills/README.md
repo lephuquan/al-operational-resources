@@ -81,11 +81,13 @@
 
 ### Database
 
+**Hub migration (Flyway / Liquibase):** [database/create-migration/README.md](database/create-migration/)
+
 | Skill | Short description |
 |-------|-------------------|
 | [database/design-database-schema](database/design-database-schema/) | Schema design |
 | [database/optimize-query](database/optimize-query/) | N+1, indexes |
-| [database/create-migration](database/create-migration/) | Flyway / Liquibase |
+| [database/create-migration](database/create-migration/) | Versioned DDL, test, JPA sync; see folder `README.md` |
 
 ### Security
 
