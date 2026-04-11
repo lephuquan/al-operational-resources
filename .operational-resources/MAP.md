@@ -78,7 +78,7 @@ Tài liệu này mô tả **cấu trúc thư mục**, **nội dung chính** và 
 | **`backend/`** | REST (`create-rest-api` hub), service (`create-service-layer` hub), JPA (`create-jpa-entity` hub), upload (`implement-file-upload` hub), pagination/search (`implement-pagination-search` hub), … |
 | **`debugging/`** | Stacktrace, lỗi local, sự cố production. |
 | **`architecture/`** | Thiết kế feature, review kiến trúc; **`README.md`** trong nhóm làm hub. |
-| **`code-quality/`** | Review code; detect smells (`detect-code-smells` hub); safe refactor (`refactor-clean-code` hub). |
+| **`code-quality/`** | Code review (`review-code` hub); detect smells (`detect-code-smells` hub); safe refactor (`refactor-clean-code` hub). |
 | **`testing/`** | Unit, integration, test data. |
 | **`database/`** | Schema, migration, tối ưu query. |
 | **`security/`** | Endpoint, validation, security review. |

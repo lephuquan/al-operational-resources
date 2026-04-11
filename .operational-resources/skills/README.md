@@ -61,12 +61,13 @@
 
 ### Code quality
 
+**Hub code review:** [code-quality/review-code/README.md](code-quality/review-code/)  
 **Hub detect smells:** [code-quality/detect-code-smells/README.md](code-quality/detect-code-smells/)  
 **Hub safe refactor:** [code-quality/refactor-clean-code/README.md](code-quality/refactor-clean-code/)
 
 | Skill | Short description |
 |-------|-------------------|
-| [code-quality/review-code](code-quality/review-code/) | Code review checklist |
+| [code-quality/review-code](code-quality/review-code/) | Structured PR/self-review; see folder `README.md` |
 | [code-quality/detect-code-smells](code-quality/detect-code-smells/) | Detect smells with evidence + severity; see folder `README.md` |
 | [code-quality/refactor-clean-code](code-quality/refactor-clean-code/) | Safe refactoring, small steps, tests; see folder `README.md` |
 
