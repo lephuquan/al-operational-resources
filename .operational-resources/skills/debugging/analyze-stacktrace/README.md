@@ -19,7 +19,7 @@
 1. Dán full stack vào task hoặc file note (redact secret).
 2. Chạy theo `SKILL.md` hoặc đánh dấu `checklist.md`.
 3. Điền khung trong `examples.md` để lưu kết quả.
-4. Nếu cần quy trình debug đầy đủ: `debug-backend-error` hoặc `debug-production-issue`.
+4. Nếu cần quy trình debug đầy đủ: `debug-backend-error/README.md` (local) hoặc `debug-production-issue` (prod).
 
 ## Liên kết nhanh
 

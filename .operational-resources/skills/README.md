@@ -44,12 +44,13 @@
 
 ### Debugging
 
-**Hub stacktrace:** [debugging/analyze-stacktrace/README.md](debugging/analyze-stacktrace/)
+**Hub stacktrace:** [debugging/analyze-stacktrace/README.md](debugging/analyze-stacktrace/)  
+**Hub debug local:** [debugging/debug-backend-error/README.md](debugging/debug-backend-error/)
 
 | Skill | Short description |
 |-------|-------------------|
 | [debugging/analyze-stacktrace](debugging/analyze-stacktrace/) | Read stack traces, Caused by, app frames; see folder `README.md` |
-| [debugging/debug-backend-error](debugging/debug-backend-error/) | Debug local backend errors |
+| [debugging/debug-backend-error](debugging/debug-backend-error/) | Reproduce, isolate, fix, regression test (local); see folder `README.md` |
 | [debugging/debug-production-issue](debugging/debug-production-issue/) | Production incidents, logs, rollback |
 
 ### Architecture
