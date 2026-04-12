@@ -55,7 +55,7 @@ Integrate a third-party payment provider behind a clear **application port**, wi
    - Follow **`rules/06-security.md`** and run **`skills/security/security-review/SKILL.md`** for payment features.
 
 10. **Observability**
-   - Metrics: success/decline rates, latency, webhook processing failures; correlation id on outbound/inbound (`skills/observability/implement-request-tracing/SKILL.md`).
+   - Metrics: success/decline rates, latency, webhook processing failures (`skills/observability/add-metrics/README.md`); correlation id on outbound/inbound (`skills/observability/implement-request-tracing/SKILL.md`).
 
 11. **Optional async**
    - Heavy post-payment work → **`skills/integration/integrate-message-queue/README.md`** after webhook ACK + durable state update.
@@ -81,6 +81,7 @@ Integrate a third-party payment provider behind a clear **application port**, wi
 - `skills/devops/configure-environment/README.md`
 - `skills/error-handling/map-exceptions-to-http/README.md`
 - `skills/integration/integrate-message-queue/README.md`
+- `skills/observability/add-metrics/README.md`
 - `skills/observability/implement-request-tracing/SKILL.md`
 - `skills/security/security-review/SKILL.md`
 - `docs/architecture/07-integrations.md`, `docs/architecture/08-transactions-and-consistency.md`

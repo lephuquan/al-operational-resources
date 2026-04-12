@@ -24,6 +24,7 @@
 ## Liên kết nhanh
 
 - `skills/devops/configure-logging/README.md`
+- `skills/observability/add-metrics/README.md`
 - `skills/observability/implement-request-tracing/SKILL.md`
 - `skills/observability/analyze-application-logs/SKILL.md`
 - `skills/backend/create-service-layer/README.md`

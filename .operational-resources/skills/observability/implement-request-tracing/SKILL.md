@@ -13,6 +13,7 @@ Truy vết request qua service: trace id, W3C Trace Context.
 
 ## References
 
+- `skills/observability/add-metrics/README.md` (Micrometer Tracing cùng hệ sinh thái)
 - `skills/observability/add-logging/README.md` (MDC xuất hiện trong log)
 - `skills/integration/call-external-api/README.md` (propagate header outbound)
 

@@ -47,7 +47,7 @@ Send transactional or notification email reliably behind a small **application p
 
 8. **Observability**
    - Log **event type**, **message id** (if returned), **outcome** — not full body.
-   - Metrics: send success/failure rate, latency (`skills/observability/add-metrics/SKILL.md`).
+   - Metrics: send success/failure rate, latency (`skills/observability/add-metrics/README.md`).
 
 9. **Bounces and complaints**
    - If the provider supports **webhooks** for bounce/complaint, implement with **`skills/integration/implement-webhook-handler/README.md`** and update suppression lists.
