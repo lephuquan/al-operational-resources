@@ -15,3 +15,4 @@ Validate input ở boundary: Bean Validation + custom validator khi cần.
 ## References
 
 - `skills/security/secure-api-endpoint/README.md` (boundary + hardening cùng security config)
+- `skills/security/security-review/README.md` (rà soát mass assignment, lộ dữ liệu, IDOR)

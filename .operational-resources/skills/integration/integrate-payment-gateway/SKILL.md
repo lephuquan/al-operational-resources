@@ -52,7 +52,7 @@ Integrate a third-party payment provider behind a clear **application port**, wi
 
 9. **Security**
    - Rotate API keys; restrict webhook IP only if provider documents it (often signature is enough).
-   - Follow **`rules/06-security.md`** and run **`skills/security/security-review/SKILL.md`** for payment features.
+   - Follow **`rules/06-security.md`** and the **`skills/security/security-review/README.md`** hub (especially **`checklist.md`**) for payment features.
 
 10. **Observability**
    - Metrics: success/decline rates, latency, webhook processing failures (`skills/observability/add-metrics/README.md`); correlation id on outbound/inbound (`skills/observability/implement-request-tracing/README.md`).
@@ -83,7 +83,7 @@ Integrate a third-party payment provider behind a clear **application port**, wi
 - `skills/integration/integrate-message-queue/README.md`
 - `skills/observability/add-metrics/README.md`
 - `skills/observability/implement-request-tracing/README.md`
-- `skills/security/security-review/SKILL.md`
+- `skills/security/security-review/README.md`
 - `docs/architecture/07-integrations.md`, `docs/architecture/08-transactions-and-consistency.md`
 - `docs/api/05-error-handling.md`
 - `rules/06-security.md`

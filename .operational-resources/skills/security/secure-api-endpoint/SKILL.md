@@ -72,7 +72,7 @@ Protect HTTP endpoints with consistent **authentication**, **authorization**, an
 - `docs/api/05-error-handling.md`
 - `docs/architecture/09-security-architecture-backend.md`
 - `skills/security/validate-input/SKILL.md`
-- `skills/security/security-review/SKILL.md`
+- `skills/security/security-review/README.md`
 - `skills/error-handling/global-exception-handler/README.md`
 - `skills/devops/health-check-endpoint/README.md`
 - `skills/integration/implement-webhook-handler/README.md`

@@ -57,6 +57,7 @@
 - `rules/08-review-checklist.md`
 - `rules/02-coding-standards.md`
 - `rules/06-security.md`
+- `skills/security/security-review/README.md` (security pass chuyên sâu khi PR đụng auth, payment, PII)
 - `rules/03-api-development.md`
 - `docs/api/01-README.md`, `docs/api/05-error-handling.md` (nếu có)
 - `skills/code-quality/detect-code-smells/SKILL.md`

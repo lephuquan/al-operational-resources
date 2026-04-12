@@ -81,7 +81,7 @@ Tài liệu này mô tả **cấu trúc thư mục**, **nội dung chính** và 
 | **`code-quality/`** | Code review (`review-code` hub); detect smells (`detect-code-smells` hub); safe refactor (`refactor-clean-code` hub). |
 | **`testing/`** | Unit, integration, test data. |
 | **`database/`** | Schema design (`design-database-schema` hub), migration (`create-migration` hub), tối ưu query (`optimize-query` hub). |
-| **`security/`** | Bảo vệ API (`secure-api-endpoint` hub), validate input (`validate-input`), security review (`security-review`). |
+| **`security/`** | Bảo vệ API (`secure-api-endpoint` hub), validate input (`validate-input`), rà soát bảo mật (`security-review` hub). |
 | **`integration/`** | HTTP (`call-external-api` hub), webhooks (`implement-webhook-handler` hub), email (`integrate-email-service` hub), payment (`integrate-payment-gateway` hub), queues (`integrate-message-queue` hub). |
 | **`performance/`** | API response (`optimize-api-response` hub), cache (`caching-strategy` hub), query (`analyze-query-performance` hub), memory (`reduce-memory-usage` hub). |
 | **`observability/`** | Log (`add-logging` hub), metrics (`add-metrics` hub), tracing (`implement-request-tracing` hub), đọc log (`analyze-application-logs` hub). |

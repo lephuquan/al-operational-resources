@@ -28,7 +28,7 @@
 - `skills/backend/create-service-layer/README.md`
 - `skills/devops/configure-environment/README.md`
 - `skills/error-handling/map-exceptions-to-http/README.md`
-- `skills/security/security-review/SKILL.md`
+- `skills/security/security-review/README.md`
 - `docs/architecture/07-integrations.md`, `docs/architecture/08-transactions-and-consistency.md`
 - `rules/06-security.md`
 
