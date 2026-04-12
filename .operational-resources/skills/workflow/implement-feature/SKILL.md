@@ -49,7 +49,7 @@ Hoàn thành một feature (hoặc phần feature trong scope task) với: code 
 
 6. **Self-review và chuẩn bị handoff MR**
    - `rules/08-review-checklist.md` + `skills/code-quality/review-code/README.md` (và `checklist.md` trong folder).
-   - Chuẩn bị MR theo `skills/workflow/prepare-pull-request/SKILL.md` (hoặc checklist team).
+   - Chuẩn bị MR theo `skills/workflow/prepare-pull-request/README.md` (hoặc checklist team).
 
 ## Output
 
@@ -66,6 +66,6 @@ Hoàn thành một feature (hoặc phần feature trong scope task) với: code 
 - Specs: `docs/specs/README.md`
 - Kiến trúc: `docs/architecture/01-README.md`, `06-backend-layers-and-dependencies.md`
 - API: `docs/api/01-README.md`
-- Skills liên quan: `skills/architecture/design-feature-architecture/SKILL.md`, `skills/backend/create-rest-api/README.md`, `skills/backend/create-service-layer/README.md`, `skills/backend/create-jpa-entity/README.md`, `skills/security/validate-input/README.md`, `skills/security/secure-api-endpoint/README.md`, `skills/testing/create-test-data/README.md`, `skills/testing/write-unit-test/README.md`, `skills/testing/write-integration-test/README.md`, `skills/code-quality/review-code/README.md`, `skills/workflow/investigate-bug/README.md` (bugfix), `skills/workflow/prepare-pull-request/SKILL.md`
+- Skills liên quan: `skills/architecture/design-feature-architecture/SKILL.md`, `skills/backend/create-rest-api/README.md`, `skills/backend/create-service-layer/README.md`, `skills/backend/create-jpa-entity/README.md`, `skills/security/validate-input/README.md`, `skills/security/secure-api-endpoint/README.md`, `skills/testing/create-test-data/README.md`, `skills/testing/write-unit-test/README.md`, `skills/testing/write-integration-test/README.md`, `skills/code-quality/review-code/README.md`, `skills/workflow/investigate-bug/README.md` (bugfix), `skills/workflow/prepare-pull-request/README.md`
 
 **Last updated:** 2026-04-11

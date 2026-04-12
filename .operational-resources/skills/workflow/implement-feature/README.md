@@ -21,7 +21,7 @@
 2. Nếu cần thiết kế sâu trước code: `skills/architecture/design-feature-architecture/`.
 3. Đọc `SKILL.md` và chốt first slice.
 4. Làm từng cụm với AL theo `examples.md`.
-5. Chạy `checklist.md` trước khi MR; MR chi tiết dùng `skills/workflow/prepare-pull-request/`.
+5. Chạy `checklist.md` trước khi MR; MR chi tiết dùng `skills/workflow/prepare-pull-request/README.md`.
 
 ## Liên kết nhanh
 
@@ -36,6 +36,6 @@
 - `skills/testing/write-unit-test/README.md`
 - `skills/testing/write-integration-test/README.md`
 - `skills/workflow/investigate-bug/README.md` (khi task là bugfix)
-- `skills/workflow/prepare-pull-request/SKILL.md`
+- `skills/workflow/prepare-pull-request/README.md`
 
 **Last updated:** 2026-04-11

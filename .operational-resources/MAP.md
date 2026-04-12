@@ -87,7 +87,7 @@ Tài liệu này mô tả **cấu trúc thư mục**, **nội dung chính** và 
 | **`observability/`** | Log (`add-logging` hub), metrics (`add-metrics` hub), tracing (`implement-request-tracing` hub), đọc log (`analyze-application-logs` hub). |
 | **`error-handling/`** | global handler (`global-exception-handler` hub), envelope (`api-error-response-format` hub), HTTP mapping (`map-exceptions-to-http` hub). |
 | **`devops/`** | Docker (`dockerize-service` hub), env/config (`configure-environment` hub), logging (`configure-logging` hub), health/probes (`health-check-endpoint` hub). |
-| **`workflow/`** | Triển khai feature (`implement-feature` hub), điều tra bug (`investigate-bug` hub), PR (`prepare-pull-request`). |
+| **`workflow/`** | Triển khai feature (`implement-feature` hub), điều tra bug (`investigate-bug` hub), MR/PR (`prepare-pull-request` hub). |
 
 Mỗi skill thường có **`SKILL.md`**; một số có **`checklist.md`** hoặc **`examples.md`**.
 

@@ -62,6 +62,6 @@
 - `docs/api/01-README.md`, `docs/api/05-error-handling.md` (nếu có)
 - `skills/code-quality/detect-code-smells/SKILL.md`
 - `skills/code-quality/refactor-clean-code/SKILL.md`
-- `skills/workflow/prepare-pull-request/SKILL.md`
+- `skills/workflow/prepare-pull-request/README.md`
 
 **Last updated:** 2026-04-09

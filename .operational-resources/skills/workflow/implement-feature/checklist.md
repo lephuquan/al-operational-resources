@@ -33,7 +33,7 @@ Dùng trước khi coi feature slice là xong hoặc trước khi mở MR. Bỏ 
 
 ## Handoff MR
 
-- [ ] Đã chuẩn bị mô tả MR (What / Why / How to test) — xem `skills/workflow/prepare-pull-request/SKILL.md`
+- [ ] Đã chuẩn bị mô tả MR (What / Why / How to test) — xem `skills/workflow/prepare-pull-request/README.md`
 - [ ] Breaking change (nếu có) đã ghi rõ
 
 **Last updated:** 2026-04-11

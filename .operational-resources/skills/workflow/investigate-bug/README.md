@@ -19,7 +19,7 @@
 
 1. Tạo/cập nhật file task (`TEMPLATE.md` §6B — bugfix).
 2. Làm theo `SKILL.md`; điền `examples.md` khi cần.
-3. Chạy `checklist.md` trước MR; MR theo `prepare-pull-request/SKILL.md`.
+3. Chạy `checklist.md` trước MR; MR theo `skills/workflow/prepare-pull-request/README.md`.
 
 ## Liên kết nhanh
 
@@ -29,7 +29,7 @@
 - `skills/debugging/debug-production-issue/README.md`
 - `skills/testing/write-unit-test/README.md`
 - `skills/testing/write-integration-test/README.md`
-- `skills/workflow/prepare-pull-request/SKILL.md`
+- `skills/workflow/prepare-pull-request/README.md`
 - `notes/debugging/bug-history.md`
 
 **Last updated:** 2026-04-11

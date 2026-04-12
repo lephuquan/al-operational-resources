@@ -27,6 +27,6 @@
 - `skills/security/security-review/README.md` (rà soát bảo mật sâu khi cần)
 - `skills/code-quality/detect-code-smells/README.md`
 - `skills/code-quality/refactor-clean-code/README.md`
-- `skills/workflow/prepare-pull-request/SKILL.md`
+- `skills/workflow/prepare-pull-request/README.md`
 
-**Last updated:** 2026-04-09
+**Last updated:** 2026-04-11

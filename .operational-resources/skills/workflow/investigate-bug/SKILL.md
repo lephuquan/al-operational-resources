@@ -51,7 +51,7 @@ Investigate and fix a defect **methodically** so the root cause is **evidence-ba
    - Append a short entry to **`notes/debugging/bug-history.md`** if the bug is **recurring** or **subtle** (search keywords for the next person).
 
 9. **Handoff**
-   - Prepare MR with **What / Why / How to test** — **`skills/workflow/prepare-pull-request/SKILL.md`**.
+   - Prepare MR with **What / Why / How to test** — **`skills/workflow/prepare-pull-request/README.md`**.
    - Note **risk** (data migration, cache, rollout) for reviewers.
 
 ## Output
@@ -72,7 +72,7 @@ Investigate and fix a defect **methodically** so the root cause is **evidence-ba
 - `skills/testing/write-unit-test/README.md`
 - `skills/testing/write-integration-test/README.md`
 - `skills/testing/create-test-data/README.md`
-- `skills/workflow/prepare-pull-request/SKILL.md`
+- `skills/workflow/prepare-pull-request/README.md`
 - `notes/debugging/bug-history.md`
 
 **Last updated:** 2026-04-11

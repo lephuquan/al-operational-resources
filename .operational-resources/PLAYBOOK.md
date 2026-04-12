@@ -81,9 +81,10 @@ Nếu chưa đạt DoR: ưu tiên làm rõ task trước, không đẩy AL vào 
 
 ## Phase 5 - Prepare MR/PR
 
-1. Tổng hợp thay đổi: What / Why / How to test / Risk.
-2. Đính kèm link task file và ticket.
-3. Đảm bảo branch, commit, pipeline theo quy ước team.
+1. Bám `skills/workflow/prepare-pull-request/README.md` (diff, checklist, mẫu mô tả).
+2. Tổng hợp thay đổi: What / Why / How to test / Risk.
+3. Đính kèm link task file và ticket.
+4. Đảm bảo branch, commit, pipeline theo quy ước team.
 
 ## Phase 6 - Close task
 
@@ -154,6 +155,7 @@ Task được xem là done khi:
 - Skills catalog: `skills/README.md`
 - Implement feature (từ task): `skills/workflow/implement-feature/README.md`
 - Investigate bug (bugfix): `skills/workflow/investigate-bug/README.md`
+- Prepare MR/PR: `skills/workflow/prepare-pull-request/README.md`
 - Cách thêm skill mới: `skills/HOW-TO-ADD-TOPIC.md`
 - Directory map: `MAP.md`
 

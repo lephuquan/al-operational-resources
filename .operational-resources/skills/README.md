@@ -184,12 +184,13 @@
 ### Workflow
 
 **Hub triển khai từ task:** [workflow/implement-feature/README.md](workflow/implement-feature/README.md) — slice, prompt AL, checklist, liên kết `PLAYBOOK.md`.  
-**Hub điều tra bug:** [workflow/investigate-bug/README.md](workflow/investigate-bug/) — evidence, reproduce, debug skills, regression, MR.
+**Hub điều tra bug:** [workflow/investigate-bug/README.md](workflow/investigate-bug/) — evidence, reproduce, debug skills, regression, MR.  
+**Hub mở MR/PR:** [workflow/prepare-pull-request/README.md](workflow/prepare-pull-request/) — diff, mô tả, test plan, risk.
 
 | Skill | Short description |
 |-------|-------------------|
 | [workflow/implement-feature](workflow/implement-feature/) | Task → slice → code → test → docs → MR; see folder `README.md` |
-| [workflow/prepare-pull-request](workflow/prepare-pull-request/) | Prepare a pull request |
+| [workflow/prepare-pull-request](workflow/prepare-pull-request/) | What/why/how to test, self-review, CI; see folder `README.md` |
 | [workflow/investigate-bug](workflow/investigate-bug/) | Hypothesis, evidence, minimal fix, tests; see folder `README.md` |
 
 ## Maintenance

@@ -92,10 +92,11 @@ Khi review MR, đối chiếu nhanh: mỗi AC có ít nhất một test (unit/in
 
 ## 5. Tạo MR (Merge Request / Pull Request)
 
-1. Branch theo convention team.
-2. Mô tả MR: **What / Why / How to test** + link ticket + ảnh hưởng (breaking hay không).
-3. Đính kèm hoặc tóm tắt: đã chạy test, checklist đã xong.
-4. Không push secret; không WIP trừ khi team cho phép draft MR.
+1. Khung chi tiết: `skills/workflow/prepare-pull-request/README.md` (`checklist.md`, `examples.md`).
+2. Branch theo convention team.
+3. Mô tả MR: **What / Why / How to test** + link ticket + ảnh hưởng (breaking hay không).
+4. Đính kèm hoặc tóm tắt: đã chạy test, checklist đã xong.
+5. Không push secret; không WIP trừ khi team cho phép draft MR.
 
 **Lưu ý:** `AGENTS.md` khuyến nghị không auto-push — bạn chủ động `git push` và tạo MR.
 
@@ -125,6 +126,7 @@ Cập nhật file khi team đổi quy trình (CI, template MR, …).
 
 - Playbook vận hành (single entry): `PLAYBOOK.md`
 - Điều tra bug (workflow): `skills/workflow/investigate-bug/README.md`
+- Mở MR/PR: `skills/workflow/prepare-pull-request/README.md`
 - Task (chuẩn): `docs/current-task/TEMPLATE.md`
 - Thêm skill / chủ đề mới: `skills/HOW-TO-ADD-TOPIC.md`
 - Git local (ẩn/hiện thư mục): `README-GIT-LOCAL.md`

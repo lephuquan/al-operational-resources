@@ -23,6 +23,6 @@ Dùng khi **chưa chắc root cause** hoặc **trước MR** bugfix.
 
 - [ ] `./mvnw test` (hoặc lệnh team) **xanh**
 - [ ] Task: progress log + **AC → test** cập nhật
-- [ ] MR: **How to test** + link ticket (`prepare-pull-request`)
+- [ ] MR: **How to test** + link ticket — `skills/workflow/prepare-pull-request/README.md`
 
 **Last updated:** 2026-04-11
