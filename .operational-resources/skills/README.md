@@ -133,11 +133,15 @@
 
 ### Error handling
 
+**Hub error envelope (JSON):** [error-handling/api-error-response-format/README.md](error-handling/api-error-response-format/)  
+**Hub global handler (`@ControllerAdvice`):** [error-handling/global-exception-handler/README.md](error-handling/global-exception-handler/)  
+**Hub HTTP mapping (status + `error.code`):** [error-handling/map-exceptions-to-http/README.md](error-handling/map-exceptions-to-http/)
+
 | Skill | Short description |
 |-------|-------------------|
-| [error-handling/global-exception-handler](error-handling/global-exception-handler/) | `@ControllerAdvice` |
-| [error-handling/api-error-response-format](error-handling/api-error-response-format/) | Error envelope |
-| [error-handling/map-exceptions-to-http](error-handling/map-exceptions-to-http/) | Map exceptions to HTTP |
+| [error-handling/global-exception-handler](error-handling/global-exception-handler/) | `@RestControllerAdvice`, map exception → HTTP + envelope; see folder `README.md` |
+| [error-handling/api-error-response-format](error-handling/api-error-response-format/) | Envelope `success`/`error`, codes, details; see folder `README.md` |
+| [error-handling/map-exceptions-to-http](error-handling/map-exceptions-to-http/) | Matrix domain → HTTP + stable codes; see folder `README.md` |
 
 ### DevOps
 

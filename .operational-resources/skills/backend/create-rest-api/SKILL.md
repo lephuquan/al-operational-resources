@@ -56,6 +56,6 @@ Triển khai một hoặc nhiều HTTP endpoint mới (hoặc mở rộng có ki
 - `docs/architecture/04-folder-structure.md`, `docs/architecture/06-backend-layers-and-dependencies.md`, `docs/architecture/09-security-architecture-backend.md`
 - `rules/03-api-development.md`
 - `skills/backend/create-service-layer/SKILL.md`
-- `skills/error-handling/global-exception-handler/SKILL.md`, `skills/error-handling/map-exceptions-to-http/SKILL.md` (khi cần)
+- `skills/error-handling/global-exception-handler/README.md`, `skills/error-handling/map-exceptions-to-http/README.md` (khi cần)
 
 **Last updated:** 2026-04-09

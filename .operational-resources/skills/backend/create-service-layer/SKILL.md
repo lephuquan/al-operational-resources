@@ -61,6 +61,6 @@ Triển khai lớp service (application/use-case) điều phối domain + persis
 - `docs/knowledge-base/coding-patterns.md`
 - `skills/backend/create-rest-api/SKILL.md`
 - `skills/backend/create-jpa-entity/SKILL.md`
-- `skills/error-handling/map-exceptions-to-http/SKILL.md`
+- `skills/error-handling/map-exceptions-to-http/README.md`
 
 **Last updated:** 2026-04-09

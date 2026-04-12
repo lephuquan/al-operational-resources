@@ -85,7 +85,7 @@ Tài liệu này mô tả **cấu trúc thư mục**, **nội dung chính** và 
 | **`integration/`** | HTTP client, email, payment, webhook, queue. |
 | **`performance/`** | Response, cache, query, memory. |
 | **`observability/`** | Log, metrics, tracing, đọc log. |
-| **`error-handling/`** | global exception, format lỗi, map HTTP. |
+| **`error-handling/`** | global handler (`global-exception-handler` hub), envelope (`api-error-response-format` hub), HTTP mapping (`map-exceptions-to-http` hub). |
 | **`devops/`** | Docker (`dockerize-service` hub), env/config (`configure-environment` hub), logging (`configure-logging` hub), health/probes (`health-check-endpoint` hub). |
 | **`workflow/`** | Implement feature (có `implement-feature/README.md` làm hub), PR, investigate bug. |
 
