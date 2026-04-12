@@ -24,6 +24,7 @@
 ## Liên kết nhanh
 
 - `skills/integration/integrate-email-service/README.md` (bounce/complaint → cập nhật suppression)
+- `skills/integration/integrate-message-queue/README.md` (đẩy event sau ACK nhanh)
 - `skills/integration/call-external-api/README.md`
 - `skills/backend/create-rest-api/README.md`
 - `skills/devops/configure-environment/README.md`

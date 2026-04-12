@@ -82,7 +82,7 @@ Tài liệu này mô tả **cấu trúc thư mục**, **nội dung chính** và 
 | **`testing/`** | Unit, integration, test data. |
 | **`database/`** | Schema design (`design-database-schema` hub), migration (`create-migration` hub), tối ưu query (`optimize-query` hub). |
 | **`security/`** | Endpoint, validation, security review. |
-| **`integration/`** | Outbound HTTP (`call-external-api` hub), webhooks (`implement-webhook-handler` hub), email (`integrate-email-service` hub), payment, queue. |
+| **`integration/`** | HTTP (`call-external-api` hub), webhooks (`implement-webhook-handler` hub), email (`integrate-email-service` hub), payment, queues (`integrate-message-queue` hub). |
 | **`performance/`** | Response, cache, query, memory. |
 | **`observability/`** | Log, metrics, tracing, đọc log. |
 | **`error-handling/`** | global handler (`global-exception-handler` hub), envelope (`api-error-response-format` hub), HTTP mapping (`map-exceptions-to-http` hub). |

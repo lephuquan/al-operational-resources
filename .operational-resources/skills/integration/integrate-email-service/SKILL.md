@@ -71,6 +71,7 @@ Send transactional or notification email reliably behind a small **application p
 - `skills/devops/configure-environment/README.md`
 - `skills/integration/call-external-api/README.md` (provider HTTP APIs)
 - `skills/integration/implement-webhook-handler/README.md` (bounce/complaint webhooks)
+- `skills/integration/integrate-message-queue/README.md` (high-volume async delivery)
 - `skills/security/validate-input/SKILL.md` (untrusted content in templates)
 - `skills/error-handling/map-exceptions-to-http/README.md`
 - `docs/architecture/07-integrations.md`
