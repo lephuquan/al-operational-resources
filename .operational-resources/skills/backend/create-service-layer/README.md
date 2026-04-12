@@ -18,7 +18,7 @@
 ## Thứ tự khuyến nghị
 
 1. Chốt use case trong task hoặc design architecture.
-2. Làm theo `SKILL.md`; tách `*Client`/port khi có integration.
+2. Làm theo `SKILL.md`; tách `*Client`/port khi có integration (xem `skills/integration/call-external-api/README.md`).
 3. Map exception sang HTTP ở layer advice (xem error-handling skills).
 4. Chạy `checklist.md`.
 
@@ -30,5 +30,6 @@
 - `skills/backend/create-rest-api/SKILL.md`
 - `skills/backend/create-jpa-entity/SKILL.md`
 - `skills/workflow/implement-feature/README.md`
+- `skills/integration/call-external-api/README.md`
 
-**Last updated:** 2026-04-09
+**Last updated:** 2026-04-11
