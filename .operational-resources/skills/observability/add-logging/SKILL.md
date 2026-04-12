@@ -73,7 +73,7 @@ Add **consistent, safe** application logging so operators can triage incidents w
 - `skills/observability/add-metrics/README.md`
 - `skills/devops/configure-logging/README.md`
 - `skills/observability/implement-request-tracing/SKILL.md`
-- `skills/observability/analyze-application-logs/SKILL.md`
+- `skills/observability/analyze-application-logs/README.md`
 - `skills/backend/create-service-layer/README.md`
 - `rules/06-security.md`
 

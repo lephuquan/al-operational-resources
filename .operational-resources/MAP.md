@@ -84,7 +84,7 @@ Tài liệu này mô tả **cấu trúc thư mục**, **nội dung chính** và 
 | **`security/`** | Endpoint, validation, security review. |
 | **`integration/`** | HTTP (`call-external-api` hub), webhooks (`implement-webhook-handler` hub), email (`integrate-email-service` hub), payment (`integrate-payment-gateway` hub), queues (`integrate-message-queue` hub). |
 | **`performance/`** | Response, cache, query, memory. |
-| **`observability/`** | Log (`add-logging` hub), metrics (`add-metrics` hub), tracing, đọc log. |
+| **`observability/`** | Log (`add-logging` hub), metrics (`add-metrics` hub), tracing, đọc log (`analyze-application-logs` hub). |
 | **`error-handling/`** | global handler (`global-exception-handler` hub), envelope (`api-error-response-format` hub), HTTP mapping (`map-exceptions-to-http` hub). |
 | **`devops/`** | Docker (`dockerize-service` hub), env/config (`configure-environment` hub), logging (`configure-logging` hub), health/probes (`health-check-endpoint` hub). |
 | **`workflow/`** | Implement feature (có `implement-feature/README.md` làm hub), PR, investigate bug. |

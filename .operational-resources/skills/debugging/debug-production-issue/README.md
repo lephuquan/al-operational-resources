@@ -27,7 +27,7 @@
 - `skills/debugging/debug-backend-error/README.md`
 - `rules/06-security.md`
 - `skills/devops/health-check-endpoint/README.md`
-- `skills/observability/analyze-application-logs/SKILL.md`
+- `skills/observability/analyze-application-logs/README.md`
 - `skills/observability/implement-request-tracing/SKILL.md`
 
 **Last updated:** 2026-04-09

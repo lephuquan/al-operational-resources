@@ -131,14 +131,15 @@
 ### Observability
 
 **Hub logging trong code (SLF4J / levels / MDC):** [observability/add-logging/README.md](observability/add-logging/)  
-**Hub metrics (Micrometer / Actuator):** [observability/add-metrics/README.md](observability/add-metrics/)
+**Hub metrics (Micrometer / Actuator):** [observability/add-metrics/README.md](observability/add-metrics/)  
+**Hub đọc log (triage / Loki / ELK):** [observability/analyze-application-logs/README.md](observability/analyze-application-logs/)
 
 | Skill | Short description |
 |-------|-------------------|
 | [observability/add-logging](observability/add-logging/) | SLF4J, levels, parameterized messages, MDC; see folder `README.md` |
 | [observability/add-metrics](observability/add-metrics/) | Counter, Timer, Gauge, low-cardinality tags; see folder `README.md` |
 | [observability/implement-request-tracing](observability/implement-request-tracing/) | Trace / correlation IDs |
-| [observability/analyze-application-logs](observability/analyze-application-logs/) | Log analysis |
+| [observability/analyze-application-logs](observability/analyze-application-logs/) | Time range, correlation, grouping, redaction; see folder `README.md` |
 
 ### Error handling
 

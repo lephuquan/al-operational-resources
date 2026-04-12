@@ -27,6 +27,6 @@ Dùng khi thêm/chỉnh log trong code (service, client, job).
 
 ## Ops alignment
 
-- [ ] Field cần grep (vd. `orderId=`) thống nhất với cách đọc log (`analyze-application-logs`).
+- [ ] Field cần grep (vd. `orderId=`) thống nhất với cách đọc log (`skills/observability/analyze-application-logs/README.md`).
 
 **Last updated:** 2026-04-11
