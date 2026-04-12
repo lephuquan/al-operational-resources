@@ -22,7 +22,7 @@
 
 ## Liên kết nhanh
 
-- `skills/performance/optimize-api-response/SKILL.md`
+- `skills/performance/optimize-api-response/README.md`
 - `skills/performance/analyze-query-performance/README.md`
 - `skills/database/optimize-query/README.md`
 - `skills/devops/configure-environment/README.md`

@@ -71,7 +71,7 @@ Introduce **safe, observable** caching (in-process or distributed) with clear in
 
 ## References
 
-- `skills/performance/optimize-api-response/SKILL.md`
+- `skills/performance/optimize-api-response/README.md`
 - `skills/database/optimize-query/README.md`
 - `skills/devops/configure-environment/README.md`
 - `skills/observability/add-metrics/README.md`

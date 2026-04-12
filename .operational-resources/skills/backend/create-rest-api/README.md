@@ -24,10 +24,11 @@
 
 ## Liên kết nhanh
 
+- `skills/performance/optimize-api-response/README.md` (gọn payload, pagination)
 - `docs/api/01-README.md`, `docs/api/03-response-format.md`
 - `rules/03-api-development.md`
 - `skills/backend/create-service-layer/SKILL.md`
 - `skills/error-handling/global-exception-handler/README.md`
 - `skills/workflow/implement-feature/README.md`
 
-**Last updated:** 2026-04-09
+**Last updated:** 2026-04-11

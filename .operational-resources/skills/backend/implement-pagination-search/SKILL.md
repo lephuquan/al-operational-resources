@@ -60,8 +60,9 @@ Triển khai endpoint danh sách có phân trang, sort an toàn, và bộ lọc/
 - `docs/api/02-api-overview.md`
 - `docs/architecture/05-database-design.md` (index)
 - `skills/backend/create-rest-api/SKILL.md`
+- `skills/performance/optimize-api-response/README.md`
 - `skills/backend/create-service-layer/SKILL.md`
 - `skills/backend/create-jpa-entity/SKILL.md`
 - `skills/database/optimize-query/SKILL.md` (khi cần tối ưu)
 
-**Last updated:** 2026-04-09
+**Last updated:** 2026-04-11

@@ -122,11 +122,12 @@
 ### Performance
 
 **Hub phân tích slow query (EXPLAIN / evidence):** [performance/analyze-query-performance/README.md](performance/analyze-query-performance/)  
-**Hub cache (TTL, evict, stampede):** [performance/caching-strategy/README.md](performance/caching-strategy/)
+**Hub cache (TTL, evict, stampede):** [performance/caching-strategy/README.md](performance/caching-strategy/)  
+**Hub API response (DTO, pagination, payload):** [performance/optimize-api-response/README.md](performance/optimize-api-response/)
 
 | Skill | Short description |
 |-------|-------------------|
-| [performance/optimize-api-response](performance/optimize-api-response/) | DTOs, batching |
+| [performance/optimize-api-response](performance/optimize-api-response/) | DTO, pagination, projection, measure; see folder `README.md` |
 | [performance/caching-strategy](performance/caching-strategy/) | Cache-aside, keys, Redis/Caffeine, invalidation; see folder `README.md` |
 | [performance/analyze-query-performance](performance/analyze-query-performance/) | EXPLAIN ANALYZE, plan, pg_stat_statements; see folder `README.md` |
 | [performance/reduce-memory-usage](performance/reduce-memory-usage/) | Streams, batching |

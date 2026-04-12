@@ -23,6 +23,7 @@
 
 ## Liên kết nhanh
 
+- `skills/performance/optimize-api-response/README.md`
 - `docs/api/07-pagination-filtering.md`
 - `docs/api/03-response-format.md`
 - `skills/backend/create-rest-api/SKILL.md`
@@ -30,4 +31,4 @@
 - `skills/database/optimize-query/SKILL.md`
 - `skills/workflow/implement-feature/README.md`
 
-**Last updated:** 2026-04-09
+**Last updated:** 2026-04-11
