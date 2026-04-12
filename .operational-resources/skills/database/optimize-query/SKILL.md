@@ -38,7 +38,7 @@ Cải thiện hiệu năng truy vấn có bằng chứng (số query, thời gia
    - Không `findAll()` rồi lọc trong memory; dùng `Page` / `LIMIT` / keyset pagination khi data lớn.
 
 6. **Cache (tuỳ chọn)**
-   - Chỉ khi có TTL/invalidate/event rõ; tránh stale data khó debug.
+   - Chỉ khi có TTL/invalidate/event rõ; tránh stale data khó debug — chi tiết `skills/performance/caching-strategy/README.md`.
 
 7. **Xác nhận**
    - So sánh before/after: latency, query count, plan.
@@ -51,6 +51,7 @@ Cải thiện hiệu năng truy vấn có bằng chứng (số query, thời gia
 ## References
 
 - `skills/performance/analyze-query-performance/README.md` (EXPLAIN, chứng minh slow query)
+- `skills/performance/caching-strategy/README.md` (TTL, evict, không cache thay index sai)
 - `docs/architecture/05-database-design.md`
 - `docs/knowledge-base/coding-patterns.md`
 - `skills/database/create-migration/SKILL.md`

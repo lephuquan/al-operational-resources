@@ -24,6 +24,7 @@
 ## Liên kết nhanh
 
 - `skills/database/optimize-query/README.md`
+- `skills/performance/caching-strategy/README.md` (không thay thế fix index/query sai)
 - `skills/database/create-migration/README.md`
 - `skills/backend/implement-pagination-search/README.md`
 - `skills/observability/add-metrics/README.md`
