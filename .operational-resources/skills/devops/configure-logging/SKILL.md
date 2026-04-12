@@ -51,7 +51,7 @@ Cấu hình logging nhất quán giữa môi trường: đủ để debug incide
 ## References
 
 - `skills/devops/configure-environment/README.md` (profile)
-- `skills/observability/add-logging/SKILL.md` (SLF4J usage trong code)
+- `skills/observability/add-logging/README.md` (SLF4J usage trong code)
 - `skills/observability/implement-request-tracing/SKILL.md` (MDC / trace id)
 - `rules/06-security.md`
 - `docs/setup/02-local-development.md`

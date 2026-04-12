@@ -130,9 +130,11 @@
 
 ### Observability
 
+**Hub logging trong code (SLF4J / levels / MDC):** [observability/add-logging/README.md](observability/add-logging/)
+
 | Skill | Short description |
 |-------|-------------------|
-| [observability/add-logging](observability/add-logging/) | SLF4J, structured logs |
+| [observability/add-logging](observability/add-logging/) | SLF4J, levels, parameterized messages, MDC; see folder `README.md` |
 | [observability/add-metrics](observability/add-metrics/) | Micrometer |
 | [observability/implement-request-tracing](observability/implement-request-tracing/) | Trace / correlation IDs |
 | [observability/analyze-application-logs](observability/analyze-application-logs/) | Log analysis |
