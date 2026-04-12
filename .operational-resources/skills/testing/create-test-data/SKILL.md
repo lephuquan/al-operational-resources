@@ -67,7 +67,7 @@ Produce **clear, reusable, isolated** test data for unit and integration tests s
 - `skills/testing/create-test-data/README.md`
 - `skills/testing/create-test-data/checklist.md`
 - `rules/07-testing.md`
-- `skills/testing/write-unit-test/SKILL.md`
+- `skills/testing/write-unit-test/README.md`
 - `skills/testing/write-integration-test/README.md`
 - `skills/backend/create-jpa-entity/SKILL.md`
 - `skills/backend/create-rest-api/README.md`

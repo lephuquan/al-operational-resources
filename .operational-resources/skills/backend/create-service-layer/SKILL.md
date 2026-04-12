@@ -61,6 +61,7 @@ Triển khai lớp service (application/use-case) điều phối domain + persis
 - `docs/knowledge-base/coding-patterns.md`
 - `skills/backend/create-rest-api/SKILL.md`
 - `skills/backend/create-jpa-entity/SKILL.md`
+- `skills/testing/write-unit-test/README.md` (mock repo/port, test use case)
 - `skills/error-handling/map-exceptions-to-http/README.md`
 - `skills/integration/call-external-api/README.md`
 - `skills/integration/integrate-email-service/README.md`

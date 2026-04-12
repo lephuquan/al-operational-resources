@@ -26,6 +26,7 @@
 
 - `skills/security/validate-input/README.md` (DTO, Bean Validation, mass assignment)
 - `skills/testing/create-test-data/README.md` (payload / entity cho test)
+- `skills/testing/write-unit-test/README.md` (logic service/domain)
 - `skills/testing/write-integration-test/README.md` (MockMvc / slice)
 - `skills/performance/optimize-api-response/README.md` (gọn payload, pagination)
 - `docs/api/01-README.md`, `docs/api/03-response-format.md`

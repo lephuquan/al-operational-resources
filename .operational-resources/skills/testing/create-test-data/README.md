@@ -23,7 +23,7 @@
 
 ## Liên kết nhanh
 
-- `skills/testing/write-unit-test/SKILL.md`
+- `skills/testing/write-unit-test/README.md`
 - `skills/testing/write-integration-test/README.md`
 - `skills/backend/create-jpa-entity/SKILL.md`
 - `skills/backend/create-rest-api/README.md`

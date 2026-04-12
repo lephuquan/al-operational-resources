@@ -38,7 +38,7 @@ Hoàn thành một feature (hoặc phần feature trong scope task) với: code 
 
 4. **Test và ánh xạ AC**
    - Bảng **AC → Test** trong task file phải được cập nhật.
-   - Dùng `skills/testing/write-unit-test/SKILL.md` và `skills/testing/write-integration-test/README.md` khi cần.
+   - Dùng `skills/testing/write-unit-test/README.md` và `skills/testing/write-integration-test/README.md` khi cần.
    - Chạy test thật (ví dụ `./mvnw test`) — không coi “AL đã viết test” là đủ.
 
 5. **Đồng bộ docs khi đổi hành vi công khai**
@@ -64,6 +64,6 @@ Hoàn thành một feature (hoặc phần feature trong scope task) với: code 
 - Specs: `docs/specs/README.md`
 - Kiến trúc: `docs/architecture/01-README.md`, `06-backend-layers-and-dependencies.md`
 - API: `docs/api/01-README.md`
-- Skills liên quan: `skills/architecture/design-feature-architecture/SKILL.md`, `skills/backend/create-rest-api/SKILL.md`, `skills/backend/create-service-layer/SKILL.md`, `skills/testing/write-integration-test/README.md`, `skills/workflow/prepare-pull-request/SKILL.md`
+- Skills liên quan: `skills/architecture/design-feature-architecture/SKILL.md`, `skills/backend/create-rest-api/SKILL.md`, `skills/backend/create-service-layer/SKILL.md`, `skills/testing/write-unit-test/README.md`, `skills/testing/write-integration-test/README.md`, `skills/workflow/prepare-pull-request/SKILL.md`
 
 **Last updated:** 2026-04-09

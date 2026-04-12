@@ -77,12 +77,13 @@
 
 ### Testing
 
+**Hub unit test:** [testing/write-unit-test/README.md](testing/write-unit-test/)  
 **Hub integration test:** [testing/write-integration-test/README.md](testing/write-integration-test/)  
 **Hub test data:** [testing/create-test-data/README.md](testing/create-test-data/)
 
 | Skill | Short description |
 |-------|-------------------|
-| [testing/write-unit-test](testing/write-unit-test/) | JUnit 5 + Mockito |
+| [testing/write-unit-test](testing/write-unit-test/) | JUnit 5, Mockito, AAA, boundaries; see folder `README.md` |
 | [testing/write-integration-test](testing/write-integration-test/) | Slices, Testcontainers, MockMvc, isolation; see folder `README.md` |
 | [testing/create-test-data](testing/create-test-data/) | Factories, builders, DB/JSON fixtures; see folder `README.md` |
 

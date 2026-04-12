@@ -25,7 +25,7 @@
 ## Liên kết nhanh
 
 - `skills/testing/create-test-data/README.md`
-- `skills/testing/write-unit-test/SKILL.md`
+- `skills/testing/write-unit-test/README.md`
 - `skills/backend/create-rest-api/README.md`
 - `skills/error-handling/global-exception-handler/README.md`
 - `skills/security/secure-api-endpoint/README.md`

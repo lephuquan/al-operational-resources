@@ -79,7 +79,7 @@ Tài liệu này mô tả **cấu trúc thư mục**, **nội dung chính** và 
 | **`debugging/`** | Stacktrace (`analyze-stacktrace` hub), local (`debug-backend-error` hub), production (`debug-production-issue` hub). |
 | **`architecture/`** | Thiết kế feature, review kiến trúc; **`README.md`** trong nhóm làm hub. |
 | **`code-quality/`** | Code review (`review-code` hub); detect smells (`detect-code-smells` hub); safe refactor (`refactor-clean-code` hub). |
-| **`testing/`** | Unit (`write-unit-test`), integration test (`write-integration-test` hub), test data (`create-test-data` hub). |
+| **`testing/`** | Unit test (`write-unit-test` hub), integration test (`write-integration-test` hub), test data (`create-test-data` hub). |
 | **`database/`** | Schema design (`design-database-schema` hub), migration (`create-migration` hub), tối ưu query (`optimize-query` hub). |
 | **`security/`** | Bảo vệ API (`secure-api-endpoint` hub), validate input (`validate-input` hub), rà soát bảo mật (`security-review` hub). |
 | **`integration/`** | HTTP (`call-external-api` hub), webhooks (`implement-webhook-handler` hub), email (`integrate-email-service` hub), payment (`integrate-payment-gateway` hub), queues (`integrate-message-queue` hub). |

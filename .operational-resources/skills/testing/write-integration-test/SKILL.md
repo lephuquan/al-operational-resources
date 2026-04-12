@@ -71,7 +71,7 @@ Write **Spring Boot integration tests** that prove **real wiring** (HTTP, persis
 - `skills/testing/write-integration-test/checklist.md`
 - `rules/07-testing.md`
 - `skills/testing/create-test-data/README.md`
-- `skills/testing/write-unit-test/SKILL.md`
+- `skills/testing/write-unit-test/README.md`
 - `skills/backend/create-rest-api/README.md`
 - `skills/database/create-migration/README.md`
 - `skills/error-handling/global-exception-handler/README.md`

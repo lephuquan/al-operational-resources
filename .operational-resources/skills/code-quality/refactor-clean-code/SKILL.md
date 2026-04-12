@@ -53,7 +53,7 @@ Cải thiện cấu trúc code (đọc dễ hơn, ít trùng lặp, ranh giới 
 - `rules/08-review-checklist.md`
 - `skills/code-quality/detect-code-smells/SKILL.md`
 - `skills/code-quality/review-code/SKILL.md`
-- `skills/testing/write-unit-test/SKILL.md`
+- `skills/testing/write-unit-test/README.md`
 - `skills/testing/create-test-data/README.md` (fixture khi bổ sung test cùng refactor)
 - `skills/workflow/implement-feature/README.md`
 
