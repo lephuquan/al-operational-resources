@@ -8,7 +8,7 @@ Không chứa secret. Thay `<task>`, tên file, path cho đúng repo.
 Context:
 - Task file: docs/current-task/<task>.md
 - Rules: rules/02-coding-standards.md, rules/03-api-development.md (điều chỉnh theo task)
-- Skills: skills/backend/create-rest-api/SKILL.md, skills/backend/create-service-layer/SKILL.md
+- Skills: skills/backend/create-rest-api/README.md, skills/backend/create-service-layer/README.md, skills/testing/create-test-data/README.md
 - Constraints: không đổi package root; không thêm dependency mới; không đổi public API ngoài scope slice
 
 Task:
@@ -38,4 +38,4 @@ Expected output:
 | 2 | Validation + error mapping | AC2 có test |
 | 3 | DB/migration nếu cần | AC3 + migration chạy local |
 
-**Last updated:** 2026-04-09
+**Last updated:** 2026-04-11

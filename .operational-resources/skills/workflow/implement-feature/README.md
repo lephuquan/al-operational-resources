@@ -28,9 +28,13 @@
 - `PLAYBOOK.md`
 - `WORKFLOW.md`
 - `docs/current-task/TEMPLATE.md`
-- `skills/backend/create-rest-api/`, `create-service-layer/`, `create-jpa-entity/`
+- `skills/backend/create-rest-api/README.md`
+- `skills/backend/create-service-layer/README.md`
+- `skills/backend/create-jpa-entity/README.md`
+- `skills/security/validate-input/README.md`
+- `skills/testing/create-test-data/README.md`
 - `skills/testing/write-unit-test/README.md`
 - `skills/testing/write-integration-test/README.md`
-- `skills/workflow/prepare-pull-request/`
+- `skills/workflow/prepare-pull-request/SKILL.md`
 
-**Last updated:** 2026-04-09
+**Last updated:** 2026-04-11

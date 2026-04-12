@@ -26,11 +26,13 @@ Hoàn thành một feature (hoặc phần feature trong scope task) với: code 
 2. **Triển khai theo lớp và skill con**
    - Bám `docs/architecture/06-backend-layers-and-dependencies.md` và package convention (`04-folder-structure.md`).
    - Thứ tự điển hình: contract/DTO → domain/service → persistence → controller (điều chỉnh theo dự án).
-   - Gọi skill chi tiết khi cần:
-     - `skills/backend/create-rest-api/SKILL.md`
-     - `skills/backend/create-service-layer/SKILL.md`
-     - `skills/backend/create-jpa-entity/SKILL.md`
-     - `skills/error-handling/*` khi đụng lỗi HTTP/global handler.
+   - Gọi skill chi tiết khi cần (vào **`README.md`** hub trước, rồi `SKILL.md`):
+     - `skills/backend/create-rest-api/README.md`
+     - `skills/backend/create-service-layer/README.md`
+     - `skills/backend/create-jpa-entity/README.md`
+     - `skills/security/validate-input/README.md` khi thêm/sửa DTO request
+     - `skills/security/secure-api-endpoint/README.md` khi đụng auth/route
+     - `skills/error-handling/global-exception-handler/README.md` (và skill lỗi liên quan) khi đụng HTTP mapping
 
 3. **Làm việc với AL theo cụm nhỏ**
    - Prompt: Context (task + rules + skill) → Task (một slice) → Constraints → Expected output (xem `examples.md`).
@@ -46,7 +48,7 @@ Hoàn thành một feature (hoặc phần feature trong scope task) với: code 
    - Lỗi/mã lỗi: `docs/knowledge-base/error-codes.md` nếu dự án dùng catalog.
 
 6. **Self-review và chuẩn bị handoff MR**
-   - `rules/08-review-checklist.md` + `skills/code-quality/review-code/checklist.md`.
+   - `rules/08-review-checklist.md` + `skills/code-quality/review-code/README.md` (và `checklist.md` trong folder).
    - Chuẩn bị MR theo `skills/workflow/prepare-pull-request/SKILL.md` (hoặc checklist team).
 
 ## Output
@@ -64,6 +66,6 @@ Hoàn thành một feature (hoặc phần feature trong scope task) với: code 
 - Specs: `docs/specs/README.md`
 - Kiến trúc: `docs/architecture/01-README.md`, `06-backend-layers-and-dependencies.md`
 - API: `docs/api/01-README.md`
-- Skills liên quan: `skills/architecture/design-feature-architecture/SKILL.md`, `skills/backend/create-rest-api/SKILL.md`, `skills/backend/create-service-layer/SKILL.md`, `skills/testing/write-unit-test/README.md`, `skills/testing/write-integration-test/README.md`, `skills/workflow/prepare-pull-request/SKILL.md`
+- Skills liên quan: `skills/architecture/design-feature-architecture/SKILL.md`, `skills/backend/create-rest-api/README.md`, `skills/backend/create-service-layer/README.md`, `skills/backend/create-jpa-entity/README.md`, `skills/security/validate-input/README.md`, `skills/security/secure-api-endpoint/README.md`, `skills/testing/create-test-data/README.md`, `skills/testing/write-unit-test/README.md`, `skills/testing/write-integration-test/README.md`, `skills/code-quality/review-code/README.md`, `skills/workflow/prepare-pull-request/SKILL.md`
 
-**Last updated:** 2026-04-09
+**Last updated:** 2026-04-11

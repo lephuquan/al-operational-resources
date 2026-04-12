@@ -187,7 +187,7 @@
 
 | Skill | Short description |
 |-------|-------------------|
-| [workflow/implement-feature](workflow/implement-feature/) | Triển khai feature có kiểm soát: task → slice → code → test → docs → MR |
+| [workflow/implement-feature](workflow/implement-feature/) | Task → slice → code → test → docs → MR; see folder `README.md` |
 | [workflow/prepare-pull-request](workflow/prepare-pull-request/) | Prepare a pull request |
 | [workflow/investigate-bug](workflow/investigate-bug/) | Systematic bug investigation |
 

@@ -27,13 +27,13 @@ Dùng trước khi coi feature slice là xong hoặc trước khi mở MR. Bỏ 
 
 ## Chất lượng & an toàn
 
-- [ ] Self-review: `rules/08-review-checklist.md` (+ `skills/code-quality/review-code` nếu dùng)
+- [ ] Self-review: `rules/08-review-checklist.md` (+ `skills/code-quality/review-code/README.md` nếu dùng)
 - [ ] Không secret, không log PII nhạy cảm
 - [ ] Task file có progress log / blocker rõ (nếu chưa MR)
 
 ## Handoff MR
 
-- [ ] Đã chuẩn bị mô tả MR (What / Why / How to test) — xem `prepare-pull-request`
+- [ ] Đã chuẩn bị mô tả MR (What / Why / How to test) — xem `skills/workflow/prepare-pull-request/SKILL.md`
 - [ ] Breaking change (nếu có) đã ghi rõ
 
-**Last updated:** 2026-04-09
+**Last updated:** 2026-04-11
