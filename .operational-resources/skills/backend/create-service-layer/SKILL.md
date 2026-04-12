@@ -63,5 +63,6 @@ Triển khai lớp service (application/use-case) điều phối domain + persis
 - `skills/backend/create-jpa-entity/SKILL.md`
 - `skills/error-handling/map-exceptions-to-http/README.md`
 - `skills/integration/call-external-api/README.md`
+- `skills/integration/integrate-email-service/README.md`
 
 **Last updated:** 2026-04-11

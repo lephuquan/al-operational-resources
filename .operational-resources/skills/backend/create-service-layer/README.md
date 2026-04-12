@@ -31,5 +31,6 @@
 - `skills/backend/create-jpa-entity/SKILL.md`
 - `skills/workflow/implement-feature/README.md`
 - `skills/integration/call-external-api/README.md`
+- `skills/integration/integrate-email-service/README.md`
 
 **Last updated:** 2026-04-11
