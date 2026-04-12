@@ -105,14 +105,15 @@
 
 ### Integration
 
-**Hub outbound HTTP (WebClient / config / resilience):** [integration/call-external-api/README.md](integration/call-external-api/)
+**Hub outbound HTTP (WebClient / config / resilience):** [integration/call-external-api/README.md](integration/call-external-api/)  
+**Hub inbound webhooks (signature, idempotency):** [integration/implement-webhook-handler/README.md](integration/implement-webhook-handler/)
 
 | Skill | Short description |
 |-------|-------------------|
 | [integration/call-external-api](integration/call-external-api/) | WebClient, timeouts, ports, WireMock; see folder `README.md` |
 | [integration/integrate-email-service](integration/integrate-email-service/) | Email |
 | [integration/integrate-payment-gateway](integration/integrate-payment-gateway/) | Payment providers |
-| [integration/implement-webhook-handler](integration/implement-webhook-handler/) | Webhooks |
+| [integration/implement-webhook-handler](integration/implement-webhook-handler/) | POST callback, HMAC, idempotency, fast ACK; see folder `README.md` |
 | [integration/integrate-message-queue](integration/integrate-message-queue/) | Message queues |
 
 ### Performance

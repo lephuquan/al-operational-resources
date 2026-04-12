@@ -23,6 +23,7 @@
 
 ## Liên kết nhanh
 
+- `skills/integration/implement-webhook-handler/README.md` (callback ngược từ provider)
 - `skills/backend/create-service-layer/README.md`
 - `skills/devops/configure-environment/README.md`
 - `skills/error-handling/map-exceptions-to-http/README.md`
