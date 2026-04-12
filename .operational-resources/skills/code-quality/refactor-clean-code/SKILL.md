@@ -54,6 +54,7 @@ Cải thiện cấu trúc code (đọc dễ hơn, ít trùng lặp, ranh giới 
 - `skills/code-quality/detect-code-smells/SKILL.md`
 - `skills/code-quality/review-code/SKILL.md`
 - `skills/testing/write-unit-test/SKILL.md`
+- `skills/testing/create-test-data/README.md` (fixture khi bổ sung test cùng refactor)
 - `skills/workflow/implement-feature/README.md`
 
 **Last updated:** 2026-04-09

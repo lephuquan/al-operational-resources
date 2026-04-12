@@ -77,11 +77,13 @@
 
 ### Testing
 
+**Hub test data:** [testing/create-test-data/README.md](testing/create-test-data/)
+
 | Skill | Short description |
 |-------|-------------------|
 | [testing/write-unit-test](testing/write-unit-test/) | JUnit 5 + Mockito |
 | [testing/write-integration-test](testing/write-integration-test/) | Spring Boot integration tests |
-| [testing/create-test-data](testing/create-test-data/) | Fixtures, builders |
+| [testing/create-test-data](testing/create-test-data/) | Factories, builders, DB/JSON fixtures; see folder `README.md` |
 
 ### Database
 

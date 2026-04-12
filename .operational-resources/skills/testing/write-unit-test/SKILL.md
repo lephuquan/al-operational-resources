@@ -15,3 +15,4 @@ Unit test cho Java: JUnit 5 + Mockito, tập trung business logic, nhanh, determ
 ## References
 
 - `rules/07-testing.md`
+- `skills/testing/create-test-data/README.md` (factories, builders, deterministic data)

@@ -67,5 +67,6 @@ Thêm (hoặc chỉnh) persistence layer: entity map đúng bảng/cột, khóa 
 - `skills/database/create-migration/SKILL.md`
 - `skills/backend/create-service-layer/SKILL.md`
 - `skills/backend/create-rest-api/SKILL.md` (DTO, không leak entity)
+- `skills/testing/create-test-data/README.md` (fixture entity cho test)
 
 **Last updated:** 2026-04-09
