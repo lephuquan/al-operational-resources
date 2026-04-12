@@ -24,10 +24,11 @@
 
 ## Liên kết nhanh
 
+- `skills/performance/reduce-memory-usage/README.md` (streaming, không nạp full file vào heap)
 - `rules/06-security.md`
 - `docs/architecture/09-security-architecture-backend.md`
 - `skills/backend/create-rest-api/SKILL.md`
 - `skills/backend/create-service-layer/SKILL.md`
 - `skills/workflow/implement-feature/README.md`
 
-**Last updated:** 2026-04-09
+**Last updated:** 2026-04-11

@@ -60,5 +60,6 @@ Triển khai luồng upload file (một hoặc nhiều file) với kiểm soát 
 - `skills/backend/create-rest-api/SKILL.md`
 - `skills/backend/create-service-layer/SKILL.md`
 - `skills/backend/create-jpa-entity/SKILL.md` (metadata entity nếu cần)
+- `skills/performance/reduce-memory-usage/README.md`
 
-**Last updated:** 2026-04-09
+**Last updated:** 2026-04-11

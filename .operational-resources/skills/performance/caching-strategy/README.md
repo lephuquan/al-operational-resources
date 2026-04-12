@@ -22,6 +22,7 @@
 
 ## Liên kết nhanh
 
+- `skills/performance/reduce-memory-usage/README.md` (cache & heap)
 - `skills/performance/optimize-api-response/README.md`
 - `skills/performance/analyze-query-performance/README.md`
 - `skills/database/optimize-query/README.md`

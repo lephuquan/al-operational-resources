@@ -52,6 +52,7 @@ Cải thiện hiệu năng truy vấn có bằng chứng (số query, thời gia
 
 - `skills/performance/analyze-query-performance/README.md` (EXPLAIN, chứng minh slow query)
 - `skills/performance/caching-strategy/README.md` (TTL, evict, không cache thay index sai)
+- `skills/performance/reduce-memory-usage/README.md` (stream/batch, không materialize toàn bộ)
 - `docs/architecture/05-database-design.md`
 - `docs/knowledge-base/coding-patterns.md`
 - `skills/database/create-migration/SKILL.md`

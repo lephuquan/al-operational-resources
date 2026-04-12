@@ -26,6 +26,7 @@
 
 - `skills/performance/analyze-query-performance/README.md`
 - `skills/performance/caching-strategy/README.md`
+- `skills/performance/reduce-memory-usage/README.md`
 - `docs/architecture/05-database-design.md`
 - `skills/database/create-migration/README.md`
 - `skills/backend/create-jpa-entity/README.md`

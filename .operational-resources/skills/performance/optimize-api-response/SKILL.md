@@ -59,6 +59,7 @@ Make HTTP responses **smaller and faster to produce** without breaking the publi
 
 ## References
 
+- `skills/performance/reduce-memory-usage/README.md`
 - `skills/backend/create-rest-api/README.md`
 - `skills/backend/create-jpa-entity/README.md`
 - `skills/backend/implement-pagination-search/README.md`

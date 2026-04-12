@@ -71,6 +71,7 @@ Introduce **safe, observable** caching (in-process or distributed) with clear in
 
 ## References
 
+- `skills/performance/reduce-memory-usage/README.md` (cache không giới hạn → heap)
 - `skills/performance/optimize-api-response/README.md`
 - `skills/database/optimize-query/README.md`
 - `skills/devops/configure-environment/README.md`

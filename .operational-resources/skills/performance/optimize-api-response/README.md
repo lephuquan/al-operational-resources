@@ -22,6 +22,7 @@
 
 ## Liên kết nhanh
 
+- `skills/performance/reduce-memory-usage/README.md` (payload / list lớn trong heap)
 - `skills/backend/create-rest-api/README.md`
 - `skills/backend/implement-pagination-search/README.md`
 - `skills/database/optimize-query/README.md`
