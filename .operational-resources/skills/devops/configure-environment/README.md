@@ -26,6 +26,6 @@
 - `docs/setup/01-README.md`, `docs/setup/02-local-development.md`
 - `rules/06-security.md`
 - `skills/devops/configure-logging/SKILL.md`
-- `skills/devops/dockerize-service/SKILL.md`
+- `skills/devops/dockerize-service/README.md`
 
 **Last updated:** 2026-04-09

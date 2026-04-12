@@ -142,14 +142,16 @@
 ### DevOps
 
 **Hub environment (profiles / env / secrets):** [devops/configure-environment/README.md](devops/configure-environment/)  
-**Hub logging (Logback / profiles):** [devops/configure-logging/README.md](devops/configure-logging/)
+**Hub logging (Logback / profiles):** [devops/configure-logging/README.md](devops/configure-logging/)  
+**Hub Docker (Spring Boot image):** [devops/dockerize-service/README.md](devops/dockerize-service/)  
+**Hub health / probes (Actuator):** [devops/health-check-endpoint/README.md](devops/health-check-endpoint/)
 
 | Skill | Short description |
 |-------|-------------------|
-| [devops/dockerize-service](devops/dockerize-service/) | Dockerfile |
+| [devops/dockerize-service](devops/dockerize-service/) | Multi-stage Dockerfile, non-root, env; see folder `README.md` |
 | [devops/configure-environment](devops/configure-environment/) | Spring profiles, env, ConfigurationProperties; see folder `README.md` |
 | [devops/configure-logging](devops/configure-logging/) | Logback, levels, rotation, correlation id; see folder `README.md` |
-| [devops/health-check-endpoint](devops/health-check-endpoint/) | Actuator health |
+| [devops/health-check-endpoint](devops/health-check-endpoint/) | Actuator health, liveness/readiness, Security; see folder `README.md` |
 
 ### Workflow
 
@@ -167,4 +169,4 @@
 - When **docs** paths change (`docs/api/NN-*.md`), update **References** inside affected skills.
 - Existing skills may still be **short** or **Vietnamese**; migrate gradually toward the template.
 
-**Last updated:** 2026-04-09
+**Last updated:** 2026-04-11
