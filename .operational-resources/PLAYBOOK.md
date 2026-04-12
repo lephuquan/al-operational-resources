@@ -7,6 +7,8 @@
 - Trong quá trình làm: dùng `rules/ + docs/ + skills/` theo từng phase.
 - Output chuẩn: code + test + review evidence + MR sẵn sàng merge.
 
+**Router nhiều kịch bản** (một task / dựng docs-skills-rules / bảo trì): `.operational-resources/entry-points/README.md`
+
 ---
 
 ## 1) Mục tiêu của playbook
@@ -150,6 +152,7 @@ Task được xem là done khi:
 
 ## 9) Liên kết nhanh
 
+- Router E2E (task / bootstrap / bảo trì): `entry-points/README.md`
 - Global flow tham chiếu: `WORKFLOW.md`
 - Current-task template: `docs/current-task/TEMPLATE.md`
 - Skills catalog: `skills/README.md`

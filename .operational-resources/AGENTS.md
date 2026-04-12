@@ -1,6 +1,6 @@
 # AGENTS.md - Personal AI Workspace
 
-Last updated: 2026-04-08
+Last updated: 2026-04-11
 Owner: Phu Quan Le (personal only)
 
 ## 1) Workspace intent
@@ -41,6 +41,7 @@ Owner: Phu Quan Le (personal only)
 5. Team docs/rules for cross-check and alignment
 
 ## 7) References
+- **Entry points (chọn luồng E2E — task / bootstrap / bảo trì):** `.operational-resources/entry-points/README.md`
 - Directory map (cấu trúc thư mục): `.operational-resources/MAP.md`
 - End-to-end execution playbook (single entry): `.operational-resources/PLAYBOOK.md`
 - Task → implement → test → review → MR: `.operational-resources/WORKFLOW.md`

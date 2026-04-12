@@ -14,6 +14,11 @@ Tài liệu này mô tả **cấu trúc thư mục**, **nội dung chính** và 
 ├── PLAYBOOK.md               # Entry guide: current-task -> implement -> test -> MR
 ├── MAP.md                    # (file này) Bản đồ thư mục
 ├── WORKFLOW.md               # Task → code → test → review → MR
+├── entry-points/             # Router E2E: 1 task, bootstrap docs/skills/rules, bảo trì
+│   ├── README.md             # Mục lục 3 lối vào
+│   ├── 01-one-task-e2e.md
+│   ├── 02-bootstrap-docs-skills-rules.md
+│   └── 03-maintain-docs-skills-rules.md
 ├── README-GIT-LOCAL.md       # Ẩn/hiện thư mục này khỏi Git local
 ├── rules/                    # Quy tắc cá nhân (Cursor / AI)
 ├── docs/                     # Tài liệu ngữ cảnh dự án (ưu tiên đọc sau rules)
@@ -37,6 +42,19 @@ Tài liệu này mô tả **cấu trúc thư mục**, **nội dung chính** và 
 | **`MAP.md`** | Bản đồ thư mục (file này). |
 | **`WORKFLOW.md`** | Quy trình end-to-end từ task ticket đến MR; liên kết `docs/current-task/TEMPLATE.md`. |
 | **`README-GIT-LOCAL.md`** | Hướng dẫn dùng `.git/info/exclude` để không track hoặc track thư mục này trên máy bạn. |
+
+---
+
+## `entry-points/` — Định tuyến E2E (chọn lối vào)
+
+| File | Mục đích |
+|------|----------|
+| **`entry-points/README.md`** | Mục lục: một task / bootstrap tài liệu / bảo trì — neo tới `PLAYBOOK.md`, `WORKFLOW.md`, `skills/`, `docs/`. |
+| **`01-one-task-e2e.md`** | Thứ tự đọc từ ticket → Done (feature / bugfix / refactor); không thay thế `PLAYBOOK.md` / `WORKFLOW.md`. |
+| **`02-bootstrap-docs-skills-rules.md`** | Dự án mới hoặc mở rộng `rules/`, `docs/`, `skills/` (HOW-TO-ADD, MAP, catalog). |
+| **`03-maintain-docs-skills-rules.md`** | Checklist kiểm tra link, catalog, MAP, chất lượng định kỳ. |
+
+**Lưu ý:** `PLAYBOOK.md` và `WORKFLOW.md` **giữ ở gốc** `.operational-resources/` để path ổn định cho `AGENTS.md` và các skill; `entry-points/` là **lớp định hướng**.
 
 ---
 

@@ -7,6 +7,7 @@
 - Nội dung `SKILL.md` nên **English**; mục TL;DR trong từng file có thể là VI.
 
 **Location:** `.operational-resources/skills/`  
+**E2E entry router (task / bootstrap / maintain):** `.operational-resources/entry-points/README.md`  
 **Read before skills:** `.operational-resources/rules/`, then `.operational-resources/docs/project-overview.md` and `docs/README.md`.
 
 ## File layout

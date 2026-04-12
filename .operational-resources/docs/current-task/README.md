@@ -3,7 +3,8 @@
 ## TL;DR (VI)
 
 - Thư mục **duy nhất** chứa file task cá nhân; không tạo bản song song trong `rules/`.
-- **Luồng làm việc với AL (task → code → test → MR):** đọc **`../../PLAYBOOK.md`**, rồi khi implement bám **`../../skills/workflow/implement-feature/README.md`**.
+- **Định tuyến E2E (tùy kịch bản):** **`../../entry-points/README.md`** — trong đó **một task** xem **`../../entry-points/01-one-task-e2e.md`**.
+- **Luồng làm việc với AL (task → code → test → MR):** đọc **`../../PLAYBOOK.md`**, rồi khi implement bám **`../../skills/workflow/implement-feature/README.md`** (bugfix: `investigate-bug` hub).
 - **Nội dung kỹ thuật / template** dùng **English** để AI đọc ổn định; phần này là **lối vào** + dashboard.
 - Sao chép `TEMPLATE.md` → đặt tên `YYYYMMDD-slug.md` → điền và cập nhật bảng bên dưới.
 
@@ -52,7 +53,7 @@ Copy **`TEMPLATE.md`**, then fill at least:
 
 ## Workflow
 
-1. **(Khuyến nghị)** Đọc playbook tổng: **`../../PLAYBOOK.md`** (DoR/DoD, prompt contract, evidence checklist).
+1. **(Khuyến nghị)** Đọc **`../../entry-points/01-one-task-e2e.md`** hoặc trực tiếp playbook tổng: **`../../PLAYBOOK.md`** (DoR/DoD, prompt contract, evidence checklist).
 2. Copy `TEMPLATE.md` → `YYYYMMDD-task-name.md`.
 3. Fill metadata and required sections; delete unused §6 blocks.
 4. Update the Dashboard table above.
@@ -62,9 +63,10 @@ Copy **`TEMPLATE.md`**, then fill at least:
 
 ## References
 
+- **Entry points (router E2E):** `../../entry-points/README.md`, `../../entry-points/01-one-task-e2e.md`
 - **Playbook vận hành với AL (single entry):** `../../PLAYBOOK.md`
 - **Implement feature từ task (hub skill):** `../../skills/workflow/implement-feature/README.md`
 - End-to-end flow (chi tiết): `../../WORKFLOW.md`
 - Rules (no task copies): `../../rules/`
 
-**Last updated:** 2026-04-09
+**Last updated:** 2026-04-11

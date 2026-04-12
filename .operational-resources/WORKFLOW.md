@@ -2,7 +2,8 @@
 
 Tài liệu này mô tả **quy trình một task** khi bạn dùng `.operational-resources/` cùng **ticket/BA/leader** và **AL (AI trong Cursor)**. Đây là khung tham chiếu; có thể rút gọn cho task nhỏ.
 
-> Muốn theo một điểm vào duy nhất (single entry) có DoR/DoD + prompt contract: xem `.operational-resources/PLAYBOOK.md`.
+> Muốn theo một điểm vào duy nhất (single entry) có DoR/DoD + prompt contract: xem `.operational-resources/PLAYBOOK.md`.  
+> **Các lối vào E2E khác** (bootstrap / bảo trì tài liệu): `.operational-resources/entry-points/README.md`.
 
 **Nguyên tắc:** Ticket team là **nguồn yêu cầu chính thức**; `.operational-resources/` là **ngữ cảnh + quy tắc cá nhân + playbook** — không thay thế quyết định BA/Lead khi có conflict (ưu tiên sync với team trước khi merge).
 
@@ -124,6 +125,7 @@ Cập nhật file khi team đổi quy trình (CI, template MR, …).
 
 ## Liên kết nhanh
 
+- Router E2E (nhiều kịch bản): `entry-points/README.md`
 - Playbook vận hành (single entry): `PLAYBOOK.md`
 - Điều tra bug (workflow): `skills/workflow/investigate-bug/README.md`
 - Mở MR/PR: `skills/workflow/prepare-pull-request/README.md`

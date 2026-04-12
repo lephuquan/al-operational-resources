@@ -6,7 +6,8 @@
 - **`docs/` ở root repo** (nếu team có) là chuẩn chung; **không nhầm** với thư mục này.
 - Nội dung chính **English**; mục này để bạn đọc nhanh.
 
-**Entry point:** this file lists **recommended reading order** for Cursor and humans. Path on disk: `.operational-resources/docs/`.
+**Entry points:** multi-scenario router at **`.operational-resources/entry-points/README.md`** (one task / bootstrap / maintain).  
+This file lists **recommended reading order** for **`docs/`** only. Path on disk: `.operational-resources/docs/`.
 
 ## Purpose of `docs/`
 
@@ -36,4 +37,4 @@
 - Update these files when behavior or contracts change.
 - When a task completes, **promote** durable facts into `specs/`, `api/`, `decisions/`, or team docs **on purpose**.
 
-**Last updated:** 2026-04-08
+**Last updated:** 2026-04-11
