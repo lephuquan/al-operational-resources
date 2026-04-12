@@ -33,5 +33,6 @@
 - `skills/integration/call-external-api/README.md`
 - `skills/integration/integrate-email-service/README.md`
 - `skills/integration/integrate-message-queue/README.md`
+- `skills/integration/integrate-payment-gateway/README.md`
 
 **Last updated:** 2026-04-11

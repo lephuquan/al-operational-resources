@@ -23,6 +23,7 @@
 
 ## Liên kết nhanh
 
+- `skills/integration/integrate-payment-gateway/README.md` (PSP outbound + reconcile)
 - `skills/integration/implement-webhook-handler/README.md` (callback ngược từ provider)
 - `skills/backend/create-service-layer/README.md`
 - `skills/devops/configure-environment/README.md`

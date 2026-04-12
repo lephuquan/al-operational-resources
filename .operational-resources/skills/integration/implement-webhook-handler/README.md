@@ -23,6 +23,7 @@
 
 ## Liên kết nhanh
 
+- `skills/integration/integrate-payment-gateway/README.md` (thanh toán: intent + đối soát)
 - `skills/integration/integrate-email-service/README.md` (bounce/complaint → cập nhật suppression)
 - `skills/integration/integrate-message-queue/README.md` (đẩy event sau ACK nhanh)
 - `skills/integration/call-external-api/README.md`

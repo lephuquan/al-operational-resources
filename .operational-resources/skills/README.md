@@ -108,13 +108,14 @@
 **Hub outbound HTTP (WebClient / config / resilience):** [integration/call-external-api/README.md](integration/call-external-api/)  
 **Hub inbound webhooks (signature, idempotency):** [integration/implement-webhook-handler/README.md](integration/implement-webhook-handler/)  
 **Hub email (SMTP / provider, templates):** [integration/integrate-email-service/README.md](integration/integrate-email-service/)  
-**Hub message queue (broker, outbox, DLQ):** [integration/integrate-message-queue/README.md](integration/integrate-message-queue/)
+**Hub message queue (broker, outbox, DLQ):** [integration/integrate-message-queue/README.md](integration/integrate-message-queue/)  
+**Hub payment (PSP, webhook, reconcile):** [integration/integrate-payment-gateway/README.md](integration/integrate-payment-gateway/)
 
 | Skill | Short description |
 |-------|-------------------|
 | [integration/call-external-api](integration/call-external-api/) | WebClient, timeouts, ports, WireMock; see folder `README.md` |
 | [integration/integrate-email-service](integration/integrate-email-service/) | Port + SMTP or HTTP API, templates, async; see folder `README.md` |
-| [integration/integrate-payment-gateway](integration/integrate-payment-gateway/) | Payment providers |
+| [integration/integrate-payment-gateway](integration/integrate-payment-gateway/) | Intent, idempotency, webhook, PCI-aware; see folder `README.md` |
 | [integration/implement-webhook-handler](integration/implement-webhook-handler/) | POST callback, HMAC, idempotency, fast ACK; see folder `README.md` |
 | [integration/integrate-message-queue](integration/integrate-message-queue/) | Producer/consumer, idempotency, DLQ, outbox; see folder `README.md` |
 
