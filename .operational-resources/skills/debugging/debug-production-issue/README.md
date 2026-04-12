@@ -23,6 +23,7 @@
 
 ## Liên kết nhanh
 
+- `skills/workflow/investigate-bug/README.md` (sau triage — fix + regression trên task)
 - `skills/debugging/analyze-stacktrace/README.md`
 - `skills/debugging/debug-backend-error/README.md`
 - `rules/06-security.md`
@@ -30,4 +31,4 @@
 - `skills/observability/analyze-application-logs/README.md`
 - `skills/observability/implement-request-tracing/README.md`
 
-**Last updated:** 2026-04-09
+**Last updated:** 2026-04-11

@@ -35,6 +35,7 @@
 - `skills/testing/create-test-data/README.md`
 - `skills/testing/write-unit-test/README.md`
 - `skills/testing/write-integration-test/README.md`
+- `skills/workflow/investigate-bug/README.md` (khi task là bugfix)
 - `skills/workflow/prepare-pull-request/SKILL.md`
 
 **Last updated:** 2026-04-11

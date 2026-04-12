@@ -23,7 +23,8 @@
 
 ## Liên kết nhanh
 
+- `skills/workflow/investigate-bug/README.md` (quy trình bugfix end-to-end)
 - `skills/debugging/debug-backend-error/README.md`
 - `skills/debugging/debug-production-issue/README.md`
 
-**Last updated:** 2026-04-09
+**Last updated:** 2026-04-11

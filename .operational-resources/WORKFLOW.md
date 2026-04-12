@@ -37,6 +37,7 @@ Tài liệu này mô tả **quy trình một task** khi bạn dùng `.operationa
 
 - Copy từ **`docs/current-task/TEMPLATE.md`** (tiêu đề/hướng dẫn **English** + `TL;DR (VI)`); không tạo bản song song trong `rules/`.
 - Điền tối thiểu: metadata, tóm tắt, nguồn/ticket, AC (hoặc lý do không có), **AC → Test**, **một khối loại task** (feature / bugfix / refactor / …), hướng dẫn cho AI, câu hỏi mở (nội dung điền có thể VI hoặc EN).
+- **Bugfix:** làm theo `skills/workflow/investigate-bug/README.md` (bằng chứng → tái hiện → fix tối thiểu → regression).
 - Cập nhật bảng Dashboard trong `docs/current-task/README.md`.
 
 **Output của bước 1:** một file task “đủ context” để `@` trong Cursor — xem `docs/current-task/README.md` (single source of truth).
@@ -123,8 +124,9 @@ Cập nhật file khi team đổi quy trình (CI, template MR, …).
 ## Liên kết nhanh
 
 - Playbook vận hành (single entry): `PLAYBOOK.md`
+- Điều tra bug (workflow): `skills/workflow/investigate-bug/README.md`
 - Task (chuẩn): `docs/current-task/TEMPLATE.md`
 - Thêm skill / chủ đề mới: `skills/HOW-TO-ADD-TOPIC.md`
 - Git local (ẩn/hiện thư mục): `README-GIT-LOCAL.md`
 
-**Last updated:** 2026-04-09
+**Last updated:** 2026-04-11

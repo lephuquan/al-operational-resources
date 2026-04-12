@@ -22,10 +22,11 @@
 
 ## Liên kết nhanh
 
+- `skills/workflow/investigate-bug/README.md` (bugfix từ ticket → MR)
 - `skills/debugging/analyze-stacktrace/README.md`
 - `skills/debugging/debug-production-issue/README.md`
 - `docs/setup/01-README.md`
 - `notes/debugging/bug-history.md`
 - `skills/testing/write-integration-test/README.md`
 
-**Last updated:** 2026-04-09
+**Last updated:** 2026-04-11
