@@ -50,10 +50,11 @@ Cải thiện hiệu năng truy vấn có bằng chứng (số query, thời gia
 
 ## References
 
+- `skills/performance/analyze-query-performance/README.md` (EXPLAIN, chứng minh slow query)
 - `docs/architecture/05-database-design.md`
 - `docs/knowledge-base/coding-patterns.md`
 - `skills/database/create-migration/SKILL.md`
 - `skills/backend/create-jpa-entity/SKILL.md`
 - `skills/backend/implement-pagination-search/SKILL.md`
 
-**Last updated:** 2026-04-09
+**Last updated:** 2026-04-11

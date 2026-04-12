@@ -121,11 +121,13 @@
 
 ### Performance
 
+**Hub phân tích slow query (EXPLAIN / evidence):** [performance/analyze-query-performance/README.md](performance/analyze-query-performance/)
+
 | Skill | Short description |
 |-------|-------------------|
 | [performance/optimize-api-response](performance/optimize-api-response/) | DTOs, batching |
 | [performance/caching-strategy](performance/caching-strategy/) | Caching |
-| [performance/analyze-query-performance](performance/analyze-query-performance/) | Explain plans, slow queries |
+| [performance/analyze-query-performance](performance/analyze-query-performance/) | EXPLAIN ANALYZE, plan, pg_stat_statements; see folder `README.md` |
 | [performance/reduce-memory-usage](performance/reduce-memory-usage/) | Streams, batching |
 
 ### Observability

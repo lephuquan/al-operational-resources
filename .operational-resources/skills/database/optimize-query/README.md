@@ -17,16 +17,17 @@
 
 ## Thứ tự khuyến nghị
 
-1. Tái hiện slow path và đo baseline.
+1. Tái hiện slow path và đo baseline; plan chi tiết → `skills/performance/analyze-query-performance/README.md`.
 2. Làm theo `SKILL.md`; thử fetch/projection trước khi thêm index.
 3. Index → migration qua `create-migration` khi cần.
 4. Chạy `checklist.md` và ghi số liệu before/after trong MR.
 
 ## Liên kết nhanh
 
+- `skills/performance/analyze-query-performance/README.md`
 - `docs/architecture/05-database-design.md`
 - `skills/database/create-migration/README.md`
 - `skills/backend/create-jpa-entity/README.md`
 - `skills/backend/implement-pagination-search/README.md`
 
-**Last updated:** 2026-04-09
+**Last updated:** 2026-04-11
