@@ -52,7 +52,7 @@ Build a **secure, idempotent** inbound HTTP handler for third-party webhooks tha
    - See **`skills/security/secure-api-endpoint/SKILL.md`** for matcher scoping.
 
 9. **Observability**
-   - Log **provider**, **event id**, **outcome**, duration; propagate **correlation id** if present (`skills/observability/implement-request-tracing/SKILL.md`).
+   - Log **provider**, **event id**, **outcome**, duration; propagate **correlation id** if present (`skills/observability/implement-request-tracing/README.md`).
    - Metrics: received, verified, rejected, duplicates, processing failures.
 
 10. **Testing**
@@ -77,7 +77,7 @@ Build a **secure, idempotent** inbound HTTP handler for third-party webhooks tha
 - `skills/error-handling/map-exceptions-to-http/README.md`
 - `skills/error-handling/global-exception-handler/README.md`
 - `skills/security/secure-api-endpoint/SKILL.md`
-- `skills/observability/implement-request-tracing/SKILL.md`
+- `skills/observability/implement-request-tracing/README.md`
 - `docs/architecture/07-integrations.md`, `docs/architecture/08-transactions-and-consistency.md`
 - `rules/06-security.md`
 

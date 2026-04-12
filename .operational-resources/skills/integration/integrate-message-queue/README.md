@@ -27,7 +27,7 @@
 - `skills/devops/configure-environment/README.md`
 - `skills/integration/call-external-api/README.md`
 - `skills/integration/implement-webhook-handler/README.md`
-- `skills/observability/implement-request-tracing/SKILL.md`
+- `skills/observability/implement-request-tracing/README.md`
 - `docs/architecture/07-integrations.md`, `docs/architecture/08-transactions-and-consistency.md`
 - `rules/06-security.md`
 

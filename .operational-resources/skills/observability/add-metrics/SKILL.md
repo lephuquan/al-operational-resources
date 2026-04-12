@@ -61,7 +61,7 @@ Expose **actionable** application and integration metrics for dashboards and ale
 ## References
 
 - `skills/observability/add-logging/README.md`
-- `skills/observability/implement-request-tracing/SKILL.md`
+- `skills/observability/implement-request-tracing/README.md`
 - `skills/devops/health-check-endpoint/README.md`
 - `skills/devops/configure-environment/README.md`
 - `rules/06-security.md` (do not leak secrets in metric labels)

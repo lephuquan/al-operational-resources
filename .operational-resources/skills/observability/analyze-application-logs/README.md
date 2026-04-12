@@ -24,7 +24,7 @@
 
 - `skills/observability/add-logging/README.md`
 - `skills/observability/add-metrics/README.md`
-- `skills/observability/implement-request-tracing/SKILL.md`
+- `skills/observability/implement-request-tracing/README.md`
 - `skills/devops/configure-logging/README.md`
 - `skills/debugging/debug-production-issue/README.md`
 - `rules/06-security.md`

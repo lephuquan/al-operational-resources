@@ -25,7 +25,7 @@
 - `skills/devops/health-check-endpoint/README.md`
 - `skills/observability/add-logging/README.md`
 - `skills/observability/analyze-application-logs/README.md`
-- `skills/observability/implement-request-tracing/SKILL.md`
+- `skills/observability/implement-request-tracing/README.md`
 - `skills/devops/configure-environment/README.md`
 
 **Last updated:** 2026-04-11

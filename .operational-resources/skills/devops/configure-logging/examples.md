@@ -60,7 +60,7 @@ logging:
 
 ## Lưu ý
 
-- `correlationId` trong pattern chỉ hiện khi code/filter gán MDC — xem `implement-request-tracing`.
+- `correlationId` trong pattern chỉ hiện khi code/filter gán MDC — xem `skills/observability/implement-request-tracing/README.md`.
 - JSON encoder (Logstash) thêm khi cần — giữ field ổn định cho parser.
 
 **Last updated:** 2026-04-09

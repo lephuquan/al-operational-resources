@@ -4,7 +4,7 @@
 
 - Dùng **SLF4J** (`LoggerFactory.getLogger(Class)`): **parameterized** `log.info("x={}", x)` — không nối chuỗi + không `System.out`.
 - **Level:** `ERROR`/`WARN`/`INFO`/`DEBUG` có chủ đích; `INFO` = mốc nghiệp vụ; `DEBUG` chi tiết (chủ yếu dev/staging hoặc timebox prod).
-- **Không** log password, token đầy đủ, thẻ, đủ PII để định danh; **MDC** cho correlation khi đã có filter (`implement-request-tracing`); cấu hình appenders/level theo **`configure-logging`**.
+- **Không** log password, token đầy đủ, thẻ, đủ PII để định danh; **MDC** cho correlation khi đã có filter (`skills/observability/implement-request-tracing/README.md`); cấu hình appenders/level theo **`configure-logging`**.
 
 ## Goal
 
@@ -41,7 +41,7 @@ Add **consistent, safe** application logging so operators can triage incidents w
    - **Avoid** logging inside tight loops at `INFO`; aggregate or sample if needed.
 
 5. **MDC (Mapped Diagnostic Context)**
-   - Do **not** set MDC in random utils unless the team owns cleanup; prefer a **filter/interceptor** (`skills/observability/implement-request-tracing/SKILL.md`).
+   - Do **not** set MDC in random utils unless the team owns cleanup; prefer a **filter/interceptor** (`skills/observability/implement-request-tracing/README.md`).
    - If you must set locally: `MDC.put("key", value)` in `try` and **`MDC.remove`** or **`MDC.clear`** in `finally` (especially on thread pools).
 
 6. **Security and privacy**
@@ -72,7 +72,7 @@ Add **consistent, safe** application logging so operators can triage incidents w
 
 - `skills/observability/add-metrics/README.md`
 - `skills/devops/configure-logging/README.md`
-- `skills/observability/implement-request-tracing/SKILL.md`
+- `skills/observability/implement-request-tracing/README.md`
 - `skills/observability/analyze-application-logs/README.md`
 - `skills/backend/create-service-layer/README.md`
 - `rules/06-security.md`

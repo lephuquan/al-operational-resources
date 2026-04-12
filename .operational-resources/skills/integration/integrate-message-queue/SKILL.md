@@ -54,7 +54,7 @@ Integrate a **durable asynchronous** messaging path (RabbitMQ, Kafka, AWS SQS, e
 
 9. **Observability**
    - Metrics: publish/consume rate, failures, **consumer lag**, age of oldest message.
-   - Logs: **correlation id**, message type, outcome — not full payload in prod (`skills/observability/add-metrics/README.md`, `skills/observability/implement-request-tracing/SKILL.md`).
+   - Logs: **correlation id**, message type, outcome — not full payload in prod (`skills/observability/add-metrics/README.md`, `skills/observability/implement-request-tracing/README.md`).
 
 10. **Testing**
    - **Testcontainers** (RabbitMQ, Kafka, LocalStack for SQS) for integration tests.
@@ -75,7 +75,7 @@ Integrate a **durable asynchronous** messaging path (RabbitMQ, Kafka, AWS SQS, e
 - `skills/devops/configure-environment/README.md`
 - `skills/integration/call-external-api/README.md` (side effects from consumers)
 - `skills/integration/implement-webhook-handler/README.md` (webhook → publish)
-- `skills/observability/implement-request-tracing/SKILL.md`
+- `skills/observability/implement-request-tracing/README.md`
 - `skills/observability/add-metrics/README.md`
 - `docs/architecture/07-integrations.md`, `docs/architecture/08-transactions-and-consistency.md`
 - `rules/06-security.md`

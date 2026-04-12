@@ -3,7 +3,7 @@
 ## TL;DR (VI)
 
 - Playbook **log trong code**: **SLF4J**, level đúng, message **parameterized**, **không PII/secret**.
-- **MDC / correlation** làm chung với **`implement-request-tracing`**; **appenders / level / JSON** thuộc **`configure-logging`**.
+- **MDC / correlation** làm chung với **`skills/observability/implement-request-tracing/README.md`**; **appenders / level / JSON** thuộc **`configure-logging`**.
 
 ## Thư mục này chứa gì
 
@@ -17,7 +17,7 @@
 ## Thứ tự khuyến nghị
 
 1. Đồng bộ pattern với `skills/devops/configure-logging/README.md` (pattern có `%X{…}` nếu dùng MDC).
-2. Bật/tracing: `skills/observability/implement-request-tracing/SKILL.md`.
+2. Bật/tracing: `skills/observability/implement-request-tracing/README.md`.
 3. Làm theo `SKILL.md`; tham chiếu `examples.md`.
 4. Chạy `checklist.md`.
 
@@ -25,7 +25,7 @@
 
 - `skills/devops/configure-logging/README.md`
 - `skills/observability/add-metrics/README.md`
-- `skills/observability/implement-request-tracing/SKILL.md`
+- `skills/observability/implement-request-tracing/README.md`
 - `skills/observability/analyze-application-logs/README.md`
 - `skills/backend/create-service-layer/README.md`
 - `rules/06-security.md`

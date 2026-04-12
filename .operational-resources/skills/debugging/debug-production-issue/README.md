@@ -28,6 +28,6 @@
 - `rules/06-security.md`
 - `skills/devops/health-check-endpoint/README.md`
 - `skills/observability/analyze-application-logs/README.md`
-- `skills/observability/implement-request-tracing/SKILL.md`
+- `skills/observability/implement-request-tracing/README.md`
 
 **Last updated:** 2026-04-09

@@ -29,7 +29,7 @@ Systematically extract **signals** from application logs to localize failures, c
    - Ignore known **noise** (health-check spam) via saved filters if the team maintains them.
 
 4. **Follow a single request**
-   - If **`correlationId`**, **`traceId`**, or **W3C `traceparent`** appears in logs, pivot all lines for that id (`skills/observability/implement-request-tracing/SKILL.md`).
+   - If **`correlationId`**, **`traceId`**, or **W3C `traceparent`** appears in logs, pivot all lines for that id (`skills/observability/implement-request-tracing/README.md`).
    - Reconstruct timeline: entry controller → service → outbound client → DB.
 
 5. **Group and count**
@@ -66,7 +66,7 @@ Systematically extract **signals** from application logs to localize failures, c
 
 - `skills/observability/add-logging/README.md`
 - `skills/observability/add-metrics/README.md`
-- `skills/observability/implement-request-tracing/SKILL.md`
+- `skills/observability/implement-request-tracing/README.md`
 - `skills/devops/configure-logging/README.md`
 - `skills/debugging/debug-production-issue/README.md`
 - `rules/06-security.md`

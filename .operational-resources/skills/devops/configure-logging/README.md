@@ -3,7 +3,7 @@
 ## TL;DR (VI)
 
 - Playbook **Logback + Spring profile**: level, appenders, **rotation**, pattern **correlation id**, tránh log nhạy cảm.
-- Bám **`skills/devops/configure-environment`** cho profile; code log → **`skills/observability/add-logging/README.md`**; trace id → **`skills/observability/implement-request-tracing/SKILL.md`**.
+- Bám **`skills/devops/configure-environment`** cho profile; code log → **`skills/observability/add-logging/README.md`**; trace id → **`skills/observability/implement-request-tracing/README.md`**.
 
 ## Thư mục này chứa gì
 
@@ -24,7 +24,7 @@
 
 - `skills/devops/configure-environment/README.md`
 - `skills/observability/add-logging/README.md`
-- `skills/observability/implement-request-tracing/SKILL.md`
+- `skills/observability/implement-request-tracing/README.md`
 - `rules/06-security.md`
 
 **Last updated:** 2026-04-11

@@ -47,7 +47,7 @@ Implement maintainable outbound HTTP clients behind clear **ports/adapters**, wi
    - **Circuit breaker / bulkhead:** use **Resilience4j** (or platform equivalent) for flaky partners; configure via properties.
 
 8. **Observability**
-   - Log at **INFO** for outbound call start/failure summary with **correlation id** (`skills/observability/implement-request-tracing/SKILL.md`).
+   - Log at **INFO** for outbound call start/failure summary with **correlation id** (`skills/observability/implement-request-tracing/README.md`).
    - Add **metrics** (latency, error rate) if the team uses Micrometer (`skills/observability/add-metrics/README.md`).
 
 9. **Testing**
@@ -68,7 +68,7 @@ Implement maintainable outbound HTTP clients behind clear **ports/adapters**, wi
 - `skills/backend/create-service-layer/README.md` (ports, no `RestTemplate` in domain)
 - `skills/devops/configure-environment/README.md`
 - `skills/error-handling/map-exceptions-to-http/README.md`
-- `skills/observability/implement-request-tracing/SKILL.md`
+- `skills/observability/implement-request-tracing/README.md`
 - `skills/observability/add-metrics/README.md`
 - `docs/architecture/06-backend-layers-and-dependencies.md`, `docs/architecture/07-integrations.md`, `docs/architecture/08-transactions-and-consistency.md`
 - `rules/06-security.md`

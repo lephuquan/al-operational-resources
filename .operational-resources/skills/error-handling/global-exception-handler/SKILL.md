@@ -47,7 +47,7 @@ Centralize exception-to-response mapping so controllers stay thin, every error r
    - Optional: differentiate **timeout / upstream** if you use dedicated exception types → **502/503** per mapping table.
 
 9. **Logging**
-   - Log once per failure path with **level** appropriate to severity; include **correlation / request id** if MDC is set (`skills/observability/implement-request-tracing/SKILL.md`).
+   - Log once per failure path with **level** appropriate to severity; include **correlation / request id** if MDC is set (`skills/observability/implement-request-tracing/README.md`).
 
 10. **Tests**
    - **`@WebMvcTest`** with **`@Import`** or standalone setup: assert **HTTP status** and JSON paths **`$.success`**, **`$.error.code`** (and `details` for validation).
@@ -66,7 +66,7 @@ Centralize exception-to-response mapping so controllers stay thin, every error r
 - `docs/api/03-response-format.md`, `docs/api/05-error-handling.md`
 - `docs/knowledge-base/error-codes.md`
 - `skills/security/secure-api-endpoint/SKILL.md`
-- `skills/observability/implement-request-tracing/SKILL.md`
+- `skills/observability/implement-request-tracing/README.md`
 - `rules/06-security.md`
 
 **Last updated:** 2026-04-11
