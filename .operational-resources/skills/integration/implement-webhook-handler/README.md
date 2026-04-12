@@ -30,7 +30,7 @@
 - `skills/observability/implement-request-tracing/README.md`
 - `skills/backend/create-rest-api/README.md`
 - `skills/devops/configure-environment/README.md`
-- `skills/security/secure-api-endpoint/SKILL.md`
+- `skills/security/secure-api-endpoint/README.md`
 - `skills/error-handling/map-exceptions-to-http/README.md`
 - `docs/architecture/07-integrations.md`, `docs/architecture/08-transactions-and-consistency.md`
 - `rules/06-security.md`

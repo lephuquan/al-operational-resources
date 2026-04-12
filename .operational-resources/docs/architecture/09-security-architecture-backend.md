@@ -50,4 +50,4 @@ This document covers **server-side** security mechanics. HTTP-facing auth standa
 
 - API auth contract: `docs/api/04-authentication.md`
 - Rules: `rules/06-security-best-practices.md` (if present in your workspace)
-- Secure endpoint skill: `skills/security/secure-api-endpoint/`
+- Secure endpoint skill: `skills/security/secure-api-endpoint/README.md`

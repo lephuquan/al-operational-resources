@@ -61,7 +61,7 @@ Expose **reliable** liveness and readiness signals for load balancers and Kubern
 - `skills/devops/dockerize-service/README.md` (container healthcheck)
 - `skills/devops/configure-environment/README.md` (profiles)
 - `skills/observability/add-metrics/README.md` (Micrometer / Actuator metrics, if enabled)
-- `skills/security/secure-api-endpoint/SKILL.md` (security patterns)
+- `skills/security/secure-api-endpoint/README.md` (security patterns)
 - `rules/06-security.md`
 - Spring Boot reference: [Actuator — Health](https://docs.spring.io/spring-boot/reference/actuator/endpoints.html#actuator.endpoints.health)
 

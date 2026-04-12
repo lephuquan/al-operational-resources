@@ -97,9 +97,11 @@
 
 ### Security
 
+**Hub bảo vệ API:** [security/secure-api-endpoint/README.md](security/secure-api-endpoint/)
+
 | Skill | Short description |
 |-------|-------------------|
-| [security/secure-api-endpoint](security/secure-api-endpoint/) | Spring Security |
+| [security/secure-api-endpoint](security/secure-api-endpoint/) | Filter chain, authn/authz, CSRF/CORS, testing; see folder `README.md` |
 | [security/validate-input](security/validate-input/) | Bean Validation |
 | [security/security-review](security/security-review/) | Security review |
 

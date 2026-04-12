@@ -49,7 +49,7 @@ Build a **secure, idempotent** inbound HTTP handler for third-party webhooks tha
 
 8. **Spring Security**
    - Permit webhook path **without** session CSRF if the contract is **signature-based**; do **not** expose the same path without verification.
-   - See **`skills/security/secure-api-endpoint/SKILL.md`** for matcher scoping.
+   - See **`skills/security/secure-api-endpoint/README.md`** for matcher scoping.
 
 9. **Observability**
    - Log **provider**, **event id**, **outcome**, duration; propagate **correlation id** if present (`skills/observability/implement-request-tracing/README.md`).
@@ -76,7 +76,7 @@ Build a **secure, idempotent** inbound HTTP handler for third-party webhooks tha
 - `skills/devops/configure-environment/README.md`
 - `skills/error-handling/map-exceptions-to-http/README.md`
 - `skills/error-handling/global-exception-handler/README.md`
-- `skills/security/secure-api-endpoint/SKILL.md`
+- `skills/security/secure-api-endpoint/README.md`
 - `skills/observability/implement-request-tracing/README.md`
 - `docs/architecture/07-integrations.md`, `docs/architecture/08-transactions-and-consistency.md`
 - `rules/06-security.md`

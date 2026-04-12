@@ -27,7 +27,7 @@
 - `skills/error-handling/map-exceptions-to-http/README.md`
 - `docs/api/03-response-format.md`, `docs/api/05-error-handling.md`
 - `docs/knowledge-base/error-codes.md`
-- `skills/security/secure-api-endpoint/SKILL.md`
+- `skills/security/secure-api-endpoint/README.md`
 - `rules/06-security.md`
 
 **Last updated:** 2026-04-11

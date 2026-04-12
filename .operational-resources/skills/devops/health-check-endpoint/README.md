@@ -27,7 +27,7 @@
 - `skills/devops/dockerize-service/README.md`
 - `skills/devops/configure-environment/README.md`
 - `skills/observability/add-metrics/README.md`
-- `skills/security/secure-api-endpoint/SKILL.md`
+- `skills/security/secure-api-endpoint/README.md`
 - `rules/06-security.md`
 
 **Last updated:** 2026-04-11

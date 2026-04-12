@@ -13,3 +13,7 @@ Rà soát nhanh bảo mật: secret, injection, authz, data exposure.
 - [ ] IDOR: kiểm tra resource thuộc user đúng
 - [ ] Log không chứa token/password
 - [ ] Dependency vulnerabilities (`mvn dependency:check` nếu team dùng)
+
+## References
+
+- `skills/security/secure-api-endpoint/README.md` (triển khai filter chain và authz)
