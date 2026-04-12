@@ -58,7 +58,7 @@ Tài liệu này mô tả **quy trình một task** khi bạn dùng `.operationa
 
 | Việc | Gợi ý |
 |------|--------|
-| AL sinh / sửa test | Dùng `skills/testing/write-unit-test`, `write-integration-test` |
+| AL sinh / sửa test | Dùng `skills/testing/write-unit-test/SKILL.md`, `skills/testing/write-integration-test/README.md` |
 | Bạn chạy thật | `./mvnw test` (hoặc lệnh team) — **cổng bắt buộc** trước MR |
 | Thiếu test cho nhánh quan trọng | Bổ sung hoặc ghi rõ lý do trong task/MR |
 

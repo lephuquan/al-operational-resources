@@ -29,6 +29,7 @@
 - `WORKFLOW.md`
 - `docs/current-task/TEMPLATE.md`
 - `skills/backend/create-rest-api/`, `create-service-layer/`, `create-jpa-entity/`
+- `skills/testing/write-integration-test/README.md`
 - `skills/workflow/prepare-pull-request/`
 
 **Last updated:** 2026-04-09

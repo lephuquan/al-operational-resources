@@ -58,6 +58,7 @@ Triển khai một hoặc nhiều HTTP endpoint mới (hoặc mở rộng có ki
 - `skills/backend/create-service-layer/SKILL.md`
 - `skills/security/validate-input/README.md`
 - `skills/testing/create-test-data/README.md`
+- `skills/testing/write-integration-test/README.md` (MockMvc / slice sau khi có endpoint)
 - `skills/performance/optimize-api-response/README.md`
 - `skills/error-handling/global-exception-handler/README.md`, `skills/error-handling/map-exceptions-to-http/README.md` (khi cần)
 

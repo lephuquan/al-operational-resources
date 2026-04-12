@@ -54,6 +54,6 @@ Kết thúc với: nguyên nhân đã xác định, sửa đủ nhỏ để an t
 - `skills/debugging/analyze-stacktrace/SKILL.md`
 - `docs/setup/01-README.md`, `docs/setup/02-local-development.md` (khi cần)
 - `rules/06-security.md` (redact secret khi paste log/request)
-- `skills/testing/write-integration-test/SKILL.md`
+- `skills/testing/write-integration-test/README.md`
 
 **Last updated:** 2026-04-09

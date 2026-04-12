@@ -16,3 +16,4 @@ Unit test cho Java: JUnit 5 + Mockito, tập trung business logic, nhanh, determ
 
 - `rules/07-testing.md`
 - `skills/testing/create-test-data/README.md` (factories, builders, deterministic data)
+- `skills/testing/write-integration-test/README.md` (khi cần chứng minh wiring Spring / HTTP / DB)

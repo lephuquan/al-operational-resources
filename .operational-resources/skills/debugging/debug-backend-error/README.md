@@ -26,6 +26,6 @@
 - `skills/debugging/debug-production-issue/README.md`
 - `docs/setup/01-README.md`
 - `notes/debugging/bug-history.md`
-- `skills/testing/write-integration-test/SKILL.md`
+- `skills/testing/write-integration-test/README.md`
 
 **Last updated:** 2026-04-09
