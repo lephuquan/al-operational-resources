@@ -4,7 +4,7 @@
 
 - Playbook **triển khai feature có kiểm soát** từ file `current-task` đến code, test, docs, self-review — làm theo **slice nhỏ**, không nhờ AL sửa cả repo một lần.
 - Luôn bám **AC → test**, `rules/` + `docs/` + skill con (`create-rest-api`, …).
-- Điểm vào tổng: `PLAYBOOK.md`; flow chi tiết: `WORKFLOW.md`.
+- Luồng tổng ticket → Done: `task-lifecycle/README.md` → `FROM-TICKET-TO-DONE.md`.
 
 ## Goal
 
@@ -13,7 +13,7 @@ Hoàn thành một feature (hoặc phần feature trong scope task) với: code 
 ## Preconditions
 
 - Có file task trong `docs/current-task/*.md` (đã điền tối thiểu theo `TEMPLATE.md`).
-- Đã đạt **DoR** cơ bản: AC rõ hoặc có cách đo done; scope/non-goals không mơ hồ (xem `PLAYBOOK.md`).
+- Đã đạt **DoR** cơ bản: AC rõ hoặc có cách đo done; scope/non-goals không mơ hồ (xem `task-lifecycle/FROM-TICKET-TO-DONE.md` §4).
 - Đã có **context pack** trong task (rules + docs + skill liên quan) hoặc bổ sung trước khi code.
 
 ## Steps
@@ -60,8 +60,7 @@ Hoàn thành một feature (hoặc phần feature trong scope task) với: code 
 
 ## References
 
-- Playbook tổng: `PLAYBOOK.md`
-- Flow tham chiếu: `WORKFLOW.md`
+- Task lifecycle (E2E): `task-lifecycle/README.md`, `task-lifecycle/FROM-TICKET-TO-DONE.md`
 - Task: `docs/current-task/README.md`, `docs/current-task/TEMPLATE.md`
 - Specs: `docs/specs/README.md`
 - Kiến trúc: `docs/architecture/01-README.md`, `06-backend-layers-and-dependencies.md`

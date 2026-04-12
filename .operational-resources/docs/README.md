@@ -6,7 +6,8 @@
 - **`docs/` ở root repo** (nếu team có) là chuẩn chung; **không nhầm** với thư mục này.
 - Nội dung chính **English**; mục này để bạn đọc nhanh.
 
-**Entry points:** multi-scenario router at **`.operational-resources/entry-points/README.md`** (one task / bootstrap / maintain).  
+**Task → Done (E2E):** **`.operational-resources/task-lifecycle/README.md`**.  
+**Bootstrap / maintain docs+skills+rules:** **`.operational-resources/guides/README.md`**.  
 This file lists **recommended reading order** for **`docs/`** only. Path on disk: `.operational-resources/docs/`.
 
 ## Purpose of `docs/`

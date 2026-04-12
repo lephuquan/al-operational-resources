@@ -64,6 +64,6 @@ Produce a **merge-ready** pull/merge request: **focused diff**, **clear descript
 - `skills/security/security-review/README.md`
 - `skills/workflow/implement-feature/README.md`
 - `docs/current-task/TEMPLATE.md` (§13 Definition of Done)
-- `WORKFLOW.md` (section MR)
+- `task-lifecycle/FROM-TICKET-TO-DONE.md` (§5 — Tạo MR)
 
 **Last updated:** 2026-04-11

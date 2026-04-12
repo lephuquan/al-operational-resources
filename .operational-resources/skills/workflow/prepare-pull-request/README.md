@@ -28,6 +28,6 @@
 - `skills/workflow/implement-feature/README.md`
 - `skills/workflow/investigate-bug/README.md`
 - `docs/current-task/TEMPLATE.md` (§13 DoD)
-- `WORKFLOW.md` (mục MR)
+- `task-lifecycle/FROM-TICKET-TO-DONE.md` (§5 — Tạo MR)
 
 **Last updated:** 2026-04-11

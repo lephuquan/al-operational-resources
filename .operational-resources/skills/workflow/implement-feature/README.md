@@ -4,7 +4,7 @@
 
 - Đây là playbook **triển khai feature end-to-end có kiểm soát** sau khi đã có task trong `docs/current-task/`.
 - Đọc `SKILL.md` để biết thứ tự; dùng `examples.md` cho prompt mẫu; `checklist.md` để soát trước MR.
-- Điểm vào tổng thể workspace: `PLAYBOOK.md`; flow chi tiết song song: `WORKFLOW.md`.
+- Luồng tổng **ticket → Done:** `task-lifecycle/README.md` → `FROM-TICKET-TO-DONE.md` (stub: `PLAYBOOK.md`, `WORKFLOW.md`).
 
 ## Thư mục này chứa gì
 
@@ -17,7 +17,7 @@
 
 ## Thứ tự khuyến nghị
 
-1. Đảm bảo task đạt DoR (xem `PLAYBOOK.md`).
+1. Đảm bảo task đạt DoR (xem `task-lifecycle/FROM-TICKET-TO-DONE.md` §4).
 2. Nếu cần thiết kế sâu trước code: `skills/architecture/design-feature-architecture/`.
 3. Đọc `SKILL.md` và chốt first slice.
 4. Làm từng cụm với AL theo `examples.md`.
@@ -25,8 +25,8 @@
 
 ## Liên kết nhanh
 
-- `PLAYBOOK.md`
-- `WORKFLOW.md`
+- `task-lifecycle/README.md`
+- `task-lifecycle/FROM-TICKET-TO-DONE.md`
 - `docs/current-task/TEMPLATE.md`
 - `skills/backend/create-rest-api/README.md`
 - `skills/backend/create-service-layer/README.md`

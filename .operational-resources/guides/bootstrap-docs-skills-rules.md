@@ -1,8 +1,8 @@
-# Entry 2 — Dựng / mở rộng `docs/`, `skills/`, `rules/`
+# Hướng dẫn: triển khai / mở rộng `docs/`, `skills/`, `rules/`
 
 ## Mục đích
 
-Dùng khi **clone workspace mới**, **onboard** AI context, hoặc **bổ sung** một lớp tài liệu (quy tắc, kiến trúc, playbook) mà không làm một task sản phẩm cụ thể.
+Dùng khi **clone workspace mới**, **onboard** AI context, hoặc **bổ sung** một lớp tài liệu (quy tắc, kiến trúc, playbook) mà **không** gói trong một task sản phẩm cụ thể — hoặc khi task riêng “dựng khung tài liệu” cần checklist rõ.
 
 ## Nguyên tắc
 
@@ -33,6 +33,6 @@ Dùng khi **clone workspace mới**, **onboard** AI context, hoặc **bổ sung*
 - [ ] **`skills/README.md`** có dòng (và hub nếu có)
 - [ ] **`MAP.md`** hàng tương ứng còn đúng (nếu đổi cấu trúc)
 
-Chi tiết định kỳ: xem **`03-maintain-docs-skills-rules.md`**.
+Sau khi ổn định hoặc theo chu kỳ: chạy **[`review-and-update-docs-skills-rules.md`](review-and-update-docs-skills-rules.md)**.
 
 **Last updated:** 2026-04-11

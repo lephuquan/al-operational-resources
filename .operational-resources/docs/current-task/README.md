@@ -3,8 +3,9 @@
 ## TL;DR (VI)
 
 - Thư mục **duy nhất** chứa file task cá nhân; không tạo bản song song trong `rules/`.
-- **Định tuyến E2E (tùy kịch bản):** **`../../entry-points/README.md`** — trong đó **một task** xem **`../../entry-points/01-one-task-e2e.md`**.
-- **Luồng làm việc với AL (task → code → test → MR):** đọc **`../../PLAYBOOK.md`**, rồi khi implement bám **`../../skills/workflow/implement-feature/README.md`** (bugfix: `investigate-bug` hub).
+- **Luồng một task (ticket → Done):** **`../../task-lifecycle/README.md`** → **`../../task-lifecycle/FROM-TICKET-TO-DONE.md`** (hoặc stub **`../../PLAYBOOK.md`** / **`../../WORKFLOW.md`** nếu đang dùng link cũ).
+- **Bootstrap / bảo trì tài liệu:** **`../../guides/README.md`**.
+- Khi implement code: bám **`../../skills/workflow/implement-feature/README.md`** (bugfix: **`investigate-bug`** hub).
 - **Nội dung kỹ thuật / template** dùng **English** để AI đọc ổn định; phần này là **lối vào** + dashboard.
 - Sao chép `TEMPLATE.md` → đặt tên `YYYYMMDD-slug.md` → điền và cập nhật bảng bên dưới.
 
@@ -53,7 +54,7 @@ Copy **`TEMPLATE.md`**, then fill at least:
 
 ## Workflow
 
-1. **(Khuyến nghị)** Đọc **`../../entry-points/01-one-task-e2e.md`** hoặc trực tiếp playbook tổng: **`../../PLAYBOOK.md`** (DoR/DoD, prompt contract, evidence checklist).
+1. **(Khuyến nghị)** Đọc **`../../task-lifecycle/FROM-TICKET-TO-DONE.md`** (DoR, từng bước, MR, DoD).
 2. Copy `TEMPLATE.md` → `YYYYMMDD-task-name.md`.
 3. Fill metadata and required sections; delete unused §6 blocks.
 4. Update the Dashboard table above.
@@ -63,10 +64,10 @@ Copy **`TEMPLATE.md`**, then fill at least:
 
 ## References
 
-- **Entry points (router E2E):** `../../entry-points/README.md`, `../../entry-points/01-one-task-e2e.md`
-- **Playbook vận hành với AL (single entry):** `../../PLAYBOOK.md`
+- **Task lifecycle (E2E):** `../../task-lifecycle/README.md`, `../../task-lifecycle/FROM-TICKET-TO-DONE.md`
+- **Guides (bootstrap / review tài liệu):** `../../guides/README.md`
+- **Stub redirect:** `../../PLAYBOOK.md`, `../../WORKFLOW.md`
 - **Implement feature từ task (hub skill):** `../../skills/workflow/implement-feature/README.md`
-- End-to-end flow (chi tiết): `../../WORKFLOW.md`
 - Rules (no task copies): `../../rules/`
 
 **Last updated:** 2026-04-11

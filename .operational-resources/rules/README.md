@@ -8,4 +8,4 @@ Chứa **quy tắc cá nhân** (ưu tiên, coding, API, …) cho AI và cho bạ
 - Lý do: tránh nhân đôi; một nguồn giúp AL và bạn không lệch bản.
 
 Xem: `../docs/current-task/README.md` và `../docs/current-task/TEMPLATE.md`.  
-Bootstrap / bảo trì toàn bộ `rules/` + `docs/` + `skills/`: `../entry-points/02-bootstrap-docs-skills-rules.md`, `../entry-points/03-maintain-docs-skills-rules.md`.
+Bootstrap / bảo trì toàn bộ `rules/` + `docs/` + `skills/`: `../guides/bootstrap-docs-skills-rules.md`, `../guides/review-and-update-docs-skills-rules.md`.

@@ -41,10 +41,10 @@ Owner: Phu Quan Le (personal only)
 5. Team docs/rules for cross-check and alignment
 
 ## 7) References
-- **Entry points (chọn luồng E2E — task / bootstrap / bảo trì):** `.operational-resources/entry-points/README.md`
+- **Một task ticket → Done (nguồn chính):** `.operational-resources/task-lifecycle/README.md` → `FROM-TICKET-TO-DONE.md`
+- **Stub (link cũ):** `.operational-resources/PLAYBOOK.md`, `.operational-resources/WORKFLOW.md`
+- **Triển khai / duy trì docs+skills+rules:** `.operational-resources/guides/README.md`
 - Directory map (cấu trúc thư mục): `.operational-resources/MAP.md`
-- End-to-end execution playbook (single entry): `.operational-resources/PLAYBOOK.md`
-- Task → implement → test → review → MR: `.operational-resources/WORKFLOW.md`
 - Rules: `.operational-resources/rules/`
 - Personal docs: `.operational-resources/docs/`
 - Backend architecture (numbered): `.operational-resources/docs/architecture/01-README.md`

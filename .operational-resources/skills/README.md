@@ -7,7 +7,8 @@
 - Nội dung `SKILL.md` nên **English**; mục TL;DR trong từng file có thể là VI.
 
 **Location:** `.operational-resources/skills/`  
-**E2E entry router (task / bootstrap / maintain):** `.operational-resources/entry-points/README.md`  
+**Một task ticket → Done:** `.operational-resources/task-lifecycle/README.md`  
+**Bootstrap / bảo trì tài liệu:** `.operational-resources/guides/README.md`  
 **Read before skills:** `.operational-resources/rules/`, then `.operational-resources/docs/project-overview.md` and `docs/README.md`.
 
 ## File layout
@@ -184,7 +185,8 @@
 
 ### Workflow
 
-**Hub triển khai từ task:** [workflow/implement-feature/README.md](workflow/implement-feature/README.md) — slice, prompt AL, checklist, liên kết `PLAYBOOK.md`.  
+**Hub nhóm (phase):** [workflow/README.md](workflow/README.md) — neo `task-lifecycle` + ba skill dưới đây.  
+**Hub triển khai từ task:** [workflow/implement-feature/README.md](workflow/implement-feature/README.md) — slice, prompt AL, checklist; luồng tổng: `task-lifecycle/FROM-TICKET-TO-DONE.md`.  
 **Hub điều tra bug:** [workflow/investigate-bug/README.md](workflow/investigate-bug/) — evidence, reproduce, debug skills, regression, MR.  
 **Hub mở MR/PR:** [workflow/prepare-pull-request/README.md](workflow/prepare-pull-request/) — diff, mô tả, test plan, risk.
 
