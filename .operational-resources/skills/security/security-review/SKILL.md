@@ -2,7 +2,7 @@
 
 ## TL;DR (VI)
 
-- Đọc diff theo **rủi ro**: endpoint mới → **authn/authz** + **IDOR**; query/string → **injection**; integration → **SSRF** / secret; DTO → **mass assignment** + **validate-input**.
+- Đọc diff theo **rủi ro**: endpoint mới → **authn/authz** + **IDOR**; query/string → **injection**; integration → **SSRF** / secret; DTO → **mass assignment** + **`validate-input`** hub.
 - **Không** hardcode secret; **không** log token/password/PII nhạy cảm; phản hồi lỗi **không** lộ stack/schema nội bộ.
 - Chạy **`checklist.md`**; bổ sung **`examples.md`** khi cần bằng chứng (lệnh scan, bước test thủ công).
 
@@ -38,7 +38,7 @@ Perform a **structured security pass** on a change set (PR or release) so common
    - XML/XXE if parsing external XML.
 
 6. **Input and output**
-   - DTOs use **`@Valid`** and safe binding; no binding **internal** fields (role, `isAdmin`) from client input — **`skills/security/validate-input/SKILL.md`**.
+   - DTOs use **`@Valid`** and safe binding; no binding **internal** fields (role, `isAdmin`) from client input — **`skills/security/validate-input/README.md`**.
    - Responses do not expose **stack traces**, raw SQL, or internal IDs unnecessarily; align with **`docs/api/05-error-handling.md`**.
 
 7. **XSS and content types**
@@ -76,7 +76,7 @@ Perform a **structured security pass** on a change set (PR or release) so common
 - `docs/architecture/09-security-architecture-backend.md`
 - `docs/api/04-authentication.md`, `docs/api/05-error-handling.md`
 - `skills/security/secure-api-endpoint/README.md`
-- `skills/security/validate-input/SKILL.md`
+- `skills/security/validate-input/README.md`
 - `skills/code-quality/review-code/README.md`
 - `skills/integration/call-external-api/README.md`
 - `skills/backend/implement-file-upload/README.md`

@@ -55,6 +55,7 @@ Triển khai luồng upload file (một hoặc nhiều file) với kiểm soát 
 ## References
 
 - `rules/06-security.md`
+- `skills/security/validate-input/README.md` (DTO / `@Valid` cho metadata kèm file)
 - `docs/architecture/09-security-architecture-backend.md`
 - `docs/api/02-api-overview.md`, `docs/api/08-endpoint-list.md`, `docs/api/10-current-api-changes.md`
 - `skills/backend/create-rest-api/SKILL.md`

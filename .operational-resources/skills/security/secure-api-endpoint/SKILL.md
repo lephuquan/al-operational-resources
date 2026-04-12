@@ -49,7 +49,7 @@ Protect HTTP endpoints with consistent **authentication**, **authorization**, an
    - Configure allowed **origins**, **methods**, and **headers** explicitly; avoid reflecting arbitrary `Origin` in production.
 
 8. **Related hardening**
-   - Input validation at DTO boundary — **`skills/security/validate-input/SKILL.md`**.
+   - Input validation at DTO boundary — **`skills/security/validate-input/README.md`**.
    - Rate limiting / WAF often at **gateway** — mention in runbook if not in app.
 
 9. **Errors and observability**
@@ -71,7 +71,7 @@ Protect HTTP endpoints with consistent **authentication**, **authorization**, an
 - `docs/api/04-authentication.md`
 - `docs/api/05-error-handling.md`
 - `docs/architecture/09-security-architecture-backend.md`
-- `skills/security/validate-input/SKILL.md`
+- `skills/security/validate-input/README.md`
 - `skills/security/security-review/README.md`
 - `skills/error-handling/global-exception-handler/README.md`
 - `skills/devops/health-check-endpoint/README.md`

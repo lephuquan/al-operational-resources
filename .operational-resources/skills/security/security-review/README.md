@@ -4,7 +4,7 @@
 
 - Playbook **rà soát bảo mật** trước merge / release: **secret**, **injection**, **authz/IDOR**, **lộ dữ liệu**, **log**, **dependency**, **cấu hình** (CORS, upload, redirect).
 - Dùng **`checklist.md`** làm gate; **`SKILL.md`** là thứ tự đọc diff và câu hỏi cần trả lời.
-- Neo **`secure-api-endpoint`** (triển khai), **`validate-input`** (boundary), **`review-code`** (PR tổng quát), **`rules/06-security.md`**.
+- Neo **`secure-api-endpoint`** (triển khai), **`validate-input`** hub (boundary), **`review-code`** (PR tổng quát), **`rules/06-security.md`**.
 
 ## Thư mục này chứa gì
 
@@ -24,7 +24,7 @@
 ## Liên kết nhanh
 
 - `skills/security/secure-api-endpoint/README.md`
-- `skills/security/validate-input/SKILL.md`
+- `skills/security/validate-input/README.md`
 - `skills/code-quality/review-code/README.md`
 - `rules/06-security.md`
 - `docs/architecture/09-security-architecture-backend.md`

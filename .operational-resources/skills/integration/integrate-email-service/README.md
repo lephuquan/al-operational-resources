@@ -28,7 +28,7 @@
 - `skills/integration/call-external-api/README.md`
 - `skills/integration/implement-webhook-handler/README.md`
 - `skills/integration/integrate-message-queue/README.md`
-- `skills/security/validate-input/SKILL.md`
+- `skills/security/validate-input/README.md`
 - `docs/architecture/07-integrations.md`
 - `rules/06-security.md`
 

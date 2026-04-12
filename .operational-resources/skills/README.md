@@ -98,12 +98,13 @@
 ### Security
 
 **Hub bảo vệ API:** [security/secure-api-endpoint/README.md](security/secure-api-endpoint/)  
+**Hub validate input:** [security/validate-input/README.md](security/validate-input/)  
 **Hub rà soát bảo mật:** [security/security-review/README.md](security/security-review/)
 
 | Skill | Short description |
 |-------|-------------------|
 | [security/secure-api-endpoint](security/secure-api-endpoint/) | Filter chain, authn/authz, CSRF/CORS, testing; see folder `README.md` |
-| [security/validate-input](security/validate-input/) | Bean Validation |
+| [security/validate-input](security/validate-input/) | DTO, Bean Validation, mass assignment, 400 mapping; see folder `README.md` |
 | [security/security-review](security/security-review/) | PR/release security pass, checklist; see folder `README.md` |
 
 ### Integration

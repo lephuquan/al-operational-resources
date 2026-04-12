@@ -24,7 +24,7 @@
 
 ## Liên kết nhanh
 
-- `skills/security/validate-input/SKILL.md`
+- `skills/security/validate-input/README.md`
 - `skills/security/security-review/README.md`
 - `skills/error-handling/global-exception-handler/README.md`
 - `skills/devops/health-check-endpoint/README.md`
