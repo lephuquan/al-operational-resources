@@ -42,7 +42,6 @@ Owner: Phu Quan Le (personal only)
 
 ## 7) References
 - **Một task ticket → Done (nguồn chính):** `.operational-resources/task-lifecycle/README.md` → `FROM-TICKET-TO-DONE.md`
-- **Stub (link cũ):** `.operational-resources/PLAYBOOK.md`, `.operational-resources/WORKFLOW.md`
 - **Triển khai / duy trì docs+skills+rules:** `.operational-resources/guides/README.md`
 - Directory map (cấu trúc thư mục): `.operational-resources/MAP.md`
 - Rules: `.operational-resources/rules/`

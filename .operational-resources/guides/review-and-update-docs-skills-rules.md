@@ -23,7 +23,7 @@ Quy trình **định kỳ** (ví dụ mỗi sprint / tháng), **trước release
 
 - [ ] Spot-check **References** trong vài **`SKILL.md`** / **`README.md`** skill (đặc biệt skill vừa sửa)
 - [ ] Tìm path cũ (ví dụ chỉ `SKILL.md` khi đã chuyển hub `README.md`) — sửa dần khi chạm file
-- [ ] **`task-lifecycle/`**, stub **`PLAYBOOK.md`** / **`WORKFLOW.md`**, **`AGENTS.md`**, **`guides/README.md`** vẫn trỏ đúng
+- [ ] **`task-lifecycle/`**, **`AGENTS.md`**, **`guides/README.md`** và liên kết chéo giữa chúng vẫn đúng
 
 ### 3) Chất lượng nội dung
 

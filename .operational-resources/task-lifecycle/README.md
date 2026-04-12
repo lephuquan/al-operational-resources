@@ -3,8 +3,7 @@
 ## TL;DR (VI)
 
 - **Một nguồn** cho luồng **một task** (ticket → code → test → MR → đóng): đọc **`FROM-TICKET-TO-DONE.md`**.
-- **`PLAYBOOK.md`** và **`WORKFLOW.md`** ở gốc `.operational-resources/` chỉ còn **stub redirect** — giữ link cũ/bookmark.
-- Playbook **theo giai đoạn** (implement / bug / MR) vẫn nằm trong **`skills/workflow/`**.
+- Playbook **theo giai đoạn** (implement / bug / MR) nằm trong **`skills/workflow/`** — bổ sung cho luồng tổng, không thay `FROM-TICKET-TO-DONE.md`.
 
 ## Đọc gì
 

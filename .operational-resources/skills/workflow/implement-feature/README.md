@@ -4,7 +4,7 @@
 
 - Đây là playbook **triển khai feature end-to-end có kiểm soát** sau khi đã có task trong `docs/current-task/`.
 - Đọc `SKILL.md` để biết thứ tự; dùng `examples.md` cho prompt mẫu; `checklist.md` để soát trước MR.
-- Luồng tổng **ticket → Done:** `task-lifecycle/README.md` → `FROM-TICKET-TO-DONE.md` (stub: `PLAYBOOK.md`, `WORKFLOW.md`).
+- Luồng tổng **ticket → Done:** `task-lifecycle/README.md` → `FROM-TICKET-TO-DONE.md`.
 
 ## Thư mục này chứa gì
 

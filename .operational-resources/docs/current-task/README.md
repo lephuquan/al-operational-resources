@@ -3,7 +3,7 @@
 ## TL;DR (VI)
 
 - Thư mục **duy nhất** chứa file task cá nhân; không tạo bản song song trong `rules/`.
-- **Luồng một task (ticket → Done):** **`../../task-lifecycle/README.md`** → **`../../task-lifecycle/FROM-TICKET-TO-DONE.md`** (hoặc stub **`../../PLAYBOOK.md`** / **`../../WORKFLOW.md`** nếu đang dùng link cũ).
+- **Luồng một task (ticket → Done):** **`../../task-lifecycle/README.md`** → **`../../task-lifecycle/FROM-TICKET-TO-DONE.md`**.
 - **Bootstrap / bảo trì tài liệu:** **`../../guides/README.md`**.
 - Khi implement code: bám **`../../skills/workflow/implement-feature/README.md`** (bugfix: **`investigate-bug`** hub).
 - **Nội dung kỹ thuật / template** dùng **English** để AI đọc ổn định; phần này là **lối vào** + dashboard.
@@ -66,7 +66,6 @@ Copy **`TEMPLATE.md`**, then fill at least:
 
 - **Task lifecycle (E2E):** `../../task-lifecycle/README.md`, `../../task-lifecycle/FROM-TICKET-TO-DONE.md`
 - **Guides (bootstrap / review tài liệu):** `../../guides/README.md`
-- **Stub redirect:** `../../PLAYBOOK.md`, `../../WORKFLOW.md`
 - **Implement feature từ task (hub skill):** `../../skills/workflow/implement-feature/README.md`
 - Rules (no task copies): `../../rules/`
 

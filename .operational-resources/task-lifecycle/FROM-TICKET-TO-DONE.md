@@ -210,7 +210,6 @@ Cập nhật tài liệu này khi team đổi CI, template MR, hoặc quy trình
 
 - **Điểm vào thư mục này:** `task-lifecycle/README.md`
 - **Triển khai / duy trì tài liệu:** `guides/README.md`
-- **Stub (link cũ):** `PLAYBOOK.md`, `WORKFLOW.md` (gốc `.operational-resources/`)
 - **Task:** `docs/current-task/TEMPLATE.md`, `docs/current-task/README.md`
 - **Skills phase:** `skills/workflow/implement-feature/README.md`, `investigate-bug/README.md`, `prepare-pull-request/README.md`
 - **Catalog:** `skills/README.md` — **MAP:** `MAP.md`

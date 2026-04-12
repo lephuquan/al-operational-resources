@@ -11,9 +11,7 @@ Tài liệu này mô tả **cấu trúc thư mục**, **nội dung chính** và 
 ```text
 .operational-resources/
 ├── AGENTS.md                 # Ngữ cảnh & cách làm việc với AI (ưu tiên đọc)
-├── PLAYBOOK.md               # Stub → task-lifecycle (link cũ)
 ├── MAP.md                    # (file này) Bản đồ thư mục
-├── WORKFLOW.md               # Stub → task-lifecycle (link cũ)
 ├── task-lifecycle/           # Luồng một task: ticket → Done (nguồn chính)
 │   ├── README.md
 │   └── FROM-TICKET-TO-DONE.md
@@ -40,9 +38,7 @@ Tài liệu này mô tả **cấu trúc thư mục**, **nội dung chính** và 
 | File | Mục đích |
 |------|----------|
 | **`AGENTS.md`** | “Khung” làm việc với AI: nguyên tắc, thứ tự ưu tiên đọc `rules/` → `docs/`, hành vi cấm. |
-| **`PLAYBOOK.md`** | **Stub redirect** tới `task-lifecycle/` — giữ path cũ. |
 | **`MAP.md`** | Bản đồ thư mục (file này). |
-| **`WORKFLOW.md`** | **Stub redirect** tới `task-lifecycle/` — giữ path cũ. |
 | **`README-GIT-LOCAL.md`** | Hướng dẫn dùng `.git/info/exclude` để không track hoặc track thư mục này trên máy bạn. |
 
 ---
@@ -52,7 +48,7 @@ Tài liệu này mô tả **cấu trúc thư mục**, **nội dung chính** và 
 | File | Mục đích |
 |------|----------|
 | **`task-lifecycle/README.md`** | Điểm vào; trỏ tới guide đầy đủ và `skills/workflow/`. |
-| **`task-lifecycle/FROM-TICKET-TO-DONE.md`** | **Nguồn chính:** DoR, từng bước, prompt, evidence, DoD (gộp nội dung cũ của `PLAYBOOK` + `WORKFLOW`). |
+| **`task-lifecycle/FROM-TICKET-TO-DONE.md`** | **Nguồn chính:** DoR, từng bước, prompt, evidence, DoD. |
 
 ---
 
