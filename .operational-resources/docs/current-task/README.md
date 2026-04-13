@@ -48,6 +48,8 @@ Copy **`TEMPLATE.md`**, then fill at least:
 | ID | Task name | Priority | Status | File |
 |:---|:---|:---:|:---:|:---|
 | 20260406 | Personal AL / operational workspace setup | High | Done | `20260406-setup-personal-workspace.md` |
+| 20260414 | ShelfLog — infra baseline (SIM-DEMO-1) | High | Done | `20260414-shelflog-infra.md` |
+| 20260411 | ShelfLog — shelf items API (SIM-DEMO-2) | Medium | Ready / Draft | `20260411-shelf-items-api.md` |
 | 20250405 | Order API (sample) | High | In Progress | `20250405-order-api.md` |
 
 *(Update this table when tasks change.)*
@@ -69,4 +71,4 @@ Copy **`TEMPLATE.md`**, then fill at least:
 - **Implement feature từ task (hub skill):** `../../skills/workflow/implement-feature/README.md`
 - Rules (no task copies): `../../rules/`
 
-**Last updated:** 2026-04-11
+**Last updated:** 2026-04-14 (SIM-DEMO-1 + SIM-DEMO-2)

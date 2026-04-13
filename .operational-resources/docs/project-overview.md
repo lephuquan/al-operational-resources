@@ -4,9 +4,10 @@
 
 - Repo **`al-operational-resources`**: workspace **cá nhân** (rules + docs + skills) để làm việc với AI/Cursor, song song với code dự án thật trong `src/`.
 - Stack chính: **Spring Boot 3.x, Java 17, Maven** (khớp `AGENTS.md`).
+- **Demo ứng dụng tham chiếu (ShelfLog):** đặc tả `specs/feature-shelflog-items.md`, ticket `current-task/20260411-shelf-items-api.md`, brief `../simulator/DEMO-PROJECT-BRIEF.md` — dùng để giả lập task end-to-end.
 - Đọc tiếp: `docs/README.md` (thứ tự đọc), `architecture/01-README.md`.
 
-**Last updated:** 2026-04-08
+**Last updated:** 2026-04-14
 
 ---
 
@@ -29,6 +30,19 @@
 
 - **In scope:** personal rules and documentation for AI; Spring Boot service code and tests as the project evolves; references to feature areas (Auth, Orders, …) documented under `docs/specs/`.
 - **Out of scope:** secrets in docs; replacing official team documentation or ticket systems.
+
+## Demo reference application: ShelfLog
+
+**ShelfLog** is a **fictional** product used to exercise this workspace: `task-lifecycle/`, `skills/`, and `docs/` stay aligned with a concrete but bounded problem (CRUD + pagination + validation + Postgres/H2 split). It is **not** a production service.
+
+| Artifact | Path |
+|----------|------|
+| Product + stack contract | `.operational-resources/simulator/DEMO-PROJECT-BRIEF.md` |
+| Feature spec | `docs/specs/feature-shelflog-items.md` |
+| Infra demo task (do first) | `docs/current-task/20260414-shelflog-infra.md` (SIM-DEMO-1) |
+| Feature demo task (main) | `docs/current-task/20260411-shelf-items-api.md` (SIM-DEMO-2) |
+| Compose (Postgres 16, host **5433**) | `.operational-resources/simulator/docker-compose.postgres.yml` |
+| ADR | `docs/decisions/006-shelflog-demo-postgres-docker.md` |
 
 ## Tech stack (current)
 

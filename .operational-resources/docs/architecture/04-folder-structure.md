@@ -5,7 +5,7 @@
 - Mô tả **cây thư mục** để AI đặt class đúng chỗ: `api` → `application` → `domain` → `infrastructure`.
 - Có mục **monorepo** tùy chọn; điền tên package thật khi có code.
 
-**Last updated:** 2026-04-08
+**Last updated:** 2026-04-14
 
 ## 1. Single backend repo (typical Maven layout)
 
@@ -68,6 +68,21 @@ packages/
 ```
 
 Document which app owns the database and API gateway routing.
+
+## 6. ShelfLog demo — suggested package layout
+
+Base package follows the existing app entry: **`com.programming_with_al.al_operational_resources`**. Suggested module slice for **ShelfItem** (adjust names to match your layer naming):
+
+```text
+com.programming_with_al.al_operational_resources/
+├── AlOperationalResourcesApplication.java
+├── shelflog/
+│   ├── api/                 # REST controller + request/response DTOs
+│   ├── application/         # Service / use cases (pagination, filters)
+│   └── persistence/         # JPA entity + Spring Data repository
+```
+
+Tests mirror under `src/test/java/.../shelflog/` (unit + `@SpringBootTest` IT).
 
 ## Related
 

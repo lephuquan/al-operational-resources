@@ -18,11 +18,11 @@ This file lists **recommended reading order** for **`docs/`** only. Path on disk
 
 ## Recommended reading order (AI)
 
-1. `project-overview.md` — project intent and stack (start here)
+1. `project-overview.md` — project intent and stack (start here); **ShelfLog demo** pointers when running simulator tasks
 2. `architecture/01-README.md` → `architecture/02-system-overview.md` — backend shape (`01`…`09`)
 3. `setup/01-README.md` → `02`…`05` — local run, env names, deploy summary
 4. `current-task/` — active task (`README.md` + `TEMPLATE.md`; English template + `TL;DR (VI)`)
-5. `api/` from `api/01-README.md` + `specs/README.md` — HTTP contract and feature behavior (`specs/TEMPLATE.md` for new features)
+5. `api/` from `api/01-README.md` + `specs/README.md` — HTTP contract and feature behavior (`specs/TEMPLATE.md` for new features); for the **ShelfLog** demo, read `specs/feature-shelflog-items.md` and `api/08-endpoint-list.md`
 6. `decisions/README.md` — ADR index + `TEMPLATE.md`
 7. `knowledge-base/` — patterns, naming, errors, troubleshooting
 
@@ -38,4 +38,4 @@ This file lists **recommended reading order** for **`docs/`** only. Path on disk
 - Update these files when behavior or contracts change.
 - When a task completes, **promote** durable facts into `specs/`, `api/`, `decisions/`, or team docs **on purpose**.
 
-**Last updated:** 2026-04-11
+**Last updated:** 2026-04-14

@@ -5,17 +5,33 @@
 - Ghi **mọi thay đổi contract hoặc hành vi** đang làm hoặc sắp release.
 - Sau khi merge/release, có thể tóm tắt vào `docs/decisions/` hoặc release notes team — file này có thể **xóa trắng** mỗi cycle.
 
-**Last updated:** 2026-04-08
+**Last updated:** 2026-04-14
 
 ## Active work / draft
 
-**Task / ticket reference:** _(link or id)_
+**Task / ticket reference:** `docs/current-task/20260414-shelflog-infra.md` (SIM-DEMO-1), then `20260411-shelf-items-api.md` (SIM-DEMO-2)
 
 **Scope (one line):**
 
-- …
+- SIM-DEMO-1: stack + Actuator; SIM-DEMO-2: CRUD `/api/v1/shelf-items` (pending).
 
 ## Changes (add newest first)
+
+### 2026-04-14 — SIM-DEMO-1: Spring baseline + Actuator (code)
+
+- **Type:** non-breaking (no business API yet)
+- **Endpoints affected:** `GET /actuator/health` (enabled)
+- **What changed:** `pom.xml` (web, validation, data-jpa, actuator, postgresql, h2 test); `application.yml`, `application-dev.yml`, `application-test.yml`; `src/test/resources/application.properties` (`spring.profiles.active=test`); IT `ActuatorHealthIntegrationTest`.
+- **Client impact:** Run app with `-Dspring-boot.run.profiles=dev` and Postgres up; tests use H2 only.
+- **Follow-ups:** SIM-DEMO-2 adds `/api/v1/shelf-items`; update this file when shipped.
+
+### 2026-04-14 — ShelfLog demo documentation baseline
+
+- **Type:** docs-only (implementation follows task)
+- **Endpoints affected:** `POST|GET|PUT|DELETE /api/v1/shelf-items`, `GET /api/v1/shelf-items`, `GET /actuator/health`
+- **What changed:** Filled endpoint inventory and spec; documented dev/test stack (ADR-006).
+- **Client impact:** None until backend is implemented.
+- **Follow-ups:** Update this file when merging implementation MR; keep `08-endpoint-list.md` in sync.
 
 ### YYYY-MM-DD — short title
 

@@ -44,6 +44,7 @@ When replacing a decision: add a new ADR with a higher number, mark the old one 
 | ADR-003 | `003-use-jwt-with-refresh-token.md` | JWT + HttpOnly refresh token | Proposed / update per team |
 | ADR-004 | `004-implement-soft-delete.md` | Soft delete for important entities | Proposed / Accepted (update file) |
 | ADR-005 | `005-optional-frontend-nextjs.md` | Optional Next.js if SPA is split | Proposed |
+| ADR-006 | `006-shelflog-demo-postgres-docker.md` | ShelfLog demo: Postgres via Docker dev, H2 tests | Accepted |
 
 *(Update this table when you add or change status.)*
 
@@ -60,4 +61,4 @@ When replacing a decision: add a new ADR with a higher number, mark the old one 
 - Feature design skill: `skills/architecture/design-feature-architecture/SKILL.md`
 - Task template (related ADR field): `docs/current-task/TEMPLATE.md`
 
-**Last updated:** 2026-04-08
+**Last updated:** 2026-04-14

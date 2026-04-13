@@ -3,15 +3,28 @@
 ## TL;DR (VI)
 
 - Bảng **tổng quan** mọi route: method, path, auth, response chính — cập nhật khi đổi contract.
+- **ShelfLog demo (v1):** bảng § ShelfLog bên dưới là contract tham chiếu cho simulator.
 - Dùng path `{id}` thống nhất; chi tiết request/response ghi trong `09-contract-template.md` hoặc OpenAPI.
 
-**Last updated:** 2026-04-08
+**Last updated:** 2026-04-14
 
 ## How to use this file
 
 - Keep one row per **route** (method + path). Sub-resources can be separate rows.
 - The **Auth** column should be one of: `Public`, `Authenticated`, `Role:XXX`, or `Scope:xxx` — match your `04-authentication.md` model.
 - Link DTO/type names to your codebase or OpenAPI schema names for traceability.
+
+## ShelfLog demo — `shelf-items` (v1)
+
+| Module | Method | Path | Auth | Response type / notes |
+|--------|--------|------|------|------------------------|
+| ShelfLog | POST | `/api/v1/shelf-items` | Public (demo) | **201** + created `ShelfItem` JSON |
+| ShelfLog | GET | `/api/v1/shelf-items` | Public (demo) | **200** + paginated JSON (`content`, `page`, `size`, `totalElements`); query: `page`, `size`, optional `category` |
+| ShelfLog | GET | `/api/v1/shelf-items/{id}` | Public (demo) | **200** / **404** |
+| ShelfLog | PUT | `/api/v1/shelf-items/{id}` | Public (demo) | **200** / **404** |
+| ShelfLog | DELETE | `/api/v1/shelf-items/{id}` | Public (demo) | **204** / **404** |
+
+Business spec: `../specs/feature-shelflog-items.md`.
 
 ## Inventory table (template)
 
@@ -32,7 +45,7 @@ If applicable, list non-business routes (metrics, health) with their auth model:
 
 | Method | Path | Auth | Notes |
 |--------|------|------|-------|
-| GET | `/actuator/health` | Internal / infra | Spring example; disable or secure in prod |
+| GET | `/actuator/health` | Public (ShelfLog demo) / Internal in prod | Enable for local demo; lock down in real deployments |
 
 ## When to update
 

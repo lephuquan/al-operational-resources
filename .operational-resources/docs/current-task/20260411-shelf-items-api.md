@@ -2,11 +2,11 @@
 
 ## TL;DR (VI)
 
-- **Bản mẫu SIM-DEMO-2:** canonical **`docs/current-task/20260411-shelf-items-api.md`**; sao chép file này nếu reset ticket feature.
-- Task **chính:** API **ShelfItem** — chỉ sau khi **SIM-DEMO-1** Done. CRUD + phân trang + lọc `category`, **quantity ≤ 999**; không lặp baseline infra.
-- Luồng: **`task-lifecycle/`**.
+- **SIM-DEMO-2** — Task **chính** (feature): API **ShelfItem** theo brief; làm sau khi **SIM-DEMO-1** (`20260414-shelflog-infra.md`) **Done**.
+- CRUD + phân trang + lọc `category`, validation **quantity ≤ 999**; **PostgreSQL** (dev) + **H2** (test) đã có từ infra — không lặp baseline `pom`/profile trong ticket này trừ khi cần chỉnh.
+- Luồng: **`task-lifecycle/`**. Bản mẫu: `simulator/DEMO-TICKET-20260411-shelf-items-api.md`.
 
-> **Quy ước:** Tài liệu chỉ **`.operational-resources/docs/`**; đổi AC → đồng bộ `current-task` + file mẫu này.
+> **Quy ước:** Tài liệu ShelfLog chỉ **`.operational-resources/docs/`**; đổi AC thì đồng bộ `current-task` + bản mẫu simulator.
 
 ---
 

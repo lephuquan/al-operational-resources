@@ -39,6 +39,7 @@ A task file should **link** to the relevant spec section when implementing a fea
 | `feature-dashboard.md` | FEA-DASH-001 | Draft | Dashboard / reporting |
 | `feature-notification.md` | FEA-NOTIF-001 | Draft | Notifications |
 | `feature-user-management.md` | FEA-USER-001 | Draft | Users / roles |
+| `feature-shelflog-items.md` | FEA-SHELF-001 | Active (demo) | ShelfLog — shelf items CRUD + list (simulator) |
 
 *(Update the table when you add files or change status.)*
 
@@ -52,4 +53,4 @@ A task file should **link** to the relevant spec section when implementing a fea
 - Task template (links to specs): `docs/current-task/TEMPLATE.md`
 - API contract: `docs/api/01-README.md`
 
-**Last updated:** 2026-04-08
+**Last updated:** 2026-04-14

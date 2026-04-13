@@ -2,26 +2,29 @@
 
 ## Mục đích
 
-Bộ tài liệu **giả lập** (chỉ thay `docs/` / `src/` khi bạn chủ động làm theo task) để:
+Bộ tài liệu **giả lập** để:
 
-1. Đọc **`DEMO-PROJECT-BRIEF.md`** như **nguồn mô tả dự án** — đủ chi tiết để AI hiểu và **soạn / bổ sung** bộ `docs/` cho một Spring Boot đơn giản.
-2. Sao chép **`DEMO-TICKET-20260411-shelf-items-api.md`** → `docs/current-task/20260411-shelf-items-api.md` (hoặc tên bạn chọn), rồi chạy luồng **`task-lifecycle/`** từ đầu đến cuối.
+1. Đọc **`DEMO-PROJECT-BRIEF.md`** như **hợp đồng** sản phẩm + kỹ thuật (ShelfLog).
+2. Đọc tài liệu ShelfLog trong **`.operational-resources/docs/`** (brief §9): `project-overview.md`, `specs/feature-shelflog-items.md`, `api/08-endpoint-list.md`, `setup/02-local-development.md`, ADR-006.
+3. **Hai ticket giả lập:** **SIM-DEMO-1** infra trước (`20260414-shelflog-infra.md`), rồi **SIM-DEMO-2** feature chính (`20260411-shelf-items-api.md`). Luồng: **`task-lifecycle/`**.
 
-Độ khó task: **trung bình** — CRUD + phân trang + validation + quy tắc nghiệp vụ nhỏ + test (unit/IT). **Yêu cầu kỹ thuật về Docker** (Postgres trong container) nằm trong brief; **H2** chỉ dùng cho profile test nếu cấu hình như vậy.
+**SIM-DEMO-1:** baseline Maven, Spring profiles, Postgres/H2, Actuator — độ khó **thấp–trung bình**. **SIM-DEMO-2:** CRUD + phân trang + validation — **trung bình**. Docker cho dev app; `./mvnw test` không cần Docker.
 
-## File trong thư mục
+## File và thư mục
 
-| File | Vai trò |
+| Path | Vai trò |
 |------|---------|
-| [`DEMO-PROJECT-BRIEF.md`](DEMO-PROJECT-BRIEF.md) | Bối cảnh sản phẩm, **stack kỹ thuật (gồm Docker)**, domain, API, cấu hình DB, checklist doc cho AI |
-| [`DEMO-TICKET-20260411-shelf-items-api.md`](DEMO-TICKET-20260411-shelf-items-api.md) | File task đầy đủ theo `docs/current-task/TEMPLATE.md` — dùng như ticket thật |
-| [`docker-compose.postgres.yml`](docker-compose.postgres.yml) | Compose **chuẩn demo**: PostgreSQL 16 (xem brief §6) |
+| [`../docs/`](../docs/README.md) | **Nguồn tài liệu duy nhất** cho ShelfLog (spec, setup, API, ADR, kiến trúc) — xem `DEMO-PROJECT-BRIEF.md` §9 |
+| [`DEMO-PROJECT-BRIEF.md`](DEMO-PROJECT-BRIEF.md) | Bối cảnh sản phẩm, stack (gồm Docker), domain, API, checklist doc §9 |
+| [`DEMO-TICKET-20260414-shelflog-infra.md`](DEMO-TICKET-20260414-shelflog-infra.md) | **SIM-DEMO-1** — mẫu; canonical `../docs/current-task/20260414-shelflog-infra.md` |
+| [`DEMO-TICKET-20260411-shelf-items-api.md`](DEMO-TICKET-20260411-shelf-items-api.md) | **SIM-DEMO-2** (task chính) — mẫu; canonical `../docs/current-task/20260411-shelf-items-api.md` |
+| [`docker-compose.postgres.yml`](docker-compose.postgres.yml) | PostgreSQL 16 (xem brief §6) |
 
 ## Gợi ý thứ tự demo
 
 1. Đọc `task-lifecycle/README.md` → `FROM-TICKET-TO-DONE.md`.
-2. (Tuỳ chọn) Nhờ AI: đọc `simulator/DEMO-PROJECT-BRIEF.md` và tạo/cập nhật các file doc được liệt kê trong **§9** của brief — mục tiêu là cây `docs/` trong `.operational-resources/`.
-3. Sao chép file ticket vào `docs/current-task/`, cập nhật bảng dashboard trong `docs/current-task/README.md`.
-4. Triển khai code trong `src/` theo task + `skills/workflow/implement-feature/`.
+2. Đọc `DEMO-PROJECT-BRIEF.md`, rồi **`.operational-resources/docs/README.md`** và các file ShelfLog trong `docs/` (brief §9).
+3. Làm **SIM-DEMO-1** trước (infra), rồi **SIM-DEMO-2** (API); cập nhật dashboard `docs/current-task/README.md`.
+4. Mỗi ticket: `skills/workflow/implement-feature/` hoặc skill ops tương ứng; đổi contract → chỉ **`.operational-resources/docs/`**.
 
-**Cập nhật lần cuối:** 2026-04-11
+**Cập nhật lần cuối:** 2026-04-14

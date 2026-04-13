@@ -1,0 +1,12 @@
+# ShelfLog demo — run against Docker Postgres (see .operational-resources/simulator/docker-compose.postgres.yml)
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/shelflog
+    username: shelves
+    password: shelves
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect

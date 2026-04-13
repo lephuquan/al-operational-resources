@@ -2,7 +2,7 @@
 
 **Vai trò:** Một **nguồn sự thật** cho dịch vụ **giả định**, chỉ phục vụ kiểm tra **docs + task lifecycle + code** trong repo này. Coi như module kiểu **greenfield** (tách bạch, dễ hiểu).
 
-**Cập nhật lần cuối:** 2026-04-11
+**Cập nhật lần cuối:** 2026-04-14
 
 ---
 
@@ -23,7 +23,7 @@
 |-----|-----------|
 | **Môi trường container (bắt buộc)** | **Docker Engine** + **Docker Compose** (plugin `docker compose`) — **yêu cầu kỹ thuật** để chạy PostgreSQL nhất quán giữa máy dev, không gọi là bước “triển khai production”. File chuẩn: **`simulator/docker-compose.postgres.yml`**. |
 | Runtime | Java **17** |
-| Framework | **Spring Boot 3.2+** |
+| Framework | **Spring Boot 3.2+** (align with `pom.xml`, e.g. 3.5.x) |
 | Build | **Maven** (ưu tiên `mvnw` nếu có) |
 | Web | Spring Web, `spring-boot-starter-validation` |
 | Truy cập dữ liệu | **Spring Data JPA** + **Hibernate** |
@@ -73,7 +73,7 @@ Base path: **`/api/v1/shelf-items`**
 ### 4.1 Dạng request/response (phác thảo)
 
 - Body tạo/cập nhật (JSON): `title`, `category`, `quantity`, `notes` (có thể bỏ `notes` hoặc null tùy quy ước bạn ghi trong spec).
-- Response danh sách: kiểu `Page` của Spring hoặc JSON tùy chỉnh `{ "content": [...], "page": n, "size": n, "totalElements": n }` — **phải ghi rõ** trong `docs/api/`.
+- Response danh sách: kiểu `Page` của Spring hoặc JSON tùy chỉnh `{ "content": [...], "page": n, "size": n, "totalElements": n }` — **phải ghi rõ** trong `.operational-resources/docs/api/08-endpoint-list.md` và `docs/specs/feature-shelflog-items.md`.
 
 ### 4.2 Lỗi
 
@@ -88,15 +88,15 @@ Base path: **`/api/v1/shelf-items`**
 Khớp package hiện có của repo nếu đã có; nếu greenfield:
 
 ```text
-com.example.shelflog
-├── ShelfLogApplication.java
-├── shelfitem
-│   ├── api          # REST controller + DTO
-│   ├── domain       # entity (hoặc gần repo nếu demo rất nhỏ)
-│   └── persistence  # JPA repository
+com.programming_with_al.al_operational_resources
+├── AlOperationalResourcesApplication.java
+├── shelflog
+│   ├── api           # REST controller + DTO
+│   ├── application   # service / use cases
+│   └── persistence   # JPA entity + repository
 ```
 
-(Đổi `com.example` theo `groupId` trong `pom.xml`.)
+Chi tiết và quy ước lớp: `docs/architecture/04-folder-structure.md` §6.
 
 ---
 
@@ -116,7 +116,7 @@ com.example.shelflog
 ### 6.3 Profile `test` — H2
 
 - Chạy `./mvnw test` **không** bắt buộc mở Docker nếu IT dùng H2 in-memory.
-- Ghi rõ trong `docs/setup/`: chạy app tay cần Docker + Postgres; chạy test có thể chỉ cần Maven + H2.
+- Ghi rõ trong `.operational-resources/docs/setup/02-local-development.md`: chạy app tay cần Docker + Postgres; chạy test có thể chỉ cần Maven + H2.
 
 ---
 
@@ -129,34 +129,45 @@ com.example.shelflog
 
 ## 8. Quan sát tối thiểu
 
-- Actuator `health` / `info` nếu repo đã có convention; không bắt buộc.
-- Log: SLF4J, tham số hóa message.
+- **Spring Boot Actuator:** bật **`/actuator/health`** cho demo (liveness/readiness pattern in `skills/devops/health-check-endpoint/`). Không bật exposure rộng trong production — demo chỉ chạy local.
+- Log: SLF4J, tham số hóa message; tránh log full body có thể chứa PII.
 
 ---
 
-## 9. Checklist — doc AI nên tạo hoặc cập nhật (`.operational-resources/docs/`)
+## 9. Checklist — tài liệu (một nguồn: `.operational-resources/docs/`)
 
-Khi được yêu cầu “bootstrap doc từ brief”, tối thiểu:
+**Chỉ** cập nhật dưới `.operational-resources/docs/` khi đổi hành vi hoặc contract (không có bản sao trong `simulator/`).
 
-| Khu vực | Đường dẫn gợi ý |
-|---------|------------------|
-| Tổng quan | `project-overview.md` — mục phụ lục ShelfLog demo **hoặc** chỉ dẫn “chỉ simulator” + spec feature làm SoT |
-| Setup | `setup/01-README.md` (hoặc đoạn mới): **bắt buộc** Docker + lệnh compose, JDBC port 5433, cách chạy app; thêm đoạn **test** với H2 |
-| Kiến trúc | `architecture/02-system-overview.md` — ngữ cảnh ShelfLog (bullet hoặc sơ đồ nhỏ) |
-| API | `api/08-endpoint-list.md`, `api/10-current-api-changes.md`, khớp quy ước `api/01-README.md` |
-| Spec | `specs/feature-shelflog-items.md` lấy từ §3–4 của brief |
-| Quyết định | Tuỳ chọn: `decisions/NNN-shelflog-postgres-docker-dev.md` — Docker + Postgres là chuẩn dev kỹ thuật |
+| Khu vực | Đường dẫn (từ `.operational-resources/docs/`) |
+|---------|-----------------------------------------------|
+| Thứ tự đọc / mục lục | `README.md` |
+| Tổng quan + demo ShelfLog | `project-overview.md` (mục ShelfLog) |
+| Setup + chạy local | `setup/02-local-development.md`, `setup/05-troubleshooting-local.md` |
+| Cấu hình profile / JDBC | `setup/03-configuration.md` |
+| Kiến trúc | `architecture/02-system-overview.md` (§ ShelfLog), `03-tech-stack.md`, `04-folder-structure.md`, `05-database-design.md` |
+| API inventory + changelog | `api/08-endpoint-list.md`, `api/10-current-api-changes.md` |
+| Spec nghiệp vụ | `specs/feature-shelflog-items.md`, `specs/README.md` |
+| ADR | `decisions/006-shelflog-demo-postgres-docker.md`, `decisions/README.md` |
+| Task thực thi (infra trước) | `current-task/20260414-shelflog-infra.md` (SIM-DEMO-1) |
+| Task thực thi (feature) | `current-task/20260411-shelf-items-api.md` (SIM-DEMO-2) |
 
-Đường dẫn tính từ **`.operational-resources/docs/`**.
+**Ticket mẫu:** `simulator/DEMO-TICKET-20260414-shelflog-infra.md`, `simulator/DEMO-TICKET-20260411-shelf-items-api.md`.
+
+Quy ước lỗi JSON và envelope HTTP: `api/03-response-format.md`, `api/05-error-handling.md` trừ khi task ghi rõ ngoại lệ.
 
 ---
 
 ## 10. Hướng dẫn tường minh cho AI (copy-paste)
 
-> Đọc `.operational-resources/simulator/DEMO-PROJECT-BRIEF.md`. Coi đây là hợp đồng sản phẩm + kỹ thuật cho demo **ShelfLog**. Tạo hoặc cập nhật các file doc trong §9 sao cho thống nhất với nhau và với brief. Không bịa tính năng ngoài §3–4 trừ khi người dùng yêu cầu. **Docker Compose** để chạy PostgreSQL là **yêu cầu kỹ thuật** môi trường dev (xem §2, §6); H2 chỉ cho profile test như đã nêu.
+> Đọc `.operational-resources/simulator/DEMO-PROJECT-BRIEF.md` và `.operational-resources/docs/project-overview.md` → `docs/specs/feature-shelflog-items.md` → `docs/api/08-endpoint-list.md` → `docs/setup/02-local-development.md`. Coi brief là hợp đồng sản phẩm + kỹ thuật cho **ShelfLog**; mọi thay đổi contract chỉ ghi trong **`docs/`** (§9). Không bịa tính năng ngoài §3–4 trừ khi người dùng yêu cầu. **Docker Compose** cho PostgreSQL là **yêu cầu kỹ thuật** môi trường dev (§2, §6); H2 chỉ cho profile **test**.
 
 ---
 
-## 11. Liên hệ với file task demo
+## 11. Liên hệ với file task demo (thứ tự như dự án thật)
 
-Phần code được điều khiển bởi **`DEMO-TICKET-20260411-shelf-items-api.md`** (sao chép vào `docs/current-task/`). Brief là **bối cảnh rộng**; file task là **lát cắt thực thi** cho một MR.
+| Thứ tự | Ticket | File canonical (`docs/current-task/`) | File mẫu (`simulator/`) |
+|--------|--------|----------------------------------------|-------------------------|
+| **1 — Infra** | **SIM-DEMO-1** | `20260414-shelflog-infra.md` | `DEMO-TICKET-20260414-shelflog-infra.md` |
+| **2 — Feature (chính)** | **SIM-DEMO-2** | `20260411-shelf-items-api.md` | `DEMO-TICKET-20260411-shelf-items-api.md` |
+
+Làm **SIM-DEMO-1** trước (baseline Maven, profile `dev`/`test`, Actuator, Postgres/H2). **SIM-DEMO-2** triển khai API `/api/v1/shelf-items` và domain. Brief là **bối cảnh rộng**; mỗi task = một MR (hoặc nhánh) gợi ý.

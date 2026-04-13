@@ -5,7 +5,7 @@
 - Mô tả **engine**, **migration**, **bảng chính** và quy ước (soft delete, audit, index).
 - Đây là **mẫu**; khi có schema thật, thay ví dụ `users`/`orders` bằng tên đúng.
 
-**Last updated:** 2026-04-08
+**Last updated:** 2026-04-14
 
 ## 1. Overview
 
@@ -63,6 +63,20 @@
 1. Change Java entity or add SQL migration script.
 2. Run migrations in CI and locally.
 3. Update this document when adding tables or changing critical constraints.
+
+## 9. ShelfLog demo — `shelf_items`
+
+| Column | Type | Notes |
+|--------|------|--------|
+| `id` | UUID (PK) | Generated |
+| `title` | varchar(200) | Not null; length enforced in API/domain |
+| `category` | varchar / enum mapping | `OFFICE`, `HOBBY`, `KITCHEN`, `OTHER` |
+| `quantity` | integer | Not null; check **0–999** at API + DB optional |
+| `notes` | varchar(2000) | Nullable |
+| `created_at` | timestamptz | UTC |
+| `updated_at` | timestamptz | UTC |
+
+**Delete:** hard delete (no `deleted_at`). Index `category` if filtered lists are hot; PK on `id` required.
 
 ## Related
 

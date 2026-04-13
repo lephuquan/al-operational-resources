@@ -5,7 +5,7 @@
 - Bảng **mẫu** cho stack Java/Spring; khi có dự án thật chỉ cần sửa phiên bản và cột “ghi chú”.
 - Giữ **một nguồn** cho version chính (trùng `pom.xml` / Gradle).
 
-**Last updated:** 2026-04-08
+**Last updated:** 2026-04-14
 
 ## Backend (default template — Spring Boot monolith or modular monolith)
 
@@ -46,6 +46,21 @@
 | EditorConfig / formatter | Consistent style (Spotless, Google Java Format, …) |
 | Static analysis | Checkstyle, Error Prone, SpotBugs — as adopted |
 | CI | GitHub Actions / GitLab CI / … | Build + test + optional quality gate |
+
+## ShelfLog demo (reference)
+
+Concrete choices for the **ShelfLog** simulator (see `specs/feature-shelflog-items.md`):
+
+| Area | Technology | Notes |
+|------|------------|--------|
+| Web | `spring-boot-starter-web` | REST JSON |
+| Validation | `spring-boot-starter-validation` | DTO constraints |
+| Persistence | Spring Data JPA | Hibernate |
+| Dev DB | PostgreSQL 16 (Docker) | `../../simulator/docker-compose.postgres.yml`, host **5433** |
+| Test DB | H2 | Profile `test` |
+| Ops | Spring Boot Actuator | `GET /actuator/health` for demo |
+
+Security (Spring Security + JWT) is **out of scope** for ShelfLog v1 — document as local/demo only.
 
 ## When to update this file
 

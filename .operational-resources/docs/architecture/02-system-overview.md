@@ -5,7 +5,7 @@
 - Bức tranh lớn: client → (gateway) → **Spring Boot** → DB/cache/queue.
 - Phong cách: **layered** + có thể DDD/event-driven từng module; stateless app để scale ngang.
 
-**Last updated:** 2026-04-08
+**Last updated:** 2026-04-14
 
 ## 1. High-level diagram (template)
 
@@ -74,6 +74,24 @@ Expand each row in `07-integrations.md`.
 | Payments | PSP HTTP webhooks + REST API |
 | Notifications | Email/SMS/push via provider or internal service |
 | Identity | OIDC / internal user directory |
+
+## 7. ShelfLog demo (simulator reference)
+
+Narrow **reference application** documented in `specs/feature-shelflog-items.md`: a single Spring Boot service exposes **`/api/v1/shelf-items`** and persists to **PostgreSQL** in dev (Docker, host port **5433**) or **H2** in tests. No gateway, cache, or broker in v1.
+
+```text
+HTTP client
+    |
+    v
+Spring Boot (ShelfLog module: controller -> service -> JPA)
+    |
+    +-- PostgreSQL (dev, Docker)
+    +-- H2 (test profile)
+```
+
+See also: `../../simulator/DEMO-PROJECT-BRIEF.md`, `../decisions/006-shelflog-demo-postgres-docker.md`.
+
+**Last updated (this section):** 2026-04-14
 
 ## Related
 
