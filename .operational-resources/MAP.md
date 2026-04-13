@@ -19,6 +19,11 @@ Tài liệu này mô tả **cấu trúc thư mục**, **nội dung chính** và 
 │   ├── README.md
 │   ├── bootstrap-docs-skills-rules.md
 │   └── review-and-update-docs-skills-rules.md
+├── simulator/                # Demo A→Z: brief dự án + ticket mẫu (task lifecycle)
+│   ├── README.md
+│   ├── DEMO-PROJECT-BRIEF.md
+│   ├── DEMO-TICKET-20260411-shelf-items-api.md
+│   └── docker-compose.postgres.yml
 ├── README-GIT-LOCAL.md       # Ẩn/hiện thư mục này khỏi Git local
 ├── rules/                    # Quy tắc cá nhân (Cursor / AI)
 ├── docs/                     # Tài liệu ngữ cảnh dự án (ưu tiên đọc sau rules)
@@ -59,6 +64,17 @@ Tài liệu này mô tả **cấu trúc thư mục**, **nội dung chính** và 
 | **`guides/README.md`** | Mục lục: neo tới `task-lifecycle/` + hai guide bootstrap / review. |
 | **`guides/bootstrap-docs-skills-rules.md`** | Dự án mới hoặc mở rộng `rules/`, `docs/`, `skills/`. |
 | **`guides/review-and-update-docs-skills-rules.md`** | Rà soát định kỳ hoặc khi có thay đổi lớn. |
+
+---
+
+## `simulator/` — Demo kiểm tra hệ thống
+
+| File | Mục đích |
+|------|----------|
+| **`simulator/README.md`** | Cách dùng: brief + ticket mẫu + luồng `task-lifecycle/`. |
+| **`simulator/DEMO-PROJECT-BRIEF.md`** | Mô tả dự án giả **ShelfLog** (Spring Boot; **Docker Compose + Postgres** là yêu cầu kỹ thuật dev; H2 cho test) + checklist doc cho AI. |
+| **`simulator/DEMO-TICKET-20260411-shelf-items-api.md`** | Task file đầy đủ — **copy** vào `docs/current-task/` trước khi implement. |
+| **`simulator/docker-compose.postgres.yml`** | PostgreSQL 16 (port host **5433**) — chuẩn dev trong brief, không mô tả triển khai production. |
 
 ---
 

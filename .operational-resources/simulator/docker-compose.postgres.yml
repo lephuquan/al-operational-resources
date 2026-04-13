@@ -1,0 +1,18 @@
+# Yêu cầu kỹ thuật demo: PostgreSQL chạy bằng Docker Compose (xem DEMO-PROJECT-BRIEF.md §2 và §6).
+# Chạy từ thư mục gốc repo:
+#   docker compose -f .operational-resources/simulator/docker-compose.postgres.yml up -d
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: shelves
+      POSTGRES_PASSWORD: shelves
+      POSTGRES_DB: shelflog
+    ports:
+      - "5433:5432"
+    volumes:
+      - shelflog-pg-data:/var/lib/postgresql/data
+
+volumes:
+  shelflog-pg-data:
