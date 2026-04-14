@@ -1,212 +1,213 @@
-# Task — ShelfLog: REST CRUD + phân trang cho shelf items
+﻿# Task â€” ShelfLog: REST CRUD + phÃ¢n trang cho shelf items
 
 ## TL;DR (VI)
 
-- **SIM-DEMO-2** — Task **chính** (feature): API **ShelfItem** theo brief; làm sau khi **SIM-DEMO-1** (`20260414-shelflog-infra.md`) **Done**.
-- CRUD + phân trang + lọc `category`, validation **quantity ≤ 999**; **PostgreSQL** (dev) + **H2** (test) đã có từ infra — không lặp baseline `pom`/profile trong ticket này trừ khi cần chỉnh.
-- Luồng: **`task-lifecycle/`**. Bản mẫu: `simulator/DEMO-TICKET-20260411-shelf-items-api.md`.
+- **SIM-DEMO-2** â€” Task **chÃ­nh** (feature): API **ShelfItem** theo brief; lÃ m sau khi **SIM-DEMO-1** (`20260414-shelflog-infra.md`) **Done**.
+- CRUD + phÃ¢n trang + lá»c `category`, validation **quantity â‰¤ 999**; **PostgreSQL** (dev) + **H2** (test) Ä‘Ã£ cÃ³ tá»« infra â€” khÃ´ng láº·p baseline `pom`/profile trong ticket nÃ y trá»« khi cáº§n chá»‰nh.
+- Luá»“ng: **`task-lifecycle/`**. Báº£n máº«u: `simulator/DEMO-TICKET-20260411-shelf-items-api.md`.
 
-> **Quy ước:** Tài liệu ShelfLog chỉ **`.operational-resources/docs/`**; đổi AC thì đồng bộ `current-task` + bản mẫu simulator.
+> **Quy Æ°á»›c:** TÃ i liá»‡u ShelfLog chá»‰ **`.operational-resources/docs/`**; Ä‘á»•i AC thÃ¬ Ä‘á»“ng bá»™ `current-task` + báº£n máº«u simulator.
 
 ---
 
-## Metadata (bắt buộc)
+## Metadata (báº¯t buá»™c)
 
-| Trường | Giá trị |
+| TrÆ°á»ng | GiÃ¡ trá»‹ |
 |--------|---------|
-| **Loại task** | `feature` |
+| **Loáº¡i task** | `feature` |
 | **ID file** | `20260411-shelf-items-api.md` |
-| **Ticket / issue** | SIM-DEMO-2 (phụ thuộc SIM-DEMO-1) |
-| **Trạng thái** | Draft |
-| **Ưu tiên** | Medium |
-| **Owner** | (bạn) |
+| **Ticket / issue** | SIM-DEMO-2 (phá»¥ thuá»™c SIM-DEMO-1) |
+| **Tráº¡ng thÃ¡i** | Draft |
+| **Æ¯u tiÃªn** | Medium |
+| **Owner** | (báº¡n) |
 
 ---
 
-## 0. Definition of Ready — trước khi nhờ AI implement (checkbox)
+## 0. Definition of Ready â€” trÆ°á»›c khi nhá» AI implement (checkbox)
 
-- [x] Ticket/spec có **mục tiêu** và **AC** rõ (brief + §3 dưới đây).
-- [x] **Phạm vi** §2 đã điền; **ngoài phạm vi** ghi rõ.
-- [x] **Câu hỏi mở** §11: không blocker — giả định nằm trong brief.
-- [x] **Skill + doc** đã liệt kê §8.
-- [x] Nếu lệch phạm vi: ghi **§7**.
-
----
-
-## 1. Tóm tắt một dòng (bắt buộc)
-
-Cung cấp REST API versioned tại `/api/v1/shelf-items` để tạo, đọc, sửa, xóa và liệt kê bản ghi **ShelfItem** có phân trang và lọc `category`, lưu trên **PostgreSQL** (dev qua Docker theo brief), validation khớp brief simulator; test có thể dùng **H2** theo profile test.
+- [x] Ticket/spec cÃ³ **má»¥c tiÃªu** vÃ  **AC** rÃµ (brief + Â§3 dÆ°á»›i Ä‘Ã¢y).
+- [x] **Pháº¡m vi** Â§2 Ä‘Ã£ Ä‘iá»n; **ngoÃ i pháº¡m vi** ghi rÃµ.
+- [x] **CÃ¢u há»i má»Ÿ** Â§11: khÃ´ng blocker â€” giáº£ Ä‘á»‹nh náº±m trong brief.
+- [x] **Skill + doc** Ä‘Ã£ liá»‡t kÃª Â§8.
+- [x] Náº¿u lá»‡ch pháº¡m vi: ghi **Â§7**.
 
 ---
 
-## 2. Nguồn, phạm vi, giả định (bắt buộc)
+## 1. TÃ³m táº¯t má»™t dÃ²ng (báº¯t buá»™c)
 
-### 2.1 Liên kết chính
+Cung cáº¥p REST API versioned táº¡i `/api/v1/shelf-items` Ä‘á»ƒ táº¡o, Ä‘á»c, sá»­a, xÃ³a vÃ  liá»‡t kÃª báº£n ghi **ShelfItem** cÃ³ phÃ¢n trang vÃ  lá»c `category`, lÆ°u trÃªn **PostgreSQL** (dev qua Docker theo brief), validation khá»›p brief simulator; test cÃ³ thá»ƒ dÃ¹ng **H2** theo profile test.
 
-- **Ticket / mô tả:** Demo simulator — **`.operational-resources/simulator/DEMO-PROJECT-BRIEF.md`** (**§3–4** ràng buộc kỹ thuật + sản phẩm).
+---
+
+## 2. Nguá»“n, pháº¡m vi, giáº£ Ä‘á»‹nh (báº¯t buá»™c)
+
+### 2.1 LiÃªn káº¿t chÃ­nh
+
+- **Ticket / mÃ´ táº£:** Demo simulator â€” **`.operational-resources/simulator/DEMO-PROJECT-BRIEF.md`** (**Â§3â€“4** rÃ ng buá»™c ká»¹ thuáº­t + sáº£n pháº©m).
 - **Spec:** `.operational-resources/docs/specs/feature-shelflog-items.md`.
-- **API / contract:** `docs/api/08-endpoint-list.md`, `docs/api/10-current-api-changes.md` — cập nhật khi đổi hành vi.
+- **API / contract:** `docs/api/08-endpoint-list.md`, `docs/api/10-current-api-changes.md` â€” cáº­p nháº­t khi Ä‘á»•i hÃ nh vi.
 - **ADR:** `docs/decisions/006-shelflog-demo-postgres-docker.md`.
-- **Tiền đề infra (SIM-DEMO-1):** `docs/current-task/20260414-shelflog-infra.md` — phải Done trước khi coi ticket này sẵn sàng implement đầy đủ.
-- **Ticket mẫu (copy khi reset):** `.operational-resources/simulator/DEMO-TICKET-20260411-shelf-items-api.md`.
+- **Tiá»n Ä‘á» infra (SIM-DEMO-1):** `docs/current-task/20260414-shelflog-infra.md` â€” pháº£i Done trÆ°á»›c khi coi ticket nÃ y sáºµn sÃ ng implement Ä‘áº§y Ä‘á»§.
+- **Ticket máº«u (copy khi reset):** `.operational-resources/simulator/DEMO-TICKET-20260411-shelf-items-api.md`.
 
-### 2.2 Trong phạm vi / ngoài phạm vi
+### 2.2 Trong pháº¡m vi / ngoÃ i pháº¡m vi
 
-| Trong phạm vi (task này) | Ngoài phạm vi (task khác / sau) |
+| Trong pháº¡m vi (task nÃ y) | NgoÃ i pháº¡m vi (task khÃ¡c / sau) |
 |---------------------------|----------------------------------|
-| CRUD + list phân trang + lọc `category` | Auth, đa người dùng, xóa mềm |
-| DTO + Bean Validation + service + JPA + REST | Testcontainers, đổi pipeline CI |
-| Test đơn vị + **IT** (profile **`test`** / H2 đã cấu hình ở SIM-DEMO-1) | Frontend, publish artifact OpenAPI |
+| CRUD + list phÃ¢n trang + lá»c `category` | Auth, Ä‘a ngÆ°á»i dÃ¹ng, xÃ³a má»m |
+| DTO + Bean Validation + service + JPA + REST | Testcontainers, Ä‘á»•i pipeline CI |
+| Test Ä‘Æ¡n vá»‹ + **IT** (profile **`test`** / H2 Ä‘Ã£ cáº¥u hÃ¬nh á»Ÿ SIM-DEMO-1) | Frontend, publish artifact OpenAPI |
 | Endpoint `/api/v1/shelf-items` + entity `ShelfItem` | Baseline **`pom`**, `application-*.yml`, Actuator-only IT (SIM-DEMO-1) |
-| Doc API/spec khi đổi contract | Secret thật trong repo |
+| Doc API/spec khi Ä‘á»•i contract | Secret tháº­t trong repo |
 
-### 2.3 Giả định và phụ thuộc
+### 2.3 Giáº£ Ä‘á»‹nh vÃ  phá»¥ thuá»™c
 
-- **Phụ thuộc bắt buộc:** **SIM-DEMO-1** hoàn tất (`20260414-shelflog-infra.md`): starters, profile `dev`/`test`, Actuator health IT.
-- **Giả định:** Spring Boot 3.x + Java 17 + Maven; package gốc khớp `groupId` trong `pom.xml`.
-- **Môi trường:** Docker + Compose cho chạy app **dev**; `./mvnw test` không cần Docker.
-- **Không** thêm broker/message queue trừ khi task khác yêu cầu.
+- **Phá»¥ thuá»™c báº¯t buá»™c:** **SIM-DEMO-1** hoÃ n táº¥t (`20260414-shelflog-infra.md`): starters, profile `dev`/`test`, Actuator health IT.
+- **Giáº£ Ä‘á»‹nh:** Spring Boot 3.x + Java 17 + Maven; package gá»‘c khá»›p `groupId` trong `pom.xml`.
+- **MÃ´i trÆ°á»ng:** Docker + Compose cho cháº¡y app **dev**; `./mvnw test` khÃ´ng cáº§n Docker.
+- **KhÃ´ng** thÃªm broker/message queue trá»« khi task khÃ¡c yÃªu cáº§u.
 
 ---
 
-## 3. Tiêu chí chấp nhận (AC)
+## 3. TiÃªu chÃ­ cháº¥p nháº­n (AC)
 
-- [ ] **AC1:** `POST /api/v1/shelf-items` tạo tài nguyên; trả **201** + body có `id`, timestamp và các trường đã lưu.
-- [ ] **AC2:** `GET /api/v1/shelf-items/{id}` trả **200** khi tồn tại, **404** khi không có.
-- [ ] **AC3:** `PUT /api/v1/shelf-items/{id}` thay thế trường được phép; **404** khi không có; validation như lúc tạo.
-- [ ] **AC4:** `DELETE /api/v1/shelf-items/{id}` trả **204** và xóa bản ghi; **404** khi không có.
-- [ ] **AC5:** `GET /api/v1/shelf-items` hỗ trợ `page`, `size` (tối đa 100), lọc tuỳ chọn `category`; JSON phân trang **ổn định** (đã ghi trong doc).
-- [ ] **AC6:** `quantity` sai (>999 hoặc âm), `title` rỗng, `category` không hợp lệ → **400** với payload lỗi nhận diện được.
+- [ ] **AC1:** `POST /api/v1/shelf-items` táº¡o tÃ i nguyÃªn; tráº£ **201** + body cÃ³ `id`, timestamp vÃ  cÃ¡c trÆ°á»ng Ä‘Ã£ lÆ°u.
+- [ ] **AC2:** `GET /api/v1/shelf-items/{id}` tráº£ **200** khi tá»“n táº¡i, **404** khi khÃ´ng cÃ³.
+- [ ] **AC3:** `PUT /api/v1/shelf-items/{id}` thay tháº¿ trÆ°á»ng Ä‘Æ°á»£c phÃ©p; **404** khi khÃ´ng cÃ³; validation nhÆ° lÃºc táº¡o.
+- [ ] **AC4:** `DELETE /api/v1/shelf-items/{id}` tráº£ **204** vÃ  xÃ³a báº£n ghi; **404** khi khÃ´ng cÃ³.
+- [ ] **AC5:** `GET /api/v1/shelf-items` há»— trá»£ `page`, `size` (tá»‘i Ä‘a 100), lá»c tuá»³ chá»n `category`; JSON phÃ¢n trang **á»•n Ä‘á»‹nh** (Ä‘Ã£ ghi trong doc).
+- [ ] **AC6:** `quantity` sai (>999 hoáº·c Ã¢m), `title` rá»—ng, `category` khÃ´ng há»£p lá»‡ â†’ **400** vá»›i payload lá»—i nháº­n diá»‡n Ä‘Æ°á»£c.
 
-### 3.1 Hành vi chi tiết (khuyến nghị)
+### 3.1 HÃ nh vi chi tiáº¿t (khuyáº¿n nghá»‹)
 
-| Kịch bản | Kết quả mong đợi | Ghi chú |
+| Ká»‹ch báº£n | Káº¿t quáº£ mong Ä‘á»£i | Ghi chÃº |
 |----------|------------------|---------|
-| Tạo hợp lệ | 201 + JSON | `id` kiểu UUID |
-| List trang 0 size 20 | 200 + metadata trang | Mặc định size 20 nếu bỏ query |
-| Lọc category=HOBBY | Chỉ bản ghi khớp | Khớp enum chính xác |
-| GET id không tồn tại | 404 | Cùng kiểu body lỗi với toàn API |
+| Táº¡o há»£p lá»‡ | 201 + JSON | `id` kiá»ƒu UUID |
+| List trang 0 size 20 | 200 + metadata trang | Máº·c Ä‘á»‹nh size 20 náº¿u bá» query |
+| Lá»c category=HOBBY | Chá»‰ báº£n ghi khá»›p | Khá»›p enum chÃ­nh xÃ¡c |
+| GET id khÃ´ng tá»“n táº¡i | 404 | CÃ¹ng kiá»ƒu body lá»—i vá»›i toÃ n API |
 | PUT quantity 1000 | 400 | BR1 |
-| DELETE rồi GET lại | 404 | Hard delete |
+| DELETE rá»“i GET láº¡i | 404 | Hard delete |
 
 ---
 
-## 4. Ánh xạ AC → test (bắt buộc trước khi coi xong)
+## 4. Ãnh xáº¡ AC â†’ test (báº¯t buá»™c trÆ°á»›c khi coi xong)
 
-| AC / mục tiêu | Mô tả | Test (class#method hoặc mô tả) | Loại |
+| AC / má»¥c tiÃªu | MÃ´ táº£ | Test (class#method hoáº·c mÃ´ táº£) | Loáº¡i |
 |----------------|-------|--------------------------------|------|
-| AC1 | Tạo hợp lệ | `ShelfItemControllerIT#create_returns201` | IT |
+| AC1 | Táº¡o há»£p lá»‡ | `ShelfItemControllerIT#create_returns201` | IT |
 | AC2 | GET theo id | `ShelfItemControllerIT#get_found_and_notFound` | IT |
-| AC3 | PUT cập nhật | `ShelfItemControllerIT#put_updates_fields` | IT |
+| AC3 | PUT cáº­p nháº­t | `ShelfItemControllerIT#put_updates_fields` | IT |
 | AC4 | DELETE | `ShelfItemControllerIT#delete_then_get_404` | IT |
-| AC5 | List + lọc | `ShelfItemControllerIT#list_pagination_and_category` | IT |
-| AC6 | Validation | `ShelfItemControllerIT#validation_errors` (+ unit service nếu có) | IT / unit |
+| AC5 | List + lá»c | `ShelfItemControllerIT#list_pagination_and_category` | IT |
+| AC6 | Validation | `ShelfItemControllerIT#validation_errors` (+ unit service náº¿u cÃ³) | IT / unit |
 
-*(Đổi tên class test theo package thực tế; giữ traceability với AC.)*
-
----
-
-## 5. Phi chức năng & ràng buộc kỹ thuật
-
-- **Hiệu năng:** Demo — endpoint list dùng **phân trang DB** (không load-all).
-- **Bảo mật:** Không auth; ghi “chỉ local/demo” trong spec/setup.
-- **Tương thích API:** Giữ path `/api/v1/shelf-items` cho demo.
-- **Idempotency:** POST không bắt buộc idempotent (nhiều lần tạo = nhiều bản ghi).
+*(Äá»•i tÃªn class test theo package thá»±c táº¿; giá»¯ traceability vá»›i AC.)*
 
 ---
 
-## 6. Khối theo loại task — giữ **một** khối, xóa các khối khác
+## 5. Phi chá»©c nÄƒng & rÃ ng buá»™c ká»¹ thuáº­t
 
-### A — FEATURE
-
-- **Tác động người dùng:** Dev chạy API local (sau khi `docker compose up`) và quản lý shelf qua HTTP.
-- **Luồng implement gợi ý:** DTO + validation → service (rule) → repository JPA → controller → IT (`@SpringBootTest` + MockMvc/WebTestClient, profile **test** + H2) → cập nhật **`docs/api/08-endpoint-list.md`**, **`docs/api/10-current-api-changes.md`**, **`docs/specs/feature-shelflog-items.md`** khi đổi contract.
-- **Mở rộng sau:** Auth, xóa mềm, luân chuyển tồn — task riêng.
-
-### B — BUGFIX
-
-*(xóa khối này khi dùng A)*
-
-### C — REFACTOR
-
-*(xóa)*
-
-### D — SPIKE / CHORE / OPS
-
-*(xóa)*
+- **Hiá»‡u nÄƒng:** Demo â€” endpoint list dÃ¹ng **phÃ¢n trang DB** (khÃ´ng load-all).
+- **Báº£o máº­t:** KhÃ´ng auth; ghi â€œchá»‰ local/demoâ€ trong spec/setup.
+- **TÆ°Æ¡ng thÃ­ch API:** Giá»¯ path `/api/v1/shelf-items` cho demo.
+- **Idempotency:** POST khÃ´ng báº¯t buá»™c idempotent (nhiá»u láº§n táº¡o = nhiá»u báº£n ghi).
 
 ---
 
-## 7. Revision — đổi yêu cầu khi đang làm
+## 6. Khá»‘i theo loáº¡i task â€” giá»¯ **má»™t** khá»‘i, xÃ³a cÃ¡c khá»‘i khÃ¡c
 
-| Ngày | Thay đổi | Mức độ | Hành động (đã sync BA/lead? đã cập nhật AC/test?) |
+### A â€” FEATURE
+
+- **TÃ¡c Ä‘á»™ng ngÆ°á»i dÃ¹ng:** Dev cháº¡y API local (sau khi `docker compose up`) vÃ  quáº£n lÃ½ shelf qua HTTP.
+- **Luá»“ng implement gá»£i Ã½:** DTO + validation â†’ service (rule) â†’ repository JPA â†’ controller â†’ IT (`@SpringBootTest` + MockMvc/WebTestClient, profile **test** + H2) â†’ cáº­p nháº­t **`docs/api/08-endpoint-list.md`**, **`docs/api/10-current-api-changes.md`**, **`docs/specs/feature-shelflog-items.md`** khi Ä‘á»•i contract.
+- **Má»Ÿ rá»™ng sau:** Auth, xÃ³a má»m, luÃ¢n chuyá»ƒn tá»“n â€” task riÃªng.
+
+### B â€” BUGFIX
+
+*(xÃ³a khá»‘i nÃ y khi dÃ¹ng A)*
+
+### C â€” REFACTOR
+
+*(xÃ³a)*
+
+### D â€” SPIKE / CHORE / OPS
+
+*(xÃ³a)*
+
+---
+
+## 7. Revision â€” Ä‘á»•i yÃªu cáº§u khi Ä‘ang lÃ m
+
+| NgÃ y | Thay Ä‘á»•i | Má»©c Ä‘á»™ | HÃ nh Ä‘á»™ng (Ä‘Ã£ sync BA/lead? Ä‘Ã£ cáº­p nháº­t AC/test?) |
 |------|----------|--------|-----------------------------------------------------|
-| 2026-04-11 | Ticket simulator ban đầu | Nhỏ | N/A — demo |
-| 2026-04-11 | Docker là yêu cầu kỹ thuật dev; H2 cho test | Nhỏ | Đồng bộ brief + task |
-| 2026-04-14 | ShelfLog: một nguồn `docs/`; bỏ `simulator/docs/`; brief §9 + MAP + task | Trung bình | Đồng bộ ticket mẫu |
-| 2026-04-14 | Tách **SIM-DEMO-1** infra (`20260414-shelflog-infra.md`); ticket này đổi thành **SIM-DEMO-2** | Trung bình | Brief §11, simulator README |
+| 2026-04-11 | Ticket simulator ban Ä‘áº§u | Nhá» | N/A â€” demo |
+| 2026-04-11 | Docker lÃ  yÃªu cáº§u ká»¹ thuáº­t dev; H2 cho test | Nhá» | Äá»“ng bá»™ brief + task |
+| 2026-04-14 | ShelfLog: má»™t nguá»“n `docs/`; bá» `simulator/docs/`; brief Â§9 + MAP + task | Trung bÃ¬nh | Äá»“ng bá»™ ticket máº«u |
+| 2026-04-14 | TÃ¡ch **SIM-DEMO-1** infra (`20260414-shelflog-infra.md`); ticket nÃ y Ä‘á»•i thÃ nh **SIM-DEMO-2** | Trung bÃ¬nh | Brief Â§11, simulator README |
 
 ---
 
-## 8. Context pack cho AI — rules, doc, skill (bắt buộc: ít nhất rules + một skill)
+## 8. Context pack cho AI â€” rules, doc, skill (báº¯t buá»™c: Ã­t nháº¥t rules + má»™t skill)
 
-| Loại | Đường dẫn |
+| Loáº¡i | ÄÆ°á»ng dáº«n |
 |------|-----------|
 | **Brief + compose** | `.operational-resources/simulator/DEMO-PROJECT-BRIEF.md`, `simulator/docker-compose.postgres.yml`, `simulator/README.md` |
-| **Infra tiền đề (SIM-DEMO-1)** | `docs/current-task/20260414-shelflog-infra.md` |
-| **Docs (ShelfLog — một nguồn)** | `docs/project-overview.md`, `docs/specs/feature-shelflog-items.md`, `docs/api/08-endpoint-list.md`, `docs/setup/02-local-development.md`, `docs/decisions/006-shelflog-demo-postgres-docker.md` |
+| **Infra tiá»n Ä‘á» (SIM-DEMO-1)** | `docs/current-task/20260414-shelflog-infra.md` |
+| **Docs (ShelfLog â€” má»™t nguá»“n)** | `docs/project-overview.md`, `docs/specs/feature-shelflog-items.md`, `docs/api/08-endpoint-list.md`, `docs/setup/02-local-development.md`, `docs/decisions/006-shelflog-demo-postgres-docker.md` |
 | Rules | `rules/00-personal-priority.md`, `rules/02-coding-standards.md`, `rules/03-api-development.md`, `rules/08-review-checklist.md` |
 | Docs (workspace chung) | `docs/architecture/06-backend-layers-and-dependencies.md`, `docs/api/01-README.md`, `docs/setup/01-README.md` |
 | Skills | `skills/workflow/implement-feature/README.md`, `skills/backend/create-rest-api/README.md`, `skills/backend/create-service-layer/README.md`, `skills/backend/create-jpa-entity/README.md`, `skills/security/validate-input/README.md`, `skills/testing/write-integration-test/README.md`, `skills/devops/health-check-endpoint/README.md` |
 
-**Prompt gợi ý (copy):**  
-“Đọc `docs/current-task/20260414-shelflog-infra.md` (đã Done) rồi `20260411-shelf-items-api.md`, `docs/specs/feature-shelflog-items.md`, `docs/setup/02-local-development.md`, `simulator/DEMO-PROJECT-BRIEF.md`. Chỉ implement **API + domain** ShelfItem — không lặp baseline infra SIM-DEMO-1. Cập nhật `.operational-resources/docs/` khi đổi contract. Không OAuth; không vượt §2.2.”
+**Prompt gá»£i Ã½ (copy):**  
+â€œÄá»c `docs/current-task/20260414-shelflog-infra.md` (Ä‘Ã£ Done) rá»“i `20260411-shelf-items-api.md`, `docs/specs/feature-shelflog-items.md`, `docs/setup/02-local-development.md`, `simulator/DEMO-PROJECT-BRIEF.md`. Chá»‰ implement **API + domain** ShelfItem â€” khÃ´ng láº·p baseline infra SIM-DEMO-1. Cáº­p nháº­t `.operational-resources/docs/` khi Ä‘á»•i contract. KhÃ´ng OAuth; khÃ´ng vÆ°á»£t Â§2.2.â€
 
 ---
 
-## 9. Checklist thực thi (tùy chỉnh)
+## 9. Checklist thá»±c thi (tÃ¹y chá»‰nh)
 
-- [ ] Ràng buộc brief vào entity/DTO (độ dài title, quantity 0–999, enum).
-- [ ] Controller dưới `/api/v1/shelf-items`; body lỗi thống nhất.
+- [ ] RÃ ng buá»™c brief vÃ o entity/DTO (Ä‘á»™ dÃ i title, quantity 0â€“999, enum).
+- [ ] Controller dÆ°á»›i `/api/v1/shelf-items`; body lá»—i thá»‘ng nháº¥t.
 - [ ] Repository + `Pageable` cho list.
-- [ ] Ít nhất một class IT cho AC1–AC6 (profile test).
+- [ ] Ãt nháº¥t má»™t class IT cho AC1â€“AC6 (profile test).
 - [ ] `./mvnw test` xanh.
 - [ ] Doc (`.operational-resources/docs/`): `specs/feature-shelflog-items.md`, `api/08-endpoint-list.md`, `api/10-current-api-changes.md`, `setup/02-local-development.md`.
 
 ---
 
-## 10. Hướng dẫn chi tiết cho AI (bắt buộc — ít nhất ba ý)
+## 10. HÆ°á»›ng dáº«n chi tiáº¿t cho AI (báº¯t buá»™c â€” Ã­t nháº¥t ba Ã½)
 
-- **BẮT BUỘC:** **quantity 0–999**, **title 1–200** tại boundary API; **chạy dev** với Postgres sau `docker compose` theo brief; ghi rõ trong README/setup.
-- **NÊN:** `page`/`size` mặc định hợp lý, **size tối đa 100**; IT dùng **random port** hoặc `@AutoConfigureMockMvc`.
-- **HỎI TRƯỚC:** **Testcontainers**, bất kỳ **starter Maven mới** (đã có stack chính ở SIM-DEMO-1), hoặc đổi **global exception** cho cả repo.
-
----
-
-## 11. Câu hỏi mở, rủi ro, blocker
-
-- Nếu SIM-DEMO-1 chưa Done: chặn implement feature cho đến khi baseline infra xong.
+- **Báº®T BUá»˜C:** **quantity 0â€“999**, **title 1â€“200** táº¡i boundary API; **cháº¡y dev** vá»›i Postgres sau `docker compose` theo brief; ghi rÃµ trong README/setup.
+- **NÃŠN:** `page`/`size` máº·c Ä‘á»‹nh há»£p lÃ½, **size tá»‘i Ä‘a 100**; IT dÃ¹ng **random port** hoáº·c `@AutoConfigureMockMvc`.
+- **Há»ŽI TRÆ¯á»šC:** **Testcontainers**, báº¥t ká»³ **starter Maven má»›i** (Ä‘Ã£ cÃ³ stack chÃ­nh á»Ÿ SIM-DEMO-1), hoáº·c Ä‘á»•i **global exception** cho cáº£ repo.
 
 ---
 
-## 12. Nhật ký tiến độ
+## 11. CÃ¢u há»i má»Ÿ, rá»§i ro, blocker
 
-- **[2026-04-11]** Tạo ticket simulator trong `simulator/` — sao chép vào `.operational-resources/docs/current-task/` trước khi code.
-- **[2026-04-11]** Cập nhật: Docker + Postgres là yêu cầu kỹ thuật dev; H2 cho test.
-- **[2026-04-14]** Đồng bộ ShelfLog vào `docs/` (spec, API, setup, kiến trúc, ADR-006); task file này là bản làm việc trong `current-task/`.
-- **[2026-04-14]** Gỡ `simulator/docs/` — chỉ còn một nguồn `.operational-resources/docs/`.
-- **[2026-04-14]** SIM-DEMO-1 infra baseline trong code; ticket này là SIM-DEMO-2.
+- Náº¿u SIM-DEMO-1 chÆ°a Done: cháº·n implement feature cho Ä‘áº¿n khi baseline infra xong.
 
 ---
 
-## 13. Definition of Done (trước MR)
+## 12. Nháº­t kÃ½ tiáº¿n Ä‘á»™
 
-- [ ] §0 DoR thỏa (hoặc điều chỉnh có chủ đích)
-- [ ] Code + test khớp §3–4 (và §7 nếu sửa)
+- **[2026-04-11]** Táº¡o ticket simulator trong `simulator/` â€” sao chÃ©p vÃ o `.operational-resources/docs/current-task/` trÆ°á»›c khi code.
+- **[2026-04-11]** Cáº­p nháº­t: Docker + Postgres lÃ  yÃªu cáº§u ká»¹ thuáº­t dev; H2 cho test.
+- **[2026-04-14]** Äá»“ng bá»™ ShelfLog vÃ o `docs/` (spec, API, setup, kiáº¿n trÃºc, ADR-006); task file nÃ y lÃ  báº£n lÃ m viá»‡c trong `current-task/`.
+- **[2026-04-14]** Gá»¡ `simulator/docs/` â€” chá»‰ cÃ²n má»™t nguá»“n `.operational-resources/docs/`.
+- **[2026-04-14]** SIM-DEMO-1 infra baseline trong code; ticket nÃ y lÃ  SIM-DEMO-2.
+
+---
+
+## 13. Definition of Done (trÆ°á»›c MR)
+
+- [ ] Â§0 DoR thá»a (hoáº·c Ä‘iá»u chá»‰nh cÃ³ chá»§ Ä‘Ã­ch)
+- [ ] Code + test khá»›p Â§3â€“4 (vÃ  Â§7 náº¿u sá»­a)
 - [ ] `./mvnw test` pass
-- [ ] Tự review `rules/08-review-checklist.md`
-- [ ] MR: mô tả + **Cách test** (gồm `docker compose ... up`) + ghi chú “simulator demo / SIM-DEMO-2”
+- [ ] Tá»± review `rules/08-review-checklist.md`
+- [ ] MR: mÃ´ táº£ + **CÃ¡ch test** (gá»“m `docker compose ... up`) + ghi chÃº â€œsimulator demo / SIM-DEMO-2â€
 
 ---
 
-**Cập nhật lần cuối:** 2026-04-14 (SIM-DEMO-2; sau SIM-DEMO-1)
+**Cáº­p nháº­t láº§n cuá»‘i:** 2026-04-14 (SIM-DEMO-2; sau SIM-DEMO-1)
+
