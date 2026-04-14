@@ -22,6 +22,22 @@
 | **Priority** | High \| Medium \| Low |
 | **Owner** | (you / team) |
 
+### Machine-readable task_contract (required)
+
+```yaml
+task_contract:
+  task_id: YYYYMMDD-slug
+  ticket: PROJ-123
+  dependencies: []
+  required_test_command: ./mvnw.cmd -q test
+  required_outputs:
+    - code_changes
+    - test_updates
+    - test_evidence
+    - ac_test_mapping
+    - handoff_notes
+```
+
 ---
 
 ## 0. Definition of Ready — before asking AI to implement (checkboxes)
@@ -188,11 +204,20 @@ Paths AI should read (fill real paths; delete unused rows):
 
 ## 13. Definition of Done (check before MR)
 
-- [ ] §0 Definition of Ready satisfied (or intentionally adjusted)
+### 13.1 AL Done (must be complete before handoff)
+
+- [ ] §0 Definition of Ready fully checked before implementation
 - [ ] Code + tests match §3–4 (and §7 if revised)
-- [ ] `./mvnw test` passes (or team command)
-- [ ] Self-review `rules/08-review-checklist.md`
-- [ ] MR: description + ticket link + **How to test** + breaking impact (if any)
+- [ ] Required test command in `task_contract.required_test_command` executed and evidence saved
+- [ ] §4 AC -> test mapping updated to final state
+- [ ] §12 progress log contains implementation + test evidence summary
+
+### 13.2 Human Done (outside AL execution)
+
+- [ ] Human reviewed code quality and scope fit
+- [ ] Human reviewed testing evidence
+- [ ] Human created MR with test instructions
+- [ ] Human decided merge/close in external process
 
 ---
 

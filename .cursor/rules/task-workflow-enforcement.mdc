@@ -1,0 +1,29 @@
+---
+description: Enforce task-driven execution workflow
+alwaysApply: true
+---
+
+# Task-Driven Execution
+
+- Start implementation only after reading one file in `docs/current-task/`.
+- Treat that task file as the single source of scope, AC, and context pack.
+- If AC/scope is unclear, ask or update task revision before coding.
+- Respect strict input gate from `SCHEMA.md` and `start-task.ps1`.
+
+# Output Contract
+
+- Keep AC -> test mapping aligned with code changes.
+- When API/contract changes, update relevant files in `docs/api/`.
+- Record key progress in task progress log.
+- AL scope ends at: code + tests + test evidence + handoff readiness.
+
+# Safety Gates
+
+- Do not introduce large architecture changes unless task explicitly allows it.
+- Ask first before adding dependencies or changing shared interfaces.
+- Prefer incremental changes that are easy to test and review.
+
+# Completion Gate
+
+- AL done means implementation/testing/evidence are complete for human review.
+- Human is responsible for code review, test review, MR creation, merge, and external close.

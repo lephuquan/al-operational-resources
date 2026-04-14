@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "hooks": {
+    "beforeShellExecution": [
+      {
+        "command": "powershell -NoProfile -ExecutionPolicy Bypass -File .cursor/hooks/shell-safety-gate.ps1",
+        "timeout": 10,
+        "failClosed": false
+      }
+    ]
+  }
+}

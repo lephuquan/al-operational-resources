@@ -1,0 +1,13 @@
+---
+description: Standards for current-task markdown files
+globs: .operational-resources/docs/current-task/*.md
+alwaysApply: false
+---
+
+# Current Task File Standard
+
+- Keep required sections from `SCHEMA.md`.
+- Keep metadata and `task_contract` aligned with actual status.
+- Keep dependencies explicit and update revision when scope changes.
+- Maintain concise, testable AC statements.
+- Keep AC -> test mapping specific (class/method or command-level evidence).

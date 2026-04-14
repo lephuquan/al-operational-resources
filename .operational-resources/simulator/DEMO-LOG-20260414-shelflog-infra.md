@@ -89,8 +89,8 @@ docker compose -f .operational-resources/simulator/docker-compose.postgres.yml d
 ```
 
 Log:
-- Command output summary:
-- Issues:
+- Command output summary: Chạy lệnh `docker compose ... up -d` nhưng không kết nối được Docker engine.
+- Issues: Docker Desktop chưa chạy (pipe `dockerDesktopLinuxEngine` không tồn tại).
 
 ---
 
@@ -114,9 +114,9 @@ Nếu fail:
 - [ ] Re-run test pass
 
 Log:
-- Run #1:
-- Run #2 (nếu có):
-- Final status:
+- Run #1: Chưa chạy xong trong phiên này vì lệnh test bị IDE bỏ qua quyền thực thi.
+- Run #2 (nếu có): N/A
+- Final status: Pending - cần bạn chạy lại thủ công theo lệnh ở trên.
 
 ---
 
@@ -185,7 +185,21 @@ Kết luận:
 
 ### Entries
 
-- (điền tại đây theo từng bước)
+- Timestamp: 2026-04-14
+  Step: 3 - Chạy hạ tầng dev (Docker Postgres)
+  Action: Thực thi `docker compose -f .operational-resources/simulator/docker-compose.postgres.yml up -d` và `docker compose ... ps`
+  Files: Không đổi file
+  Evidence: Lỗi kết nối `//./pipe/dockerDesktopLinuxEngine`
+  Issue/Risk: Docker Desktop chưa khởi động, nên không verify được profile `dev`
+  Next: Mở Docker Desktop, chạy lại step 3
+
+- Timestamp: 2026-04-14
+  Step: 4 - Chạy test bắt buộc
+  Action: Đã gửi lệnh `./mvnw.cmd -q test`
+  Files: Không đổi file
+  Evidence: Lệnh bị IDE skip (không có output test)
+  Issue/Risk: Chưa có bằng chứng AC6 trong lần chạy này
+  Next: Chạy lại thủ công `./mvnw.cmd -q test` và ghi kết quả vào mục Log step 4
 
 ---
 
@@ -200,3 +214,51 @@ Khi xong file này, bạn phải có:
 5. Sẵn sàng bắt đầu SIM-DEMO-2
 
 **Last updated:** 2026-04-14
+
+- Timestamp: 2026-04-14 23:40:46
+  Step: 0
+  Action: Confirm required inputs
+  Files: Khong doi file bang script
+  Evidence: Confirmed by operator
+  Issue/Risk: None
+  Next: Proceed DoR gate
+
+- Timestamp: 2026-04-14 23:40:47
+  Step: 1
+  Action: DoR gate confirmation
+  Files: Khong doi file bang script
+  Evidence: Checklist confirmed
+  Issue/Risk: None
+  Next: Validate infra files
+
+- Timestamp: 2026-04-14 23:40:47
+  Step: 2
+  Action: Validated baseline artifacts/dependencies
+  Files: Khong doi file bang script
+  Evidence: File existence + dependency markers checked
+  Issue/Risk: Check warnings if any missing
+  Next: Run Docker step
+
+- Timestamp: 2026-04-14 23:40:47
+  Step: 3
+  Action: Skipped Docker by flag
+  Files: Khong doi file bang script
+  Evidence: Operator used -SkipDocker
+  Issue/Risk: Dev profile not verified
+  Next: Continue to tests
+
+- Timestamp: 2026-04-14 23:40:47
+  Step: 4
+  Action: Skipped test by flag
+  Files: Khong doi file bang script
+  Evidence: Operator used -SkipTests
+  Issue/Risk: No AC6 evidence
+  Next: Run tests manually before closing task
+
+- Timestamp: 2026-04-14 23:40:47
+  Step: 5-7
+  Action: Manual checklist/self-review required
+  Files: Khong doi file bang script
+  Evidence: Instructions shown in console
+  Issue/Risk: Pending manual updates
+  Next: Finish manual sync and close SIM-DEMO-1

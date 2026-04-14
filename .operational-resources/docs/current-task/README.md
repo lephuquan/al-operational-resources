@@ -1,74 +1,58 @@
-# Current tasks (single source of truth)
+# Current Tasks (Single Source of Truth)
 
-## TL;DR (VI)
+This folder is the canonical input/output area for task-driven AL execution.
 
-- Th? m?c **duy nh?t** ch?a file task cá nhân; không t?o b?n song song trong `rules/`.
-- **Lu?ng m?t task (ticket ? Done):** **`../../task-lifecycle/README.md`** ? **`../../task-lifecycle/FROM-TICKET-TO-DONE.md`**.
-- **Bootstrap / b?o trì tài li?u:** **`../../guides/README.md`**.
-- Khi implement code: bám **`../../skills/workflow/implement-feature/README.md`** (bugfix: **`investigate-bug`** hub).
-- **N?i dung k? thu?t / template** dùng **English** ?? AI ??c ?n ??nh; ph?n này là **l?i vào** + dashboard.
-- Sao chép `TEMPLATE.md` ? ??t tên `YYYYMMDD-slug.md` ? ?i?n và c?p nh?t b?ng bên d??i.
+## TL;DR
 
-This folder is the **only** place for active personal task files. Use **`TEMPLATE.md`** for every new task. Main instructions are in **English**; this README is the entry point and dashboard.
+- Keep exactly one task file per task in this folder.
+- Create task file from `TEMPLATE.md`.
+- Validate strict input gate with `.operational-resources/scripts/start-task.ps1`.
+- Validate AL-done output gate with `.operational-resources/scripts/close-task.ps1`.
 
-## Location
+## Folder contract
 
-- **Path:** `.operational-resources/docs/current-task/`
-- **Do not** duplicate tasks under `rules/` ? one source of truth avoids drift.
+- Path: `.operational-resources/docs/current-task/`
+- One task = one file: `YYYYMMDD-short-slug.md`
+- No duplicate task copies in other folders.
 
-## File naming
+## Required files
 
-- Pattern: `YYYYMMDD-short-description.md` ? example: `20260408-order-create-api.md`
-- One task = one file; metadata **ID** should match the date prefix + slug.
+- `TEMPLATE.md`: main authoring template
+- `SCHEMA.md`: contract for required sections and outputs
+- `HUMAN-GATE-CHECKLIST.md`: final human validation gates
+- `METRICS.md`: KPI tracking
+- `logs/TEMPLATE.md`: execution log template
+- `MIGRATION-TO-STRICT-CONTRACT.md`: upgrade guide for legacy task files
 
-## Minimum content per task
+## Standard workflow
 
-Copy **`TEMPLATE.md`**, then fill at least:
+1. Create task file from `TEMPLATE.md`.
+2. Fill scope, AC, AC->test mapping, context pack, DoD, and required `task_contract`.
+3. Run:
+   - `powershell -File .operational-resources/scripts/start-task.ps1 -TaskFile ".operational-resources/docs/current-task/YYYYMMDD-slug.md"`
+4. Implement task using the listed context pack.
+5. Execute tests and record evidence.
+6. Run:
+   - `powershell -File .operational-resources/scripts/close-task.ps1 -TaskFile ".operational-resources/docs/current-task/YYYYMMDD-slug.md" -TestEvidence "<path>"`
+7. Handoff to human gate: human reviews code + testing evidence, creates MR, and decides merge/close outside AL.
 
-| Section in `TEMPLATE.md` | Required | Notes |
-|--------------------------|----------|--------|
-| §0 Definition of Ready | Before large implementation | Clear requirements or explicit blockers |
-| Metadata + §1 summary | Yes | |
-| §2 sources, in/out scope, assumptions | Yes | Reduces scope misunderstandings |
-| §3 AC + §3.1 behavior (features) | Strongly recommended | Happy path, errors, edge cases |
-| §4 AC ? Test | Yes* | *Spike/chore may be N/A with reason |
-| §5 non-functional | When relevant | |
-| §6 one block A/B/C/D | Yes | Delete unused blocks |
-| §7 Revision | When AC changes | Track updates / major pivots |
-| §8 context pack (rules + docs + skills) | Yes | AI knows what to read before coding |
-| §10 AI guidance (MUST / SHOULD / ASK) | Yes | |
-| §13 Definition of Done | Before MR | |
+## Role split
 
-## Task types
-
-**Feature / Bugfix / Refactor / Spike / Chore / Ops** ? all use **`TEMPLATE.md`**. In **§6**, keep **one** block (A/B/C/D) and remove the others.
+- **AL:** read task, implement AC, update tests, run tests, update evidence in task/log, handoff ready.
+- **Human:** review code, review testing evidence, create MR, decide merge, close task in external process.
 
 ## Dashboard (active tasks)
 
 | ID | Task name | Priority | Status | File |
 |:---|:---|:---:|:---:|:---|
-| 20260406 | Personal AL / operational workspace setup | High | Done | `20260406-setup-personal-workspace.md` |
-| 20260414 | ShelfLog ? infra baseline (SIM-DEMO-1) | High | Done | `20260414-shelflog-infra.md` |
-| 20260411 | ShelfLog ? shelf items API (SIM-DEMO-2) | Medium | Ready / Draft | `20260411-shelf-items-api.md` |
-| 20250405 | Order API (sample) | High | In Progress | `20250405-order-api.md` |
-
-*(Update this table when tasks change.)*
-
-## Workflow
-
-1. **(Khuy?n ngh?)** ??c **`../../task-lifecycle/FROM-TICKET-TO-DONE.md`** (DoR, t?ng b??c, MR, DoD).
-2. Copy `TEMPLATE.md` ? `YYYYMMDD-task-name.md`.
-3. Fill metadata and required sections; delete unused §6 blocks.
-4. Update the Dashboard table above.
-5. Khi tri?n khai code: bám **`../../skills/workflow/implement-feature/README.md`** (slice, checklist, ví d? prompt) + skill chi ti?t trong §8 context pack.
-6. Prompt AI: `@docs/current-task/YYYYMMDD-task-name.md` + relevant skill.
-7. Close task: set Status to **Done**; optionally move the file to `archive/` later.
+| 20260414 | ShelfLog infra baseline (SIM-DEMO-1) | High | Done | `20260414-shelflog-infra.md` |
+| 20260411 | ShelfLog shelf items API (SIM-DEMO-2) | Medium | Ready / Draft | `20260411-shelf-items-api.md` |
 
 ## References
 
-- **Task lifecycle (E2E):** `../../task-lifecycle/README.md`, `../../task-lifecycle/FROM-TICKET-TO-DONE.md`
-- **Guides (bootstrap / review tài li?u):** `../../guides/README.md`
-- **Implement feature t? task (hub skill):** `../../skills/workflow/implement-feature/README.md`
-- Rules (no task copies): `../../rules/`
+- `../../task-lifecycle/README.md`
+- `../../task-lifecycle/FROM-TICKET-TO-DONE.md`
+- `../../skills/workflow/implement-feature/README.md`
+- `../../rules/`
 
-**Last updated:** 2026-04-14 (SIM-DEMO-1 + SIM-DEMO-2)
+**Last updated:** 2026-04-14 (4-phase workflow baseline)

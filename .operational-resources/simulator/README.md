@@ -19,6 +19,7 @@ Bộ tài liệu **giả lập** để:
 | [`DEMO-TICKET-20260414-shelflog-infra.md`](DEMO-TICKET-20260414-shelflog-infra.md) | **SIM-DEMO-1** — mẫu; canonical `../docs/current-task/20260414-shelflog-infra.md` |
 | [`DEMO-TICKET-20260411-shelf-items-api.md`](DEMO-TICKET-20260411-shelf-items-api.md) | **SIM-DEMO-2** (task chính) — mẫu; canonical `../docs/current-task/20260411-shelf-items-api.md` |
 | [`DEMO-LOG-20260414-shelflog-infra.md`](DEMO-LOG-20260414-shelflog-infra.md) | File runbook + execution log chi tiết để làm SIM-DEMO-1 theo từng bước |
+| [`DEMO-SCRIPT-20260414-shelflog-infra.ps1`](DEMO-SCRIPT-20260414-shelflog-infra.ps1) | Script demo chạy tuần tự các bước SIM-DEMO-1 và ghi entry vào log |
 | [`docker-compose.postgres.yml`](docker-compose.postgres.yml) | PostgreSQL 16 (xem brief §6) |
 
 ## Gợi ý thứ tự demo
