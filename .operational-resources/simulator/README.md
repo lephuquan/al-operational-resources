@@ -18,6 +18,7 @@ Bộ tài liệu **giả lập** để:
 | [`DEMO-PROJECT-BRIEF.md`](DEMO-PROJECT-BRIEF.md) | Bối cảnh sản phẩm, stack (gồm Docker), domain, API, checklist doc §9 |
 | [`DEMO-TICKET-20260414-shelflog-infra.md`](DEMO-TICKET-20260414-shelflog-infra.md) | **SIM-DEMO-1** — mẫu; canonical `../docs/current-task/20260414-shelflog-infra.md` |
 | [`DEMO-TICKET-20260411-shelf-items-api.md`](DEMO-TICKET-20260411-shelf-items-api.md) | **SIM-DEMO-2** (task chính) — mẫu; canonical `../docs/current-task/20260411-shelf-items-api.md` |
+| [`DEMO-LOG-20260414-shelflog-infra.md`](DEMO-LOG-20260414-shelflog-infra.md) | File runbook + execution log chi tiết để làm SIM-DEMO-1 theo từng bước |
 | [`docker-compose.postgres.yml`](docker-compose.postgres.yml) | PostgreSQL 16 (xem brief §6) |
 
 ## Gợi ý thứ tự demo
