@@ -1,16 +1,16 @@
 # Demo execution log - SIM-DEMO-1 (`20260414-shelflog-infra.md`)
 
-Muc tieu: day la file "doc va lam theo" de hoan thanh task infra theo dung he thong `.operational-resources/`.
+Mục tiêu: đây là file "đọc và làm theo" để hoàn thành task infra theo đúng hệ thống `.operational-resources/`.
 
-Phan vi: chi cho SIM-DEMO-1 (infra baseline), khong implement business API `shelf-items` (thuoc SIM-DEMO-2).
+Phạm vi: chỉ cho SIM-DEMO-1 (infra baseline), không implement business API `shelf-items` (thuộc SIM-DEMO-2).
 
 ---
 
-## 0) Input can co (bat buoc)
+## 0) Input cần có (bắt buộc)
 
 - Task file canonical: `../docs/current-task/20260414-shelflog-infra.md`
-- Luong E2E: `../task-lifecycle/FROM-TICKET-TO-DONE.md`
-- Brief simulator: `DEMO-PROJECT-BRIEF.md` (doc ky sec 2, 6, 8, 9, 11)
+- Luồng E2E: `../task-lifecycle/FROM-TICKET-TO-DONE.md`
+- Brief simulator: `DEMO-PROJECT-BRIEF.md` (đọc kỹ sec 2, 6, 8, 9, 11)
 - Setup/config docs:
   - `../docs/setup/02-local-development.md`
   - `../docs/setup/03-configuration.md`
@@ -20,30 +20,30 @@ Phan vi: chi cho SIM-DEMO-1 (infra baseline), khong implement business API `shel
   - `docker-compose.postgres.yml`
 
 Log:
-- [ ] Da doc du input
+- [ ] Đã đọc đủ input
 - Time:
 - Note:
 
 ---
 
-## 1) DoR gate (truoc khi code)
+## 1) DoR gate (trước khi code)
 
-Doc lai sec 0, 2, 3 trong task `20260414-shelflog-infra.md` va xac nhan:
+Đọc lại sec 0, 2, 3 trong task `20260414-shelflog-infra.md` và xác nhận:
 
-- [ ] Scope ro: Maven + profiles + Actuator + test
-- [ ] Non-goal ro: khong lam `ShelfItem` API
-- [ ] AC1..AC6 da co va co cach verify
-- [ ] Khong co blocker mo
+- [ ] Scope rõ: Maven + profiles + Actuator + test
+- [ ] Non-goal rõ: không làm `ShelfItem` API
+- [ ] AC1..AC6 đã có và có cách verify
+- [ ] Không có blocker mở
 
 Evidence:
-- [ ] Chap lai AC quan trong vao ghi chu lam viec
-- [ ] Co plan test `./mvnw.cmd -q test`
+- [ ] Chép lại AC quan trọng vào ghi chú làm việc
+- [ ] Có plan test `./mvnw.cmd -q test`
 
 ---
 
-## 2) Tao "working slice" cho infra
+## 2) Tạo "working slice" cho infra
 
-Lam tung cum nho theo dung scope:
+Làm từng cụm nhỏ theo đúng scope:
 
 1) Dependencies (`pom.xml`)
 - [ ] `spring-boot-starter-web`
@@ -54,13 +54,13 @@ Lam tung cum nho theo dung scope:
 - [ ] `com.h2database:h2` (test)
 
 2) Config files
-- [ ] Tao/cap nhat `src/main/resources/application.yml`
-- [ ] Tao/cap nhat `src/main/resources/application-dev.yml`
-- [ ] Tao/cap nhat `src/main/resources/application-test.yml`
-- [ ] Tao/cap nhat `src/test/resources/application.properties` (`spring.profiles.active=test`)
+- [ ] Tạo/cập nhật `src/main/resources/application.yml`
+- [ ] Tạo/cập nhật `src/main/resources/application-dev.yml`
+- [ ] Tạo/cập nhật `src/main/resources/application-test.yml`
+- [ ] Tạo/cập nhật `src/test/resources/application.properties` (`spring.profiles.active=test`)
 
 3) Health integration test
-- [ ] Tao/cap nhat `src/test/java/com/programming_with_al/al_operational_resources/infra/ActuatorHealthIntegrationTest.java`
+- [ ] Tạo/cập nhật `src/test/java/com/programming_with_al/al_operational_resources/infra/ActuatorHealthIntegrationTest.java`
 - [ ] Assert `/actuator/health` -> `200` + `status=UP`
 
 Log:
@@ -70,17 +70,17 @@ Log:
 
 ---
 
-## 3) Chay ha tang dev (Postgres docker) de verify local profile `dev`
+## 3) Chạy hạ tầng dev (Postgres docker) để verify local profile `dev`
 
-PowerShell tai root repo:
+PowerShell tại root repo:
 
 ```text
 docker compose -f .operational-resources/simulator/docker-compose.postgres.yml up -d
 ```
 
 Check:
-- [ ] Container postgres len
-- [ ] Port host `5433` mo
+- [ ] Container postgres lên
+- [ ] Port host `5433` mở
 
 Optional stop:
 
@@ -94,35 +94,35 @@ Log:
 
 ---
 
-## 4) Chay test bat buoc (AC6)
+## 4) Chạy test bắt buộc (AC6)
 
-PowerShell tai root repo:
+PowerShell tại root repo:
 
 ```text
 ./mvnw.cmd -q test
 ```
 
-Bat buoc pass:
+Bắt buộc pass:
 - [ ] `AlOperationalResourcesApplicationTests`
 - [ ] `ActuatorHealthIntegrationTest`
 - [ ] Exit code = 0
 
-Neu fail:
-- [ ] Ghi loi chinh
+Nếu fail:
+- [ ] Ghi lỗi chính
 - [ ] Ghi root-cause
-- [ ] Ghi cach fix
+- [ ] Ghi cách fix
 - [ ] Re-run test pass
 
 Log:
 - Run #1:
-- Run #2 (neu co):
+- Run #2 (nếu có):
 - Final status:
 
 ---
 
-## 5) Doi chieu AC checklist (dong bo task file)
+## 5) Đối chiếu AC checklist (đồng bộ task file)
 
-Mo `../docs/current-task/20260414-shelflog-infra.md` va danh dau:
+Mở `../docs/current-task/20260414-shelflog-infra.md` và đánh dấu:
 
 - [ ] AC1 complete
 - [ ] AC2 complete
@@ -131,9 +131,9 @@ Mo `../docs/current-task/20260414-shelflog-infra.md` va danh dau:
 - [ ] AC5 complete
 - [ ] AC6 complete
 
-Cap nhat section:
-- [ ] Sec 4 (AC -> test) phu hop class test hien tai
-- [ ] Sec 12 (Nhat ky tien do) ghi dung nhung gi da lam
+Cập nhật section:
+- [ ] Sec 4 (AC -> test) phù hợp class test hiện tại
+- [ ] Sec 12 (Nhật ký tiến độ) ghi đúng những gì đã làm
 - [ ] Sec 13 (DoD) tick xong
 
 Log:
@@ -142,13 +142,13 @@ Log:
 
 ---
 
-## 6) Dong bo simulator ticket + dashboard
+## 6) Đồng bộ simulator ticket + dashboard
 
-Can dong bo theo he thong:
+Cần đồng bộ theo hệ thống:
 
-- [ ] `../simulator/DEMO-TICKET-20260414-shelflog-infra.md` phan anh dung task canonical
-- [ ] `../docs/current-task/README.md` dashboard status dung (`Done`)
-- [ ] Neu co doi contract: cap nhat `../docs/api/10-current-api-changes.md`
+- [ ] `../simulator/DEMO-TICKET-20260414-shelflog-infra.md` phản ánh đúng task canonical
+- [ ] `../docs/current-task/README.md` dashboard status đúng (`Done`)
+- [ ] Nếu có đổi contract: cập nhật `../docs/api/10-current-api-changes.md`
 
 Log:
 - Files synced:
@@ -156,22 +156,22 @@ Log:
 
 ---
 
-## 7) Self-review truoc khi chuyen sang SIM-DEMO-2
+## 7) Self-review trước khi chuyển sang SIM-DEMO-2
 
 Checklist nhanh:
-- [ ] Khong co logic business `ShelfItem` trong task infra
-- [ ] Khong lo secret that
-- [ ] Chi dung stack da duoc phe duyet trong task/brief
-- [ ] Tai lieu phan anh dung implementation
-- [ ] SIM-DEMO-2 co the bat dau (infra preconditions dat)
+- [ ] Không có logic business `ShelfItem` trong task infra
+- [ ] Không lộ secret thật
+- [ ] Chỉ dùng stack đã được phê duyệt trong task/brief
+- [ ] Tài liệu phản ánh đúng implementation
+- [ ] SIM-DEMO-2 có thể bắt đầu (infra preconditions đạt)
 
-Ket luan:
+Kết luận:
 - [ ] SIM-DEMO-1 Done
 - [ ] Ready for SIM-DEMO-2
 
 ---
 
-## 8) Execution log (dien trong qua trinh lam)
+## 8) Execution log (điền trong quá trình làm)
 
 ### Entry template
 
@@ -185,18 +185,18 @@ Ket luan:
 
 ### Entries
 
-- (dien tai day theo tung buoc)
+- (điền tại đây theo từng bước)
 
 ---
 
 ## 9) Final output expected
 
-Khi xong file nay, ban phai co:
+Khi xong file này, bạn phải có:
 
-1. Code infra baseline da dung scope
-2. Test pass voi `./mvnw.cmd -q test`
-3. Task `20260414-shelflog-infra.md` da tick AC/DoD
-4. Dashboard `docs/current-task/README.md` dung status
-5. San sang bat dau SIM-DEMO-2
+1. Code infra baseline đã đúng scope
+2. Test pass với `./mvnw.cmd -q test`
+3. Task `20260414-shelflog-infra.md` đã tick AC/DoD
+4. Dashboard `docs/current-task/README.md` đúng status
+5. Sẵn sàng bắt đầu SIM-DEMO-2
 
 **Last updated:** 2026-04-14
