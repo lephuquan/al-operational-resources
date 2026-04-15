@@ -49,6 +49,11 @@ powershell -File .operational-resources/scripts/start-task.ps1 -TaskFile ".opera
 
 Neu fail: sua dung section hoac pattern bi bao loi roi chay lai.
 
+Input gate hien kiem tra them:
+
+- path trong context pack (`Rules`, `Docs`, `Skills`) co ton tai that hay khong
+- voi task `feature`: co tham chieu toi docs toi thieu (`docs/api/08-endpoint-list.md`, `docs/api/10-current-api-changes.md`, `docs/specs/feature-shelflog-items.md`) hay khong
+
 ### Buoc C - Giao viec cho AL theo tung slice nho
 
 Prompt goi y:

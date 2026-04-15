@@ -51,6 +51,104 @@ function Get-SectionText([string]$content, [string]$startPattern, [string]$nextP
     return ""
 }
 
+function Resolve-RepoPath([string]$repoRoot, [string]$rawPath) {
+    $clean = $rawPath.Trim()
+    if ([string]::IsNullOrWhiteSpace($clean)) {
+        return $null
+    }
+    $clean = $clean -replace "\\", "/"
+    $candidates = @()
+    if ($clean.StartsWith(".operational-resources/")) {
+        $candidates += Join-Path $repoRoot ($clean -replace "/", "\")
+    } else {
+        $candidates += Join-Path $repoRoot ($clean -replace "/", "\")
+        $candidates += Join-Path (Join-Path $repoRoot ".operational-resources") ($clean -replace "/", "\")
+    }
+    foreach ($candidate in $candidates) {
+        if (Test-Path $candidate) {
+            return $candidate
+        }
+    }
+    return $null
+}
+
+function Get-PathsFromContextRow([string]$rowValue) {
+    $paths = New-Object System.Collections.Generic.List[string]
+    $backtickMatches = [Regex]::Matches($rowValue, '`([^`]+)`')
+    foreach ($m in $backtickMatches) {
+        $paths.Add($m.Groups[1].Value.Trim())
+    }
+    $linkMatches = [Regex]::Matches($rowValue, '\(([^)]+)\)')
+    foreach ($m in $linkMatches) {
+        $target = $m.Groups[1].Value.Trim()
+        if (-not $target.StartsWith("http")) {
+            $paths.Add($target)
+        }
+    }
+    return @($paths | Select-Object -Unique)
+}
+
+function Validate-ContextPackResources([string]$content, [string]$repoRoot) {
+    $contextSection = Get-SectionText $content "## 8\." "## 9\."
+    if ([string]::IsNullOrWhiteSpace($contextSection)) {
+        Fail "Cannot isolate Context pack section."
+    }
+
+    $requiredKinds = @("Rules", "Docs", "Skills")
+    foreach ($kind in $requiredKinds) {
+        $rowMatch = [Regex]::Match($contextSection, "(?m)^\|\s*$kind\s*\|\s*(.+?)\|\s*$")
+        if (-not $rowMatch.Success) {
+            Fail "Context pack row not found for: $kind"
+        }
+        $paths = @(Get-PathsFromContextRow $rowMatch.Groups[1].Value)
+        if ($paths.Length -eq 0) {
+            Fail "Context pack $kind row has no parseable paths."
+        }
+        foreach ($path in $paths) {
+            $resolved = Resolve-RepoPath $repoRoot $path
+            if (-not $resolved) {
+                Fail "Context pack $kind path not found: $path"
+            }
+        }
+        Write-Host "[OK] Context pack $kind resources exist" -ForegroundColor Green
+    }
+}
+
+function Get-TaskType([string]$content) {
+    $m = [Regex]::Match($content, '(?im)^\|.*\|\s*`(feature|bugfix|refactor|spike|chore|ops)`\s*\|')
+    if ($m.Success) {
+        return $m.Groups[1].Value.ToLowerInvariant()
+    }
+    return ""
+}
+
+function Validate-RequiredDocsByTaskType([string]$content, [string]$repoRoot) {
+    $taskType = Get-TaskType $content
+    if ($taskType -ne "feature") {
+        Write-Host "[OK] Task type-specific docs check skipped (non-feature or unknown type)" -ForegroundColor Green
+        return
+    }
+
+    $requiredDocs = @(
+        "docs/api/08-endpoint-list.md",
+        "docs/api/10-current-api-changes.md",
+        "docs/specs/feature-shelflog-items.md"
+    )
+
+    foreach ($doc in $requiredDocs) {
+        $resolved = Resolve-RepoPath $repoRoot $doc
+        if (-not $resolved) {
+            Fail "Required docs file missing in repository: $doc"
+        }
+        $escapedDoc = [Regex]::Escape($doc)
+        $escapedDocWithPrefix = [Regex]::Escape(".operational-resources/$doc")
+        if ($content -notmatch $escapedDoc -and $content -notmatch $escapedDocWithPrefix) {
+            Fail "Feature task missing required docs reference in task file: $doc"
+        }
+    }
+    Write-Host "[OK] Feature task required docs present and referenced" -ForegroundColor Green
+}
+
 $repoRoot = (Get-Item -Path (Join-Path $PSScriptRoot "..\..")).FullName
 $taskPath = if ([System.IO.Path]::IsPathRooted($TaskFile)) { $TaskFile } else { Join-Path $repoRoot $TaskFile }
 
@@ -93,6 +191,8 @@ Check-Regex $content "(?m)- \*\*SHOULD:\*\*\s*.+$" "SHOULD guidance"
 Check-Regex $content "(?m)- \*\*ASK FIRST:\*\*\s*.+$" "ASK FIRST guidance"
 
 Ensure-NoPlaceholders $content
+Validate-ContextPackResources $content $repoRoot
+Validate-RequiredDocsByTaskType $content $repoRoot
 
 $dorSection = Get-SectionText $content "## 0\." "## 1\."
 if ([string]::IsNullOrWhiteSpace($dorSection)) {
