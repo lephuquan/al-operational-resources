@@ -14,7 +14,7 @@
 | **Task type** | `ops` |
 | **File ID** | `20260415-operational-system-smoke-check.md` |
 | **Ticket / issue** | OPS-DEMO-20260415 |
-| **Status** | Draft |
+| **Status** | Review |
 | **Priority** | Medium |
 | **Owner** | Admin |
 
@@ -78,10 +78,10 @@ Run a controlled smoke check of the operational workflow so AL and human gates a
 
 ## 3. Acceptance criteria (required when provided by BA/lead)
 
-- [ ] AC1: Task file is created under `docs/current-task/` with required sections and valid `task_contract`.
-- [ ] AC2: Input gate `start-task.ps1` passes for this task file.
-- [ ] AC3: Required test command runs successfully and output is captured to an evidence file.
-- [ ] AC4: Output gate `close-task.ps1` generates a handoff report successfully.
+- [x] AC1: Task file is created under `docs/current-task/` with required sections and valid `task_contract`.
+- [x] AC2: Input gate `start-task.ps1` passes for this task file.
+- [x] AC3: Required test command runs successfully and output is captured to an evidence file.
+- [x] AC4: Output gate `close-task.ps1` generates a handoff report successfully.
 
 ### 3.1 Detailed behavior (recommended for features - avoids happy-path-only AI work)
 
@@ -145,10 +145,10 @@ Suggested prompt:
 
 ## 9. Execution checklist
 
-- [ ] Create task file from template
-- [ ] Run input gate
-- [ ] Run required tests and save evidence
-- [ ] Run output gate and confirm handoff report
+- [x] Create task file from template
+- [x] Run input gate
+- [x] Run required tests and save evidence
+- [x] Run output gate and confirm handoff report
 
 ---
 
@@ -169,6 +169,9 @@ Suggested prompt:
 ## 12. Progress log
 
 - **[2026-04-15]** Task file created from template and prepared for gate validation.
+- **[2026-04-16]** Input gate passed for this task via `start-task.ps1`.
+- **[2026-04-16]** Test evidence captured at `docs/current-task/logs/20260415-smoke-check-test-evidence.txt` after running `./mvnw.cmd -q test`.
+- **[2026-04-16]** Close-task initially failed because `13.1 AL Done` had unchecked items; checklist was updated and gate rerun successfully, report generated at `docs/current-task/reports/20260416-20260415-operational-system-smoke-check-review.md`.
 
 ---
 
@@ -177,10 +180,10 @@ Suggested prompt:
 ### 13.1 AL Done (must be complete before handoff)
 
 - [x] Section 0 Definition of Ready checked
-- [ ] Code + tests match sections 3-4
-- [ ] Required test command executed and evidence saved
-- [ ] AC -> test mapping reflects final state
-- [ ] Progress log includes implementation and test evidence summary
+- [x] Code + tests match sections 3-4
+- [x] Required test command executed and evidence saved
+- [x] AC -> test mapping reflects final state
+- [x] Progress log includes implementation and test evidence summary
 
 ### 13.2 Human Done (outside AL execution)
 
@@ -191,4 +194,4 @@ Suggested prompt:
 
 ---
 
-**Last updated:** 2026-04-15
+**Last updated:** 2026-04-16
