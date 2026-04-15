@@ -11,10 +11,11 @@
 |------|----------|
 | [`bootstrap-docs-skills-rules.md`](bootstrap-docs-skills-rules.md) | Dự án mới, onboard AI context, thêm rule/doc/skill lần đầu hoặc mở rộng có kiểm soát |
 | [`review-and-update-docs-skills-rules.md`](review-and-update-docs-skills-rules.md) | Định kỳ, trước release, hoặc **ngay khi** đổi contract / kiến trúc / cấu trúc skill |
+| [`how-to-use-operational-system.md`](how-to-use-operational-system.md) | Huong dan thao tac tung buoc de van hanh he thong AL/Human tu task den handoff |
 
 ## Neo nhanh
 
 - **Một task ticket → Done:** [`../task-lifecycle/README.md`](../task-lifecycle/README.md)
 - **Bản đồ:** [`../MAP.md`](../MAP.md) — **AI + quy tắc:** [`../AGENTS.md`](../AGENTS.md)
 
-**Last updated:** 2026-04-11
+**Last updated:** 2026-04-15
