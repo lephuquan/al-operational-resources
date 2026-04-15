@@ -19,12 +19,46 @@ Trang thai Done:
 - `SYSTEM-DEFINITION.md`: dinh nghia chuan van hanh.
 - `docs/current-task/`: noi duy nhat chua task canonical.
 - `scripts/start-task.ps1`: input gate (fail-fast).
+- `scripts/preflight-discovery.ps1`: discovery gate (pass/fail before task implementation).
 - `scripts/close-task.ps1`: output gate (AL done + handoff report).
 - `task-lifecycle/FROM-TICKET-TO-DONE.md`: luong day du ticket -> done.
 
 ---
 
 ## 2) Quick start (10-15 phut)
+
+### Buoc 0 - Discovery gate cho task tho/khong ro dau vao
+
+Khi task con mo hoac ban chua chac ve cong nghe (vi du Kafka, email, payment):
+
+1. Copy `docs/current-task/DISCOVERY-TEMPLATE.md`.
+2. Yeu cau AL sinh "domain-specific discovery addendum" cho task do.
+3. Ban nghien cuu va dien day du cau tra loi.
+4. Chay discovery gate:
+
+```powershell
+powershell -File .operational-resources/scripts/preflight-discovery.ps1 -DiscoveryFile ".operational-resources/docs/current-task/<discovery-file>.md"
+```
+
+5. Chi khi `Discovery preflight passed` va `Discovery ready = Yes` thi moi chuyen sang Buoc A.
+
+Prompt goi y:
+
+```text
+Context:
+- Raw task: docs/current-task/YYYYMMDD-slug.md
+- Discovery template: docs/current-task/DISCOVERY-TEMPLATE.md
+
+Task:
+- Analyze missing inputs for implementation readiness
+- Generate domain-specific discovery questions (must-answer)
+- Separate: critical blockers vs optional refinements
+
+Expected output:
+- Filled discovery checklist draft
+- Concrete questions the human must answer
+- Pass/fail recommendation for implementation readiness
+```
 
 ### Buoc A - Tao task canonical
 
@@ -102,6 +136,7 @@ Lenh nay tao handoff report trong `docs/current-task/reports/`.
 
 Truoc khi AL code:
 
+- [ ] (Neu task mo/unknown) Discovery gate da xong va `Discovery ready = Yes`
 - [ ] Task nam trong `docs/current-task/`
 - [ ] Khong placeholder
 - [ ] Co `task_contract`

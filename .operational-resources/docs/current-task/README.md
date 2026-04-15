@@ -18,6 +18,7 @@ This folder is the canonical input/output area for task-driven AL execution.
 ## Required files
 
 - `TEMPLATE.md`: main authoring template
+- `DISCOVERY-TEMPLATE.md`: shared discovery template for raw/unclear tasks
 - `SCHEMA.md`: contract for required sections and outputs
 - `HUMAN-GATE-CHECKLIST.md`: final human validation gates
 - `METRICS.md`: KPI tracking
@@ -26,15 +27,18 @@ This folder is the canonical input/output area for task-driven AL execution.
 
 ## Standard workflow
 
-1. Create task file from `TEMPLATE.md`.
-2. Fill scope, AC, AC->test mapping, context pack, DoD, and required `task_contract`.
-3. Run:
+1. (Optional but recommended for unclear tasks) Run discovery with `DISCOVERY-TEMPLATE.md`, then validate with:
+   - `powershell -File .operational-resources/scripts/preflight-discovery.ps1 -DiscoveryFile ".operational-resources/docs/current-task/<discovery-file>.md"`
+   - Continue only when discovery preflight passes.
+2. Create task file from `TEMPLATE.md`.
+3. Fill scope, AC, AC->test mapping, context pack, DoD, and required `task_contract`.
+4. Run:
    - `powershell -File .operational-resources/scripts/start-task.ps1 -TaskFile ".operational-resources/docs/current-task/YYYYMMDD-slug.md"`
-4. Implement task using the listed context pack.
-5. Execute tests and record evidence.
-6. Run:
+5. Implement task using the listed context pack.
+6. Execute tests and record evidence.
+7. Run:
    - `powershell -File .operational-resources/scripts/close-task.ps1 -TaskFile ".operational-resources/docs/current-task/YYYYMMDD-slug.md" -TestEvidence "<path>"`
-7. Handoff to human gate: human reviews code + testing evidence, creates MR, and decides merge/close outside AL.
+8. Handoff to human gate: human reviews code + testing evidence, creates MR, and decides merge/close outside AL.
 
 ## Role split
 

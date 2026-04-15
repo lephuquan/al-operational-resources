@@ -18,4 +18,4 @@
 - **Một task ticket → Done:** [`../task-lifecycle/README.md`](../task-lifecycle/README.md)
 - **Bản đồ:** [`../MAP.md`](../MAP.md) — **AI + quy tắc:** [`../AGENTS.md`](../AGENTS.md)
 
-**Last updated:** 2026-04-15
+**Last updated:** 2026-04-16
