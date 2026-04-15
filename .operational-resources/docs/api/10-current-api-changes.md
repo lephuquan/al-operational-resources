@@ -17,6 +17,14 @@
 
 ## Changes (add newest first)
 
+### 2026-04-16 - SIM-DEMO-2: Shelf items CRUD implemented
+
+- **Type:** non-breaking (new demo business endpoints)
+- **Endpoints affected:** `POST|GET|PUT|DELETE /api/v1/shelf-items`, `GET /api/v1/shelf-items?page=&size=&category=`
+- **What changed:** Added ShelfItem CRUD + pagination/filter by `category`, validation (`title`, `quantity`, `size<=100`), and global error payload for 400/404 (`COMMON_400_VALIDATION`, `SHELF_404`).
+- **Client impact:** Clients can now call ShelfLog endpoints in local demo; 400 responses include field-level validation details.
+- **Follow-ups:** keep OpenAPI source aligned if published later.
+
 ### 2026-04-14 — SIM-DEMO-1: Spring baseline + Actuator (code)
 
 - **Type:** non-breaking (no business API yet)

@@ -46,7 +46,7 @@ This folder is the canonical input/output area for task-driven AL execution.
 | ID | Task name | Priority | Status | File |
 |:---|:---|:---:|:---:|:---|
 | 20260414 | ShelfLog infra baseline (SIM-DEMO-1) | High | Done | `20260414-shelflog-infra.md` |
-| 20260411 | ShelfLog shelf items API (SIM-DEMO-2) | Medium | Ready / Draft | `20260411-shelf-items-api.md` |
+| 20260411 | ShelfLog shelf items API (SIM-DEMO-2) | Medium | Review (AL done) | `20260411-shelf-items-api.md` |
 
 ## References
 
