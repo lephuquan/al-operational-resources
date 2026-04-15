@@ -19,6 +19,22 @@
 | **Æ¯u tiÃªn** | High |
 | **Owner** | (báº¡n) |
 
+### Machine-readable task_contract (required)
+
+```yaml
+task_contract:
+  task_id: 20260414-shelflog-infra
+  ticket: SIM-DEMO-1
+  dependencies: []
+  required_test_command: ./mvnw.cmd -q test
+  required_outputs:
+    - code_changes
+    - test_updates
+    - test_evidence
+    - ac_test_mapping
+    - handoff_notes
+```
+
 ---
 
 ## 0. Definition of Ready
@@ -122,15 +138,14 @@ Thiáº¿t láº­p baseline Spring Boot cho ShelfLog: starters cáº§n cho RES
 
 ## 8. Context pack cho AI
 
-| Loáº¡i | ÄÆ°á»ng dáº«n |
-|------|-----------|
-| Brief + compose | `simulator/DEMO-PROJECT-BRIEF.md`, `simulator/docker-compose.postgres.yml` |
+| Kind | Paths |
+|------|-------|
+| Rules | `rules/00-personal-priority.md`, `rules/02-coding-standards.md`, `rules/08-review-checklist.md` |
 | Docs | `docs/setup/02-local-development.md`, `docs/setup/03-configuration.md`, `docs/decisions/006-shelflog-demo-postgres-docker.md` |
-| Rules | `rules/02-coding-standards.md`, `rules/08-review-checklist.md` |
 | Skills | `skills/devops/dockerize-service/README.md`, `skills/devops/configure-environment/README.md`, `skills/devops/health-check-endpoint/README.md` |
 
-**Prompt gá»£i Ã½:**  
-â€œÄá»c task `20260414-shelflog-infra.md` vÃ  brief Â§2/Â§6. Chá»‰ baseline infra â€” khÃ´ng thÃªm REST shelf-items (thuá»™c SIM-DEMO-2).â€
+Prompt goi y:
+"Doc task `20260414-shelflog-infra.md` va brief sec 2/6. Chi lam baseline infra, khong them REST shelf-items (thuoc SIM-DEMO-2)."
 
 ---
 
@@ -145,9 +160,9 @@ Thiáº¿t láº­p baseline Spring Boot cho ShelfLog: starters cáº§n cho RES
 
 ## 10. HÆ°á»›ng dáº«n cho AI
 
-- **Báº®T BUá»˜C:** KhÃ´ng thÃªm entity/controller shelf trong ticket nÃ y.
-- **NÃŠN:** Ghi chÃº rÃµ lá»‡nh cháº¡y dev trong MR / `docs/setup/02`.
-- **Há»ŽI TRÆ¯á»šC:** Testcontainers, Flyway, Ä‘á»•i cá»•ng compose.
+- **MUST:** Khong them entity/controller shelf-items trong ticket nay.
+- **SHOULD:** Ghi ro lenh chay dev trong MR va `docs/setup/02-local-development.md`.
+- **ASK FIRST:** Testcontainers, Flyway, doi cong compose, hoac thay doi shared interface.
 
 ---
 
@@ -165,9 +180,20 @@ Thiáº¿t láº­p baseline Spring Boot cho ShelfLog: starters cáº§n cho RES
 
 ## 13. Definition of Done
 
-- [x] Â§3 AC Ä‘áº¡t
-- [x] `./mvnw test` pass
-- [x] Ticket SIM-DEMO-2 cÃ³ thá»ƒ báº¯t Ä‘áº§u (infra á»•n Ä‘á»‹nh)
+### 13.1 AL Done (must be complete before handoff)
+
+- [x] Â§0 Definition of Ready Ä‘Ã£ Ä‘á»§ trÆ°á»›c implement
+- [x] Code + tests khá»›p Â§3â€“4 (vÃ  Â§7 náº¿u revised)
+- [x] ÄÃ£ cháº¡y `task_contract.required_test_command` vÃ  lÆ°u test evidence
+- [x] Â§4 AC -> test mapping Ä‘Ã£ cáº­p nháº­t tráº¡ng thÃ¡i cuá»‘i
+- [x] Â§12 progress log cÃ³ tÃ³m táº¯t implementation + test evidence
+
+### 13.2 Human Done (outside AL execution)
+
+- [ ] Human review code quality + scope fit
+- [ ] Human review testing evidence
+- [ ] Human táº¡o MR kÃ¨m test instructions
+- [ ] Human quyáº¿t Ä‘á»‹nh merge/close theo process bÃªn ngoÃ i
 
 ---
 

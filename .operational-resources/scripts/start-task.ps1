@@ -84,9 +84,9 @@ Check-Regex $content "(?m)^\s*-\s*test_evidence\s*$" "required_output test_evide
 Check-Regex $content "(?m)^\s*-\s*ac_test_mapping\s*$" "required_output ac_test_mapping"
 Check-Regex $content "(?m)^\s*-\s*handoff_notes\s*$" "required_output handoff_notes"
 
-Check-Regex $content "(?m)^\|\s*Rules\s*\|.+\|$" "Context pack Rules path"
-Check-Regex $content "(?m)^\|\s*Docs\s*\|.+\|$" "Context pack Docs path"
-Check-Regex $content "(?m)^\|\s*Skills\s*\|.+\|$" "Context pack Skills path"
+Check-Regex $content "(?m)^\|\s*Rules\s*\|.+\|\s*$" "Context pack Rules path"
+Check-Regex $content "(?m)^\|\s*Docs\s*\|.+\|\s*$" "Context pack Docs path"
+Check-Regex $content "(?m)^\|\s*Skills\s*\|.+\|\s*$" "Context pack Skills path"
 
 Check-Regex $content "(?m)- \*\*MUST:\*\*\s*.+$" "MUST guidance"
 Check-Regex $content "(?m)- \*\*SHOULD:\*\*\s*.+$" "SHOULD guidance"
