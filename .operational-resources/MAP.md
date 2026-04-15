@@ -20,10 +20,9 @@ Tài liệu này mô tả **cấu trúc thư mục**, **nội dung chính** và 
 │   ├── README.md
 │   ├── bootstrap-docs-skills-rules.md
 │   └── review-and-update-docs-skills-rules.md
-├── simulator/                # Demo A→Z: brief + ticket mẫu + Compose Postgres (tài liệu ShelfLog chỉ ở docs/)
+├── simulator/                # Demo A→Z: brief + Compose Postgres (task canonical ở docs/current-task)
 │   ├── README.md
 │   ├── DEMO-PROJECT-BRIEF.md
-│   ├── DEMO-TICKET-20260411-shelf-items-api.md
 │   └── docker-compose.postgres.yml
 ├── README-GIT-LOCAL.md       # Ẩn/hiện thư mục này khỏi Git local
 ├── rules/                    # Quy tắc cá nhân (Cursor / AI)
@@ -73,10 +72,8 @@ Tài liệu này mô tả **cấu trúc thư mục**, **nội dung chính** và 
 
 | File | Mục đích |
 |------|----------|
-| **`simulator/README.md`** | Cách dùng: brief + ticket mẫu + luồng `task-lifecycle/`. |
+| **`simulator/README.md`** | Cách dùng: brief + luồng `task-lifecycle/` + trỏ task canonical trong `docs/current-task/`. |
 | **`simulator/DEMO-PROJECT-BRIEF.md`** | Mô tả dự án giả **ShelfLog** (Spring Boot; **Docker Compose + Postgres** là yêu cầu kỹ thuật dev; H2 cho test) + checklist doc cho AI. |
-| **`simulator/DEMO-TICKET-20260414-shelflog-infra.md`** | Ticket mẫu **SIM-DEMO-1** (infra); canonical: `docs/current-task/20260414-shelflog-infra.md`. |
-| **`simulator/DEMO-TICKET-20260411-shelf-items-api.md`** | Ticket mẫu **SIM-DEMO-2** (feature); canonical: `docs/current-task/20260411-shelf-items-api.md`. |
 | **`simulator/docker-compose.postgres.yml`** | PostgreSQL 16 (port host **5433**) — chuẩn dev trong brief, không mô tả triển khai production. |
 
 ---

@@ -6,7 +6,7 @@ Bộ tài liệu **giả lập** để:
 
 1. Đọc **`DEMO-PROJECT-BRIEF.md`** như **hợp đồng** sản phẩm + kỹ thuật (ShelfLog).
 2. Đọc tài liệu ShelfLog trong **`.operational-resources/docs/`** (brief §9): `project-overview.md`, `specs/feature-shelflog-items.md`, `api/08-endpoint-list.md`, `setup/02-local-development.md`, ADR-006.
-3. **Hai ticket giả lập:** **SIM-DEMO-1** infra trước (`20260414-shelflog-infra.md`), rồi **SIM-DEMO-2** feature chính (`20260411-shelf-items-api.md`). Luồng: **`task-lifecycle/`**.
+3. Ticket thực thi nằm trong **`../docs/current-task/`**: làm **SIM-DEMO-1** infra trước (`20260414-shelflog-infra.md`), rồi **SIM-DEMO-2** feature chính (`20260411-shelf-items-api.md`). Luồng: **`task-lifecycle/`**.
 
 **SIM-DEMO-1:** baseline Maven, Spring profiles, Postgres/H2, Actuator — độ khó **thấp–trung bình**. **SIM-DEMO-2:** CRUD + phân trang + validation — **trung bình**. Docker cho dev app; `./mvnw test` không cần Docker.
 
@@ -16,10 +16,8 @@ Bộ tài liệu **giả lập** để:
 |------|---------|
 | [`../docs/`](../docs/README.md) | **Nguồn tài liệu duy nhất** cho ShelfLog (spec, setup, API, ADR, kiến trúc) — xem `DEMO-PROJECT-BRIEF.md` §9 |
 | [`DEMO-PROJECT-BRIEF.md`](DEMO-PROJECT-BRIEF.md) | Bối cảnh sản phẩm, stack (gồm Docker), domain, API, checklist doc §9 |
-| [`DEMO-TICKET-20260414-shelflog-infra.md`](DEMO-TICKET-20260414-shelflog-infra.md) | **SIM-DEMO-1** — mẫu; canonical `../docs/current-task/20260414-shelflog-infra.md` |
-| [`DEMO-TICKET-20260411-shelf-items-api.md`](DEMO-TICKET-20260411-shelf-items-api.md) | **SIM-DEMO-2** (task chính) — mẫu; canonical `../docs/current-task/20260411-shelf-items-api.md` |
-| [`DEMO-LOG-20260414-shelflog-infra.md`](DEMO-LOG-20260414-shelflog-infra.md) | File runbook + execution log chi tiết để làm SIM-DEMO-1 theo từng bước |
-| [`DEMO-SCRIPT-20260414-shelflog-infra.ps1`](DEMO-SCRIPT-20260414-shelflog-infra.ps1) | Script demo chạy tuần tự các bước SIM-DEMO-1 và ghi entry vào log |
+| [`../docs/current-task/20260414-shelflog-infra.md`](../docs/current-task/20260414-shelflog-infra.md) | **SIM-DEMO-1** — task canonical (infra baseline) |
+| [`../docs/current-task/20260411-shelf-items-api.md`](../docs/current-task/20260411-shelf-items-api.md) | **SIM-DEMO-2** — task canonical (feature chính) |
 | [`docker-compose.postgres.yml`](docker-compose.postgres.yml) | PostgreSQL 16 (xem brief §6) |
 
 ## Gợi ý thứ tự demo

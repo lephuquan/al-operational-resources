@@ -4,7 +4,7 @@
 
 - **SIM-DEMO-1** â€” Chuáº©n bá»‹ **háº¡ táº§ng tháº­t** cho demo ShelfLog: dependencies Spring Web / Validation / JPA / Actuator, Postgres (`dev`) + H2 (`test`), cáº¥u hÃ¬nh YAML, IT kiá»ƒm tra `/actuator/health`.
 - **Pháº£i xong trÆ°á»›c** ticket **SIM-DEMO-2** (`20260411-shelf-items-api.md` â€” API shelf items).
-- TÃ i liá»‡u: chá»‰ **`.operational-resources/docs/`**; ticket máº«u: `simulator/DEMO-TICKET-20260414-shelflog-infra.md`.
+- TÃ i liá»‡u: chá»‰ **`.operational-resources/docs/`**; task canonical: `docs/current-task/20260414-shelflog-infra.md`.
 
 ---
 
@@ -139,7 +139,7 @@ Thiáº¿t láº­p baseline Spring Boot cho ShelfLog: starters cáº§n cho RES
 - [x] Dependencies vÃ  YAML nhÆ° AC.
 - [x] IT actuator.
 - [x] `./mvnw test` xanh.
-- [x] Äá»“ng bá»™ ticket máº«u trong `simulator/`.
+- [x] Äá»“ng bá»™ task canonical trong `docs/current-task/`.
 
 ---
 

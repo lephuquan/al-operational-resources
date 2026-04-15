@@ -151,7 +151,7 @@ Chi tiết và quy ước lớp: `docs/architecture/04-folder-structure.md` §6.
 | Task thực thi (infra trước) | `current-task/20260414-shelflog-infra.md` (SIM-DEMO-1) |
 | Task thực thi (feature) | `current-task/20260411-shelf-items-api.md` (SIM-DEMO-2) |
 
-**Ticket mẫu:** `simulator/DEMO-TICKET-20260414-shelflog-infra.md`, `simulator/DEMO-TICKET-20260411-shelf-items-api.md`.
+**Task canonical:** `docs/current-task/20260414-shelflog-infra.md`, `docs/current-task/20260411-shelf-items-api.md`.
 
 Quy ước lỗi JSON và envelope HTTP: `api/03-response-format.md`, `api/05-error-handling.md` trừ khi task ghi rõ ngoại lệ.
 
@@ -165,9 +165,9 @@ Quy ước lỗi JSON và envelope HTTP: `api/03-response-format.md`, `api/05-er
 
 ## 11. Liên hệ với file task demo (thứ tự như dự án thật)
 
-| Thứ tự | Ticket | File canonical (`docs/current-task/`) | File mẫu (`simulator/`) |
-|--------|--------|----------------------------------------|-------------------------|
-| **1 — Infra** | **SIM-DEMO-1** | `20260414-shelflog-infra.md` | `DEMO-TICKET-20260414-shelflog-infra.md` |
-| **2 — Feature (chính)** | **SIM-DEMO-2** | `20260411-shelf-items-api.md` | `DEMO-TICKET-20260411-shelf-items-api.md` |
+| Thứ tự | Ticket | File canonical (`docs/current-task/`) |
+|--------|--------|----------------------------------------|
+| **1 — Infra** | **SIM-DEMO-1** | `20260414-shelflog-infra.md` |
+| **2 — Feature (chính)** | **SIM-DEMO-2** | `20260411-shelf-items-api.md` |
 
 Làm **SIM-DEMO-1** trước (baseline Maven, profile `dev`/`test`, Actuator, Postgres/H2). **SIM-DEMO-2** triển khai API `/api/v1/shelf-items` và domain. Brief là **bối cảnh rộng**; mỗi task = một MR (hoặc nhánh) gợi ý.
