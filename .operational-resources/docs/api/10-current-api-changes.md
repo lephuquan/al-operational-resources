@@ -5,7 +5,7 @@
 - Ghi **mọi thay đổi contract hoặc hành vi** đang làm hoặc sắp release.
 - Sau khi merge/release, có thể tóm tắt vào `docs/decisions/` hoặc release notes team — file này có thể **xóa trắng** mỗi cycle.
 
-**Last updated:** 2026-04-14
+**Last updated:** 2026-04-16
 
 ## Active work / draft
 
@@ -16,6 +16,14 @@
 - SIM-DEMO-1: stack + Actuator; SIM-DEMO-2: CRUD `/api/v1/shelf-items` (pending).
 
 ## Changes (add newest first)
+
+### 2026-04-16 - DEMO-USER-1: POST create user (demo)
+
+- **Type:** non-breaking (new demo endpoint)
+- **Endpoints affected:** `POST /api/v1/users`
+- **What changed:** Added `demo_users` JPA entity, `POST /api/v1/users` with Bean Validation, duplicate email returns **409** with `USER_409_DUPLICATE_EMAIL` (same envelope as other errors: `success` + `error`), validation errors **400** with `COMMON_400_VALIDATION`.
+- **Client impact:** None unless calling this demo route; email match for duplicates is case-insensitive.
+- **Follow-ups:** none for this small demo scope.
 
 ### 2026-04-16 - SIM-DEMO-2: Shelf items CRUD implemented
 

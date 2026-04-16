@@ -13,6 +13,7 @@ Tài liệu này mô tả **cấu trúc thư mục**, **nội dung chính** và 
 ├── AGENTS.md                 # Ngữ cảnh & cách làm việc với AI (ưu tiên đọc)
 ├── MAP.md                    # (file này) Bản đồ thư mục
 ├── SYSTEM-DEFINITION.md      # Định nghĩa hệ thống vận hành AL/Human mới (nguồn chuẩn)
+├── HUMAN-AL-WORKFLOW-GUIDE.md # Luồng E2E: Human vs AL, từng bước + lệnh (có nhánh discovery)
 ├── task-lifecycle/           # Luồng một task: ticket → Done (nguồn chính)
 │   ├── README.md
 │   └── FROM-TICKET-TO-DONE.md
@@ -45,6 +46,7 @@ Tài liệu này mô tả **cấu trúc thư mục**, **nội dung chính** và 
 | **`AGENTS.md`** | “Khung” làm việc với AI: nguyên tắc, thứ tự ưu tiên đọc `rules/` → `docs/`, hành vi cấm. |
 | **`MAP.md`** | Bản đồ thư mục (file này). |
 | **`SYSTEM-DEFINITION.md`** | Định nghĩa chính thức mô hình vận hành: input contract nghiêm ngặt, AL done, human gate, task done. |
+| **`HUMAN-AL-WORKFLOW-GUIDE.md`** | Hướng dẫn luồng đầy đủ: ai làm gì, thứ tự bước, lệnh `start-task` / `close-task` / discovery tùy chọn. |
 | **`README-GIT-LOCAL.md`** | Hướng dẫn dùng `.git/info/exclude` để không track hoặc track thư mục này trên máy bạn. |
 
 ---

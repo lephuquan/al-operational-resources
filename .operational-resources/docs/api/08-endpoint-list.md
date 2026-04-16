@@ -6,13 +6,19 @@
 - **ShelfLog demo (v1):** bảng § ShelfLog bên dưới là contract tham chiếu cho simulator.
 - Dùng path `{id}` thống nhất; chi tiết request/response ghi trong `09-contract-template.md` hoặc OpenAPI.
 
-**Last updated:** 2026-04-14
+**Last updated:** 2026-04-16
 
 ## How to use this file
 
 - Keep one row per **route** (method + path). Sub-resources can be separate rows.
 - The **Auth** column should be one of: `Public`, `Authenticated`, `Role:XXX`, or `Scope:xxx` — match your `04-authentication.md` model.
 - Link DTO/type names to your codebase or OpenAPI schema names for traceability.
+
+## Demo users — `users` (local chore / DEMO-USER-1)
+
+| Module | Method | Path | Auth | Response type / notes |
+|--------|--------|------|------|------------------------|
+| Demo | POST | `/api/v1/users` | Public (demo) | **201** + `{ id, email, name? }`; duplicate email (case-insensitive) **409** + `USER_409_DUPLICATE_EMAIL`; validation **400** + `COMMON_400_VALIDATION` |
 
 ## ShelfLog demo — `shelf-items` (v1)
 
