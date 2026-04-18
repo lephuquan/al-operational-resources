@@ -27,10 +27,12 @@ This document maps the implemented workflow to the 4 phases.
 
 ## Final operating model
 
-- AL executes up to `AL done` only (code + tests + evidence + handoff).
-- Human executes review, MR, merge, and external close.
+- AL executes up to `AL done` only (code + tests + evidence + handoff). After `start-task.ps1` passes with a sufficient §8 context pack, **AL is the default mandatory owner of implementation** (not the human), unless the task documents an exception in §7 / §11 (`SCHEMA.md`).
+- Human executes **post-handoff** review, MR, merge, external close, **§13.2**, and product/scope decisions when intent or AC must change.
 
 ## Operational note
 
 This baseline is intentionally strict on structure and light on hard blocking.
 If needed, increase strictness by changing hook policies to fail closed.
+
+**Last updated:** 2026-04-17

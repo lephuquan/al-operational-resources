@@ -2,6 +2,8 @@
 
 Use this checklist after AL handoff (`AL done`) and before external close.
 
+**Ownership:** implementation through **AL done** is **AL’s job** by default once `start-task.ps1` has passed and the context pack is sufficient (`SCHEMA.md`). This checklist is **human-only** work after that handoff (review, MR, merge/close, **§13.2**, product follow-ups).
+
 ## Gate 1 - Testing
 
 - [ ] Required test command ran successfully.

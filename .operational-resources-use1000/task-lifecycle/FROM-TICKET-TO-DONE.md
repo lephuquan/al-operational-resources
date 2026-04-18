@@ -13,10 +13,12 @@
 Phối hợp giữa:
 
 - Ticket / BA / Lead (nguồn yêu cầu chính thức)
-- Bạn (chốt hướng, quyết định)
-- AL (thực thi theo prompt + tài nguyên trong `.operational-resources/`)
+- Bạn (chốt hướng, quyết định sản phẩm / scope; sau handoff: review, MR, merge)
+- AL (sau `start-task.ps1` pass và task đủ §8: **code + test + evidence bắt buộc** tới **AL done** — xem `docs/current-task/SCHEMA.md`)
 
-**Nguyên tắc:** Ticket team là **nguồn yêu cầu chính thức**; `.operational-resources/` là **ngữ cảnh + quy tắc cá nhân + playbook** — không thay quyết định BA/Lead khi conflict; ưu tiên sync trước khi merge.
+**Nguyên tắc:** Ticket team là **nguồn yêu cầu chính thức**; `.operational-resources/` (và cây `.operational-resources-use1000/` trong repo mẫu) là **ngữ cảnh + quy tắc + playbook** — không thay quyết định BA/Lead khi conflict; ưu tiên sync trước khi merge.
+
+**Quy ước repo (mặc định):** Human **không** làm bước code chính thay AL khi task đã pass input gate và context đủ; ngoại lệ phải ghi trong task (**§7** / **§11**). Chi tiết: `HUMAN-AL-WORKFLOW-GUIDE.md`, `SCHEMA.md` — Role split.
 
 ---
 

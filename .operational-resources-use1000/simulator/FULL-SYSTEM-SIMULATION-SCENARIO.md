@@ -27,8 +27,10 @@ Outcome target:
 
 | Role | Responsibility in simulation |
 |------|------------------------------|
-| Human (you) | Define intent, confirm decisions, review outputs, create MR, decide merge/close |
-| AL | Execute implementation/testing workflow up to AL done, update evidence and handoff |
+| Human (you) | Define intent, confirm decisions in discovery/task; **after handoff** — review code and evidence, create MR, decide merge/close, tick **§13.2**, own product/scope if outcomes diverge |
+| AL | **Mandatory** implementation and testing after input gate passes and context is sufficient — workflow up to **AL done**, evidence, contract docs per task |
+
+Default policy matches `docs/current-task/SCHEMA.md` (Role split): humans do not substitute for the primary coding path unless the task records an exception.
 
 ---
 

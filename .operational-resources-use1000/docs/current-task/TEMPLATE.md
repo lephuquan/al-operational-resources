@@ -9,6 +9,8 @@
 > **Convention:** One task = **one file** `YYYYMMDD-task-name.md` under **only** `docs/current-task/`. Do not duplicate tasks under `rules/`.  
 > Copy this file → rename → remove sections you do not need (by task type).
 
+> **Execution (this repo):** After `start-task.ps1` passes and §8 is sufficient, **AL is the mandatory primary implementer** for code and tests through **AL done**; humans own **post-handoff** review, MR, merge, **§13.2**, and product/scope. Exceptions: document in **§7** / **§11**. See `SCHEMA.md` — Role split.
+
 ---
 
 ## Metadata (required)
@@ -221,4 +223,4 @@ Paths AI should read (fill real paths; delete unused rows):
 
 ---
 
-**Last updated (template):** 2026-04-08
+**Last updated (template):** 2026-04-17

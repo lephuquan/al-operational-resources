@@ -1,6 +1,6 @@
 # AGENTS.md - Personal AI Workspace
 
-Last updated: 2026-04-11
+Last updated: 2026-04-17
 Owner: Phu Quan Le (personal only)
 
 ## 1) Workspace intent
@@ -22,10 +22,11 @@ Owner: Phu Quan Le (personal only)
 
 ## 4) Working protocol with AI
 1. Plan briefly before non-trivial implementation.
-2. Read `.operational-resources/rules/` first, then `.operational-resources/docs/`.
+2. Read `.operational-resources-use1000/rules/` first, then `.operational-resources-use1000/docs/` (and task file in `docs/current-task/`).
 3. If unclear, ask instead of guessing.
 4. Do not auto-commit or push.
 5. After each task: summarize changes and suggest next checks.
+6. **Task-driven runs:** after `start-task.ps1` passes and §8 context is sufficient, **AL implements code and tests** through **AL done**; the human owns **post-handoff** review, evidence check, MR, merge, **§13.2**, and product/scope. Canonical policy: `.operational-resources-use1000/docs/current-task/SCHEMA.md` (Role split).
 
 ## 5) Forbidden actions
 - No deleting major files/folders without confirmation.
@@ -34,23 +35,23 @@ Owner: Phu Quan Le (personal only)
 - No secret exposure in code, logs, or docs.
 
 ## 6) Priority order
-1. `.operational-resources/rules/00-personal-priority.md`
+1. `.operational-resources-use1000/rules/00-personal-priority.md`
 2. This `AGENTS.md`
-3. Other `.operational-resources/rules/*.md`
-4. `.operational-resources/docs/**`
+3. Other `.operational-resources-use1000/rules/*.md`
+4. `.operational-resources-use1000/docs/**`
 5. Team docs/rules for cross-check and alignment
 
 ## 7) References
-- **Một task ticket → Done (nguồn chính):** `.operational-resources/task-lifecycle/README.md` → `FROM-TICKET-TO-DONE.md`
-- **Triển khai / duy trì docs+skills+rules:** `.operational-resources/guides/README.md`
-- Directory map (cấu trúc thư mục): `.operational-resources/MAP.md`
-- Rules: `.operational-resources/rules/`
-- Personal docs: `.operational-resources/docs/`
-- Backend architecture (numbered): `.operational-resources/docs/architecture/01-README.md`
-- Architecture playbooks (design vs review): `.operational-resources/skills/architecture/README.md`
-- ADRs (index + template): `.operational-resources/docs/decisions/README.md`
-- Feature specs (index): `.operational-resources/docs/specs/README.md`
-- Local run & setup (no secrets): `.operational-resources/docs/setup/01-README.md`
-- Skills index: `.operational-resources/skills/README.md`
-- Adding a skill / topic: `.operational-resources/skills/HOW-TO-ADD-TOPIC.md` (copy `.operational-resources/skills/SKILL-TEMPLATE.md` → `skills/<group>/<topic>/SKILL.md`)
-- Notes: `.operational-resources/notes/`
+- **Một task ticket → Done (nguồn chính):** `.operational-resources-use1000/task-lifecycle/README.md` → `FROM-TICKET-TO-DONE.md`
+- **Triển khai / duy trì docs+skills+rules:** `.operational-resources-use1000/guides/README.md`
+- Directory map (cấu trúc thư mục): `.operational-resources-use1000/MAP.md`
+- Rules: `.operational-resources-use1000/rules/`
+- Personal docs: `.operational-resources-use1000/docs/`
+- Backend architecture (numbered): `.operational-resources-use1000/docs/architecture/01-README.md`
+- Architecture playbooks (design vs review): `.operational-resources-use1000/skills/architecture/README.md`
+- ADRs (index + template): `.operational-resources-use1000/docs/decisions/README.md`
+- Feature specs (index): `.operational-resources-use1000/docs/specs/README.md`
+- Local run & setup (no secrets): `.operational-resources-use1000/docs/setup/01-README.md`
+- Skills index: `.operational-resources-use1000/skills/README.md`
+- Adding a skill / topic: `.operational-resources-use1000/skills/HOW-TO-ADD-TOPIC.md` (copy `SKILL-TEMPLATE.md` → `skills/<group>/<topic>/SKILL.md`)
+- Notes: `.operational-resources-use1000/notes/`

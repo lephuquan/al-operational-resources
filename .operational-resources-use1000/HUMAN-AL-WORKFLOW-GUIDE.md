@@ -1,6 +1,6 @@
 # Luồng đầy đủ Human + AL (từ task đến Done)
 
-**Mục đích:** một tài liệu duy nhất mô tả **ai làm gì**, **theo thứ tự nào**, kèm lệnh tham chiếu — bám mô hình đã chốt: AL làm implement + test + evidence tới **AL done**; Human làm review + MR + merge/close tới **Task done**.
+**Mục đích:** một tài liệu duy nhất mô tả **ai làm gì**, **theo thứ tự nào**, kèm lệnh tham chiếu — bám mô hình đã chốt: sau khi task **đủ tài nguyên** và pass **`start-task.ps1`**, **AL (agent) là người code và test bắt buộc** tới **AL done**; Human **không** thay thế bước code chính trừ khi task ghi **ngoại lệ** (§7 / §11). Sau handoff, Human làm review + MR + merge/close + tick **§13.2** + quyết định sản phẩm/scope tới **Task done**.
 
 **Tài liệu liên quan (đọc khi cần chi tiết hơn):**
 
@@ -28,17 +28,20 @@
 | Chạy input gate `start-task.ps1` | Thường Human hoặc giao AL chạy trong máy bạn | Có thể chạy nếu bạn giao và môi trường cho phép |
 | Discovery khi yêu cầu chưa rõ (`preflight-discovery.ps1`) | Chốt câu trả lời / quyết định thiếu | Soạn discovery, đề xuất câu hỏi, chạy script khi được giao |
 | Đọc §8 Context pack (Rules/Docs/Skills) | Nên đọc nhanh một lượt | **Bắt buộc** đọc trước khi code |
-| Implement + unit/IT + sửa lỗi | — | **Có** |
+| Implement + unit/IT + sửa lỗi (sau input gate, task đủ §8) | — | **Bắt buộc (AL)** — Human không làm bước code chính trừ khi task ghi ngoại lệ |
 | Chạy `./mvnw.cmd -q test` + lưu evidence | Có thể yêu cầu / xác minh | **Có** (thực hiện và ghi path evidence vào task §12) |
 | Cập nhật doc API / spec khi đổi contract | Chốt wording nếu cần | **Có** (theo task) |
 | Tick §13.1 AL Done + mapping AC §4 | — | **Có** |
 | Review code + review evidence | **Có** | — |
 | Tạo MR, merge, đóng ticket ngoài hệ thống | **Có** | — |
 | Tick §13.2 Human Done + Status **Done** | **Có** | Chỉ gợi ý / không thay quyết định merge |
+| Quyết định sản phẩm / chỉnh AC hoặc scope sớm | **Có** (chốt ý định, cập nhật task §7) | Soạn đề xuất kỹ thuật theo yêu cầu Human |
 
 ---
 
 ## 3) Luồng chuẩn (task đã rõ — không bắt buộc discovery)
+
+**Ghi chú đường dẫn:** Trong repo này, script và task thường nằm dưới `.operational-resources-use1000/` — thay tiền tố `.operational-resources/` trong các lệnh mẫu bên dưới cho khớp môi trường của bạn.
 
 **Giả định:** AC và phạm vi đã đủ rõ trong một file `docs/current-task/YYYYMMDD-slug.md`.
 

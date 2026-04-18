@@ -12,6 +12,31 @@ function Fail([string]$msg) {
     exit 1
 }
 
+function Get-OpsCurrentTaskBase([string]$repoRoot) {
+    $use1000 = Join-Path $repoRoot ".operational-resources-use1000\docs\current-task"
+    if (Test-Path $use1000) {
+        return $use1000
+    }
+    return Join-Path $repoRoot ".operational-resources\docs\current-task"
+}
+
+function Get-TaskWorkItemSlugFromPath([string]$filePath) {
+    $leaf = [System.IO.Path]::GetFileName($filePath)
+    if ($leaf -ieq "TASK.md") {
+        return [System.IO.Path]::GetFileName([System.IO.Path]::GetDirectoryName($filePath))
+    }
+    return [System.IO.Path]::GetFileNameWithoutExtension($filePath)
+}
+
+function Resolve-RuntimeDirectory([string]$repoRoot, [string]$anchorFilePath) {
+    $leaf = [System.IO.Path]::GetFileName($anchorFilePath)
+    if ($leaf -ieq "TASK.md" -or $leaf -ieq "DISCOVERY.md") {
+        $workDir = [System.IO.Path]::GetDirectoryName($anchorFilePath)
+        return (Join-Path $workDir "runtime")
+    }
+    return (Join-Path (Get-OpsCurrentTaskBase $repoRoot) ".runtime")
+}
+
 function Check-Contains([string]$content, [string]$needle, [string]$label) {
     if ($content -notmatch [Regex]::Escape($needle)) {
         Fail "Missing required section: $label"
@@ -60,9 +85,12 @@ function Resolve-RepoPath([string]$repoRoot, [string]$rawPath) {
     $candidates = @()
     if ($clean.StartsWith(".operational-resources/")) {
         $candidates += Join-Path $repoRoot ($clean -replace "/", "\")
+        $use1000Alt = $clean -replace "^\.operational-resources/", ".operational-resources-use1000/"
+        $candidates += Join-Path $repoRoot ($use1000Alt -replace "/", "\")
     } else {
         $candidates += Join-Path $repoRoot ($clean -replace "/", "\")
         $candidates += Join-Path (Join-Path $repoRoot ".operational-resources") ($clean -replace "/", "\")
+        $candidates += Join-Path (Join-Path $repoRoot ".operational-resources-use1000") ($clean -replace "/", "\")
     }
     foreach ($candidate in $candidates) {
         if (Test-Path $candidate) {
@@ -208,16 +236,21 @@ if ($hasUncheckedDor -and $AllowUnready.IsPresent) {
     Write-Host "[OK] Definition of Ready checked" -ForegroundColor Green
 }
 
-$sessionDir = Join-Path $repoRoot ".operational-resources\docs\current-task\.runtime"
+$sessionDir = Resolve-RuntimeDirectory $repoRoot $taskPath
 if (-not (Test-Path $sessionDir)) {
     New-Item -ItemType Directory -Path $sessionDir | Out-Null
 }
 
-$taskId = [System.IO.Path]::GetFileNameWithoutExtension($taskPath)
-$statePath = Join-Path $sessionDir "$taskId.session.json"
+$taskSlug = Get-TaskWorkItemSlugFromPath $taskPath
+$sessionFileName = if (([System.IO.Path]::GetFileName($taskPath)) -ieq "TASK.md") {
+    "$taskSlug.task.session.json"
+} else {
+    "$taskSlug.session.json"
+}
+$statePath = Join-Path $sessionDir $sessionFileName
 $state = @{
     task_file = $taskPath
-    task_id = $taskId
+    task_id = $taskSlug
     started_at = (Get-Date).ToString("s")
     status = "in_progress"
     role_model = "AL_implementation_and_testing_only"

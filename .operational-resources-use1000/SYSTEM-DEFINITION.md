@@ -1,6 +1,6 @@
 # Operational Resources System Definition
 
-Last updated: 2026-04-14
+Last updated: 2026-04-17
 Owner: Personal workspace
 
 ## 1) Purpose
@@ -24,10 +24,13 @@ This document is the canonical system definition.
   - Run required test command.
   - Write evidence and handoff notes.
 - **Human**
-  - Review code quality and scope fit.
+  - After **AL done** / handoff: review code quality and scope fit.
   - Review testing evidence.
-  - Create MR and decide merge.
-  - Close task in external process.
+  - Create MR and decide merge or defer.
+  - Close task in external process; tick **§13.2** in the task file when applicable.
+  - Own **product and scope** decisions (including updating the task early if AC or scope must change).
+
+**Default implementation ownership:** once the strict **input gate** has passed and the task’s context pack is sufficient, **AL is the mandatory primary implementer** for code and tests through **AL done**. Humans focus on governance, review, and delivery after handoff—not on substituting for AL as the default coder. Exceptions must be written in the task (**§7** / **§11**). See `.operational-resources-use1000/docs/current-task/SCHEMA.md` (Role split).
 
 ### 2.2 Done states
 

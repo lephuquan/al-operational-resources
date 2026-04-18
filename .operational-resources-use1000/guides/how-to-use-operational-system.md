@@ -4,8 +4,8 @@
 
 Tai lieu nay huong dan ban van hanh he thong theo dung mo hinh:
 
-- **AL:** doc task, implement theo AC, cap nhat test, chay test, cap nhat evidence vao task/log.
-- **Human:** review code, review testing evidence, tao MR, quyet dinh merge/close.
+- **AL:** doc task; **sau khi `start-task.ps1` pass va §8 du tai nguyen, AL la nguoi code + test bat buoc** toi AL done; cap nhat evidence vao task/log va doc contract neu task yeu cau.
+- **Human:** sau handoff — review code, review testing evidence, tao MR, quyet dinh merge/close, tick §13.2, quyet dinh san pham/scope hoac chi dao AC som neu can.
 
 Trang thai Done:
 
@@ -88,7 +88,9 @@ Input gate hien kiem tra them:
 - path trong context pack (`Rules`, `Docs`, `Skills`) co ton tai that hay khong
 - voi task `feature`: co tham chieu toi docs toi thieu (`docs/api/08-endpoint-list.md`, `docs/api/10-current-api-changes.md`, `docs/specs/feature-shelflog-items.md`) hay khong
 
-### Buoc C - Giao viec cho AL theo tung slice nho
+### Buoc C - AL implement (mac dinh bat buoc, khong phai Human code chinh)
+
+Sau input gate: **AL** thuc hien code + test theo AC va §8. Human khong thay the buoc nay tru khi task ghi ngoai le (xem `docs/current-task/SCHEMA.md`).
 
 Prompt goi y:
 

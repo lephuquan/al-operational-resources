@@ -20,7 +20,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File ".operational-resources/scri
 
 ## 2) `start-task.ps1` — gate đầu vào task (input gate)
 
-**Dùng khi:** bắt đầu làm việc trên một file task canonical; kiểm tra contract nghiêm (section, `task_contract`, §8 paths, DoR, …). Pass thì mới nên nhờ AL implement hoặc tự code.
+**Dùng khi:** bắt đầu làm việc trên một file task canonical; kiểm tra contract nghiêm (section, `task_contract`, §8 paths, DoR, …). **Pass thì bước implement mặc định thuộc AL** (agent code + test tới AL done); Human không làm bước code chính trừ khi task ghi ngoại lệ (xem `docs/current-task/SCHEMA.md`).
 
 ```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File ".operational-resources/scripts/start-task.ps1" -TaskFile ".operational-resources/docs/current-task/YYYYMMDD-slug.md"
@@ -46,7 +46,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File ".operational-resources/scri
 
 1. (Tuỳ chọn) `preflight-discovery.ps1` — nếu ticket raw.
 2. `start-task.ps1` — trước implement.
-3. Implement + chạy test + lưu evidence (ví dụ `Tee-Object` vào `docs/current-task/logs/...`).
+3. **AL:** implement + chạy test + lưu evidence (folder mode: `.../<work-item>/logs/...`; flat: `docs/current-task/logs/...`).
 4. `close-task.ps1` — sau khi §13.1 và evidence đã sẵn sàng.
 
 ---

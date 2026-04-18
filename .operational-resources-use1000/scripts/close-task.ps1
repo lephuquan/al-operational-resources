@@ -14,6 +14,30 @@ function Fail([string]$msg) {
     exit 1
 }
 
+function Get-OpsCurrentTaskBase([string]$repoRoot) {
+    $use1000 = Join-Path $repoRoot ".operational-resources-use1000\docs\current-task"
+    if (Test-Path $use1000) {
+        return $use1000
+    }
+    return Join-Path $repoRoot ".operational-resources\docs\current-task"
+}
+
+function Get-TaskWorkItemSlugFromPath([string]$filePath) {
+    $leaf = [System.IO.Path]::GetFileName($filePath)
+    if ($leaf -ieq "TASK.md") {
+        return [System.IO.Path]::GetFileName([System.IO.Path]::GetDirectoryName($filePath))
+    }
+    return [System.IO.Path]::GetFileNameWithoutExtension($filePath)
+}
+
+function Resolve-ReportsDirectory([string]$repoRoot, [string]$anchorTaskPath) {
+    $leaf = [System.IO.Path]::GetFileName($anchorTaskPath)
+    if ($leaf -ieq "TASK.md") {
+        return (Join-Path ([System.IO.Path]::GetDirectoryName($anchorTaskPath)) "reports")
+    }
+    return (Join-Path (Get-OpsCurrentTaskBase $repoRoot) "reports")
+}
+
 function Get-SectionText([string]$content, [string]$startPattern, [string]$nextPattern) {
     $match = [Regex]::Match($content, "$startPattern[\s\S]*?(?=$nextPattern)", [System.Text.RegularExpressions.RegexOptions]::Multiline)
     if ($match.Success) {
@@ -66,16 +90,16 @@ if ($content -notmatch "## 12.") {
     Write-Host "[WARN] Missing progress log section, bypassed with -Force." -ForegroundColor Yellow
 }
 
-$reportDir = Join-Path $repoRoot ".operational-resources\docs\current-task\reports"
+$reportDir = Resolve-ReportsDirectory $repoRoot $taskPath
 if (-not (Test-Path $reportDir)) {
     New-Item -ItemType Directory -Path $reportDir | Out-Null
 }
 
-$taskId = [System.IO.Path]::GetFileNameWithoutExtension($taskPath)
-$reportPath = Join-Path $reportDir ("{0}-{1}-review.md" -f (Get-Date -Format "yyyyMMdd"), $taskId)
+$taskSlug = Get-TaskWorkItemSlugFromPath $taskPath
+$reportPath = Join-Path $reportDir ("{0}-{1}-review.md" -f (Get-Date -Format "yyyyMMdd"), $taskSlug)
 
 $report = @"
-# AL Handoff Report - $taskId
+# AL Handoff Report - $taskSlug
 
 ## 1) AL execution status
 

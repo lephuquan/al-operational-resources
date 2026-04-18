@@ -12,6 +12,33 @@ function Fail([string]$msg) {
     exit 1
 }
 
+function Get-OpsCurrentTaskBase([string]$repoRoot) {
+    $use1000 = Join-Path $repoRoot ".operational-resources-use1000\docs\current-task"
+    if (Test-Path $use1000) {
+        return $use1000
+    }
+    return Join-Path $repoRoot ".operational-resources\docs\current-task"
+}
+
+function Resolve-RuntimeDirectory([string]$repoRoot, [string]$anchorFilePath) {
+    $leaf = [System.IO.Path]::GetFileName($anchorFilePath)
+    if ($leaf -ieq "TASK.md" -or $leaf -ieq "DISCOVERY.md") {
+        $workDir = [System.IO.Path]::GetDirectoryName($anchorFilePath)
+        return (Join-Path $workDir "runtime")
+    }
+    return (Join-Path (Get-OpsCurrentTaskBase $repoRoot) ".runtime")
+}
+
+function Resolve-DiscoveryStateFilename([string]$discoveryPath) {
+    $leaf = [System.IO.Path]::GetFileName($discoveryPath)
+    if ($leaf -ieq "DISCOVERY.md") {
+        $folder = [System.IO.Path]::GetDirectoryName($discoveryPath)
+        $slug = [System.IO.Path]::GetFileName($folder)
+        return "$slug.discovery.session.json"
+    }
+    return "$([System.IO.Path]::GetFileNameWithoutExtension($discoveryPath)).discovery.session.json"
+}
+
 function Check-Contains([string]$content, [string]$needle, [string]$label) {
     if ($content -notmatch [Regex]::Escape($needle)) {
         Fail "Missing required section: $label"
@@ -32,10 +59,16 @@ function Resolve-RepoPath([string]$repoRoot, [string]$rawPath) {
         return $null
     }
     $clean = $clean -replace "\\", "/"
-    $candidates = @(
-        (Join-Path $repoRoot ($clean -replace "/", "\")),
-        (Join-Path (Join-Path $repoRoot ".operational-resources") ($clean -replace "/", "\"))
-    )
+    $candidates = @()
+    if ($clean.StartsWith(".operational-resources/")) {
+        $candidates += Join-Path $repoRoot ($clean -replace "/", "\")
+        $use1000Alt = $clean -replace "^\.operational-resources/", ".operational-resources-use1000/"
+        $candidates += Join-Path $repoRoot ($use1000Alt -replace "/", "\")
+    } else {
+        $candidates += Join-Path $repoRoot ($clean -replace "/", "\")
+        $candidates += Join-Path (Join-Path $repoRoot ".operational-resources") ($clean -replace "/", "\")
+        $candidates += Join-Path (Join-Path $repoRoot ".operational-resources-use1000") ($clean -replace "/", "\")
+    }
     foreach ($candidate in $candidates) {
         if (Test-Path $candidate) {
             return $candidate
@@ -124,13 +157,13 @@ if (-not $AllowUnready.IsPresent) {
     }
 }
 
-$sessionDir = Join-Path $repoRoot ".operational-resources\docs\current-task\.runtime"
+$sessionDir = Resolve-RuntimeDirectory $repoRoot $discoveryPath
 if (-not (Test-Path $sessionDir)) {
     New-Item -ItemType Directory -Path $sessionDir | Out-Null
 }
 
-$discoveryId = [System.IO.Path]::GetFileNameWithoutExtension($discoveryPath)
-$statePath = Join-Path $sessionDir "$discoveryId.discovery.session.json"
+$stateFileName = Resolve-DiscoveryStateFilename $discoveryPath
+$statePath = Join-Path $sessionDir $stateFileName
 $state = @{
     discovery_file = $discoveryPath
     task_file = $taskResolved

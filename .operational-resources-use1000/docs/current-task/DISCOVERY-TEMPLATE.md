@@ -3,6 +3,8 @@
 Use this file when a task is still "raw" and important inputs are unknown.
 Goal: identify missing information before coding starts.
 
+**Optional layout (recommended):** one folder per work item with fixed names `TASK.md` + `DISCOVERY.md` — see `FOLDER-CONVENTION.md` in this directory.
+
 ---
 
 ## 1) Discovery metadata

@@ -9,6 +9,7 @@ alwaysApply: true
 - Treat that task file as the single source of scope, AC, and context pack.
 - If AC/scope is unclear, ask or update task revision before coding.
 - Respect strict input gate from `SCHEMA.md` and `start-task.ps1`.
+- **Implementation owner (default):** after `start-task.ps1` passes and §8 context is sufficient, **AL performs coding and tests** through AL done; the human does **not** own the primary coding step unless the task records an exception in §7 / §11.
 
 # Output Contract
 
@@ -26,4 +27,4 @@ alwaysApply: true
 # Completion Gate
 
 - AL done means implementation/testing/evidence are complete for human review.
-- Human is responsible for code review, test review, MR creation, merge, and external close.
+- Human is responsible for **post-handoff** code review, test evidence review, MR creation, merge decision, external close, ticking **§13.2**, and product/scope decisions when the task diverges from intent.
