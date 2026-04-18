@@ -1,6 +1,6 @@
----
+﻿---
 description: Standards for current-task markdown files
-globs: .operational-resources-use1000/current-task/**/*.md,.operational-resources/docs/current-task/*.md
+globs: .operational-resources-use1000/al-run/current-task/**/*.md,.operational-resources/docs/current-task/*.md
 alwaysApply: false
 ---
 
