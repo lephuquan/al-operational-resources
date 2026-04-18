@@ -6,7 +6,7 @@
 - **ShelfLog demo (v1):** bảng § ShelfLog bên dưới là contract tham chiếu cho simulator.
 - Dùng path `{id}` thống nhất; chi tiết request/response ghi trong `09-contract-template.md` hoặc OpenAPI.
 
-**Last updated:** 2026-04-16
+**Last updated:** 2026-04-19
 
 ## How to use this file
 
@@ -26,6 +26,7 @@
 |--------|--------|------|------|------------------------|
 | ShelfLog | POST | `/api/v1/shelf-items` | Public (demo) | **201** + created `ShelfItem` JSON |
 | ShelfLog | GET | `/api/v1/shelf-items` | Public (demo) | **200** + paginated JSON (`content`, `page`, `size`, `totalElements`); query: `page`, `size`, optional `category` |
+| ShelfLog | GET | `/api/v1/shelf-items/export` | Public (demo) | **200** + `text/csv;charset=UTF-8` attachment (`Content-Disposition: attachment; filename="shelf-items-UTCDate.csv"`); same query params as list; **413** JSON `SHELF_413_EXPORT` if matching rows **> 5000** (no partial CSV); cells starting with `= + - @` prefixed for spreadsheet safety |
 | ShelfLog | GET | `/api/v1/shelf-items/{id}` | Public (demo) | **200** / **404** |
 | ShelfLog | PUT | `/api/v1/shelf-items/{id}` | Public (demo) | **200** / **404** |
 | ShelfLog | DELETE | `/api/v1/shelf-items/{id}` | Public (demo) | **204** / **404** |

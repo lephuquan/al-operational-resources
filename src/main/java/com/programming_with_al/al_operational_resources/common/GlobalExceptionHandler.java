@@ -23,6 +23,12 @@ public class GlobalExceptionHandler {
 				.body(ApiErrorResponse.of(ex.getCode(), ex.getMessage()));
 	}
 
+	@ExceptionHandler(ExportTooLargeException.class)
+	public ResponseEntity<ApiErrorResponse> handleExportTooLarge(ExportTooLargeException ex) {
+		return ResponseEntity.status(HttpStatus.PAYLOAD_TOO_LARGE)
+				.body(ApiErrorResponse.of(ex.getCode(), ex.getMessage()));
+	}
+
 	@ExceptionHandler(ConflictException.class)
 	public ResponseEntity<ApiErrorResponse> handleConflict(ConflictException ex) {
 		return ResponseEntity.status(HttpStatus.CONFLICT)

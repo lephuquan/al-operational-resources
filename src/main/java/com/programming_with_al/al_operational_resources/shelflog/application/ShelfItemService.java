@@ -9,6 +9,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.programming_with_al.al_operational_resources.common.ExportTooLargeException;
 import com.programming_with_al.al_operational_resources.common.ResourceNotFoundException;
 import com.programming_with_al.al_operational_resources.shelflog.api.ShelfItemPageResponse;
 import com.programming_with_al.al_operational_resources.shelflog.api.ShelfItemResponse;
@@ -21,6 +22,9 @@ import com.programming_with_al.al_operational_resources.shelflog.persistence.She
 public class ShelfItemService {
 
 	private static final String NOT_FOUND_CODE = "SHELF_404";
+
+	/** Maximum matching rows (filter applied) allowed before CSV export is rejected with 413. */
+	public static final int MAX_EXPORT_MATCHING_ROWS = 5000;
 
 	private final ShelfItemRepository repository;
 
@@ -64,6 +68,25 @@ public class ShelfItemService {
 				result.getNumber(),
 				result.getSize(),
 				result.getTotalElements());
+	}
+
+	/**
+	 * CSV for the same page/filter as {@link #list(int, int, ShelfCategory)}. Rejects the whole export when
+	 * the number of matching rows exceeds {@link #MAX_EXPORT_MATCHING_ROWS} (413 JSON, no partial CSV).
+	 */
+	@Transactional(readOnly = true)
+	public byte[] exportToCsv(int page, int size, ShelfCategory category) {
+		final long total = category == null ? repository.count() : repository.countByCategory(category);
+		if (total > MAX_EXPORT_MATCHING_ROWS) {
+			throw new ExportTooLargeException(
+					"Matching shelf items (" + total + ") exceed export limit of "
+							+ MAX_EXPORT_MATCHING_ROWS + ". Narrow filters (for example category) and retry.");
+		}
+		final Pageable pageable = PageRequest.of(page, size, Sort.by(Sort.Direction.DESC, "createdAt"));
+		final Page<ShelfItemEntity> result = category == null
+				? repository.findAll(pageable)
+				: repository.findByCategory(category, pageable);
+		return ShelfItemCsvFormatter.toCsvUtf8Bytes(result.getContent());
 	}
 
 	private ShelfItemEntity findByIdOrThrow(UUID id) {

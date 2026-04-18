@@ -9,5 +9,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface ShelfItemRepository extends JpaRepository<ShelfItemEntity, UUID> {
 
 	Page<ShelfItemEntity> findByCategory(ShelfCategory category, Pageable pageable);
+
+	long countByCategory(ShelfCategory category);
 }
 

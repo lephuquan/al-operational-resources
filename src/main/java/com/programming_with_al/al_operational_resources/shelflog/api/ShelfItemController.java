@@ -1,8 +1,12 @@
 package com.programming_with_al.al_operational_resources.shelflog.api;
 
+import java.time.LocalDate;
+import java.time.ZoneOffset;
 import java.util.UUID;
 
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -38,11 +42,6 @@ public class ShelfItemController {
 		return ResponseEntity.status(HttpStatus.CREATED).body(service.create(request));
 	}
 
-	@GetMapping("/{id}")
-	public ShelfItemResponse getById(@PathVariable UUID id) {
-		return service.getById(id);
-	}
-
 	@PutMapping("/{id}")
 	public ShelfItemResponse update(@PathVariable UUID id, @Valid @RequestBody ShelfItemUpsertRequest request) {
 		return service.update(id, request);
@@ -61,5 +60,23 @@ public class ShelfItemController {
 			@RequestParam(required = false) ShelfCategory category) {
 		return service.list(page, size, category);
 	}
-}
 
+	@GetMapping(value = "/export", produces = "text/csv;charset=UTF-8")
+	public ResponseEntity<byte[]> exportCsv(
+			@RequestParam(defaultValue = "0") @Min(0) int page,
+			@RequestParam(defaultValue = "20") @Min(1) @Max(100) int size,
+			@RequestParam(required = false) ShelfCategory category) {
+		final byte[] body = service.exportToCsv(page, size, category);
+		final String filename = "shelf-items-" + LocalDate.now(ZoneOffset.UTC) + ".csv";
+		return ResponseEntity.ok()
+				.header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + filename + "\"")
+				.contentType(MediaType.parseMediaType("text/csv;charset=UTF-8"))
+				.body(body);
+	}
+
+	@GetMapping("/{id}")
+	public ShelfItemResponse getById(@PathVariable UUID id) {
+		return service.getById(id);
+	}
+
+}

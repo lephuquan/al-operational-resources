@@ -5,17 +5,25 @@
 - Ghi **mọi thay đổi contract hoặc hành vi** đang làm hoặc sắp release.
 - Sau khi merge/release, có thể tóm tắt vào `docs/decisions/` hoặc release notes team — file này có thể **xóa trắng** mỗi cycle.
 
-**Last updated:** 2026-04-16
+**Last updated:** 2026-04-19
 
 ## Active work / draft
 
-**Task / ticket reference:** `docs/current-task/20260414-shelflog-infra.md` (SIM-DEMO-1), then `20260411-shelf-items-api.md` (SIM-DEMO-2)
+**Task / ticket reference:** `docs/current-task/20260414-shelflog-infra.md` (SIM-DEMO-1), `20260411-shelf-items-api.md` (SIM-DEMO-2), `20260417-shelflog-csv-export/TASK.md` (SHELF-EXPORT-1)
 
 **Scope (one line):**
 
 - SIM-DEMO-1: stack + Actuator; SIM-DEMO-2: CRUD `/api/v1/shelf-items` (pending).
 
 ## Changes (add newest first)
+
+### 2026-04-19 - SHELF-EXPORT-1: GET CSV export for shelf items
+
+- **Type:** non-breaking (new demo endpoint)
+- **Endpoints affected:** `GET /api/v1/shelf-items/export`
+- **What changed:** CSV download (UTF-8, no BOM, comma) with same `page` / `size` / `category` as list; if **total matching rows > 5000** returns **413** + JSON `SHELF_413_EXPORT` (same `success`/`error` envelope); formula-injection prefixes on text fields mitigated with a leading `'` when value starts with `=`, `+`, `-`, `@`.
+- **Client impact:** Optional download for operators; large unfiltered catalogues must be narrowed before export.
+- **Follow-ups:** none for demo scope.
 
 ### 2026-04-16 - DEMO-USER-1: POST create user (demo)
 

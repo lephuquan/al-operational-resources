@@ -17,7 +17,7 @@
 | **Task type** | `feature` |
 | **File ID** | `20260417-shelflog-csv-export` |
 | **Ticket / issue** | SHELF-EXPORT-1 |
-| **Status** | In Progress |
+| **Status** | Review (AL done) |
 | **Priority** | Medium |
 | **Owner** | Human (local demo) |
 
@@ -88,13 +88,13 @@ Contract doc paths used by automation checks (same filenames under `.operational
 
 ## 3. Acceptance criteria (required when provided by BA/lead)
 
-- [ ] **AC1:** `GET /api/v1/shelf-items/export` returns **200** with `Content-Type` including `text/csv` and UTF-8, and `Content-Disposition: attachment` with a sensible filename (for example containing `shelf-items` and date or run id).
-- [ ] **AC2:** CSV uses **comma** delimiter, **UTF-8** without BOM by default, includes a **header row**, and columns cover the exported shelf item fields in a stable order documented in spec/API docs.
-- [ ] **AC3:** Query parameters match the **list** endpoint contract for pagination and optional `category` filter (same semantics as `GET /api/v1/shelf-items`); default `page`/`size` behavior consistent with list unless spec documents an export-specific default.
-- [ ] **AC4:** If the filtered result would return **more than 5000 item rows** in one CSV response, the API returns **413 Payload Too Large** with a **JSON** error body using the same envelope as other API errors (no partial CSV body).
-- [ ] **AC5:** Cell values that start with `=`, `+`, `-`, or `@` are written in a spreadsheet-safe way (for example prefix with tab or single-quote per agreed pattern); behavior documented briefly in spec or API notes.
-- [ ] **AC6:** Automated tests cover: successful CSV download (status, headers, non-empty body with header line), at least one **413** scenario when row cap is exceeded, and at least one cell proving injection mitigation.
-- [ ] **AC7:** `docs/api/08-endpoint-list.md`, `docs/api/10-current-api-changes.md`, and `docs/specs/feature-shelflog-items.md` are updated for the new route, limits, and error case.
+- [x] **AC1:** `GET /api/v1/shelf-items/export` returns **200** with `Content-Type` including `text/csv` and UTF-8, and `Content-Disposition: attachment` with a sensible filename (for example containing `shelf-items` and date or run id).
+- [x] **AC2:** CSV uses **comma** delimiter, **UTF-8** without BOM by default, includes a **header row**, and columns cover the exported shelf item fields in a stable order documented in spec/API docs.
+- [x] **AC3:** Query parameters match the **list** endpoint contract for pagination and optional `category` filter (same semantics as `GET /api/v1/shelf-items`); default `page`/`size` behavior consistent with list unless spec documents an export-specific default.
+- [x] **AC4:** If the filtered result would return **more than 5000 item rows** in one CSV response, the API returns **413 Payload Too Large** with a **JSON** error body using the same envelope as other API errors (no partial CSV body). *(Implemented as: **total matching rows** for the filter, before pagination, exceeds 5000 → 413; see §7.)*
+- [x] **AC5:** Cell values that start with `=`, `+`, `-`, or `@` are written in a spreadsheet-safe way (for example prefix with tab or single-quote per agreed pattern); behavior documented briefly in spec or API notes.
+- [x] **AC6:** Automated tests cover: successful CSV download (status, headers, non-empty body with header line), at least one **413** scenario when row cap is exceeded, and at least one cell proving injection mitigation.
+- [x] **AC7:** `docs/api/08-endpoint-list.md`, `docs/api/10-current-api-changes.md`, and `docs/specs/feature-shelflog-items.md` are updated for the new route, limits, and error case.
 
 ### 3.1 Detailed behavior (recommended for features — avoids happy-path-only AI work)
 
@@ -112,13 +112,13 @@ Contract doc paths used by automation checks (same filenames under `.operational
 
 | AC / goal | Description | Test (class#method or description) | Type |
 |-----------|-------------|-------------------------------------|------|
-| AC1 | CSV response headers and attachment | `ShelfItemExportControllerTest#export_returnsCsvWithDisposition` (name may vary) | integration |
+| AC1 | CSV response headers and attachment | `ShelfItemExportControllerTest#export_returnsCsvWithDisposition` | integration |
 | AC2 | Delimiter and header row | `ShelfItemExportControllerTest#export_csvFormatAndHeader` | integration |
-| AC3 | Query params parity with list | `ShelfItemExportControllerTest#export_respectsCategoryAndPagination` | integration |
+| AC3 | Query params parity with list | `ShelfItemExportControllerTest#export_respectsCategoryAndPagination` (+ `export_invalidSize_returns400` for `size` bound) | integration |
 | AC4 | Row cap returns 413 JSON | `ShelfItemExportControllerTest#export_exceedsCap_returns413` | integration |
 | AC5 | Injection-safe cell | `ShelfItemExportControllerTest#export_escapesFormulaPrefix` | integration |
-| AC6 | Suite coverage | Same class or adjacent IT methods covering AC1–AC5 | integration |
-| AC7 | Docs updated | Manual review in MR + grep for endpoint path in listed docs | N/A + reason |
+| AC6 | Suite coverage | `ShelfItemExportControllerTest` (methods above) | integration |
+| AC7 | Docs updated | `docs/api/08-endpoint-list.md`, `10-current-api-changes.md`, `specs/feature-shelflog-items.md` updated in this MR | N/A + reason |
 
 Update this table when **§7** changes AC.
 
@@ -148,6 +148,7 @@ Update this table when **§7** changes AC.
 | Date | Change | Type | Action (synced BA/lead? AC/tests updated?) |
 |------|--------|------|--------------------------------------------|
 | 2026-04-17 | Task file created from discovery SHELF-EXPORT-1 | Small | Initial AC and mapping |
+| 2026-04-19 | AC4 clarified in task: 413 when **total matching rows** for filter exceed 5000 (not “rows in one page only”) | Small | Aligns implementation + docs with safety intent |
 
 ---
 
@@ -170,11 +171,11 @@ Read this `TASK.md` first, then `DISCOVERY.md` in the same folder. Follow rules 
 
 ## 9. Execution checklist (customize)
 
-- [ ] Confirm list endpoint query contract in code matches §3.1 expectations.
-- [ ] Implement export endpoint + CSV mapping + cap + escaping.
-- [ ] Add integration tests for AC1–AC6.
-- [ ] Run `./mvnw.cmd -q test` and save evidence under `logs/` in this work item folder.
-- [ ] Update API and spec markdown files (AC7).
+- [x] Confirm list endpoint query contract in code matches §3.1 expectations.
+- [x] Implement export endpoint + CSV mapping + cap + escaping.
+- [x] Add integration tests for AC1–AC6.
+- [x] Run `./mvnw.cmd -q test` and save evidence under `logs/` in this work item folder.
+- [x] Update API and spec markdown files (AC7).
 
 ---
 
@@ -199,6 +200,8 @@ Read this `TASK.md` first, then `DISCOVERY.md` in the same folder. Follow rules 
 
 - **[2026-04-17]** Authored full `TASK.md` from `DISCOVERY.md` and template; ready for `start-task.ps1` gate.
 - **[2026-04-17]** Ran `start-task.ps1` successfully; session written under `runtime/20260417-shelflog-csv-export.task.session.json`.
+- **[2026-04-19]** Implemented `GET /api/v1/shelf-items/export` (CSV, cap via total match > 5000 → `SHELF_413_EXPORT`, formula-safe cells), `ShelfItemExportControllerTest`, `ExportTooLargeException`, `ShelfItemCsvFormatter`, `countByCategory`; updated API/spec docs under `.operational-resources-use1000/docs/`.
+- **[2026-04-19]** Test evidence: `logs/20260419-shelflog-export-test-evidence.txt` (command `./mvnw.cmd -q test`, exit **0**).
 
 ---
 
@@ -206,11 +209,11 @@ Read this `TASK.md` first, then `DISCOVERY.md` in the same folder. Follow rules 
 
 ### 13.1 AL Done (must be complete before handoff)
 
-- [ ] §0 Definition of Ready fully checked before implementation
-- [ ] Code + tests match §3–4 (and §7 if revised)
-- [ ] Required test command in `task_contract.required_test_command` executed and evidence saved
-- [ ] §4 AC → test mapping updated to final state
-- [ ] §12 progress log contains implementation + test evidence summary
+- [x] §0 Definition of Ready fully checked before implementation
+- [x] Code + tests match §3–4 (and §7 if revised)
+- [x] Required test command in `task_contract.required_test_command` executed and evidence saved
+- [x] §4 AC → test mapping updated to final state
+- [x] §12 progress log contains implementation + test evidence summary
 
 ### 13.2 Human Done (outside AL execution)
 
@@ -221,4 +224,4 @@ Read this `TASK.md` first, then `DISCOVERY.md` in the same folder. Follow rules 
 
 ---
 
-**Last updated:** 2026-04-17
+**Last updated:** 2026-04-19

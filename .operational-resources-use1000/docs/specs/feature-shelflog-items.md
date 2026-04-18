@@ -3,7 +3,7 @@
 **Feature code:** FEA-SHELF-001  
 **Status:** Active (demo reference application)  
 **Canonical brief:** `.operational-resources/simulator/DEMO-PROJECT-BRIEF.md`  
-**Last updated:** 2026-04-14
+**Last updated:** 2026-04-19
 
 ## 1. Summary
 
@@ -47,6 +47,7 @@ Expose versioned REST APIs under **`/api/v1/shelf-items`** to create, read, upda
 | PUT | `/api/v1/shelf-items/{id}` | Full replace of mutable fields (`title`, `category`, `quantity`, `notes`); **404** if not found; validation as on create |
 | DELETE | `/api/v1/shelf-items/{id}` | **204** empty body; **404** if not found |
 | GET | `/api/v1/shelf-items` | Paginated list; query `page` (0-based), `size` (default **20**, max **100**); optional filter `category` (exact enum match) |
+| GET | `/api/v1/shelf-items/export` | CSV export; same `page`, `size`, `category` as list; UTF-8 comma-separated, no BOM; attachment filename `shelf-items-<UTC date>.csv`. If **total matching rows** (same filter, no pagination cap) **exceeds 5000**, respond **413** with JSON error code **`SHELF_413_EXPORT`** and **no** CSV body. Text fields that start with `=`, `+`, `-`, or `@` are prefixed with `'` in the CSV cell to reduce spreadsheet formula injection risk. |
 
 ### 4.1 Request body (create / update)
 
@@ -71,6 +72,11 @@ Spring Data `Page` serialization is acceptable if globally consistent; otherwise
 
 - **400** — validation failures; prefer field-level detail (Bean Validation and/or shared error envelope — see `docs/api/05-error-handling.md`).
 - **404** — resource not found by `id`.
+- **413** — CSV export refused when the filtered catalogue has **more than 5000** matching rows (`SHELF_413_EXPORT`); client should narrow filters (for example `category`) and retry.
+
+### 4.4 CSV export columns (stable order)
+
+Header row (first line): `id`, `title`, `category`, `quantity`, `notes`, `createdAt`, `updatedAt` (ISO-8601 instants). One data row per shelf item in the current page, sorted like the list API (`createdAt` descending).
 
 **409** is not required for v1.
 
