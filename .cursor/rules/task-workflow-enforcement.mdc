@@ -1,11 +1,11 @@
----
+﻿---
 description: Enforce task-driven execution workflow
 alwaysApply: true
 ---
 
 # Task-Driven Execution
 
-- Start implementation only after reading one file in `.operational-resources-use1000/current-task/` (or the synced `.operational-resources/docs/current-task/` in template-only layouts).
+- Start implementation only after reading one file in `.operational-resources-use1000/al-run/current-task/` (or the synced `.operational-resources/docs/current-task/` in template-only layouts).
 - Treat that task file as the single source of scope, AC, and context pack.
 - If AC/scope is unclear, ask or update task revision before coding.
 - Respect strict input gate from `SCHEMA.md` and `start-task.ps1`.
@@ -14,7 +14,7 @@ alwaysApply: true
 # Output Contract
 
 - Keep AC -> test mapping aligned with code changes.
-- When API/contract changes, update relevant files in `docs/api/`.
+- When API/contract changes, update relevant files in `workspace/docs/api/` (this repo) or the team’s canonical API docs path.
 - Record key progress in task progress log.
 - AL scope ends at: code + tests + test evidence + handoff readiness.
 
