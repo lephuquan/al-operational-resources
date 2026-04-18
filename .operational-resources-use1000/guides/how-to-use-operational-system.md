@@ -92,22 +92,36 @@ Input gate hien kiem tra them:
 
 Sau input gate: **AL** thuc hien code + test theo AC va §8. Human khong thay the buoc nay tru khi task ghi ngoai le (xem `docs/current-task/SCHEMA.md`).
 
-Prompt goi y:
+#### C.1 - Human: **giao AL** trong Cursor (buoc thao tac)
+
+1. Mo **Cursor** → **Chat / Composer / Agent** (che do co the sua file + chay lenh trong repo).
+2. **Dinh kem** file task bang `@`:
+   - **Folder mode:** `@.operational-resources-use1000/docs/current-task/<slug>/TASK.md`
+   - **Flat mode:** `@.operational-resources-use1000/docs/current-task/YYYYMMDD-slug.md`
+3. *(Tuy chon)* Them `@` cac file trong §8 (Rules, Docs, Skills) de neo ngữ canh.
+4. Gui tin nhan: dung **prompt toi thieu** o `HUMAN-AL-WORKFLOW-GUIDE.md` → muc **"Bước B2 — Human: giao AL implement"**, hoac copy **"Suggested prompt"** trong §8 cua file task (chinh duong dan neu can).
+5. De AL chay lien mach toi AL done; Human chi tra loi khi AL hoi quyet dinh san pham / ASK FIRST.
+
+#### C.2 - Noi dung prompt goi y (cho AL thuc thi)
 
 ```text
 Context:
-- Current task: docs/current-task/YYYYMMDD-slug.md
-- Rules/docs/skills: theo section 8 trong task
+- Current task: (file task da dinh kem bang @)
+- Rules/docs/skills: doc theo bang section 8 trong task
 
 Task:
-- Implement 1 vertical slice theo AC
+- Doc task §2-§4 truoc khi sua code
+- Implement theo AC (co the theo slice neu task lon)
 - Khong vuot scope section 2
+- Chay task_contract.required_test_command; luu evidence; cap nhat §4 §12 §13.1 va doc API/spec neu AC yeu cau
 
 Expected output:
-- Code changes
-- Test updates
-- Risk notes ngan
+- Code changes + test updates
+- Duong dan file evidence cho close-task.ps1
+- Risk notes ngan (neu co)
 ```
+
+**Tham chiếu day du (tiếng Việt + prompt mẫu):** `HUMAN-AL-WORKFLOW-GUIDE.md` — **Bước B2** và các bước **C–F** phía sau.
 
 ### Buoc D - Chay test va luu evidence
 
@@ -143,6 +157,7 @@ Truoc khi AL code:
 - [ ] Khong placeholder
 - [ ] Co `task_contract`
 - [ ] DoR da check
+- [ ] Human da **giao AL** (Cursor: `@TASK.md` + prompt) — xem **Buoc C.1** / `HUMAN-AL-WORKFLOW-GUIDE.md` **Bước B2**
 
 Truoc khi handoff:
 

@@ -35,6 +35,7 @@ This folder is the canonical input/output area for task-driven AL execution.
 3. Fill scope, AC, AC->test mapping, context pack, DoD, and required `task_contract`.
 4. Run:
    - `powershell -File .operational-resources-use1000/scripts/start-task.ps1 -TaskFile ".operational-resources-use1000/docs/current-task/..."` (flat file or `.../TASK.md` in folder mode; see `FOLDER-CONVENTION.md`).
+4b. **Human: giao AL implement** trong IDE (Cursor): `@TASK.md` + prompt — chi tiết **`../../HUMAN-AL-WORKFLOW-GUIDE.md`** mục **Bước B2**; tóm tắt nhanh **`../../guides/how-to-use-operational-system.md`** mục **C.1**.
 5. **AL implements** the task using the §8 context pack (default owner of code and tests after input gate passes; see `SCHEMA.md` Role split). Human does not substitute for the primary coding path unless the task records an exception.
 6. **AL** runs tests and records evidence (for example under the work-item `logs/` folder in folder mode).
 7. Run:

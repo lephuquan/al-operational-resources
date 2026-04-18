@@ -175,6 +175,8 @@ Paths AI should read (fill real paths; delete unused rows):
 **Suggested prompt (copy):**  
 “Read this task file first. Follow the rules and skills in the table above. Do not add dependencies or change architecture broadly without asking.”
 
+**Human — how to assign AL to implement (after `start-task.ps1` passes):** open Cursor Chat/Composer/Agent, attach this task file with `@`, paste the prompt above or the minimal prompt in **`../../HUMAN-AL-WORKFLOW-GUIDE.md`** section **Bước B2**; step-by-step also in **`../../guides/how-to-use-operational-system.md`** section **C.1**.
+
 ---
 
 ## 9. Execution checklist (customize)

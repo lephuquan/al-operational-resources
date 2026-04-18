@@ -11,7 +11,7 @@
 |------|----------|
 | [`bootstrap-docs-skills-rules.md`](bootstrap-docs-skills-rules.md) | Dự án mới, onboard AI context, thêm rule/doc/skill lần đầu hoặc mở rộng có kiểm soát |
 | [`review-and-update-docs-skills-rules.md`](review-and-update-docs-skills-rules.md) | Định kỳ, trước release, hoặc **ngay khi** đổi contract / kiến trúc / cấu trúc skill |
-| [`how-to-use-operational-system.md`](how-to-use-operational-system.md) | Huong dan thao tac tung buoc: AL code bat buoc sau input gate; Human sau handoff (review, MR, §13.2) |
+| [`how-to-use-operational-system.md`](how-to-use-operational-system.md) | Huong dan tung buoc; **C.1** = giao AL trong Cursor (`@TASK.md` + prompt); xem them `HUMAN-AL-WORKFLOW-GUIDE.md` **Bước B2** |
 
 ## Neo nhanh
 

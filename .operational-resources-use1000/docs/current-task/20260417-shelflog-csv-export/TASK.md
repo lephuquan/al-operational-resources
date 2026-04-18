@@ -164,6 +164,8 @@ Paths AI should read (repo-relative where noted):
 **Suggested prompt (copy):**  
 Read this `TASK.md` first, then `DISCOVERY.md` in the same folder. Follow rules and skills in the table. Reuse existing list semantics; do not add Maven starters or change global security architecture without **ASK FIRST** in §10.
 
+**Human — giao AL implement:** sau khi `start-task.ps1` pass, mở Cursor → Chat/Agent → `@` file `TASK.md` này → dán prompt trên hoặc prompt tối thiểu trong **`../../../HUMAN-AL-WORKFLOW-GUIDE.md`** (**Bước B2**); chi tiết thao tác **`../../../guides/how-to-use-operational-system.md`** (**C.1**).
+
 ---
 
 ## 9. Execution checklist (customize)

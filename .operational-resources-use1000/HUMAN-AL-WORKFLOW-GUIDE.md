@@ -26,6 +26,7 @@
 |------|:-----:|:---:|
 | Tạo / điền file task từ `TEMPLATE.md` | Có thể | Có thể hỗ trợ soạn, nhưng Human chốt scope/AC |
 | Chạy input gate `start-task.ps1` | Thường Human hoặc giao AL chạy trong máy bạn | Có thể chạy nếu bạn giao và môi trường cho phép |
+| **Giao AL implement** (sau khi gate pass): mở Cursor, `@TASK.md`, gửi prompt — **Bước B2** | **Có** (khởi tạo phiên làm việc) | Thực hiện theo prompt; không thay Human làm code chính |
 | Discovery khi yêu cầu chưa rõ (`preflight-discovery.ps1`) | Chốt câu trả lời / quyết định thiếu | Soạn discovery, đề xuất câu hỏi, chạy script khi được giao |
 | Đọc §8 Context pack (Rules/Docs/Skills) | Nên đọc nhanh một lượt | **Bắt buộc** đọc trước khi code |
 | Implement + unit/IT + sửa lỗi (sau input gate, task đủ §8) | — | **Bắt buộc (AL)** — Human không làm bước code chính trừ khi task ghi ngoại lệ |
@@ -61,6 +62,29 @@ powershell -File .operational-resources/scripts/start-task.ps1 -TaskFile ".opera
 
 - **Pass:** tiếp tục implement.
 - **Fail:** sửa task file theo thông báo script (thiếu section, placeholder, DoR chưa tick, path §8 sai, …). Có thể dùng `-AllowUnready` chỉ khi **cố ý** bỏ qua DoR (không khuyến khích).
+
+### Bước B2 — Human: **giao AL implement** (trong Cursor / agent IDE)
+
+Đây là bước **cụ thể** để Human chuyển từ “task đã pass gate” sang “AL bắt đầu code trong repo”. Không thay thế cho §8 trong task; chỉ là cách **khởi động** phiên làm việc với AL.
+
+1. **Điều kiện:** `start-task.ps1` đã **Pass** (Bước B); task có §8 đủ đường dẫn thật.
+2. Mở **Cursor** (hoặc IDE có AI agent với quyền sửa file + chạy lệnh): vào **Chat**, **Composer**, hoặc **Agent** (chế độ có thể chỉnh repo).
+3. **Đính kèm ngữ cảnh** cho AL (tối thiểu):
+   - File task canonical: dùng **`@`** + chọn `TASK.md` (folder mode) hoặc `YYYYMMDD-slug.md` (flat), ví dụ:  
+     `.operational-resources-use1000/docs/current-task/20260417-shelflog-csv-export/TASK.md`
+   - *(Khuyến nghị)* Thêm `@` vài file trong bảng §8 (Rules/Docs/Skills) nếu muốn giảm lệch ngữ cảnh — không bắt buộc nếu AL tự resolve path được.
+4. **Gửi yêu cầu** (dán prompt dưới đây hoặc copy từ **§8 “Suggested prompt”** trong chính file task), và nêu rõ: làm đến **AL done** (code + test + evidence + doc theo AC + tick §13.1 + chuẩn bị lệnh `close-task.ps1`).
+5. Trong phiên đó, **Human không làm bước code chính**; chỉ trả lời khi AL hỏi quyết định sản phẩm hoặc khi cần chỉnh task (§7).
+
+**Prompt tối thiểu (copy chỉnh đường dẫn cho đúng task):**
+
+```text
+Đọc kỹ file task đính kèm (ưu tiên §0 §2 §3 §4 §8 §10 §13.1).
+Input gate start-task.ps1 đã pass. Theo quy ước repo, bạn (AL) là người implement chính: code + test trong scope, chạy đúng task_contract.required_test_command, lưu test evidence (path ghi vào §12), cập nhật tài liệu API/spec nếu AC yêu cầu, cập nhật §4 tên test thực tế, tick §13.1 khi đủ điều kiện.
+Cho tôi lệnh PowerShell chính xác để chạy close-task.ps1 với -TaskFile và -TestEvidence sau khi bạn xong.
+```
+
+Sau khi gửi prompt, AL sẽ thực hiện các bước tương đương **Bước C → F** bên dưới (đọc context → code → test → handoff).
 
 ### Bước C — AL: đọc ngữ cảnh (một bước riêng, nên làm rõ ràng)
 
