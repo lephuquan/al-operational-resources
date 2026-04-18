@@ -1,4 +1,4 @@
-# Examples: Implement feature với AL
+﻿# Examples: Implement feature với AL
 
 Không chứa secret. Thay `<task>`, tên file, path cho đúng repo.
 
@@ -6,7 +6,7 @@ Không chứa secret. Thay `<task>`, tên file, path cho đúng repo.
 
 ```text
 Context:
-- Task file: docs/current-task/<task>.md
+- Task file: current-task/<task>.md
 - Rules: rules/02-coding-standards.md, rules/03-api-development.md (điều chỉnh theo task)
 - Skills: skills/backend/create-rest-api/README.md, skills/backend/create-service-layer/README.md, skills/testing/create-test-data/README.md
 - Constraints: không đổi package root; không thêm dependency mới; không đổi public API ngoài scope slice

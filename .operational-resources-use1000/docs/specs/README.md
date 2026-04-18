@@ -1,4 +1,4 @@
-# Feature specifications (`docs/specs/`)
+﻿# Feature specifications (`docs/specs/`)
 
 ## TL;DR (VI)
 
@@ -19,7 +19,7 @@ This folder holds **business-level** feature specs for personal AI-assisted work
 | Artifact | Focus |
 |----------|--------|
 | **`specs/feature-*.md`** | Business rules, user-visible behavior, acceptance over time |
-| **`docs/current-task/*.md`** | A **single slice of work** (scope, DoD, links, AI MUST/SHOULD) |
+| **`current-task/*.md`** | A **single slice of work** (scope, DoD, links, AI MUST/SHOULD) |
 | **`docs/api/*.md`** | HTTP contract: URLs, envelopes, errors |
 
 A task file should **link** to the relevant spec section when implementing a feature.
@@ -50,7 +50,7 @@ A task file should **link** to the relevant spec section when implementing a fea
 
 ## Related
 
-- Task template (links to specs): `docs/current-task/TEMPLATE.md`
+- Task template (links to specs): `current-task/TEMPLATE.md`
 - API contract: `docs/api/01-README.md`
 
 **Last updated:** 2026-04-14

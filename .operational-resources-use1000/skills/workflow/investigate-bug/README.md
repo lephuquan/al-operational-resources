@@ -1,10 +1,10 @@
-# Investigate Bug (index)
+﻿# Investigate Bug (index)
 
 ## TL;DR (VI)
 
 - Playbook **điều tra bug có phương pháp**: thu thập **bằng chứng** → **tái hiện** → giả thuyết có kiểm chứng → **fix tối thiểu** → **regression test** → ghi nhận nếu lỗi hay gặp.
 - Khi có **exception**: **`analyze-stacktrace`** trước; **local** dùng **`debug-backend-error`**; **production** dùng **`debug-production-issue`** (policy + redact).
-- Gói việc trong **`docs/current-task/`** (task type **bugfix**, khối B trong `TEMPLATE.md`).
+- Gói việc trong **`current-task/`** (task type **bugfix**, khối B trong `TEMPLATE.md`).
 
 ## Thư mục này chứa gì
 
@@ -23,7 +23,7 @@
 
 ## Liên kết nhanh
 
-- `docs/current-task/TEMPLATE.md`
+- `current-task/TEMPLATE.md`
 - `skills/debugging/analyze-stacktrace/README.md`
 - `skills/debugging/debug-backend-error/README.md`
 - `skills/debugging/debug-production-issue/README.md`

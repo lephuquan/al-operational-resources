@@ -1,12 +1,12 @@
-# Task — [Short title]
+﻿# Task — [Short title]
 
 ## TL;DR (VI)
 
 - Copy file này → đổi tên `YYYYMMDD-slug.md` → xóa khối §6 không dùng.
 - Phần **hướng dẫn và tiêu đề** giữ **English**; nội dung điền có thể VI hoặc EN tùy ticket.
-- Mỗi task **một file**, chỉ trong `docs/current-task/`.
+- Mỗi task **một file**, chỉ trong `current-task/`.
 
-> **Convention:** One task = **one file** `YYYYMMDD-task-name.md` under **only** `docs/current-task/`. Do not duplicate tasks under `rules/`.  
+> **Convention:** One task = **one file** `YYYYMMDD-task-name.md` under **only** `current-task/`. Do not duplicate tasks under `rules/`.  
 > Copy this file → rename → remove sections you do not need (by task type).
 
 > **Execution (this repo):** After `start-task.ps1` passes and §8 is sufficient, **AL is the mandatory primary implementer** for code and tests through **AL done**; humans own **post-handoff** review, MR, merge, **§13.2**, and product/scope. Exceptions: document in **§7** / **§11**. See `SCHEMA.md` — Role split.

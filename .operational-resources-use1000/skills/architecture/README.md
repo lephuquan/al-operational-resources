@@ -1,4 +1,4 @@
-# Architecture skills (hub)
+﻿# Architecture skills (hub)
 
 ## TL;DR (VI)
 
@@ -16,7 +16,7 @@
 
 1. `docs/architecture/01-README.md` — index and reading order  
 2. `02-system-overview.md`, `04-folder-structure.md`, `06-backend-layers-and-dependencies.md` — shared baseline for both skills  
-3. `docs/specs/README.md` and `docs/current-task/README.md` — inputs for **design**  
+3. `docs/specs/README.md` and `current-task/README.md` — inputs for **design**  
 
 ## Files per skill
 

@@ -1,4 +1,4 @@
-# Task — ShelfLog: export shelf items to CSV (download)
+﻿# Task — ShelfLog: export shelf items to CSV (download)
 
 ## TL;DR (VI)
 
@@ -63,7 +63,7 @@ Add a versioned **GET** endpoint that returns a downloadable **UTF-8 CSV** of sh
 - **Simulator brief:** `.operational-resources-use1000/simulator/DEMO-PROJECT-BRIEF.md` (ShelfLog demo context).
 - **Spec:** `docs/specs/feature-shelflog-items.md` (extend with export behavior and limits).
 - **API / contract:** Maintain `docs/api/08-endpoint-list.md`, `docs/api/10-current-api-changes.md`; align errors with `docs/api/05-error-handling.md` where applicable.
-- **Prior shelf items task (reference):** `docs/current-task/20260411-shelf-items-api.md`.
+- **Prior shelf items work (reference):** SIM-DEMO-2 baseline is summarized in `.operational-resources-use1000/simulator/DEMO-PROJECT-BRIEF.md` and `docs/specs/feature-shelflog-items.md` (no separate task file in this repo snapshot).
 - **Local runbook:** `.operational-resources-use1000/docs/setup/02-local-development.md`.
 
 Contract doc paths used by automation checks (same filenames under `.operational-resources-use1000/docs/` in this repo): `docs/api/08-endpoint-list.md`, `docs/api/10-current-api-changes.md`, and `docs/specs/feature-shelflog-items.md`.
@@ -159,13 +159,13 @@ Paths AI should read (repo-relative where noted):
 | Kind | Paths |
 |------|--------|
 | Rules | `.operational-resources-use1000/rules/00-personal-priority.md`, `.operational-resources-use1000/rules/02-coding-standards.md`, `.operational-resources-use1000/rules/03-api-development.md`, `.operational-resources-use1000/rules/07-testing.md` |
-| Docs | `.operational-resources-use1000/docs/api/01-README.md`, `.operational-resources-use1000/docs/api/05-error-handling.md`, `.operational-resources-use1000/docs/api/07-pagination-filtering.md`, `.operational-resources-use1000/docs/api/08-endpoint-list.md`, `.operational-resources-use1000/docs/api/10-current-api-changes.md`, `.operational-resources-use1000/docs/specs/feature-shelflog-items.md`, `.operational-resources-use1000/docs/setup/02-local-development.md`, `docs/current-task/20260411-shelf-items-api.md`, `docs/current-task/20260417-shelflog-csv-export/DISCOVERY.md` |
+| Docs | `.operational-resources-use1000/docs/api/01-README.md`, `.operational-resources-use1000/docs/api/05-error-handling.md`, `.operational-resources-use1000/docs/api/07-pagination-filtering.md`, `.operational-resources-use1000/docs/api/08-endpoint-list.md`, `.operational-resources-use1000/docs/api/10-current-api-changes.md`, `.operational-resources-use1000/docs/specs/feature-shelflog-items.md`, `.operational-resources-use1000/docs/setup/02-local-development.md`, `.operational-resources-use1000/simulator/DEMO-PROJECT-BRIEF.md`, `current-task/20260417-shelflog-csv-export/DISCOVERY.md` |
 | Skills | `.operational-resources-use1000/skills/workflow/implement-feature/SKILL.md`, `.operational-resources-use1000/skills/backend/create-rest-api/SKILL.md`, `.operational-resources-use1000/skills/testing/write-integration-test/README.md`, `.operational-resources-use1000/skills/error-handling/api-error-response-format/SKILL.md` |
 
 **Suggested prompt (copy):**  
 Read this `TASK.md` first, then `DISCOVERY.md` in the same folder. Follow rules and skills in the table. Reuse existing list semantics; do not add Maven starters or change global security architecture without **ASK FIRST** in §10.
 
-**Human — giao AL implement:** sau khi `start-task.ps1` pass, mở Cursor → Chat/Agent → `@` file `TASK.md` này → dán prompt trên hoặc prompt tối thiểu trong **`../../../HUMAN-AL-WORKFLOW-GUIDE.md`** (**Bước B2**); chi tiết thao tác **`../../../guides/how-to-use-operational-system.md`** (**C.1**).
+**Human — giao AL implement:** sau khi `start-task.ps1` pass, mở Cursor → Chat/Agent → `@` file `TASK.md` này → dán prompt trên hoặc prompt tối thiểu trong **`../../HUMAN-AL-WORKFLOW-GUIDE.md`** (**Bước B2**); chi tiết thao tác **`../../guides/how-to-use-operational-system.md`** (**C.1**).
 
 ---
 
@@ -202,6 +202,7 @@ Read this `TASK.md` first, then `DISCOVERY.md` in the same folder. Follow rules 
 - **[2026-04-17]** Ran `start-task.ps1` successfully; session written under `runtime/20260417-shelflog-csv-export.task.session.json`.
 - **[2026-04-19]** Implemented `GET /api/v1/shelf-items/export` (CSV, cap via total match > 5000 → `SHELF_413_EXPORT`, formula-safe cells), `ShelfItemExportControllerTest`, `ExportTooLargeException`, `ShelfItemCsvFormatter`, `countByCategory`; updated API/spec docs under `.operational-resources-use1000/docs/`.
 - **[2026-04-19]** Test evidence: `logs/20260419-shelflog-export-test-evidence.txt` (command `./mvnw.cmd -q test`, exit **0**).
+- **[2026-04-16]** Ops: canonical `current-task/` tree moved from `.operational-resources-use1000/docs/current-task/` to `.operational-resources-use1000/current-task/`; scripts + docs paths updated; §8 adjusted so `start-task.ps1` resolves only existing files.
 
 ---
 

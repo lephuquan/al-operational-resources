@@ -1,4 +1,4 @@
-# Bản mô tả dự án demo — ShelfLog API (Spring Boot)
+﻿# Bản mô tả dự án demo — ShelfLog API (Spring Boot)
 
 **Vai trò:** Một **nguồn sự thật** cho dịch vụ **giả định**, chỉ phục vụ kiểm tra **docs + task lifecycle + code** trong repo này. Coi như module kiểu **greenfield** (tách bạch, dễ hiểu).
 
@@ -151,7 +151,7 @@ Chi tiết và quy ước lớp: `docs/architecture/04-folder-structure.md` §6.
 | Task thực thi (infra trước) | `current-task/20260414-shelflog-infra.md` (SIM-DEMO-1) |
 | Task thực thi (feature) | `current-task/20260411-shelf-items-api.md` (SIM-DEMO-2) |
 
-**Task canonical:** `docs/current-task/20260414-shelflog-infra.md`, `docs/current-task/20260411-shelf-items-api.md`.
+**Task canonical:** `current-task/20260414-shelflog-infra.md`, `current-task/20260411-shelf-items-api.md`.
 
 Quy ước lỗi JSON và envelope HTTP: `api/03-response-format.md`, `api/05-error-handling.md` trừ khi task ghi rõ ngoại lệ.
 
@@ -165,7 +165,7 @@ Quy ước lỗi JSON và envelope HTTP: `api/03-response-format.md`, `api/05-er
 
 ## 11. Liên hệ với file task demo (thứ tự như dự án thật)
 
-| Thứ tự | Ticket | File canonical (`docs/current-task/`) |
+| Thứ tự | Ticket | File canonical (`current-task/`) |
 |--------|--------|----------------------------------------|
 | **1 — Infra** | **SIM-DEMO-1** | `20260414-shelflog-infra.md` |
 | **2 — Feature (chính)** | **SIM-DEMO-2** | `20260411-shelf-items-api.md` |

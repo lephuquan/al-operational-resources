@@ -1,9 +1,9 @@
-# Prepare Pull Request (index)
+﻿# Prepare Pull Request (index)
 
 ## TL;DR (VI)
 
 - PR **nhỏ, đọc được**: diff tập trung; tránh **noise** format + file vô tình; **self-review** trước khi mời người khác.
-- Mô tả chuẩn: **What / Why / How to test / Risk & rollback**; **link ticket** + (khi có) link task `docs/current-task/`.
+- Mô tả chuẩn: **What / Why / How to test / Risk & rollback**; **link ticket** + (khi có) link task `current-task/`.
 - Chạy **test + lint/format** theo team; đối chiếu **`rules/08-review-checklist.md`** và **`review-code`** hub nếu dùng.
 
 ## Thư mục này chứa gì
@@ -27,7 +27,7 @@
 - `skills/code-quality/review-code/README.md`
 - `skills/workflow/implement-feature/README.md`
 - `skills/workflow/investigate-bug/README.md`
-- `docs/current-task/TEMPLATE.md` (§13 DoD)
+- `current-task/TEMPLATE.md` (§13 DoD)
 - `task-lifecycle/FROM-TICKET-TO-DONE.md` (§5 — Tạo MR)
 
 **Last updated:** 2026-04-11

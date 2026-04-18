@@ -1,4 +1,4 @@
-# Checklist: Prepare Pull Request
+﻿# Checklist: Prepare Pull Request
 
 Dùng **trước** khi chuyển MR sang **Ready for review** (hoặc trước khi ping reviewer).
 
@@ -15,7 +15,7 @@ Dùng **trước** khi chuyển MR sang **Ready for review** (hoặc trước kh
 ## Mô tả MR
 
 - [ ] Có **What / Why / How to test**
-- [ ] Link **ticket**; link **`docs/current-task/...`** nếu task dẫn dắt PR
+- [ ] Link **ticket**; link **`current-task/...`** nếu task dẫn dắt PR
 - [ ] **Risk / rollback** đã nêu khi có migration, breaking API, flag, cache
 
 ## Review

@@ -1,4 +1,4 @@
-# Examples: Prepare Pull Request
+﻿# Examples: Prepare Pull Request
 
 Thay `PROJ-123`, branch, lệnh test cho đúng repo. Không dán secret.
 
@@ -21,7 +21,7 @@ Thay `PROJ-123`, branch, lệnh test cho đúng repo. Không dán secret.
 - **Rollback:** revert single commit.
 
 ## Links
-- Task: `docs/current-task/20260411-order-mapper-npe.md`
+- Task: `current-task/20260411-order-mapper-npe.md`
 ```
 
 ## Title mẫu

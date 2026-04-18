@@ -5,7 +5,7 @@ alwaysApply: true
 
 # Task-Driven Execution
 
-- Start implementation only after reading one file in `docs/current-task/`.
+- Start implementation only after reading one file in `.operational-resources-use1000/current-task/` (or the synced `.operational-resources/docs/current-task/` in template-only layouts).
 - Treat that task file as the single source of scope, AC, and context pack.
 - If AC/scope is unclear, ask or update task revision before coding.
 - Respect strict input gate from `SCHEMA.md` and `start-task.ps1`.

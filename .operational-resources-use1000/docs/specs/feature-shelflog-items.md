@@ -92,7 +92,7 @@ Header row (first line): `id`, `title`, `category`, `quantity`, `notes`, `create
 
 ## 6. Acceptance criteria (traceability)
 
-Aligned with `.operational-resources/docs/current-task/20260411-shelf-items-api.md` §3.
+Aligned with **SIM-DEMO-2** shelf-items scope in `.operational-resources-use1000/simulator/DEMO-PROJECT-BRIEF.md` §3 and this spec.
 
 ## 7. Related documents
 

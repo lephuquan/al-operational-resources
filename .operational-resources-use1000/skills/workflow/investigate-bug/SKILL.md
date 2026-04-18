@@ -1,4 +1,4 @@
-# Skill: Investigate Bug
+﻿# Skill: Investigate Bug
 
 ## TL;DR (VI)
 
@@ -12,7 +12,7 @@ Investigate and fix a defect **methodically** so the root cause is **evidence-ba
 
 ## Preconditions
 
-- A **ticket** or internal report with symptom; ideally a **`docs/current-task/*.md`** file with **Task type = bugfix** and block **B — BUGFIX** filled (`docs/current-task/TEMPLATE.md`).
+- A **ticket** or internal report with symptom; ideally a **`current-task/*.md`** file with **Task type = bugfix** and block **B — BUGFIX** filled (`current-task/TEMPLATE.md`).
 - Access to **logs** or stack traces (redact secrets/PII before sharing in prompts).
 
 ## Steps
@@ -64,8 +64,8 @@ Investigate and fix a defect **methodically** so the root cause is **evidence-ba
 
 - `skills/workflow/investigate-bug/README.md`
 - `skills/workflow/investigate-bug/checklist.md`
-- `docs/current-task/TEMPLATE.md` (§6B — BUGFIX)
-- `docs/current-task/README.md`
+- `current-task/TEMPLATE.md` (§6B — BUGFIX)
+- `current-task/README.md`
 - `skills/debugging/analyze-stacktrace/README.md`
 - `skills/debugging/debug-backend-error/README.md`
 - `skills/debugging/debug-production-issue/README.md`

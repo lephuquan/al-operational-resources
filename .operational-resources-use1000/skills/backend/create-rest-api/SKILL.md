@@ -1,4 +1,4 @@
-# Skill: Create REST API (Spring Boot)
+﻿# Skill: Create REST API (Spring Boot)
 
 ## TL;DR (VI)
 
@@ -12,7 +12,7 @@ Triển khai một hoặc nhiều HTTP endpoint mới (hoặc mở rộng có ki
 
 ## Preconditions
 
-- Path, method, shape request/response đã rõ hoặc đang draft trong `docs/api/` (và/hoặc trong `docs/current-task/*.md`).
+- Path, method, shape request/response đã rõ hoặc đang draft trong `docs/api/` (và/hoặc trong `current-task/*.md`).
 - Service layer (hoặc port/use-case) đã có hoặc sẽ tạo **cùng slice** (xem `skills/backend/create-service-layer/SKILL.md`).
 - Biết envelope/response format của dự án (`docs/api/03-response-format.md` hoặc tương đương).
 

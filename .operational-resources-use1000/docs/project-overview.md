@@ -1,4 +1,4 @@
-# Project overview
+﻿# Project overview
 
 ## TL;DR (VI)
 
@@ -39,8 +39,8 @@
 |----------|------|
 | Product + stack contract | `.operational-resources/simulator/DEMO-PROJECT-BRIEF.md` |
 | Feature spec | `docs/specs/feature-shelflog-items.md` |
-| Infra demo task (do first) | `docs/current-task/20260414-shelflog-infra.md` (SIM-DEMO-1) |
-| Feature demo task (main) | `docs/current-task/20260411-shelf-items-api.md` (SIM-DEMO-2) |
+| Infra demo task (do first) | `current-task/20260414-shelflog-infra.md` (SIM-DEMO-1) |
+| Feature demo task (main) | `current-task/20260411-shelf-items-api.md` (SIM-DEMO-2) |
 | Compose (Postgres 16, host **5433**) | `.operational-resources/simulator/docker-compose.postgres.yml` |
 | ADR | `docs/decisions/006-shelflog-demo-postgres-docker.md` |
 
@@ -72,4 +72,4 @@
 - Backend architecture: `docs/architecture/01-README.md`
 - API contract: `docs/api/01-README.md`
 - Local run: `docs/setup/01-README.md`
-- Task format: `docs/current-task/README.md`
+- Task format: `current-task/README.md`

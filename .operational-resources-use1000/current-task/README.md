@@ -1,4 +1,4 @@
-# Current Tasks (Single Source of Truth)
+﻿# Current Tasks (Single Source of Truth)
 
 This folder is the canonical input/output area for task-driven AL execution.
 
@@ -20,7 +20,7 @@ This folder is the canonical input/output area for task-driven AL execution.
 
 ## Folder contract
 
-- Path: `.operational-resources-use1000/docs/current-task/` (this tree)
+- Path: `.operational-resources-use1000/current-task/` (this tree)
 - **Flat mode (legacy):** one task = one file `YYYYMMDD-short-slug.md` at this level.
 - **Folder mode (recommended for new work):** one folder `YYYYMMDD-short-slug/` with `TASK.md` (canonical) and optional `DISCOVERY.md`, optional `logs/`. See **`reference/FOLDER-CONVENTION.md`**.
 - No duplicate task copies in other folders.
@@ -48,17 +48,17 @@ Shared execution log template (unchanged path):
 ## Standard workflow
 
 1. (Optional but recommended for unclear tasks) Run discovery with `DISCOVERY-TEMPLATE.md`, then validate with:
-   - `powershell -File .operational-resources-use1000/scripts/preflight-discovery.ps1 -DiscoveryFile ".operational-resources-use1000/docs/current-task/<path-to-DISCOVERY.md or flat discovery>.md"`
+   - `powershell -File .operational-resources-use1000/scripts/preflight-discovery.ps1 -DiscoveryFile ".operational-resources-use1000/current-task/<path-to-DISCOVERY.md or flat discovery>.md"`
    - Continue only when discovery preflight passes.
 2. Create task file from `TEMPLATE.md`.
 3. Fill scope, AC, AC->test mapping, context pack, DoD, and required `task_contract`.
 4. Run:
-   - `powershell -File .operational-resources-use1000/scripts/start-task.ps1 -TaskFile ".operational-resources-use1000/docs/current-task/..."` (flat file or `.../TASK.md` in folder mode; see **`reference/FOLDER-CONVENTION.md`**).
-4b. **Human: giao AL implement** trong IDE (Cursor): `@TASK.md` + prompt — chi tiết **`../../HUMAN-AL-WORKFLOW-GUIDE.md`** mục **Bước B2**; tóm tắt nhanh **`../../guides/how-to-use-operational-system.md`** mục **C.1**.
+   - `powershell -File .operational-resources-use1000/scripts/start-task.ps1 -TaskFile ".operational-resources-use1000/current-task/..."` (flat file or `.../TASK.md` in folder mode; see **`reference/FOLDER-CONVENTION.md`**).
+4b. **Human: giao AL implement** trong IDE (Cursor): `@TASK.md` + prompt — chi tiết **`../HUMAN-AL-WORKFLOW-GUIDE.md`** mục **Bước B2**; tóm tắt nhanh **`../guides/how-to-use-operational-system.md`** mục **C.1**.
 5. **AL implements** the task using the §8 context pack (default owner of code and tests after input gate passes; see `SCHEMA.md` Role split). Human does not substitute for the primary coding path unless the task records an exception.
 6. **AL** runs tests and records evidence (for example under the work-item `logs/` folder in folder mode).
 7. Run:
-   - `powershell -File .operational-resources-use1000/scripts/close-task.ps1 -TaskFile ".operational-resources-use1000/docs/current-task/..." -TestEvidence "<path-to-evidence>"`
+   - `powershell -File .operational-resources-use1000/scripts/close-task.ps1 -TaskFile ".operational-resources-use1000/current-task/..." -TestEvidence "<path-to-evidence>"`
 8. **Human** (post-handoff): review code + testing evidence, create MR, merge/close outside AL, tick **§13.2**, own product/scope if the outcome diverges from the ticket.
 
 ## Role split
@@ -75,9 +75,9 @@ Shared execution log template (unchanged path):
 
 ## References
 
-- `../../task-lifecycle/README.md`
-- `../../task-lifecycle/FROM-TICKET-TO-DONE.md`
-- `../../skills/workflow/implement-feature/README.md`
-- `../../rules/`
+- `../task-lifecycle/README.md`
+- `../task-lifecycle/FROM-TICKET-TO-DONE.md`
+- `../skills/workflow/implement-feature/README.md`
+- `../rules/`
 
 **Last updated:** 2026-04-19 (`reference/` layout — contract files stay at root)

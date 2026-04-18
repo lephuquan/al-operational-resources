@@ -1,4 +1,4 @@
-# Design Feature Architecture (index)
+﻿# Design Feature Architecture (index)
 
 ## TL;DR (VI)
 
@@ -28,7 +28,7 @@ Không cần dùng quá nặng cho CRUD nhỏ, ít impact kiến trúc.
 ## Thứ tự khuyến nghị
 
 1. Đọc `SKILL.md` để chốt scope, boundaries, assumptions.
-2. Dùng khung trong `examples.md` để soạn design note cho task hiện tại (`docs/current-task/*.md`).
+2. Dùng khung trong `examples.md` để soạn design note cho task hiện tại (`current-task/*.md`).
 3. Chạy `checklist.md` để phát hiện lỗ hổng trước khi implement.
 4. Nếu quyết định quan trọng/khó đảo ngược, tạo ADR từ `docs/decisions/TEMPLATE.md`.
 5. Handoff sang implementation với trạng thái rõ ràng: **Ready** hoặc **Blocked**.

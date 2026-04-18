@@ -1,4 +1,4 @@
-# AGENTS.md - Personal AI Workspace
+﻿# AGENTS.md - Personal AI Workspace
 
 Last updated: 2026-04-17
 Owner: Phu Quan Le (personal only)
@@ -22,11 +22,11 @@ Owner: Phu Quan Le (personal only)
 
 ## 4) Working protocol with AI
 1. Plan briefly before non-trivial implementation.
-2. Read `.operational-resources-use1000/rules/` first, then `.operational-resources-use1000/docs/` (and task file in `docs/current-task/`).
+2. Read `.operational-resources-use1000/rules/` first, then `.operational-resources-use1000/docs/` (and task file in `current-task/`).
 3. If unclear, ask instead of guessing.
 4. Do not auto-commit or push.
 5. After each task: summarize changes and suggest next checks.
-6. **Task-driven runs:** after `start-task.ps1` passes and §8 context is sufficient, **AL implements code and tests** through **AL done**; the human owns **post-handoff** review, evidence check, MR, merge, **§13.2**, and product/scope. Canonical policy: `.operational-resources-use1000/docs/current-task/SCHEMA.md` (Role split).
+6. **Task-driven runs:** after `start-task.ps1` passes and §8 context is sufficient, **AL implements code and tests** through **AL done**; the human owns **post-handoff** review, evidence check, MR, merge, **§13.2**, and product/scope. Canonical policy: `.operational-resources-use1000/current-task/SCHEMA.md` (Role split).
 
 ## 5) Forbidden actions
 - No deleting major files/folders without confirmation.

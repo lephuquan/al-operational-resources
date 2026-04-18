@@ -1,4 +1,4 @@
-# Skill: Refactor Clean Code
+﻿# Skill: Refactor Clean Code
 
 ## TL;DR (VI)
 
@@ -48,7 +48,7 @@ Cải thiện cấu trúc code (đọc dễ hơn, ít trùng lặp, ranh giới 
 
 ## References
 
-- `docs/current-task/TEMPLATE.md` (khối refactor / task type)
+- `current-task/TEMPLATE.md` (khối refactor / task type)
 - `rules/02-coding-standards.md`
 - `rules/08-review-checklist.md`
 - `skills/code-quality/detect-code-smells/SKILL.md`

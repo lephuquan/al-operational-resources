@@ -1,8 +1,8 @@
-# Implement Feature (index)
+﻿# Implement Feature (index)
 
 ## TL;DR (VI)
 
-- Đây là playbook **triển khai feature end-to-end có kiểm soát** sau khi đã có task trong `docs/current-task/`.
+- Đây là playbook **triển khai feature end-to-end có kiểm soát** sau khi đã có task trong `current-task/`.
 - Đọc `SKILL.md` để biết thứ tự; dùng `examples.md` cho prompt mẫu; `checklist.md` để soát trước MR.
 - Luồng tổng **ticket → Done:** `task-lifecycle/README.md` → `FROM-TICKET-TO-DONE.md`.
 
@@ -27,7 +27,7 @@
 
 - `task-lifecycle/README.md`
 - `task-lifecycle/FROM-TICKET-TO-DONE.md`
-- `docs/current-task/TEMPLATE.md`
+- `current-task/TEMPLATE.md`
 - `skills/backend/create-rest-api/README.md`
 - `skills/backend/create-service-layer/README.md`
 - `skills/backend/create-jpa-entity/README.md`

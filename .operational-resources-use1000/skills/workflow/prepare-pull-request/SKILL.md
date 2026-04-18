@@ -1,4 +1,4 @@
-# Skill: Prepare Pull Request
+﻿# Skill: Prepare Pull Request
 
 ## TL;DR (VI)
 
@@ -45,7 +45,7 @@ Produce a **merge-ready** pull/merge request: **focused diff**, **clear descript
 
 7. **Metadata**
    - Set **labels**, **reviewers**, **milestone** per project rules.
-   - Link **`docs/current-task/<task>.md`** in the MR body when the task file drove the work.
+   - Link **`current-task/<task>.md`** in the MR body when the task file drove the work.
 
 8. **After push**
    - Confirm **CI** is green; respond to **bot** comments (coverage, conventional commit).
@@ -63,7 +63,7 @@ Produce a **merge-ready** pull/merge request: **focused diff**, **clear descript
 - `skills/code-quality/review-code/README.md`
 - `skills/security/security-review/README.md`
 - `skills/workflow/implement-feature/README.md`
-- `docs/current-task/TEMPLATE.md` (§13 Definition of Done)
+- `current-task/TEMPLATE.md` (§13 Definition of Done)
 - `task-lifecycle/FROM-TICKET-TO-DONE.md` (§5 — Tạo MR)
 
 **Last updated:** 2026-04-11

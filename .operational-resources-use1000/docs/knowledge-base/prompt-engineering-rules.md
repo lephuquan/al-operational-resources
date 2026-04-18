@@ -1,10 +1,10 @@
-# AI Prompting Best Practices
+﻿# AI Prompting Best Practices
 
 Tài liệu hướng dẫn tương tác với AI trong dự án này để đạt hiệu suất “Vibe Coding” tối đa.
 
 ## 1. Cấu trúc prompt chuẩn (Context–Task–Constraint)
 
-Khi bắt đầu task mới trong `docs/current-task/`:
+Khi bắt đầu task mới trong `current-task/`:
 
 - **Ngôn ngữ:** `TEMPLATE.md` và tiêu đề mục dùng **English**; nội dung ticket/AC bạn điền có thể **tiếng Việt hoặc English** tùy nguồn — giữ nhất quán trong một file.
 - **Context**: "Dựa trên `architecture/02-system-overview.md` và `specs/feature-xxx.md`…"

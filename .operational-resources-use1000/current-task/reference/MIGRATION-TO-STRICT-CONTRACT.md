@@ -25,4 +25,4 @@ Use this when a legacy task file fails `start-task.ps1`.
 
 Run:
 
-`powershell -File .operational-resources/scripts/start-task.ps1 -TaskFile ".operational-resources/docs/current-task/YYYYMMDD-slug.md"`
+`powershell -File .operational-resources-use1000/scripts/start-task.ps1 -TaskFile ".operational-resources-use1000/current-task/YYYYMMDD-slug.md"` (hoặc bản sync `.operational-resources/…/docs/current-task/…` nếu dùng template gốc)

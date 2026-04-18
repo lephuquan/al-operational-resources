@@ -1,4 +1,4 @@
-# Refactor Clean Code (index)
+﻿# Refactor Clean Code (index)
 
 ## TL;DR (VI)
 
@@ -27,7 +27,7 @@
 - `skills/code-quality/detect-code-smells/README.md`
 - `skills/code-quality/review-code/SKILL.md`
 - `skills/testing/write-unit-test/README.md`
-- `docs/current-task/TEMPLATE.md`
+- `current-task/TEMPLATE.md`
 - `rules/02-coding-standards.md`, `rules/08-review-checklist.md`
 
 **Last updated:** 2026-04-09

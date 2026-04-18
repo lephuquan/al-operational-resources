@@ -1,4 +1,4 @@
-# Endpoint contract template
+﻿# Endpoint contract template
 
 ## TL;DR (VI)
 
@@ -100,5 +100,5 @@ Content-Type: application/json
 
 ### 7. References
 
-- Spec / ticket: `docs/specs/...` or `docs/current-task/...`
+- Spec / ticket: `docs/specs/...` or `current-task/...`
 - OpenAPI operation id: `...` (if any)

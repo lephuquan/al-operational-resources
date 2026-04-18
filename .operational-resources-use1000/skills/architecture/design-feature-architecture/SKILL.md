@@ -1,4 +1,4 @@
-# Skill: Design Feature Architecture
+﻿# Skill: Design Feature Architecture
 
 ## TL;DR (VI)
 
@@ -12,7 +12,7 @@ Tạo một bản thiết kế **rõ ràng, đủ dùng và tối giản** cho f
 
 ## Preconditions
 
-- Đã có intent cho feature: `docs/specs/feature-*.md` và/hoặc `docs/current-task/*.md`.
+- Đã có intent cho feature: `docs/specs/feature-*.md` và/hoặc `current-task/*.md`.
 - Đã có baseline architecture trong `docs/architecture/` (đọc từ `01-README.md` và các file đánh số liên quan).
 - Xác định được người chốt scope/trade-off (scope owner) để xử lý assumption còn mở.
 
@@ -45,7 +45,7 @@ Tạo một bản thiết kế **rõ ràng, đủ dùng và tối giản** cho f
 
 ## Output
 
-- Một design note trong `docs/current-task/<task>.md`, gồm:
+- Một design note trong `current-task/<task>.md`, gồm:
   - Scope và non-goals
   - Layer/module boundaries
   - API sketch và error behavior
@@ -60,7 +60,7 @@ Tạo một bản thiết kế **rõ ràng, đủ dùng và tối giản** cho f
 - Docs: `docs/architecture/01-README.md` (thứ tự đọc), `02-system-overview.md`, `04-folder-structure.md`, `05-database-design.md`, `06-backend-layers-and-dependencies.md`, `07-integrations.md`, `08-transactions-and-consistency.md`, `09-security-architecture-backend.md`
 - API: `docs/api/01-README.md` và các file đánh số liên quan
 - Specs: `docs/specs/README.md`
-- Tasks: `docs/current-task/README.md`, `docs/current-task/TEMPLATE.md`
+- Tasks: `current-task/README.md`, `current-task/TEMPLATE.md`
 - Decisions: `docs/decisions/README.md`, `docs/decisions/TEMPLATE.md`
 - Related skills: `skills/workflow/implement-feature/SKILL.md`, `skills/backend/create-rest-api/SKILL.md`, `skills/backend/create-service-layer/SKILL.md`, `skills/architecture/review-project-architecture/SKILL.md`
 

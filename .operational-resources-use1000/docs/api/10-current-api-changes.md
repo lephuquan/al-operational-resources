@@ -1,4 +1,4 @@
-# Current API changes (changelog)
+﻿# Current API changes (changelog)
 
 ## TL;DR (VI)
 
@@ -9,7 +9,7 @@
 
 ## Active work / draft
 
-**Task / ticket reference:** `docs/current-task/20260414-shelflog-infra.md` (SIM-DEMO-1), `20260411-shelf-items-api.md` (SIM-DEMO-2), `20260417-shelflog-csv-export/TASK.md` (SHELF-EXPORT-1)
+**Task / ticket reference:** SIM-DEMO-1 / SIM-DEMO-2 — mô tả ticket trong `.operational-resources-use1000/simulator/DEMO-PROJECT-BRIEF.md` (file task flat tùy chọn trong `current-task/` khi chạy simulation đầy đủ); work item đang mở: `.operational-resources-use1000/current-task/20260417-shelflog-csv-export/TASK.md` (SHELF-EXPORT-1).
 
 **Scope (one line):**
 

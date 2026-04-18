@@ -1,4 +1,4 @@
-# Skill: Implement Feature (End-to-End)
+﻿# Skill: Implement Feature (End-to-End)
 
 ## TL;DR (VI)
 
@@ -12,7 +12,7 @@ Hoàn thành một feature (hoặc phần feature trong scope task) với: code 
 
 ## Preconditions
 
-- Có file task trong `docs/current-task/*.md` (đã điền tối thiểu theo `TEMPLATE.md`).
+- Có file task trong `current-task/*.md` (đã điền tối thiểu theo `TEMPLATE.md`).
 - Đã đạt **DoR** cơ bản: AC rõ hoặc có cách đo done; scope/non-goals không mơ hồ (xem `task-lifecycle/FROM-TICKET-TO-DONE.md` §4).
 - Đã có **context pack** trong task (rules + docs + skill liên quan) hoặc bổ sung trước khi code.
 
@@ -61,7 +61,7 @@ Hoàn thành một feature (hoặc phần feature trong scope task) với: code 
 ## References
 
 - Task lifecycle (E2E): `task-lifecycle/README.md`, `task-lifecycle/FROM-TICKET-TO-DONE.md`
-- Task: `docs/current-task/README.md`, `docs/current-task/TEMPLATE.md`
+- Task: `current-task/README.md`, `current-task/TEMPLATE.md`
 - Specs: `docs/specs/README.md`
 - Kiến trúc: `docs/architecture/01-README.md`, `06-backend-layers-and-dependencies.md`
 - API: `docs/api/01-README.md`

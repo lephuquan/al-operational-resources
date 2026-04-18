@@ -1,10 +1,10 @@
-# Checklist: Implement Feature
+﻿# Checklist: Implement Feature
 
 Dùng trước khi coi feature slice là xong hoặc trước khi mở MR. Bỏ qua mục không áp dụng.
 
 ## Chuẩn bị (DoR nhẹ)
 
-- [ ] File `docs/current-task/<task>.md` đã có AC và scope rõ
+- [ ] File `current-task/<task>.md` đã có AC và scope rõ
 - [ ] Context pack (rules + docs + skill) đã ghi trong task hoặc đính kèm prompt
 - [ ] First slice đã chốt (không làm “cả feature” một phát)
 

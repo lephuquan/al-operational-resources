@@ -1,4 +1,4 @@
-# Hướng dẫn: rà soát & cập nhật `docs/`, `skills/`, `rules/`
+﻿# Hướng dẫn: rà soát & cập nhật `docs/`, `skills/`, `rules/`
 
 ## Mục đích
 
@@ -33,7 +33,7 @@ Quy trình **định kỳ** (ví dụ mỗi sprint / tháng), **trước release
 
 ### 4) Task & ghi chú
 
-- [ ] **`docs/current-task/README.md`** dashboard không còn file task **Done** cũ kéo dài (dọn hoặc archive theo convention team)
+- [ ] **`current-task/README.md`** dashboard không còn file task **Done** cũ kéo dài (dọn hoặc archive theo convention team)
 - [ ] **`notes/`** — insight bền đã **promote** sang `docs/` / `skills/` khi phù hợp (xem `notes/README.md`)
 
 ### 5) Công cụ (tuỳ chọn)

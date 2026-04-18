@@ -15,9 +15,13 @@ function Fail([string]$msg) {
 }
 
 function Get-OpsCurrentTaskBase([string]$repoRoot) {
-    $use1000 = Join-Path $repoRoot ".operational-resources-use1000\docs\current-task"
-    if (Test-Path $use1000) {
-        return $use1000
+    $use1000New = Join-Path $repoRoot ".operational-resources-use1000\current-task"
+    if (Test-Path $use1000New) {
+        return $use1000New
+    }
+    $use1000Legacy = Join-Path $repoRoot ".operational-resources-use1000\docs\current-task"
+    if (Test-Path $use1000Legacy) {
+        return $use1000Legacy
     }
     return Join-Path $repoRoot ".operational-resources\docs\current-task"
 }

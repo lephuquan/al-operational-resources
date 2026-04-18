@@ -1,6 +1,6 @@
-## Summary
+﻿## Summary
 
-- Task file: `docs/current-task/YYYYMMDD-slug.md`
+- Task file: `current-task/YYYYMMDD-slug.md`
 - Ticket:
 - Scope:
 

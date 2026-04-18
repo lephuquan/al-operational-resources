@@ -1,4 +1,4 @@
-# Architecture Decision Records (ADR)
+﻿# Architecture Decision Records (ADR)
 
 ## TL;DR (VI)
 
@@ -54,11 +54,11 @@ When replacing a decision: add a new ADR with a higher number, mark the old one 
 2. Copy **`TEMPLATE.md`** → `NNN-title-kebab-case.md`.
 3. Set the first-line title to **`# ADR-NNN: …`** matching the file number.
 4. Add a row to the **Index** table above.
-5. Link from `docs/current-task/…` or `docs/architecture/01-README.md` when relevant.
+5. Link from `current-task/…` or `docs/architecture/01-README.md` when relevant.
 
 ## References
 
 - Feature design skill: `skills/architecture/design-feature-architecture/SKILL.md`
-- Task template (related ADR field): `docs/current-task/TEMPLATE.md`
+- Task template (related ADR field): `current-task/TEMPLATE.md`
 
 **Last updated:** 2026-04-14

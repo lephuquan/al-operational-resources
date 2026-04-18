@@ -1,4 +1,4 @@
-# Operational Resources System Definition
+﻿# Operational Resources System Definition
 
 Last updated: 2026-04-17
 Owner: Personal workspace
@@ -30,7 +30,7 @@ This document is the canonical system definition.
   - Close task in external process; tick **§13.2** in the task file when applicable.
   - Own **product and scope** decisions (including updating the task early if AC or scope must change).
 
-**Default implementation ownership:** once the strict **input gate** has passed and the task’s context pack is sufficient, **AL is the mandatory primary implementer** for code and tests through **AL done**. Humans focus on governance, review, and delivery after handoff—not on substituting for AL as the default coder. Exceptions must be written in the task (**§7** / **§11**). See `.operational-resources-use1000/docs/current-task/SCHEMA.md` (Role split).
+**Default implementation ownership:** once the strict **input gate** has passed and the task’s context pack is sufficient, **AL is the mandatory primary implementer** for code and tests through **AL done**. Humans focus on governance, review, and delivery after handoff—not on substituting for AL as the default coder. Exceptions must be written in the task (**§7** / **§11**). See `.operational-resources-use1000/current-task/SCHEMA.md` (Role split).
 
 ### 2.2 Done states
 
@@ -43,12 +43,12 @@ This document is the canonical system definition.
 
 Source of truth:
 
-- `.operational-resources/docs/current-task/SCHEMA.md`
-- `.operational-resources/docs/current-task/TEMPLATE.md`
+- **This repo:** `.operational-resources-use1000/current-task/SCHEMA.md`, `.operational-resources-use1000/current-task/TEMPLATE.md`
+- **Synced template bundle:** `.operational-resources/docs/current-task/SCHEMA.md`, `.operational-resources/docs/current-task/TEMPLATE.md` (when present)
 
 Mandatory requirements:
 
-- Task file in `docs/current-task/YYYYMMDD-slug.md`
+- Task file in `current-task/YYYYMMDD-slug.md`
 - Required sections present and filled
 - No template placeholders
 - `task_contract` block present and valid
@@ -69,12 +69,12 @@ AL must produce:
 
 ### 4.1 Input gate
 
-- Script: `.operational-resources/scripts/start-task.ps1`
+- Script: `.operational-resources-use1000/scripts/start-task.ps1` (or `.operational-resources/scripts/start-task.ps1` in template-only layouts)
 - Mode: fail-fast (missing contract/placeholder/DoR issues -> fail)
 
 ### 4.2 AL done gate
 
-- Script: `.operational-resources/scripts/close-task.ps1`
+- Script: `.operational-resources-use1000/scripts/close-task.ps1` (or `.operational-resources/scripts/close-task.ps1` in template-only layouts)
 - Validates AL output readiness and generates handoff report
 
 ### 4.3 Policy gate
@@ -85,7 +85,7 @@ AL must produce:
 
 ## 5) Core Directory Responsibilities
 
-- `docs/current-task/`: strict task contracts, logs, reports, dashboard
+- `current-task/`: strict task contracts, logs, reports, dashboard
 - `rules/`: execution policies and coding/review standards
 - `docs/`: project context (architecture, API, setup, specs, ADR)
 - `skills/`: how-to playbooks AL can follow

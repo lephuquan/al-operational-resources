@@ -1,8 +1,8 @@
-# Từ ticket đến Done — luồng một task (AL + `.operational-resources/`)
+﻿# Từ ticket đến Done — luồng một task (AL + `.operational-resources/`)
 
 ## TL;DR (VI)
 
-- **Input chuẩn:** một file trong `docs/current-task/` + ticket/AC; **output:** code + test đã chạy + MR rõ ràng + task đóng có kiểm soát.
+- **Input chuẩn:** một file trong `current-task/` + ticket/AC; **output:** code + test đã chạy + MR rõ ràng + task đóng có kiểm soát.
 - Đọc **rules → docs → task → skills** theo thứ tự dưới đây; triển khai theo **cụm nhỏ** với prompt có cấu trúc.
 - **Triển khai / duy trì** tài liệu (bootstrap, review): `guides/README.md`.
 
@@ -14,7 +14,7 @@ Phối hợp giữa:
 
 - Ticket / BA / Lead (nguồn yêu cầu chính thức)
 - Bạn (chốt hướng, quyết định sản phẩm / scope; sau handoff: review, MR, merge)
-- AL (sau `start-task.ps1` pass và task đủ §8: **code + test + evidence bắt buộc** tới **AL done** — xem `docs/current-task/SCHEMA.md`)
+- AL (sau `start-task.ps1` pass và task đủ §8: **code + test + evidence bắt buộc** tới **AL done** — xem `current-task/SCHEMA.md`)
 
 **Nguyên tắc:** Ticket team là **nguồn yêu cầu chính thức**; `.operational-resources/` (và cây `.operational-resources-use1000/` trong repo mẫu) là **ngữ cảnh + quy tắc + playbook** — không thay quyết định BA/Lead khi conflict; ưu tiên sync trước khi merge.
 
@@ -38,7 +38,7 @@ Phối hợp giữa:
 
 ### Input (bắt buộc)
 
-- Một file task: `docs/current-task/YYYYMMDD-*.md`
+- Một file task: `current-task/YYYYMMDD-*.md`
 - Link ticket + AC
 - Scope + constraints quan trọng
 
@@ -76,16 +76,16 @@ Chưa đạt DoR → làm rõ task trước, không đẩy AL đoán ngầm.
 3. `docs/project-overview.md` → `docs/architecture/01-README.md` → `docs/architecture/02-system-overview.md`
 4. `docs/setup/` khi cần local/profile/env (`docs/setup/01-README.md`)
 5. `docs/specs/README.md` + `feature-*.md` liên quan + `docs/api/` nếu đụng API
-6. `docs/current-task/` — tạo/cập nhật file task (1.2)
+6. `current-task/` — tạo/cập nhật file task (1.2)
 7. `skills/README.md` — chọn skill phù hợp
 8. Ticket — copy AC, link, id vào task (**không** paste secret)
 
-**1.2 Một file task duy nhất** `docs/current-task/YYYYMMDD-ten-task.md`
+**1.2 Một file task duy nhất** `current-task/YYYYMMDD-ten-task.md`
 
-- Copy `docs/current-task/TEMPLATE.md`; không đặt task trong `rules/`.
+- Copy `current-task/TEMPLATE.md`; không đặt task trong `rules/`.
 - Điền tối thiểu: metadata, tóm tắt, ticket, AC, **AC → Test**, **một khối §6** (feature/bugfix/refactor/…), hướng dẫn AI, open questions.
 - **Bugfix:** bám `skills/workflow/investigate-bug/README.md` (bằng chứng → tái hiện → fix tối thiểu → regression).
-- Cập nhật dashboard `docs/current-task/README.md`.
+- Cập nhật dashboard `current-task/README.md`.
 
 **Output:** file task đủ context để `@` trong Cursor.
 
@@ -129,7 +129,7 @@ Không coi “AL đã viết test” là đủ nếu **chưa chạy** local.
 
 ### Bước 6 — Đóng task
 
-1. Cập nhật `docs/current-task/README.md` (dashboard/status).
+1. Cập nhật `current-task/README.md` (dashboard/status).
 2. Learned notes vào `notes/` khi cần.
 3. Follow-up → ticket/task mới nếu còn việc.
 
@@ -152,7 +152,7 @@ Không coi “AL đã viết test” là đủ nếu **chưa chạy** local.
 
 ```text
 Context:
-- Current task: docs/current-task/<task>.md
+- Current task: current-task/<task>.md
 - Rules: <rules files>
 - Skills: <skill files>
 - Constraints: <must-not-change items>
@@ -212,7 +212,7 @@ Cập nhật tài liệu này khi team đổi CI, template MR, hoặc quy trình
 
 - **Điểm vào thư mục này:** `task-lifecycle/README.md`
 - **Triển khai / duy trì tài liệu:** `guides/README.md`
-- **Task:** `docs/current-task/TEMPLATE.md`, `docs/current-task/README.md`
+- **Task:** `current-task/TEMPLATE.md`, `current-task/README.md`
 - **Skills phase:** `skills/workflow/implement-feature/README.md`, `investigate-bug/README.md`, `prepare-pull-request/README.md`
 - **Catalog:** `skills/README.md` — **MAP:** `MAP.md`
 

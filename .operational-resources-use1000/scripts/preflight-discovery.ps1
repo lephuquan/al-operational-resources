@@ -13,9 +13,13 @@ function Fail([string]$msg) {
 }
 
 function Get-OpsCurrentTaskBase([string]$repoRoot) {
-    $use1000 = Join-Path $repoRoot ".operational-resources-use1000\docs\current-task"
-    if (Test-Path $use1000) {
-        return $use1000
+    $use1000New = Join-Path $repoRoot ".operational-resources-use1000\current-task"
+    if (Test-Path $use1000New) {
+        return $use1000New
+    }
+    $use1000Legacy = Join-Path $repoRoot ".operational-resources-use1000\docs\current-task"
+    if (Test-Path $use1000Legacy) {
+        return $use1000Legacy
     }
     return Join-Path $repoRoot ".operational-resources\docs\current-task"
 }
@@ -53,6 +57,26 @@ function Check-Regex([string]$content, [string]$pattern, [string]$label) {
     Write-Host "[OK] $label" -ForegroundColor Green
 }
 
+function Add-LegacyUse1000CurrentTaskCandidates([string[]]$candidates) {
+    $expanded = New-Object System.Collections.Generic.List[string]
+    foreach ($c in $candidates) {
+        if (-not [string]::IsNullOrWhiteSpace($c)) {
+            [void]$expanded.Add($c)
+        }
+    }
+    $legacyRoot = '.operational-resources-use1000\docs\current-task\'
+    foreach ($c in @($expanded.ToArray())) {
+        $norm = ($c -replace "/", "\")
+        if ($norm.Contains($legacyRoot)) {
+            $alt = $norm.Replace('.operational-resources-use1000\docs\current-task\', '.operational-resources-use1000\current-task\')
+            if ($alt -ne $norm) {
+                [void]$expanded.Add($alt)
+            }
+        }
+    }
+    return @($expanded | Select-Object -Unique)
+}
+
 function Resolve-RepoPath([string]$repoRoot, [string]$rawPath) {
     $clean = $rawPath.Trim()
     if ([string]::IsNullOrWhiteSpace($clean)) {
@@ -69,6 +93,7 @@ function Resolve-RepoPath([string]$repoRoot, [string]$rawPath) {
         $candidates += Join-Path (Join-Path $repoRoot ".operational-resources") ($clean -replace "/", "\")
         $candidates += Join-Path (Join-Path $repoRoot ".operational-resources-use1000") ($clean -replace "/", "\")
     }
+    $candidates = @(Add-LegacyUse1000CurrentTaskCandidates $candidates)
     foreach ($candidate in $candidates) {
         if (Test-Path $candidate) {
             return $candidate

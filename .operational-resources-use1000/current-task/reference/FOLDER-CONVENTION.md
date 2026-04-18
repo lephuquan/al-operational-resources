@@ -1,11 +1,11 @@
-# Quy ước thư mục: một work item = một thư mục
+﻿# Quy ước thư mục: một work item = một thư mục
 
 Mục tiêu: tách rõ **discovery** (làm rõ yêu cầu) và **task** (contract implement), vẫn giữ một chỗ duy nhất cho mọi artefact của cùng một ticket.
 
 ## Cấu trúc đề xuất
 
 ```text
-docs/current-task/
+current-task/
   <YYYYMMDD-short-slug>/          # một work item (trùng “slug” với tên thư mục)
     TASK.md                       # file task canonical (chạy start-task / close-task trỏ vào đây)
     DISCOVERY.md                  # (tuỳ chọn) discovery đã pass preflight
@@ -32,21 +32,21 @@ docs/current-task/
 
 Trong bảng metadata **Task file**, ghi đường dẫn đầy đủ tới `TASK.md`, ví dụ:
 
-`.operational-resources-use1000/docs/current-task/20260417-shelflog-csv-export/TASK.md`
+`.operational-resources-use1000/current-task/20260417-shelflog-csv-export/TASK.md`
 
 ## Lệnh (ví dụ)
 
 ```powershell
-powershell -File .operational-resources-use1000/scripts/preflight-discovery.ps1 -DiscoveryFile ".operational-resources-use1000/docs/current-task/20260417-shelflog-csv-export/DISCOVERY.md"
+powershell -File .operational-resources-use1000/scripts/preflight-discovery.ps1 -DiscoveryFile ".operational-resources-use1000/current-task/20260417-shelflog-csv-export/DISCOVERY.md"
 ```
 
 ```powershell
-powershell -File .operational-resources-use1000/scripts/start-task.ps1 -TaskFile ".operational-resources-use1000/docs/current-task/20260417-shelflog-csv-export/TASK.md"
+powershell -File .operational-resources-use1000/scripts/start-task.ps1 -TaskFile ".operational-resources-use1000/current-task/20260417-shelflog-csv-export/TASK.md"
 ```
 
 ## Tương thích ngược
 
-Các task cũ dạng **một file phẳng** `YYYYMMDD-slug.md` vẫn hợp lệ cho đến khi migrate; script chỉ cần `-TaskFile` trỏ đúng file tồn tại. Session JSON cho task phẳng vẫn ghi vào `docs/current-task/.runtime/`; handoff vào `docs/current-task/reports/` (cùng cây `current-task` mà script resolve).
+Các task cũ dạng **một file phẳng** `YYYYMMDD-slug.md` vẫn hợp lệ cho đến khi migrate; script chỉ cần `-TaskFile` trỏ đúng file tồn tại. Session JSON cho task phẳng vẫn ghi vào `current-task/.runtime/`; handoff vào `current-task/reports/` (cùng cây `current-task` mà script resolve).
 
 ---
 

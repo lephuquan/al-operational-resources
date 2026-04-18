@@ -1,7 +1,7 @@
 # Task Contract Schema (Strict)
 
 This file defines the strict input contract for task execution in
-`.operational-resources/docs/current-task/`.
+`.operational-resources-use1000/current-task/` (this repo) or, in template-only layouts, `.operational-resources/docs/current-task/`.
 
 ## Purpose
 

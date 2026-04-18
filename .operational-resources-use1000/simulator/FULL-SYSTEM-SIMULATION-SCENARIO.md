@@ -1,4 +1,4 @@
-# Full System Simulation Scenario (Human + AL)
+﻿# Full System Simulation Scenario (Human + AL)
 
 ## Purpose
 
@@ -15,7 +15,7 @@ Outcome target:
 ## Scope of simulation
 
 - Includes discovery gate, task gate, implementation cycle, output gate, and human gate.
-- Can run with any feature task (recommended: task under `docs/current-task/`).
+- Can run with any feature task (recommended: task under `current-task/`).
 - Uses scripts:
   - `scripts/preflight-discovery.ps1`
   - `scripts/start-task.ps1`
@@ -30,18 +30,18 @@ Outcome target:
 | Human (you) | Define intent, confirm decisions in discovery/task; **after handoff** — review code and evidence, create MR, decide merge/close, tick **§13.2**, own product/scope if outcomes diverge |
 | AL | **Mandatory** implementation and testing after input gate passes and context is sufficient — workflow up to **AL done**, evidence, contract docs per task |
 
-Default policy matches `docs/current-task/SCHEMA.md` (Role split): humans do not substitute for the primary coding path unless the task records an exception.
+Default policy matches `current-task/SCHEMA.md` (Role split): humans do not substitute for the primary coding path unless the task records an exception.
 
 ---
 
 ## Phase 0 - Preparation (Human)
 
-1. Choose target task file (or create one from `docs/current-task/TEMPLATE.md`).
-2. If requirement is unclear, create discovery file from `docs/current-task/DISCOVERY-TEMPLATE.md`.
+1. Choose target task file (or create one from `current-task/TEMPLATE.md`).
+2. If requirement is unclear, create discovery file from `current-task/DISCOVERY-TEMPLATE.md`.
 3. Confirm baseline docs to read:
    - `SYSTEM-DEFINITION.md`
    - `task-lifecycle/FROM-TICKET-TO-DONE.md`
-   - task file in `docs/current-task/`
+   - task file in `current-task/`
 
 Output:
 
@@ -55,7 +55,7 @@ Output:
 Run when task is raw/unclear:
 
 ```powershell
-powershell -File .operational-resources/scripts/preflight-discovery.ps1 -DiscoveryFile ".operational-resources/docs/current-task/<discovery-file>.md"
+powershell -File .operational-resources-use1000/scripts/preflight-discovery.ps1 -DiscoveryFile ".operational-resources-use1000/current-task/<discovery-file>.md"
 ```
 
 If fail:
@@ -75,7 +75,7 @@ Pass criteria:
 Validate strict task contract:
 
 ```powershell
-powershell -File .operational-resources/scripts/start-task.ps1 -TaskFile ".operational-resources/docs/current-task/YYYYMMDD-slug.md"
+powershell -File .operational-resources-use1000/scripts/start-task.ps1 -TaskFile ".operational-resources-use1000/current-task/YYYYMMDD-slug.md"
 ```
 
 If fail:
@@ -86,7 +86,7 @@ If fail:
 Pass criteria:
 
 - `Task gate passed.`
-- Runtime session created in `docs/current-task/.runtime/`
+- Runtime session created in `current-task/.runtime/`
 
 ---
 
@@ -111,7 +111,7 @@ Human checkpoints:
 Run required command and save evidence:
 
 ```powershell
-.\mvnw.cmd -q test 2>&1 | Tee-Object -FilePath ".operational-resources/docs/current-task/logs/YYYYMMDD-test-evidence.txt"
+.\mvnw.cmd -q test 2>&1 | Tee-Object -FilePath ".operational-resources-use1000/current-task/logs/YYYYMMDD-test-evidence.txt"
 ```
 
 Update task file:
@@ -128,13 +128,13 @@ Update task file:
 Validate AL done and generate handoff report:
 
 ```powershell
-powershell -File .operational-resources/scripts/close-task.ps1 -TaskFile ".operational-resources/docs/current-task/YYYYMMDD-slug.md" -TestEvidence ".operational-resources/docs/current-task/logs/YYYYMMDD-test-evidence.txt"
+powershell -File .operational-resources-use1000/scripts/close-task.ps1 -TaskFile ".operational-resources-use1000/current-task/YYYYMMDD-slug.md" -TestEvidence ".operational-resources-use1000/current-task/logs/YYYYMMDD-test-evidence.txt"
 ```
 
 Pass criteria:
 
 - `AL done gate completed.`
-- Report generated in `docs/current-task/reports/`
+- Report generated in `current-task/reports/`
 
 ---
 

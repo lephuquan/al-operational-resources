@@ -1,4 +1,4 @@
-# Personal docs — AI context (`docs/`)
+﻿# Personal docs — AI context (`docs/`)
 
 ## TL;DR (VI)
 
@@ -30,7 +30,7 @@ This file lists **recommended reading order** for **`docs/`** only. Path on disk
 
 - "Use full context from `.operational-resources/docs/`"
 - "Read `project-overview.md` and `architecture/02-system-overview.md` first"
-- "Active task: `docs/current-task/YYYYMMDD-task-name.md`"
+- "Active task: `current-task/YYYYMMDD-task-name.md`"
 
 ## Important notes
 

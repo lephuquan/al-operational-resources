@@ -1,4 +1,4 @@
-# Hướng dẫn: triển khai / mở rộng `docs/`, `skills/`, `rules/`
+﻿# Hướng dẫn: triển khai / mở rộng `docs/`, `skills/`, `rules/`
 
 ## Mục đích
 
@@ -6,7 +6,7 @@ Dùng khi **clone workspace mới**, **onboard** AI context, hoặc **bổ sung*
 
 ## Nguyên tắc
 
-- **`rules/`** = luật ưu tiên; **`docs/`** = ngữ cảnh dự án; **`skills/`** = cách làm lặp lại (playbook). Không trộn **task đang chạy** vào `rules/` (task chỉ ở `docs/current-task/`).
+- **`rules/`** = luật ưu tiên; **`docs/`** = ngữ cảnh dự án; **`skills/`** = cách làm lặp lại (playbook). Không trộn **task đang chạy** vào `rules/` (task chỉ ở `current-task/`).
 - Phần **chạy được** (code, `pom.xml`, CI) vẫn ở tree chính repo; `.operational-resources/` chỉ **bản đồ + quy trình**.
 
 ## Thứ tự bootstrap (khuyến nghị)
