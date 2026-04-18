@@ -4,9 +4,9 @@ This document maps the implemented workflow to the 4 phases.
 
 ## Phase 1 - Standardization
 
-- `TEMPLATE.md` as canonical task template.
-- `SCHEMA.md` defines required sections and outputs.
-- `logs/TEMPLATE.md` standardizes execution logs.
+- `../TEMPLATE.md` as canonical task template.
+- `../SCHEMA.md` defines required sections and outputs.
+- `../logs/TEMPLATE.md` standardizes execution logs.
 
 ## Phase 2 - Light automation
 
@@ -22,12 +22,12 @@ This document maps the implemented workflow to the 4 phases.
 ## Phase 4 - MR-ready human workflow
 
 - `.github/pull_request_template.md` for consistent PR quality.
-- `HUMAN-GATE-CHECKLIST.md` defines 4 human gates.
-- `METRICS.md` tracks workflow KPIs weekly.
+- `HUMAN-GATE-CHECKLIST.md` (this folder) defines 4 human gates.
+- `METRICS.md` (this folder) tracks workflow KPIs weekly.
 
 ## Final operating model
 
-- AL executes up to `AL done` only (code + tests + evidence + handoff). After `start-task.ps1` passes with a sufficient §8 context pack, **AL is the default mandatory owner of implementation** (not the human), unless the task documents an exception in §7 / §11 (`SCHEMA.md`).
+- AL executes up to `AL done` only (code + tests + evidence + handoff). After `start-task.ps1` passes with a sufficient §8 context pack, **AL is the default mandatory owner of implementation** (not the human), unless the task documents an exception in §7 / §11 (`../SCHEMA.md`).
 - Human executes **post-handoff** review, MR, merge, external close, **§13.2**, and product/scope decisions when intent or AC must change.
 
 ## Operational note

@@ -7,7 +7,7 @@
 - Định nghĩa hệ thống: `SYSTEM-DEFINITION.md`
 - Contract task nghiêm: `docs/current-task/SCHEMA.md`, `docs/current-task/TEMPLATE.md`
 - Kịch bản dry-run đầy đủ (có discovery): `simulator/FULL-SYSTEM-SIMULATION-SCENARIO.md`
-- Checklist human gate: `docs/current-task/HUMAN-GATE-CHECKLIST.md`
+- Checklist human gate: `docs/current-task/reference/HUMAN-GATE-CHECKLIST.md`
 
 ---
 

@@ -13,7 +13,9 @@ docs/current-task/
     reports/                      # (tự tạo) báo cáo handoff từ close-task.ps1
     logs/                         # (tuỳ chọn) evidence test riêng work item
       ...
-  TEMPLATE.md                     # vẫn ở gốc current-task
+  reference/                      # quy ước thư mục, workflow, migration, metrics, human gate (xem reference/README.md)
+  SCHEMA.md                       # contract nghiêm — giữ ở gốc current-task
+  TEMPLATE.md
   DISCOVERY-TEMPLATE.md
   .runtime/                       # (legacy, flat task) session JSON khi -TaskFile là file .md phẳng
   reports/                        # (legacy) handoff cho task phẳng
@@ -48,4 +50,4 @@ Các task cũ dạng **một file phẳng** `YYYYMMDD-slug.md` vẫn hợp lệ 
 
 ---
 
-**Last updated:** 2026-04-17
+**Last updated:** 2026-04-19

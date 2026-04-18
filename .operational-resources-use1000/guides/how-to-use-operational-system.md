@@ -202,6 +202,6 @@ Truoc khi dong task:
 - `task-lifecycle/FROM-TICKET-TO-DONE.md`
 - `docs/current-task/SCHEMA.md`
 - `docs/current-task/TEMPLATE.md`
-- `docs/current-task/HUMAN-GATE-CHECKLIST.md`
+- `docs/current-task/reference/HUMAN-GATE-CHECKLIST.md`
 
 **Last updated:** 2026-04-15

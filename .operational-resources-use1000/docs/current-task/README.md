@@ -2,9 +2,18 @@
 
 This folder is the canonical input/output area for task-driven AL execution.
 
+## Mục lục nhanh
+
+| Khu vực | Nội dung | Ghi chú |
+|---------|----------|---------|
+| **Contract & template (gốc `current-task/`)** | `SCHEMA.md`, `TEMPLATE.md`, `DISCOVERY-TEMPLATE.md`, file `README.md` này | **Giữ path ổ định** — `start-task.ps1` và rule Cursor dựa trên các file này ở thư mục cha. |
+| **Tài liệu tham chiếu** | [`reference/README.md`](reference/README.md) | Quy ước thư mục, workflow 4 phase, migration, metrics, human gate. |
+| **Work items** | Thư mục `YYYYMMDD-short-slug/` (folder mode) hoặc file `YYYYMMDD-slug.md` (flat) | Mỗi ticket một nơi; xem `reference/FOLDER-CONVENTION.md`. |
+| **Logs chung (flat)** | `logs/` | Evidence / template log cho task phẳng hoặc dùng chung. |
+
 ## TL;DR
 
-- Keep exactly one task file per task in this folder.
+- Keep exactly one task file per task (flat file **or** one `TASK.md` per folder).
 - Create task file from `TEMPLATE.md`.
 - Validate strict input gate with `.operational-resources-use1000/scripts/start-task.ps1`.
 - Validate AL-done output gate with `.operational-resources-use1000/scripts/close-task.ps1`.
@@ -13,18 +22,28 @@ This folder is the canonical input/output area for task-driven AL execution.
 
 - Path: `.operational-resources-use1000/docs/current-task/` (this tree)
 - **Flat mode (legacy):** one task = one file `YYYYMMDD-short-slug.md` at this level.
-- **Folder mode (recommended for new work):** one folder `YYYYMMDD-short-slug/` with `TASK.md` (canonical) and optional `DISCOVERY.md`, optional `logs/`. See `FOLDER-CONVENTION.md`.
+- **Folder mode (recommended for new work):** one folder `YYYYMMDD-short-slug/` with `TASK.md` (canonical) and optional `DISCOVERY.md`, optional `logs/`. See **`reference/FOLDER-CONVENTION.md`**.
 - No duplicate task copies in other folders.
 
-## Required files
+## Contract & templates (ở gốc — không đổi path)
 
-- `TEMPLATE.md`: main authoring template
-- `DISCOVERY-TEMPLATE.md`: shared discovery template for raw/unclear tasks
-- `SCHEMA.md`: contract for required sections and outputs
-- `HUMAN-GATE-CHECKLIST.md`: final human validation gates
-- `METRICS.md`: KPI tracking
-- `logs/TEMPLATE.md`: execution log template
-- `MIGRATION-TO-STRICT-CONTRACT.md`: upgrade guide for legacy task files
+- **`TEMPLATE.md`** — main authoring template
+- **`DISCOVERY-TEMPLATE.md`** — shared discovery template for raw/unclear tasks
+- **`SCHEMA.md`** — contract for required sections and outputs (strict gate)
+
+## Reference (`reference/`)
+
+Operational guides live under **`reference/`** (see **`reference/README.md`**):
+
+- `FOLDER-CONVENTION.md` — folder vs flat layout, runtime/reports
+- `WORKFLOW-4-PHASES.md` — automation phases map
+- `MIGRATION-TO-STRICT-CONTRACT.md` — upgrade legacy task files
+- `METRICS.md` — KPI tracking
+- `HUMAN-GATE-CHECKLIST.md` — human validation after AL handoff
+
+Shared execution log template (unchanged path):
+
+- `logs/TEMPLATE.md`
 
 ## Standard workflow
 
@@ -34,7 +53,7 @@ This folder is the canonical input/output area for task-driven AL execution.
 2. Create task file from `TEMPLATE.md`.
 3. Fill scope, AC, AC->test mapping, context pack, DoD, and required `task_contract`.
 4. Run:
-   - `powershell -File .operational-resources-use1000/scripts/start-task.ps1 -TaskFile ".operational-resources-use1000/docs/current-task/..."` (flat file or `.../TASK.md` in folder mode; see `FOLDER-CONVENTION.md`).
+   - `powershell -File .operational-resources-use1000/scripts/start-task.ps1 -TaskFile ".operational-resources-use1000/docs/current-task/..."` (flat file or `.../TASK.md` in folder mode; see **`reference/FOLDER-CONVENTION.md`**).
 4b. **Human: giao AL implement** trong IDE (Cursor): `@TASK.md` + prompt — chi tiết **`../../HUMAN-AL-WORKFLOW-GUIDE.md`** mục **Bước B2**; tóm tắt nhanh **`../../guides/how-to-use-operational-system.md`** mục **C.1**.
 5. **AL implements** the task using the §8 context pack (default owner of code and tests after input gate passes; see `SCHEMA.md` Role split). Human does not substitute for the primary coding path unless the task records an exception.
 6. **AL** runs tests and records evidence (for example under the work-item `logs/` folder in folder mode).
@@ -61,4 +80,4 @@ This folder is the canonical input/output area for task-driven AL execution.
 - `../../skills/workflow/implement-feature/README.md`
 - `../../rules/`
 
-**Last updated:** 2026-04-17 (AL default implementation owner; human post-handoff gates)
+**Last updated:** 2026-04-19 (`reference/` layout — contract files stay at root)
