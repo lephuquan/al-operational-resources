@@ -7,6 +7,7 @@ Owner: Phu Quan Le (personal only)
 - This workspace is personal and optimized for fast, high-quality delivery with AI.
 - It must not change team-shared conventions without explicit confirmation.
 - Team standards remain default; personal rules can override for local workflow decisions.
+- Bundle-level intent (discovery before implement, readiness bar, human vs AL ownership): `.operational-resources-use1000/CORE-OBJECTIVES.md`.
 
 ## 2) Project context
 - Project: `al-operational-resources`

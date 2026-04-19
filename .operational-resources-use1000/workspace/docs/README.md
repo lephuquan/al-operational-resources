@@ -37,5 +37,6 @@ This file lists **recommended reading order** for **`docs/`** only. Path on disk
 - **This folder** (under `.operational-resources/`) is **personal** and optimized for your AI workflow. **Official product or team documentation** usually lives elsewhere (e.g. `docs/` at the **repository root** for the shared codebase, Confluence, wiki). Before merging to shared branches, **reconcile** with team standards.
 - Update these files when behavior or contracts change.
 - When a task completes, **promote** durable facts into `specs/`, `api/`, `decisions/`, or team docs **on purpose**.
+- **Resource changelog (this bundle):** when you add or materially change workspace resources (rules, skills, docs structure, etc.), append an entry to **[`../RESOURCE-CHANGE-LOG.md`](../RESOURCE-CHANGE-LOG.md)** at the **workspace root** (newest first).
 
-**Last updated:** 2026-04-14
+**Last updated:** 2026-04-17

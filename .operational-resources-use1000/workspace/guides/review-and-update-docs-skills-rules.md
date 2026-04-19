@@ -13,6 +13,10 @@ Quy trình **định kỳ** (ví dụ mỗi sprint / tháng), **trước release
 
 ## Checklist
 
+### 0) Nhật ký thay đổi tài nguyện (khuyến nghị)
+
+- [ ] **`workspace/RESOURCE-CHANGE-LOG.md`** — nếu vừa thêm/sửa/xóa rule, skill, doc, hoặc đổi cấu trúc catalog đáng kể: **đã append** một mục mới (mới nhất ở trên cùng), ghi loại + path + tóm tắt (và ticket/dự án nếu có)
+
 ### 1) Mục lục & bản đồ
 
 - [ ] **`.operational-resources/skills/README.md`** — mọi skill mới đã có dòng; các dòng **hub** (`README.md` trong folder) khớp thực tế
@@ -48,5 +52,7 @@ Quy trình **định kỳ** (ví dụ mỗi sprint / tháng), **trước release
 ## Thêm tài nguyên mới (ôn lại)
 
 Khi review phát hiện thiếu khung: xem lại **[`bootstrap-docs-skills-rules.md`](bootstrap-docs-skills-rules.md)**.
+
+Sau khi bổ sung hoặc chỉnh lớn: cập nhật **[`../RESOURCE-CHANGE-LOG.md`](../RESOURCE-CHANGE-LOG.md)** (một dòng log = một thay đổi có thể kể lại được).
 
 **Last updated:** 2026-04-11
