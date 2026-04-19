@@ -1,0 +1,1 @@
+Dùng AL để triển khai từng docs trong thư mục docs/ để tiện hơn
