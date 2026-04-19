@@ -164,18 +164,20 @@ When AC or scope **changes** vs. task start (even small), add a row — keeps co
 
 ## 8. Context pack for AI — rules, docs, skills (required: at least rules + one skill)
 
-Paths AI should read (fill real paths; delete unused rows):
+**Curation:** trước khi chốt §8, xem bảng gợi ý [`reference/AL-ACCURACY-SOLUTION-MATRIX.md`](reference/AL-ACCURACY-SOLUTION-MATRIX.md) (độ rộng §8, neo spec/code, gate).
+
+Paths AI should read (fill real paths under `.operational-resources-use1000/workspace/…` or repo; delete unused rows):
 
 | Kind | Paths (examples) |
 |------|------------------|
-| Rules | `rules/00-personal-priority.md`, `rules/02-coding-standards.md`, … |
-| Docs | `docs/architecture/02-system-overview.md`, `docs/api/01-README.md`, `docs/specs/...` |
-| Skills | `skills/backend/create-rest-api/SKILL.md`, … |
+| Rules | `.operational-resources-use1000/workspace/rules/00-personal-priority.md`, … |
+| Docs | `.operational-resources-use1000/workspace/docs/architecture/02-system-overview.md`, … |
+| Skills | `.operational-resources-use1000/workspace/skills/backend/create-rest-api/SKILL.md`, … |
 
 **Suggested prompt (copy):**  
 “Read this task file first. Follow the rules and skills in the table above. Do not add dependencies or change architecture broadly without asking.”
 
-**Human — how to assign AL to implement (after `start-task.ps1` passes):** open Cursor Chat/Composer/Agent, attach this task file with `@`, paste the prompt above or the minimal prompt in **`../../HUMAN-AL-WORKFLOW-GUIDE.md`** section **Bước B2**; step-by-step also in **`../../guides/how-to-use-operational-system.md`** section **C.1**.
+**Human — how to assign AL to implement (after `start-task.ps1` passes):** open Cursor Chat/Composer/Agent, attach this task file with `@`, paste the prompt above or the minimal prompt in **`../HUMAN-AL-WORKFLOW-GUIDE.md`** section **Bước B2**; step-by-step also in **`../../workspace/guides/how-to-use-operational-system.md`** section **C.1**.
 
 ---
 
