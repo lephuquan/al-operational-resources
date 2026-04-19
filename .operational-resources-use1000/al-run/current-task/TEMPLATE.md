@@ -50,6 +50,8 @@ Complete **before** large implementation; if not ready — note in §11 or set s
 - [ ] **Scope** in §2 is filled; **out of scope** is explicit.
 - [ ] **Open questions** §11: no unresolved blockers — or **temporary assumptions** are written so AI can proceed (to confirm later).
 - [ ] **Skills + docs** listed in §8 (at least `rules/` + one relevant skill).
+- [ ] **A1:** §8 đã tỉa — tổng số path trong backtick trên 3 dòng **Rules / Docs / Skills** ≤ **12** (hoặc ghi lý do ngoại lệ trong §11).
+- [ ] **A2:** **§2.4** đã điền với anchor `src/...` tới chỗ sửa chính (hoặc *N/A — doc-only* có path doc).
 - [ ] If scope diverges materially from the ticket: recorded in **§7 Revision** and (when needed) **synced with BA/lead**.
 
 ---
@@ -79,6 +81,18 @@ Complete **before** large implementation; if not ready — note in §11 or set s
 
 - **Assumptions** (if not confirmed with BA): …
 - **Dependencies** (other team, service, feature flag, DB migration): …
+
+### 2.4 Implementation anchors (recommended — **A2**)
+
+Neo AL vào **code thật** (đọc trước khi sửa; tránh AL đoán pattern). Bảng gợi ý:
+
+| Area | Path (`src/...` hoặc test) |
+|------|----------------------------|
+| Entry (controller / route) | `src/main/java/.../YourController.java` |
+| Domain / use case | `src/main/java/.../YourService.java` |
+| Tests tham chiếu | `src/test/java/.../YourIT.java` |
+
+Xóa dòng không dùng. Nếu task chỉ doc — ghi *N/A — doc-only* và trỏ file doc cần sửa trong §2.1.
 
 ---
 
@@ -165,6 +179,8 @@ When AC or scope **changes** vs. task start (even small), add a row — keeps co
 ## 8. Context pack for AI — rules, docs, skills (required: at least rules + one skill)
 
 **Curation:** trước khi chốt §8, xem bảng gợi ý [`reference/AL-ACCURACY-SOLUTION-MATRIX.md`](reference/AL-ACCURACY-SOLUTION-MATRIX.md) (độ rộng §8, neo spec/code, gate).
+
+**A1:** Trên **3 dòng** `Rules` / `Docs` / `Skills`, tổng số đường dẫn trong **backtick** nên **≤ 12**. README/brief/setup dài → để **§2.1**, không nhồi §8. **A2:** neo code trong **§2.4**, không trùng lặp hàng loạt path `src/` trong §8 (tránh vượt ngưỡng và trùng gate).
 
 Paths AI should read (fill real paths under `.operational-resources-use1000/workspace/…` or repo; delete unused rows):
 

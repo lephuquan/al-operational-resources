@@ -45,6 +45,8 @@ task_contract:
 - [x] **Scope** in §2 is filled; **out of scope** is explicit.
 - [x] **Open questions** §11: no unresolved blockers for implementation.
 - [x] **Skills + docs** listed in §8 (rules + skills + API/spec paths).
+- [x] **A1:** §8 đã tỉa (≤ 12 path trong backtick); bối cảnh rộng ở §2.1.
+- [x] **A2:** **§2.4** có anchor `src/...` tới controller/service/test liên quan.
 - [x] If scope diverges materially from discovery: will record in **§7 Revision**.
 
 ---
@@ -83,6 +85,17 @@ Contract doc paths used by automation checks (same filenames under `.operational
 - **Product dependency:** List + CRUD for `/api/v1/shelf-items` already exists (SIM-DEMO-2 baseline); this task adds export only.
 - **Stack:** Spring Boot 3.x, existing ShelfLog persistence and validation rules for list queries.
 - **Demo security:** Endpoints remain public for local demo; no new secrets in repo.
+
+### 2.4 Implementation anchors — read before changing code (**A2**)
+
+Neo AL vào code ShelfLog liên quan export (đọc trước khi sửa; bám pattern list hiện có):
+
+| Area | Path |
+|------|------|
+| HTTP (list + export) | `src/main/java/com/programming_with_al/al_operational_resources/shelflog/api/ShelfItemController.java` |
+| Application + cap + CSV | `src/main/java/com/programming_with_al/al_operational_resources/shelflog/application/ShelfItemService.java`, `src/main/java/com/programming_with_al/al_operational_resources/shelflog/application/ShelfItemCsvFormatter.java` |
+| Integration tests (export) | `src/test/java/com/programming_with_al/al_operational_resources/shelflog/api/ShelfItemExportControllerTest.java` |
+| Shared export error | `src/main/java/com/programming_with_al/al_operational_resources/common/ExportTooLargeException.java` |
 
 ---
 
@@ -154,13 +167,17 @@ Update this table when **§7** changes AC.
 
 ## 8. Context pack for AI — rules, docs, skills (required: at least rules + one skill)
 
+**A1 — curation:** giữ §8 tập trung (mục tiêu **≤ 12** path có backtick tổng cộng trên 3 dòng); bối cảnh demo / README API tổng quan nằm **§2.1**, không nhồi vào §8.
+
 Paths AI should read (repo-relative where noted):
 
 | Kind | Paths |
 |------|--------|
 | Rules | `.operational-resources-use1000/workspace/rules/00-personal-priority.md`, `.operational-resources-use1000/workspace/rules/02-coding-standards.md`, `.operational-resources-use1000/workspace/rules/03-api-development.md`, `.operational-resources-use1000/workspace/rules/07-testing.md` |
-| Docs | `.operational-resources-use1000/workspace/docs/api/01-README.md`, `.operational-resources-use1000/workspace/docs/api/05-error-handling.md`, `.operational-resources-use1000/workspace/docs/api/07-pagination-filtering.md`, `.operational-resources-use1000/workspace/docs/api/08-endpoint-list.md`, `.operational-resources-use1000/workspace/docs/api/10-current-api-changes.md`, `.operational-resources-use1000/workspace/docs/specs/feature-shelflog-items.md`, `.operational-resources-use1000/workspace/docs/setup/02-local-development.md`, `.operational-resources-use1000/workspace/simulator/DEMO-PROJECT-BRIEF.md`, `current-task/20260417-shelflog-csv-export/DISCOVERY.md` |
-| Skills | `.operational-resources-use1000/workspace/skills/workflow/implement-feature/SKILL.md`, `.operational-resources-use1000/workspace/skills/backend/create-rest-api/SKILL.md`, `.operational-resources-use1000/workspace/skills/testing/write-integration-test/README.md`, `.operational-resources-use1000/workspace/skills/error-handling/api-error-response-format/SKILL.md` |
+| Docs | `.operational-resources-use1000/workspace/docs/api/05-error-handling.md`, `.operational-resources-use1000/workspace/docs/api/07-pagination-filtering.md`, `.operational-resources-use1000/workspace/docs/api/08-endpoint-list.md`, `.operational-resources-use1000/workspace/docs/api/10-current-api-changes.md`, `.operational-resources-use1000/workspace/docs/specs/feature-shelflog-items.md`, `current-task/20260417-shelflog-csv-export/DISCOVERY.md` |
+| Skills | `.operational-resources-use1000/workspace/skills/workflow/implement-feature/SKILL.md`, `.operational-resources-use1000/workspace/skills/backend/create-rest-api/SKILL.md` |
+
+**Neo code (A2):** dùng **§2.4** — không trùng lặp path trong §8 để tránh đếm path gate quá cao.
 
 **Suggested prompt (copy):**  
 Read this `TASK.md` first, then `DISCOVERY.md` in the same folder. Follow rules and skills in the table. Reuse existing list semantics; do not add Maven starters or change global security architecture without **ASK FIRST** in §10.
@@ -203,6 +220,7 @@ Read this `TASK.md` first, then `DISCOVERY.md` in the same folder. Follow rules 
 - **[2026-04-19]** Implemented `GET /api/v1/shelf-items/export` (CSV, cap via total match > 5000 → `SHELF_413_EXPORT`, formula-safe cells), `ShelfItemExportControllerTest`, `ExportTooLargeException`, `ShelfItemCsvFormatter`, `countByCategory`; updated API/spec docs under `.operational-resources-use1000/workspace/docs/`.
 - **[2026-04-19]** Test evidence: `logs/20260419-shelflog-export-test-evidence.txt` (command `./mvnw.cmd -q test`, exit **0**).
 - **[2026-04-16]** Ops: split `.operational-resources-use1000/` into **`al-run/`** (task hub + `scripts/` + `task-lifecycle/` + workflow MD) and **`workspace/`** (docs, rules, skills, simulator, guides, AGENTS, MAP); `current-task/` now only under `al-run/`; `Resolve-RepoPath` resolves short `current-task/…` and legacy `…use1000\\docs\\…` paths.
+- **[2026-04-16]** A1/A2: §8 thu gọn (**12** path backtick); bỏ trùng brief/setup khỏi §8 (giữ §2.1); thêm **§2.4** neo file Java/test chính cho export.
 
 ---
 

@@ -38,6 +38,19 @@ Cách dùng: khi soạn / review task, Human đối chiếu từng hàng; có th
 ## Ghi chú triển khai
 
 - Bảng này **không** thay `SCHEMA.md`; chỉ bổ trợ cách “điền” contract cho hiệu quả AL cao.
-- Có thể thêm một dòng trong **`TEMPLATE.md`** (mục §8 / §10) trỏ tới file này nếu team muốn neo mặc định.
+- **`TEMPLATE.md`**: đã thêm **§2.4** (anchor code), ngưỡng **A1** trong §8, và checkbox DoR **A1/A2**.
+- **Task mẫu** `20260417-shelflog-csv-export/TASK.md`: §8 tỉa còn **12** path backtick; **§2.4** liệt kê controller/service/test/export exception — `start-task.ps1` pass sau chỉnh.
+
+---
+
+## Checklist vận hành A1 + A2 (Human)
+
+| Bước | A1 (thu §8) | A2 (neo code) |
+|------|-------------|----------------|
+| 1 | Liệt kê dự kiến path §8; chuyển brief/README/setup sang **§2.1** nếu chỉ bối cảnh | Mở repo, xác định 2–5 file `src/` / test đụng tới slice |
+| 2 | Giữ **Rules** tối thiểu (stack + test + API) | Điền **§2.4** bảng Area \| Path |
+| 3 | **Docs** = spec/API/error/pagination trực tiếp cho AC; bỏ file “nice to have” | Đảm bảo path tồn tại (không typo package) |
+| 4 | **Skills** = 1 workflow + 1 playbook sát việc (ví dụ REST + IT) | Nếu không có code (doc-only): ghi N/A + path doc trong §2.1 |
+| 5 | Chạy `al-run/scripts/start-task.ps1` | Cùng một lệnh — gate kiểm §8 tồn tại |
 
 **Last updated:** 2026-04-16

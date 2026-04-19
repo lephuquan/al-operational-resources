@@ -9,6 +9,6 @@ Các file trong thư mục này là **hướng dẫn, quy ước và checklist**
 | `MIGRATION-TO-STRICT-CONTRACT.md` | Nâng task legacy lên contract nghiêm |
 | `METRICS.md` | KPI theo dõi workflow |
 | `HUMAN-GATE-CHECKLIST.md` | Checklist sau handoff (Human) |
-| `AL-ACCURACY-SOLUTION-MATRIX.md` | Bảng vấn đề → hướng giải pháp (context §8, §4, gate, prompt) để AL triển khai chính xác |
+| `AL-ACCURACY-SOLUTION-MATRIX.md` | Bảng vấn đề → hướng giải pháp + **checklist vận hành A1/A2** (tỉa §8, neo §2.4) |
 
 **Last updated:** 2026-04-19
