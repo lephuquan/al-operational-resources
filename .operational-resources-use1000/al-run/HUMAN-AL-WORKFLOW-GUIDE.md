@@ -63,6 +63,8 @@ powershell -File .operational-resources-use1000/al-run/scripts/start-task.ps1 -T
 - **Pass:** tiếp tục implement.
 - **Fail:** sửa task file theo thông báo script (thiếu section, placeholder, DoR chưa tick, path §8 sai, …). Có thể dùng `-AllowUnready` chỉ khi **cố ý** bỏ qua DoR (không khuyến khích).
 
+**A3 (vận hành + gate):** bất kỳ lần chỉnh **§2** hoặc **§8** (đường dẫn) — chạy lại lệnh Bước B cho tới **Task gate passed** trước khi coi task “sẵn sàng giao AL”.
+
 ### Bước B2 — Human: **giao AL implement** (trong Cursor / agent IDE)
 
 Đây là bước **cụ thể** để Human chuyển từ “task đã pass gate” sang “AL bắt đầu code trong repo”. Không thay thế cho §8 trong task; chỉ là cách **khởi động** phiên làm việc với AL.
@@ -74,6 +76,8 @@ powershell -File .operational-resources-use1000/al-run/scripts/start-task.ps1 -T
      `.operational-resources-use1000/al-run/current-task/20260417-shelflog-csv-export/TASK.md`
    - *(Khuyến nghị)* Thêm `@` vài file trong bảng §8 (Rules/Docs/Skills) nếu muốn giảm lệch ngữ cảnh — không bắt buộc nếu AL tự resolve path được.
 4. **Gửi yêu cầu** (dán prompt dưới đây hoặc copy từ **§8 “Suggested prompt”** trong chính file task), và nêu rõ: làm đến **AL done** (code + test + evidence + doc theo AC + tick §13.1 + chuẩn bị lệnh `close-task.ps1`).
+
+**A7 (checklist nhanh):** đã `@` **TASK.md** (hoặc file task flat); đã dán prompt tối thiểu hoặc prompt trong §8; (tuỳ chọn) `@` thêm 1–2 file từ §8 nếu slice nhạy với rule/API.
 5. Trong phiên đó, **Human không làm bước code chính**; chỉ trả lời khi AL hỏi quyết định sản phẩm hoặc khi cần chỉnh task (§7).
 
 **Prompt tối thiểu (copy chỉnh đường dẫn cho đúng task):**

@@ -52,6 +52,7 @@ Complete **before** large implementation; if not ready — note in §11 or set s
 - [ ] **Skills + docs** listed in §8 (at least `rules/` + one relevant skill).
 - [ ] **A1:** §8 đã tỉa — tổng số path trong backtick trên 3 dòng **Rules / Docs / Skills** ≤ **12** (hoặc ghi lý do ngoại lệ trong §11).
 - [ ] **A2:** **§2.4** đã điền với anchor `src/...` tới chỗ sửa chính (hoặc *N/A — doc-only* có path doc).
+- [ ] **A3:** Sau mỗi lần sửa đường dẫn trong **§2** hoặc **§8**: đã chạy `al-run/scripts/start-task.ps1` và có **Task gate passed** (hoặc ghi ngoại lệ / lý do trong §11).
 - [ ] If scope diverges materially from the ticket: recorded in **§7 Revision** and (when needed) **synced with BA/lead**.
 
 ---
@@ -70,6 +71,7 @@ Complete **before** large implementation; if not ready — note in §11 or set s
 - **Spec:** `docs/specs/...` (if any)
 - **API / contract:** `docs/api/...` (if touched)
 - **Related ADR:** `docs/decisions/README.md` (index) or `docs/decisions/NNN-topic.md` (if any)
+- **Source-of-truth order (A6):** với task có code — ưu tiên **spec + API trong `workspace/docs/`** và **§2.4** (code), rồi mới tới brief/simulator nếu chỉ bối cảnh. Ghi một dòng nếu brief **không** là contract kỹ thuật chính.
 
 ### 2.2 In scope / out of scope
 
@@ -115,6 +117,8 @@ If there is no separate AC — write: *“No separate AC — technical goal: …
 ---
 
 ## 4. AC → test mapping (required before “done” — except pure doc spike/chore)
+
+**A5:** Mỗi AC nên có **ít nhất một** chỉ báo test **cụ thể** (`ClassName#methodName` hoặc đường dẫn file test mới). Tránh chỉ ghi “có test” / “đã cover”.
 
 | AC / goal | Description | Test (class#method or description) | Type |
 |-----------|-------------|-------------------------------------|------|
@@ -205,6 +209,8 @@ Paths AI should read (fill real paths under `.operational-resources-use1000/work
 ---
 
 ## 10. Detailed guidance for AI (required — at least three items)
+
+**A4:** Các bullet dưới đây phải **cụ thể cho slice** (package, ràng buộc kỹ thuật, lệnh, điều **cấm** đụng vào), không copy nguyên văn mơ hồ từ `AGENTS.md`.
 
 - **MUST:** … (e.g. Bean Validation on DTOs, do not log PII)
 - **SHOULD:** … (e.g. add integration test for new endpoint)

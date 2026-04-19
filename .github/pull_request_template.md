@@ -1,6 +1,6 @@
 ﻿## Summary
 
-- Task file: `current-task/YYYYMMDD-slug.md`
+- Task file: `.operational-resources-use1000/al-run/current-task/…` (flat `YYYYMMDD-slug.md` hoặc folder `…/TASK.md`)
 - Ticket:
 - Scope:
 
@@ -28,5 +28,5 @@
 
 - [ ] Testing gate passed
 - [ ] Code review gate passed
-- [ ] Docs and API changelog synced (if needed)
+- [ ] Docs and API changelog synced (if needed) — **A8:** `workspace/docs/api/` + spec khớp behavior trong MR này
 - [ ] Task file status/log updated

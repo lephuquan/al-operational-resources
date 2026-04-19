@@ -83,6 +83,8 @@ powershell -File .operational-resources-use1000/al-run/scripts/start-task.ps1 -T
 
 Neu fail: sua dung section hoac pattern bi bao loi roi chay lai.
 
+**A3:** Moi lan sua duong dan trong **§2** hoac **§8** cua task — chay lai `start-task.ps1` cho toi khi **Pass** (tranh path lech sau refactor `workspace/` / `al-run/`).
+
 Input gate hien kiem tra them:
 
 - path trong context pack (`Rules`, `Docs`, `Skills`) co ton tai that hay khong
@@ -90,7 +92,7 @@ Input gate hien kiem tra them:
 
 ### Buoc C - AL implement (mac dinh bat buoc, khong phai Human code chinh)
 
-Sau input gate: **AL** thuc hien code + test theo AC va §8. Human khong thay the buoc nay tru khi task ghi ngoai le (xem `current-task/SCHEMA.md`).
+Sau input gate: **AL** thuc hien code + test theo AC va §8. Human khong thay the buoc nay tru khi task ghi ngoai le (xem `al-run/current-task/SCHEMA.md`).
 
 #### C.1 - Human: **giao AL** trong Cursor (buoc thao tac)
 

@@ -54,3 +54,18 @@ Cách dùng: khi soạn / review task, Human đối chiếu từng hàng; có th
 | 5 | Chạy `al-run/scripts/start-task.ps1` | Cùng một lệnh — gate kiểm §8 tồn tại |
 
 **Last updated:** 2026-04-16
+
+---
+
+## Đánh giá A3–A8: cái nào nên cập nhật *trong hệ thống* (repo) vs chỉ vận hành
+
+| ID | Cập nhật **tài liệu / template / checklist** trong repo? | Gợi ý cụ thể (nếu “Có”) | Chủ yếu **Human vận hành** (không cần đổi repo) |
+|:---:|------------------|----------------|----------------|
+| **A3** | **Nên** (đủ nhẹ, giảm quên) | Neo trong **DoR** (`TEMPLATE.md`), một dòng trong **`HUMAN-AL-WORKFLOW-GUIDE`** / **`workspace/guides/how-to-use`** sau chỉnh path | Thực tế: chạy `start-task.ps1` mỗi lần sửa §2/§8 |
+| **A4** | **Nên** | **`TEMPLATE.md` §10**: nhắc MUST/SHOULD theo *slice*; ví dụ mẫu đã có thể mở rộng theo loại task | Human điền §10 khi tạo task; review trước gate |
+| **A5** | **Nên** | **`TEMPLATE.md` §4**: nhắc `Class#method`; **§13.1** đã có tick §4 — giữ kỷ luật** | AL cập nhật tên test thật sau code; Human review §4 |
+| **A6** | **Nên** | **`TEMPLATE.md` §2.1**: thứ tự nguồn sự thật (spec/API/code trước, brief sau) | Human chọn path §8; không nhồi simulator vào §8 khi không cần |
+| **A7** | **Tuỳ chọn** | Đã có **Bước B2** trong `HUMAN-AL-WORKFLOW-GUIDE`; có thể thêm **mini checklist** dưới bảng A7 trong file này | Human mỗi phiên: `@TASK.md` + prompt chuẩn |
+| **A8** | **Nên** | **`.github/pull_request_template.md`**: task path đúng `al-run/current-task/`; checklist “doc/API đã sync với AC” | Cùng MR cập nhật `workspace/docs/`; Human review |
+
+**Tóm tắt:** **A3–A6, A8** đáng bổ sung **vài dòng trong template / matrix / PR template** để hệ thống “tự nhắc” đúng chỗ; **A7** chủ yếu đã được neo bởi guide — chỉ cần checklist ngắn nếu muốn. Không bắt buộc thêm script CI trừ khi bạn chủ động muốn tự động hóa A3.
